@@ -42,7 +42,8 @@ import org.tigris.subversion.subclipse.ui.util.DetailsDialog;
  * This dialog is used when user wants to commit some files which are not under revision
  * control
  */
-public class AddToVersionControlDialog extends DetailsDialog {
+import guitypes.checkers.quals.*;
+@UIType public class AddToVersionControlDialog extends DetailsDialog {
 
 	private static final int WIDTH_HINT = 350;
 	private final static int SELECTION_HEIGHT_HINT = 100;

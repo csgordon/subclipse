@@ -56,7 +56,8 @@ import org.tigris.subversion.subclipse.ui.util.WorkspaceDialog;
  * Page to select a patch file. Overriding validatePage was necessary to allow
  * entering a file name that already exists.
  */
-class PatchFileSelectionPage extends WizardPage {
+import guitypes.checkers.quals.*;
+@UIType class PatchFileSelectionPage extends WizardPage {
 	private Text filenameCombo;
 	private Button browseButton;
 	private Button saveInFilesystem;

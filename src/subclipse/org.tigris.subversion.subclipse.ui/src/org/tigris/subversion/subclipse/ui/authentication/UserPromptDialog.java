@@ -25,7 +25,8 @@ import org.eclipse.ui.PlatformUI;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 
-public class UserPromptDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class UserPromptDialog extends TrayDialog {
     private String realm;
     private String username;
     private boolean save;

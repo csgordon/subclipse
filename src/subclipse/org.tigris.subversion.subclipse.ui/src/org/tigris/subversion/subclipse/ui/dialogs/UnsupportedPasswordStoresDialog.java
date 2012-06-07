@@ -19,7 +19,8 @@ import org.eclipse.ui.forms.widgets.Hyperlink;
 import org.tigris.subversion.subclipse.ui.Messages;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class UnsupportedPasswordStoresDialog extends SvnDialog {
+import guitypes.checkers.quals.*;
+@UIType public class UnsupportedPasswordStoresDialog extends SvnDialog {
 
 	public UnsupportedPasswordStoresDialog(Shell shell) {
 		super(shell, "passwordStores"); //$NON-NLS-1$

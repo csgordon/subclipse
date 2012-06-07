@@ -69,7 +69,8 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-public class HistoryDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class HistoryDialog extends TrayDialog {
     private IResource resource;
     private ISVNRemoteResource remoteResource;
     private SashForm sashForm;

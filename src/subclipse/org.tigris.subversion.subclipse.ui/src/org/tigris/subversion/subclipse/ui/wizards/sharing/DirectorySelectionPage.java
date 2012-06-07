@@ -39,7 +39,8 @@ import org.tigris.subversion.subclipse.ui.wizards.SVNWizardPage;
 /**
  * wizard page to select remote directory that will correpond to the project 
  */
-public class DirectorySelectionPage extends SVNWizardPage {
+import guitypes.checkers.quals.*;
+@UIType public class DirectorySelectionPage extends SVNWizardPage {
 	private ISVNRepositoryLocationProvider repositoryLocationProvider;
 	Button useProjectNameButton;
 	Button useSpecifiedNameButton;

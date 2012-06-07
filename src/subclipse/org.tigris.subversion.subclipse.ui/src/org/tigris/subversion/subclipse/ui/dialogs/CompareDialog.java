@@ -34,7 +34,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
 
-public class CompareDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class CompareDialog extends TrayDialog {
 		
 	private CompareEditorInput compareEditorInput;
     private IDialogSettings settings;

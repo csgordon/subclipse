@@ -43,7 +43,8 @@ import org.tigris.subversion.subclipse.ui.settings.ProjectProperties;
 import org.tigris.subversion.subclipse.ui.util.LinkList;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-public class SetCommitPropertiesDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class SetCommitPropertiesDialog extends TrayDialog {
     
 	private CommitCommentArea commitCommentArea;
     private ProjectProperties projectProperties;

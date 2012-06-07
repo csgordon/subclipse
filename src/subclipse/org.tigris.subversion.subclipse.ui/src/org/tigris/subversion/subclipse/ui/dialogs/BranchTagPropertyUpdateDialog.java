@@ -34,7 +34,8 @@ import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 
-public class BranchTagPropertyUpdateDialog extends SvnDialog {
+import guitypes.checkers.quals.*;
+@UIType public class BranchTagPropertyUpdateDialog extends SvnDialog {
 	private IResource resource;
 	private Alias newAlias;
 	private ISVNLocalResource svnResource;

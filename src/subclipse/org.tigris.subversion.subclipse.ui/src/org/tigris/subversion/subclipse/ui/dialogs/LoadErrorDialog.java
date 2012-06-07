@@ -18,7 +18,8 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.Hyperlink;
 import org.tigris.subversion.subclipse.ui.Messages;
 
-public class LoadErrorDialog extends SvnDialog {
+import guitypes.checkers.quals.*;
+@UIType public class LoadErrorDialog extends SvnDialog {
 	private String loadErrors;
 
 	public LoadErrorDialog(Shell shell, String loadErrors) {

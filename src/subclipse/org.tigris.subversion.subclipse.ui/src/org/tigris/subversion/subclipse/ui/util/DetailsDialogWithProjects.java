@@ -23,7 +23,8 @@ import org.eclipse.swt.widgets.Shell;
 /**
  * Display a message with a details that can contain a list of projects
  */
-public class DetailsDialogWithProjects extends DetailsDialog {
+import guitypes.checkers.quals.*;
+@UIType public class DetailsDialogWithProjects extends DetailsDialog {
 	
 	private String message;
 	private String detailsTitle;
