@@ -41,7 +41,8 @@ import org.tigris.subversion.subclipse.ui.actions.CheckoutAsProjectAction;
 import org.tigris.subversion.subclipse.ui.actions.CheckoutIntoAction;
 import org.tigris.subversion.subclipse.ui.actions.CheckoutUsingProjectWizardAction;
 
-public class CheckoutWizard extends Wizard implements INewWizard, IImportWizard {
+import guitypes.checkers.quals.*;
+@UIType public class CheckoutWizard extends Wizard implements INewWizard, IImportWizard {
 	private CheckoutWizardLocationPage locationPage;
 
 	private ConfigurationWizardMainPage createLocationPage;

@@ -16,7 +16,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 
-public class SvnWizardMarkResolvedPage extends SvnWizardDialogPage {
+import guitypes.checkers.quals.*;
+@UIType public class SvnWizardMarkResolvedPage extends SvnWizardDialogPage {
 	private IResource[] resources;
 	private Button markResolvedButton;
 	private Button chooseUserVersionButton;

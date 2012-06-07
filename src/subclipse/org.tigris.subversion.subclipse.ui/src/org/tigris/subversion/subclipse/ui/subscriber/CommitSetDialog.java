@@ -41,7 +41,8 @@ import org.tigris.subversion.subclipse.ui.comments.CommitCommentArea;
  * Dialog for creating and editing commit set
  * title and comment
  */
-public class CommitSetDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class CommitSetDialog extends TrayDialog {
 
     private static final int DEFAULT_WIDTH_IN_CHARS= 80;
     

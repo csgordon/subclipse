@@ -10,7 +10,8 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public abstract class SvnDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public abstract class SvnDialog extends TrayDialog {
 	private String id;
 	private IDialogSettings settings = SVNUIPlugin.getPlugin().getDialogSettings();
 	protected static final int LABEL_WIDTH_HINT = 400;

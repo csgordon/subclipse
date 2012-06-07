@@ -16,7 +16,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 
-public class UpdateToHeadPreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
+import guitypes.checkers.quals.*;
+@UIType public class UpdateToHeadPreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
 	private Button ignoreExternalsButton;
 	private Button forceButton;
 	

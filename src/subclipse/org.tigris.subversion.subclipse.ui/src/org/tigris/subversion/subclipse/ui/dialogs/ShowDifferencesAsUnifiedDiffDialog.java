@@ -266,7 +266,7 @@ import guitypes.checkers.quals.*;
     protected void createButtonsForButtonBar(Composite parent) {
 		Button toggleFromToButton = createButton(parent, 2, Policy.bind("ShowDifferencesAsUnifiedDiffDialog.swap"), false); //$NON-NLS-1$
 		toggleFromToButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				String fromUrl = fromUrlText.getText().trim();
 				boolean fromHeadRevision = fromHeadButton.getSelection();
 				String fromRevision = fromRevisionText.getText().trim();

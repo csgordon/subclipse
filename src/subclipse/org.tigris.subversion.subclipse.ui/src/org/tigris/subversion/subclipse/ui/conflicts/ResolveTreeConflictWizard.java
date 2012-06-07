@@ -50,7 +50,8 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class ResolveTreeConflictWizard extends Wizard {
+import guitypes.checkers.quals.*;
+@UIType public class ResolveTreeConflictWizard extends Wizard {
 	private SVNTreeConflict treeConflict;
 	private IWorkbenchPart targetPart;
 	private ISVNLocalResource svnResource;

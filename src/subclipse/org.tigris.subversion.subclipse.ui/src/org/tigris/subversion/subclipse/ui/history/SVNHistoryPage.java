@@ -649,7 +649,7 @@ import guitypes.checkers.quals.*;
       private ILogEntry currentLogEntry;
       private int currentSelectionSize = -1;
 
-      public void selectionChanged(SelectionChangedEvent event) {
+      @UIEffect public void selectionChanged(SelectionChangedEvent event) {
         ISelection selection = event.getSelection();
         ILogEntry logEntry = getLogEntry((IStructuredSelection) selection);
         if(logEntry != currentLogEntry || ((IStructuredSelection) selection).size() != currentSelectionSize) {
@@ -962,7 +962,7 @@ import guitypes.checkers.quals.*;
   private void contributeActions() {
     toggleShowComments = new Action(Policy.bind("HistoryView.showComments"), //$NON-NLS-1$
         SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_COMMENTS)) {
-      public void run() {
+      @UIEffect public void run() {
         showComments = isChecked();
         setViewerVisibility();
         store.setValue(ISVNUIConstants.PREF_SHOW_COMMENTS, showComments);
@@ -974,7 +974,7 @@ import guitypes.checkers.quals.*;
 
     // Toggle wrap comments action
     toggleWrapCommentsAction = new Action(Policy.bind("HistoryView.wrapComments")) { //$NON-NLS-1$
-      public void run() {
+      @UIEffect public void run() {
         wrapCommentsText = isChecked();
         setViewerVisibility();
         store.setValue(ISVNUIConstants.PREF_WRAP_COMMENTS, wrapCommentsText);
@@ -987,7 +987,7 @@ import guitypes.checkers.quals.*;
     // Toggle path visible action
     toggleShowAffectedPathsAction = new Action(Policy.bind("HistoryView.showAffectedPaths"), //$NON-NLS-1$
         SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_AFFECTED_PATHS_FLAT_MODE)) {
-      public void run() {
+      @UIEffect public void run() {
         showAffectedPaths = isChecked();
         setViewerVisibility();
         store.setValue(ISVNUIConstants.PREF_SHOW_PATHS, showAffectedPaths);
@@ -999,7 +999,7 @@ import guitypes.checkers.quals.*;
 
     // Toggle stop on copy action
     toggleStopOnCopyAction = new Action(Policy.bind("HistoryView.stopOnCopy")) { //$NON-NLS-1$
-      public void run() {
+      @UIEffect public void run() {
         refresh();
         SVNUIPlugin.getPlugin().getPreferenceStore().setValue(ISVNUIConstants.PREF_STOP_ON_COPY,
             toggleStopOnCopyAction.isChecked());
@@ -1009,7 +1009,7 @@ import guitypes.checkers.quals.*;
     
     // Toggle include merged revisions action
     toggleIncludeMergedRevisionsAction = new Action(Policy.bind("HistoryView.includeMergedRevisions")) { //$NON-NLS-1$
-      public void run() {
+      @UIEffect public void run() {
         store.setValue(ISVNUIConstants.PREF_INCLUDE_MERGED_REVISIONS, toggleIncludeMergedRevisionsAction.isChecked());
     	refreshTable();
     	refresh();
@@ -1275,7 +1275,7 @@ import guitypes.checkers.quals.*;
   private IAction getCopyChangedPathAction() {
 	  if (copyChangedPathAction == null) {
 		  copyChangedPathAction = new Action(Policy.bind("HistoryView.copyChangedPath")) { //$NON-NLS-1$
-			  public void run() {
+			  @UIEffect public void run() {
 				  ContainerSelectionDialog dialog = new ContainerSelectionDialog(Display.getDefault().getActiveShell(), null, false, Policy.bind("CopyAction.selectionLabel")); //$NON-NLS-1$
 				  if (dialog.open() == ContainerSelectionDialog.OK) {
 					Object[] result = dialog.getResult();
@@ -1293,7 +1293,7 @@ import guitypes.checkers.quals.*;
 					}
 					final IProject targetProject = selectedProject;
 					final File destPath = target;
-					BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+					BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 						public void run() {
 							ISVNClientAdapter client = null;
 							try {		
@@ -1328,7 +1328,7 @@ import guitypes.checkers.quals.*;
   private IAction getExportAction() {
     if(exportAction == null) {
       exportAction = new Action("Export...", SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_MENU_EXPORT)) { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           ExportAction delegate = new ExportAction();
           delegate.selectionChanged(this, changePathsViewer.getSelection());
           delegate.run(this);
@@ -1341,7 +1341,7 @@ import guitypes.checkers.quals.*;
   private IAction getShowAnnotationAction() {
     if(showAnnotationAction == null) {
       showAnnotationAction = new Action("Show Annotation", SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_MENU_ANNOTATE)) { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           if (!isFile()) { 
           	MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("SVNHistoryPage.11"), Policy.bind("SVNHistoryPage.12")); //$NON-NLS-1$ //$NON-NLS-2$
             	return;
@@ -1359,7 +1359,7 @@ import guitypes.checkers.quals.*;
   private IAction getCompareAction() {
     if(compareAction == null) {
       compareAction = new Action("Compare...") { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           CompareAction delegate = new CompareAction();
           delegate.selectionChanged(this, changePathsViewer.getSelection());
           delegate.run(this);
@@ -1372,7 +1372,7 @@ import guitypes.checkers.quals.*;
   private IAction getCreateTagFromRevisionChangedPathAction() {
     if(createTagFromRevisionChangedPathAction == null) {
     	createTagFromRevisionChangedPathAction = new Action() { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
         	SVNRevision selectedRevision = null;
             ISelection selection = changePathsViewer.getSelection();
             if( !(selection instanceof IStructuredSelection))
@@ -1408,7 +1408,7 @@ import guitypes.checkers.quals.*;
                 final SVNRevision revision = wizard.getRevision();
                 final boolean makeParents = wizard.isMakeParents();
                 try {
-                    BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+                    BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
                         public void run() {
                           ISVNClientAdapter client = null;
                           try {
@@ -1804,7 +1804,7 @@ import guitypes.checkers.quals.*;
               IResource[] resources = { resource };
               try {
                 if(resource == null) {
-                  BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+                  BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
                     public void run() {
                       ISVNClientAdapter client = null;
                       try {
@@ -2062,7 +2062,7 @@ import guitypes.checkers.quals.*;
                 "HistoryView.confirmRevertRevisions", resource.getFullPath().toString()))) //$NON-NLS-1$
               return;
           }
-          BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+          BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
             public void run() {
               ILogEntry firstElement = getFirstElement();
               ILogEntry lastElement = getLastElement();            
@@ -2168,7 +2168,7 @@ import guitypes.checkers.quals.*;
 		  clearSearchAction = new Action(
 				  Policy.bind("HistoryView.clearSearch"), plugin.getImageDescriptor(ISVNUIConstants.IMG_CLEAR)) { //$NON-NLS-1$
 			  public void run() {
-				  BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new Runnable() {
+				  BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new @UI Runnable() {
 					  public void run() {
 						  ViewerFilter[] filters = tableHistoryViewer.getFilters();
 						  for (int i=0; i<filters.length; i++) {
@@ -2701,7 +2701,7 @@ import guitypes.checkers.quals.*;
 		  
 		  getSite().getShell().getDisplay().asyncExec(new Runnable() {
 				public void run() {
-				    BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new Runnable() {
+				    BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new @UI Runnable() {
 				        public void run() {
 				        	getClearSearchAction().run();
 				        	tableHistoryViewer.addFilter(viewerFilter);

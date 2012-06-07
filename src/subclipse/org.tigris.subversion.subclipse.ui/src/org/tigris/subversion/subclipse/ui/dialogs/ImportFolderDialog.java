@@ -41,7 +41,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.comments.CommitCommentArea;
 import org.tigris.subversion.subclipse.ui.operations.ImportOperation;
 
-public class ImportFolderDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class ImportFolderDialog extends TrayDialog {
 	private ISVNRemoteFolder remoteFolder;
 	private IWorkbenchPart targetPart;
 	private Text directoryText;

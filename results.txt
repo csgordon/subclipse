@@ -11,3 +11,5 @@ Note: Running the checker over the whole source base (every line other than the 
 takes about 35 seconds.
 +5 minutes (0:15): 6460 by more UIType annos, and marking a few anonymous inner class methods @UIEffect
 +15 minutes (0:30): 5464 by more of the same
++15 minutes (0:45): 4695 by more of the same
++15 minutes (1:00): 4220 much of the same, annotating all the dialog subclasses @UIType, and marking BusyIndicator.showWhile as taking a @UI Runnable

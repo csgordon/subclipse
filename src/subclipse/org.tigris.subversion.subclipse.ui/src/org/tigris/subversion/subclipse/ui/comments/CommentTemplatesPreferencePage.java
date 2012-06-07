@@ -34,7 +34,8 @@ import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class CommentTemplatesPreferencePage extends PreferencePage implements
+import guitypes.checkers.quals.*;
+@UIType public class CommentTemplatesPreferencePage extends PreferencePage implements
 		IWorkbenchPreferencePage, ISelectionChangedListener {
 
 	private ListViewer viewer;

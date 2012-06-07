@@ -29,7 +29,8 @@ import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class QuestionDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class QuestionDialog extends TrayDialog {
     private String realm;
     private String question;
     private boolean showAnswer;

@@ -23,7 +23,8 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
 /**
  * Dialog that ask the user to give the root repository url of the given url 
  */
-public class ChooseRootUrlDialog extends ListDialog {
+import guitypes.checkers.quals.*;
+@UIType public class ChooseRootUrlDialog extends ListDialog {
 	private SVNUrl url;
     
 	/**
