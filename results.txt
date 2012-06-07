@@ -14,3 +14,5 @@ takes about 35 seconds.
 +15 minutes (0:45): 4695 by more of the same
 +15 minutes (1:00): 4220 much of the same, annotating all the dialog subclasses @UIType, and marking BusyIndicator.showWhile as taking a @UI Runnable
 +20 minutes (1:20): 3954 marking some @UI Runnables and making an actions subpackage @UIPackage (lots of invalid isEnabled() overrides)
++5 min (1:25): 3441 by making the .wizards subpackage @UIPackage
++5 min (1:30): 2555 by making .wizards.dialogs and .dialogs @UIPackage
