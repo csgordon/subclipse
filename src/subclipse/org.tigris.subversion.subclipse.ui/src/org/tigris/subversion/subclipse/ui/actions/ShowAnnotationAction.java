@@ -23,8 +23,8 @@ import org.tigris.subversion.subclipse.ui.operations.ShowAnnotationOperation;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardAnnotatePage;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
-
-public class ShowAnnotationAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class ShowAnnotationAction extends WorkbenchWindowAction {
 
 	/**
 	 * Action to open a SVN Annotate View

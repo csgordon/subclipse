@@ -21,7 +21,8 @@ import org.tigris.subversion.subclipse.ui.operations.MergeOperation;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class MergeAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class MergeAction extends WorkbenchWindowAction {
 
     protected void execute(IAction action) throws InvocationTargetException, InterruptedException {
         if (action != null && !action.isEnabled()) { 

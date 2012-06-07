@@ -27,7 +27,8 @@ import org.tigris.subversion.subclipse.ui.svnproperties.SvnRevPropertiesView;
  * 
  * 
  */
-public class ShowSvnRevPropertiesAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class ShowSvnRevPropertiesAction extends WorkbenchWindowAction {
 
     protected void execute(IAction action) throws InvocationTargetException, InterruptedException {
         if (action != null && !action.isEnabled()) { 

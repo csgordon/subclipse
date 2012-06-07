@@ -7,7 +7,8 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.ui.IWorkbenchPart;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class ConfigurableMergeAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class ConfigurableMergeAction extends WorkbenchWindowAction {
 
     public ConfigurableMergeAction() {
 		super();
