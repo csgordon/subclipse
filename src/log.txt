@@ -12,144 +12,15 @@ dist:
 BUILD SUCCESSFUL
 Total time: 0 seconds
 ~/research/experiments/timed/subclipse/src
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:36: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		node = nodeFigure.getNode();
-		                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        SetCommitPropertiesDialog dialog = new SetCommitPropertiesDialog(Display.getDefault().getActiveShell(), revision, resource, projectProperties);
-	                                                                                                            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        dialog.setOldAuthor(node.getAuthor());
-	                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        dialog.setOldComment(node.getMessage());
-	                            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:52: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        if (dialog.open() == SetCommitPropertiesDialog.OK) {
-	                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              if(node.getAuthor().equals(dialog.getAuthor()))
-                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:58: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                author = dialog.getAuthor();
-                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              if(node.getMessage().equals(dialog.getComment()))
-                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:62: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                commitComment = dialog.getComment();
-                                                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              PlatformUI.getWorkbench().getProgressService().run(true, true, new IRunnableWithProgress() {
-                                                                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:76: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    		nodeFigure.setToolTip(new NodeTooltipFigure(node));
-                    		                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SetCommitPropertiesAction.java:84: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			SVNUIPlugin.openError(Display.getDefault().getActiveShell(), null, null, e, SVNUIPlugin.LOG_TEAM_EXCEPTIONS);
-			                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			new ScrollableThumbnail((Viewport) rootEditPart.getFigure());
-			                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		thumbnail.setBorder(new MarginBorder(3));
-		                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		thumbnail.setSource(
-		                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:44: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				rootEditPart.getLayer(LayerConstants.PRINTABLE_LAYERS));
-				                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		lws.setContents(thumbnail);
-		               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			thumbnail.deactivate();
-			                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.dispose();
-		             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/OverviewOutlinePage.java:69: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			getControl().setFocus();
-			                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphEditorInput.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			.getImageDescriptor(getName());
-			                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SynchronizeViewGraphAction.java:17: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SynchronizeViewGraphAction.java:25: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		viewGraphAction.run(null);
-		                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/SynchronizeViewGraphAction.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (fSelection == null || fSelection.isEmpty()) return false;
-		                                            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:35: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (resource == null) task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, remoteResource);
-		                                                                                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:35: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (resource == null) task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, remoteResource);
-		                                                                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:36: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		else task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, resource);	
-		                                                                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:36: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		else task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, resource);	
-		                                                                                                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			nodes[i] = (Node)((RevisionEditPart)selectedRevisions.get(i)).getModel();
-			                                                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			task.run();
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:48: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("RefreshNodeAction.title"), e.getMessage()); //$NON-NLS-1$
-			                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RefreshNodeAction.java:48: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("RefreshNodeAction.title"), e.getMessage()); //$NON-NLS-1$
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
-		                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					MessageDialog.openError(Display.getDefault().getActiveShell(), "Revision Info", e.getMessage());
-					                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					MessageDialog.openError(Display.getDefault().getActiveShell(), "Revision Info", e.getMessage());
-					                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:69: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			ShowRevisionsDialog dialog = new ShowRevisionsDialog(Display.getDefault().getActiveShell(), logEntry, remoteResource, includeTags, null);
-			                                                                                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			dialog.setTitle("Revision Info");
-			               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:71: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			dialog.setSelectFirst(true);
-			                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:72: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			dialog.open();
-			           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:15: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class UpdateCacheAction extends SVNAction {
-       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:18: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		final ISVNRemoteFolder[] selectedFolders = getSelectedRemoteFolders();
-		                                                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:20: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), null, null, selectedFolders[0]);
-			                                                                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:22: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			task.run();
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("UpdateCacheAction.title"), e.getMessage()); //$NON-NLS-1$
-			                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("UpdateCacheAction.title"), e.getMessage()); //$NON-NLS-1$
-			                                                           ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphEditorInput.java:77: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.equals(java.lang.Object)).
+	public boolean equals(Object obj) {
+	               ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RevisionDetailsAction.java:43: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/UpdateCacheAction.java:28: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.TeamAction.isEnabled()).
+	protected boolean isEnabled() throws TeamException {
+	                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/SVNAction.java:238: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
 					public void run() {
 					            ^
@@ -204,120 +75,21 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/internal/TeamAction.java:384: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			return getTargetPage().showView(viewId);
 			                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:19: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class DeleteCacheAction extends SVNAction {
-       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		final ISVNRemoteFolder[] selectedFolders = getSelectedRemoteFolders();
-		                                                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:26: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
-		                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), error.getMessage()); //$NON-NLS-1$
-			                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), error.getMessage()); //$NON-NLS-1$
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openInformation(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), Policy.bind("DeleteCacheAction.noCache")); //$NON-NLS-1$ //$NON-NLS-2$
-			                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openInformation(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), Policy.bind("DeleteCacheAction.noCache")); //$NON-NLS-1$ //$NON-NLS-2$
-			                                                                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (!MessageDialog.openConfirm(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), Policy.bind("DeleteCacheAction.confirm", url))) return; //$NON-NLS-1$ //$NON-NLS-2$
-		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (!MessageDialog.openConfirm(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), Policy.bind("DeleteCacheAction.confirm", url))) return; //$NON-NLS-1$ //$NON-NLS-2$
-		                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), Policy.bind("DeleteCacheAction.deleteError", file)); //$NON-NLS-1$ //$NON-NLS-2$
-				                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("DeleteCacheAction.title"), Policy.bind("DeleteCacheAction.deleteError", file)); //$NON-NLS-1$ //$NON-NLS-2$
-				                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:44: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		wizard.setRevisionNumber(node.getRevision());
-		                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    	WizardDialog dialog = new ClosableWizardDialog(Display.getDefault().getActiveShell(), wizard);
-    	                                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    	if (dialog.open() == WizardDialog.OK) {	
-    	               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final SVNUrl sourceUrl = wizard.getUrl();
-                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:48: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final SVNUrl destinationUrl = wizard.getToUrl();
-                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final String message = wizard.getComment();
-                                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final SVNRevision revision = wizard.getRevision();
-                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final boolean makeParents = wizard.isMakeParents();
-                                                            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:52: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final SVNUrl[] sourceUrls = wizard.getUrls();
-                                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:53: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final boolean createOnServer = wizard.isCreateOnServer();
-                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:54: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final Alias newAlias = wizard.getNewAlias();
-                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            final boolean switchAfter = wizard.isSwitchAfterBranchTag();
-                                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-                                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            	            BranchTagOperation branchTagOperation = new BranchTagOperation(editor.getEditorSite().getPart(), resources, sourceUrls, destinationUrl, createOnServer, revision, message);
-            	                                                                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            	            BranchTagOperation branchTagOperation = new BranchTagOperation(editor.getEditorSite().getPart(), resources, sourceUrls, destinationUrl, createOnServer, revision, message);
-            	                                                                                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            	            branchTagOperation.run();        		                    		
-            	                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                        MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("HistoryView.createTagFromRevision"), e
-                                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                        MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("HistoryView.createTagFromRevision"), e
-                                                                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:81: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("HistoryView.createTagFromRevision"), e
-                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:81: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("HistoryView.createTagFromRevision"), e
-                                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:19: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class ViewGraphAction extends WorkbenchWindowAction {
-       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			run(new IRunnableWithProgress() {
-			   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-									MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("ViewGraphAction.0"), Policy.bind("ViewGraphAction.1")); //$NON-NLS-1$ //$NON-NLS-2$
-									                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-									MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("ViewGraphAction.0"), Policy.bind("ViewGraphAction.1")); //$NON-NLS-1$ //$NON-NLS-2$
-									                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							getTargetPage().openEditor(
-							                          ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:27: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/DeleteCacheAction.java:66: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.TeamAction.isEnabled()).
+	protected boolean isEnabled() throws TeamException {
+	                  ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/BranchTagAction.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+                    public void run() {
+                                ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:80: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.TeamAction.getSelectedResources()).
+	protected IResource[] getSelectedResources() {
+	                      ^
 subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:80: warning: This method overrides a method with @UI effect (org.tigris.subversion.subclipse.ui.actions.WorkspaceAction.getSelectedResources()) and another method with an @AlwaysSafe effect (org.tigris.subversion.subclipse.ui.internal.TeamAction.getSelectedResources()).  This is discouraged.
 	protected IResource[] getSelectedResources() {
 	                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ViewGraphAction.java:85: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return super.getSelectedResources();
-		                                 ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/WorkspaceAction.java:110: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.TeamAction.isEnabled()).
 	protected boolean isEnabled() throws TeamException {
 	                  ^
@@ -330,72 +102,21 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/WorkspaceAction.java:320: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.TeamAction.getSelectedResources()).
 	protected IResource[] getSelectedResources() {
 	                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			DifferencesDialog dialog = new DifferencesDialog(Display.getDefault().getActiveShell(), null, selectedResources, editor.getEditorSite().getPart());
-			                                                                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			DifferencesDialog dialog = new DifferencesDialog(Display.getDefault().getActiveShell(), null, selectedResources, editor.getEditorSite().getPart());
-			                                                                                                                                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			DifferencesDialog dialog = new DifferencesDialog(Display.getDefault().getActiveShell(), null, selectedResources, editor.getEditorSite().getPart());
-			                                                                                                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			dialog.setFromRevision(Long.toString(node1.getRevision()));
-			                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:52: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			dialog.setToRevision(Long.toString(node2.getRevision()));
-			                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:53: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			dialog.open();
-			           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), "Compare Revisions", e.getMessage());
-			                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/CompareRevisionsAction.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			MessageDialog.openError(Display.getDefault().getActiveShell(), "Compare Revisions", e.getMessage());
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ImageAction.java:21: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		SaveImageDialog dialog = new SaveImageDialog(Display.getDefault().getActiveShell(), editor);
-		                                                                                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/ImageAction.java:22: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		dialog.open();
-		           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:15: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class RemoteResourceViewGraphAction extends SVNAction {
-       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:18: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		run(new IRunnableWithProgress() {
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:20: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				ISVNRemoteResource[] resources = getSelectedRemoteResources();
-				                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:22: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					resources = getSelectedRemoteFolders();
-					                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:25: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						getTargetPage().openEditor(
-						                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		ISVNRemoteResource[] resources = getSelectedRemoteResources();
-		                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:44: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (resources.length == 0 && getSelectedRemoteFolders().length == 1) return true;
-		                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:165: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-								IWorkbenchWindow window = editor.getEditorSite().getWorkbenchWindow();
-								                                                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:165: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-								IWorkbenchWindow window = editor.getEditorSite().getWorkbenchWindow();
-								                                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:167: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-								page.activate(editor);
-								             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:168: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-								page.closeEditor(editor, false);
-								                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:224: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				viewer.setContents(graph);
-				                  ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/popup/actions/RemoteResourceViewGraphAction.java:41: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.TeamAction.isEnabled()).
+	protected boolean isEnabled() throws TeamException {
+	                  ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:65: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.operations.SVNOperation.execute(org.eclipse.core.runtime.IProgressMonitor)).
+	protected void execute(IProgressMonitor monitor) throws SVNException,
+	               ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:164: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+							public void run() {
+							            ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:223: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphBackgroundTask.java:235: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.operations.SVNOperation.getTaskName()).
+	protected String getTaskName() {
+	                 ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/SVNOperation.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		super(part);
 		     ^
@@ -411,573 +132,12 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/SVNOperation.java:303: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				MessageDialog.openInformation(getShell(), getJobName(), Policy.bind("SVNOperation.operationCancelled")); //$NON-NLS-1$
 				                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphSelectionTool.java:10: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphSelectionTool.java:14: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (getTargetEditPart() instanceof RevisionEditPart)
-		                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphSelectionTool.java:15: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			super.mouseUp(e, viewer);
-			             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphSelectionTool.java:19: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (getTargetEditPart() instanceof RevisionEditPart)
-		                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphSelectionTool.java:20: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			super.mouseDown(e, viewer);
-			               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	public NodeTooltipFigure(Node node) {
-	                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		layout.setStretchMinorAxis(false);
-		                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setLayoutManager(layout);	
-		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setBackgroundColor(Activator.BGCOLOR);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setOpaque(true);
-		         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		layout.setSpacing(5);
-		                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setToolTip(tooltip);
-		          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:53: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel("Action and path", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:54: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel(node.getAction()+" "+node.getPath(), JFaceResources.getTextFont()));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel("Author", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:56: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel(node.getAuthor(), JFaceResources.getTextFont()));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel("Date", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:58: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel(dateFormat.format(node.getRevisionDate()), JFaceResources.getTextFont()));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel("Message", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:60: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel(getFirstLines(node.getMessage(), NUMBER_OF_LOG_MESSAGE_LINES), JFaceResources.getTextFont()));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:62: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			add(createLabel("From", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-			   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			add(createLabel(format(node.getCopySrcRevision(), node.getCopySrcPath()), JFaceResources.getTextFont()));
-			   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:68: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (tagCount > tagsAdded) add(createLabel((tagCount - tagsAdded) + " more...", JFaceResources.getTextFont()));
-		                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Dimension d = getPreferredSize();
-		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Rectangle b = PlatformUI.getWorkbench().getDisplay().getClientArea();
-		                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:78: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setPreferredSize(width, height);
-		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:79: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setBorder(new LineBorder(Activator.BGCOLOR, BORDER_WIDTH));
-		         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:84: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			add(createLabel("Source of", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-			   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:87: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(createLabel(format(node.getRevision(), node.getPath()), JFaceResources.getTextFont()));
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:92: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			add(createLabel("Tagged as", JFaceResources.getHeaderFont(), Activator.FONT_COLOR));
-			   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:96: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			add(createLabel(format(node.getRevision(), node.getPath()), JFaceResources.getTextFont()));
-			   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:108: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		label.setFont(font);
-		             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:109: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		label.setTextAlignment(PositionConstants.LEFT);
-		                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		label.setFont(font);
-		             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:116: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		label.setTextAlignment(PositionConstants.LEFT);
-		                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/NodeTooltipFigure.java:117: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		label.setForegroundColor(c);
-		                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:16: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:21: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setBackgroundColor(ColorConstants.white);
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:22: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setOpaque(true);
-		           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setLayoutManager(layout);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:26: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Path path = (Path)getModel();
-		                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		GraphEditPart graphEditPart = (GraphEditPart)getParent().getParent();
-		                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		GraphEditPart graphEditPart = (GraphEditPart)getParent().getParent();
-		                                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:30: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.add(branchFigure, BorderLayout.CENTER);
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getFigure().setSize(220, 30);
-		                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getFigure().setSize(220, 30);
-		         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.refreshVisuals();
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/PathEditPart.java:44: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE, new SelectionEditPolicy() {
-		                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:13: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	public BranchFigure(String path, Color bgcolor, Color fgcolor) {
-	                                                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:16: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setLayoutManager(new BorderLayout());
-		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:17: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setBackgroundColor(bgcolor);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:18: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setForegroundColor(fgcolor);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:19: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setOpaque(true);
-		         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:22: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		label.setForegroundColor(Activator.FONT_COLOR);
-		                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:23: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		add(label, BorderLayout.CENTER);
-		   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchFigure.java:26: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setToolTip(tooltip);
-		          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:30: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class GraphActionBarContributor extends ActionBarContributor {
-       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.setActiveEditor(editor);
-		                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:48: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.contributeToToolBar(toolBarManager);
-		                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		toolBarManager.add(new Separator());
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(new ZoomComboContributionItem(getPage()));
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(new ZoomComboContributionItem(getPage()));
-                                                                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(new Separator());
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(refreshAction);
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:67: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(showDeletedAction);
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:72: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        		GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-        		                                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:72: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        		GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-        		                                                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:79: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(filterConnectionsAction);
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:84: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-	    		                                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:84: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-	    		                                                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:85: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		Graph graph = (Graph)graphEditPart.getModel();
-	    		                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents("Redrawing graph...");
-	    		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents("Redrawing graph...");
-	    		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:87: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents(graph);
-	    		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:87: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents(graph);
-	    		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:93: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(chronologicalAction);        
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:98: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				action.run();
-				          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:102: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        toolBarManager.add(imageAction);
-                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:125: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				menu.dispose();
-				            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:131: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (menu != null) menu.dispose();
-			                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:145: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			item.fill(parent, -1);			
-			         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:161: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				menu.dispose();
-				            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:167: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (menu != null) menu.dispose();
-			                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:181: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			item.fill(parent, -1);			
-			         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:202: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-	    		                                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:202: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-	    		                                                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:203: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		Graph graph = (Graph)graphEditPart.getModel();
-	    		                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:204: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents("Redrawing graph...");
-	    		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:204: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents("Redrawing graph...");
-	    		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:205: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents(graph);
-	    		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:205: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    		editor.getViewer().setContents(graph);
-	    		                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:228: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-				                                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:228: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				GraphEditPart graphEditPart = (GraphEditPart)editor.getViewer().getContents();
-				                                                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:229: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				Graph graph = (Graph)graphEditPart.getModel();
-				                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:241: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (resource == null) task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, remoteResource);
-			                                                                                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:241: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (resource == null) task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, remoteResource);
-			                                                                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:242: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			else task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, resource);	
-			                                                                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:242: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			else task = new GraphBackgroundTask(SVNUIPlugin.getActivePage().getActivePart(), editor.getViewer(), editor, resource);	
-			                                                                                                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:246: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				task.run();
-				        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:248: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				MessageDialog.openError(Display.getDefault().getActiveShell(), "Refresh " + getText(), e.getMessage()); //$NON-NLS-1$
-				                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphActionBarContributor.java:248: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				MessageDialog.openError(Display.getDefault().getActiveShell(), "Refresh " + getText(), e.getMessage()); //$NON-NLS-1$
-				                                                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super(viewer);
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Node node = (Node)revision.getModel();
-			                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			NodeFigure nodeFigure = (NodeFigure)revision.getFigure();
-			                                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:34: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			menu.add(new RevisionDetailsAction(node, editor));
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:35: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			menu.add(new SetCommitPropertiesAction(nodeFigure, editor));
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:36: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			menu.add(new BranchTagAction("Create Branch/Tag from Revision " + node.getRevision() + "...", editor, node));
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			menu.add(new RefreshNodeAction(selectedRevisions, editor));	
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		menu.add(new Separator());
-		        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:44: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Node node1 = (Node)revision1.getModel();
-			                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Node node2 = (Node)revision2.getModel();
-			                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			menu.add(new CompareRevisionsAction(node1, node2, editor));
-			        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		menu.add(new Separator());
-		        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		menu.add(new ImageAction(editor));
-		        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		List selectedEditParts = getViewer().getSelectedEditParts();
-		                                                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphMenuProvider.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		List selectedEditParts = getViewer().getSelectedEditParts();
-		                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:19: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:23: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Node node = (Node)getModel();
-		                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		GraphEditPart graphEditPart = (GraphEditPart)getParent().getParent();
-		                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:24: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		GraphEditPart graphEditPart = (GraphEditPart)getParent().getParent();
-		                                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				nodeFigure.addTag(tag);
-				                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		nodeFigure.endLayout();
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(nodeFigure, rect);
-		                                                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(nodeFigure, rect);
-		                                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(nodeFigure, rect);
-		                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(nodeFigure, rect);
-		                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Node node = (Node)getModel();
-		                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		GraphEditPart graphEditPart = (GraphEditPart)getParent().getParent();
-		                                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		GraphEditPart graphEditPart = (GraphEditPart)getParent().getParent();
-		                                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:52: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		nodeFigure.setSelected(getSelected() != SELECTED_NONE);
-		                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:52: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		nodeFigure.setSelected(getSelected() != SELECTED_NONE);
-		                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionEditPart.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE, new SelectionEditPolicy() {
-		                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPartFactory.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			editPart.setModel(model);
-			                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:53: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setBackgroundColor(ColorConstants.white);
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:54: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setOpaque(true);
-		           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setLayoutManager(layout);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE, null);
-		                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Graph graph = (Graph)getModel();
-		                             ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:139: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						makeConnection(getFigure(), target, nodeFigure);
-						                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:144: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						makeConnection(getFigure(), target, nodeFigure);
-						                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:148: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					makeConnection(getFigure(), branchFigure, nodeFigure);
-					                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:168: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						makeConnection(getFigure(), mergedView, nodeFigure, ColorConstants.red);
-						                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:220: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.refreshVisuals();
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:230: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				IFigure source =con.getSourceAnchor().getOwner();
-				                                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:230: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				IFigure source =con.getSourceAnchor().getOwner();
-				                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:231: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				IFigure target = con.getTargetAnchor().getOwner();
-				                                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:231: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				IFigure target = con.getTargetAnchor().getOwner();
-				                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:232: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				if (source instanceof NodeFigure && ((NodeFigure)source).isSelected()) show = true;
-				                                                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:233: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				else if (target instanceof NodeFigure && ((NodeFigure)target).isSelected()) show = true;
-				                                                                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:235: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			con.setVisible(show);
-			              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:250: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.setTargetAnchor(targetAnchor);
-		                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:251: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.setSourceAnchor(new ChopboxAnchor(source));
-		                 ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:253: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		decoration.setTemplate(PolygonDecoration.TRIANGLE_TIP);
-		                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:254: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.setTargetDecoration(decoration);
-		                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:255: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.setForegroundColor(color);
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:257: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.addMouseMotionListener(listener);
-		                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:258: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.addMouseListener(listener);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:259: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		c.setCursor(Cursors.HAND);
-		           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:260: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		contents.add(c);
-		            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:270: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Viewport viewport = ((FigureCanvas)viewer.getControl()).getViewport();
-		                                                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:270: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Viewport viewport = ((FigureCanvas)viewer.getControl()).getViewport();
-		                                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:271: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Rectangle vbounds = viewport.getBounds();
-		                                      ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:276: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		viewport.setHorizontalLocation(x);
-		                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:277: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		viewport.setVerticalLocation(y);
-		                            ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:281: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		scrollTo(target.getBounds());
-		                         ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:299: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			connection.setLineWidth(1);
-			                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:303: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			connection.setLineWidth(2);
-			                       ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:313: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			NodeFigure nodeFigure = (NodeFigure) connection.getTargetAnchor().getOwner();
-			                                                                          ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:313: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			NodeFigure nodeFigure = (NodeFigure) connection.getTargetAnchor().getOwner();
-			                                                               ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:315: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Map map = viewer.getEditPartRegistry();
-			                                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:316: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			EditPart editPart = (EditPart)map.get(nodeFigure.getNode());
-			                                                        ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:317: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (editPart != null) viewer.select(editPart);
-			                                   ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:328: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			super(point);
-			     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:333: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Point p = super.getLocation(reference).getCopy();
-			                                              ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:333: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Point p = super.getLocation(reference).getCopy();
-			                           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/GraphEditPart.java:334: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			f.translateToAbsolute(p);
-			                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphEditDomain.java:11: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super(editorPart);
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:25: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super();
-		     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:30: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setBackgroundColor(ColorConstants.white);
-		                    ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:31: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setOpaque(true);
-		           ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:34: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		f.setLayoutManager(layout);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:36: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Branch branch = (Branch)getModel();		
-		                                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(f, rect);
-		                                                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(f, rect);
-		                                                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(f, rect);
-		                                                  ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		((AbstractGraphicalEditPart)getParent()).getFigure().getLayoutManager().setConstraint(f, rect);
-		                                     ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:44: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Branch branch = (Branch)getModel();
-		                                ^
-subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/BranchEditPart.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		installEditPolicy(EditPolicy.SELECTION_FEEDBACK_ROLE, new SelectionEditPolicy() {
-		                 ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphEditor.java:194: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe WorkListener.worked()).
+	public void worked() {
+	            ^
+subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/editors/RevisionGraphEditor.java:213: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISVNLogMessageCallback.singleMessage(org.tigris.subversion.svnclientadapter.ISVNLogMessage)).
+	public void singleMessage(ISVNLogMessage message) {
+	            ^
 subclipse/org.tigris.subversion.subclipse.graph/src/org/tigris/subversion/subclipse/graph/ImageDescriptors.java:21: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         ImageDescriptor desc = ImageDescriptor.createFromURL(url);
                                                             ^
@@ -2068,39 +1228,39 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/MergeFileAssociation.java:66: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.hashCode()).
 	public int hashCode() {
 	           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	private class SVNParticipantLabelDecorator extends LabelProvider implements ILabelDecorator {
-	        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:163: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			showOutOfDateFoldersAction.setSvnSynchronizeParticipant(SVNSynchronizeParticipant.this);
-			                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:276: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						viewer.getControl().setRedraw(false);
-						                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:276: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						viewer.getControl().setRedraw(false);
-						                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:277: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						((AbstractTreeViewer)viewer).expandToLevel(viewer.getInput(), AbstractTreeViewer.ALL_LEVELS);
-						                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:277: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						((AbstractTreeViewer)viewer).expandToLevel(viewer.getInput(), AbstractTreeViewer.ALL_LEVELS);
-						                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:278: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						viewer.getControl().setRedraw(true);
-						                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:278: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						viewer.getControl().setRedraw(true);
-						                 ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:146: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizePageActionGroup.initialize(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
+		public void initialize(ISynchronizePageConfiguration configuration) {
+		            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:150: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+				protected FastSyncInfoFilter getSyncInfoFilter() {
+				                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:150: warning: This method overrides a method with @UI effect (org.tigris.subversion.subclipse.ui.subscriber.UpdateSynchronizeAction.getSyncInfoFilter()) and another method with an @AlwaysSafe effect (org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).  This is discouraged.
+				protected FastSyncInfoFilter getSyncInfoFilter() {
+				                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:291: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizePageActionGroup.fillActionBars(org.eclipse.ui.IActionBars)).
+		public void fillActionBars(IActionBars actionBars) {
+		            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:291: warning: This method overrides a method with @UI effect (org.eclipse.ui.actions.ActionGroup.fillActionBars(org.eclipse.ui.IActionBars)) and another method with an @AlwaysSafe effect (org.eclipse.team.ui.synchronize.SynchronizePageActionGroup.fillActionBars(org.eclipse.ui.IActionBars)).  This is discouraged.
 		public void fillActionBars(IActionBars actionBars) {
 		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:292: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			IToolBarManager manager = actionBars.getToolBarManager();
-			                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:329: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        return TeamUI.getSynchronizeManager().getParticipantDescriptor(ID);
-                                           ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:322: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SubscriberParticipant.init(java.lang.String,org.eclipse.ui.IMemento)).
+	public void init(String secondaryId, IMemento memento) throws PartInitException {
+	            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:328: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.internal.ScopableSubscriberParticipant.getDescriptor()).
+	 protected ISynchronizeParticipantDescriptor getDescriptor() {
+	                                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:335: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SubscriberParticipant.initializeConfiguration(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
+	protected void initializeConfiguration(ISynchronizePageConfiguration configuration) {
+	               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:358: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.AbstractSynchronizeParticipant.isViewerContributionsSupported()).
+	protected boolean isViewerContributionsSupported() {
+	                  ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:362: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IChangeSetProvider.getChangeSetCapability()).
+	public ChangeSetCapability getChangeSetCapability() {
+	                           ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:374: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
+	public void propertyChange(org.eclipse.core.runtime.Preferences.PropertyChangeEvent event) {
+	            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/CommitOperation.java:235: warning: This method overrides a method with @UI effect (org.eclipse.team.ui.TeamOperation.canRunAsJob()) and another method with an @AlwaysSafe effect (org.tigris.subversion.subclipse.ui.operations.SVNOperation.canRunAsJob()).  This is discouraged.
 	protected boolean canRunAsJob() {
 	                  ^
@@ -5918,390 +5078,225 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/annotations/AnnotateView.java:372: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		part.getSite().getPage().addPartListener(partListener);
 		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:56: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        ISynchronizeModelElement element = (ISynchronizeModelElement)getStructuredSelection().getFirstElement();
-                                                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		IStructuredSelection selection = getStructuredSelection();
-		                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:71: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeAction.java:100: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		List selected = getStructuredSelection().toList();
-		                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeAction.java:132: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    IStructuredSelection selection = getStructuredSelection();
-	                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeOperation.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (!promptForConflictHandling(getShell(), syncSet)) return;
-		                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					confirm = MessageDialog.openConfirm(getShell(), Policy.bind("SyncAction.updateAll"), Policy.bind("SyncAction.updateConfirm", Integer.toString(syncSet.getSyncInfos().length))); //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-2$				
-					                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					confirm = MessageDialog.openConfirm(getShell(), Policy.bind("SyncAction.updateAll"), Policy.bind("SyncAction.updateConfirm", Integer.toString(syncSet.getSyncInfos().length))); //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-2$				
-					                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:98: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						if (!MessageDialog.openConfirm(getShell(), Policy.bind("ResolveOperation.taskName"), message)) { //$NON-NLS-1$
-						                              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:98: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						if (!MessageDialog.openConfirm(getShell(), Policy.bind("ResolveOperation.taskName"), message)) { //$NON-NLS-1$
-						                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:105: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						markResolvedPage.setPropertyConflicts(propertyConflicts);
-						                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:106: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						markResolvedPage.setTreeConflicts(treeConflicts);
-						                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:108: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				        SvnWizardDialog dialog = new SvnWizardDialog(getShell(), wizard);
-				                                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:109: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				        wizard.setParentDialog(dialog);
-				                              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:110: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				        if (dialog.open() == SvnWizardDialog.CANCEL) {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:114: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				        selectedResolution = markResolvedPage.getResolution();	
-				                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:164: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:167: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							innerRunnable.run(new NullProgressMonitor());
-							                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:178: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:178: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:116: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        fInput.setResources(conflictOldFile, conflictWorkingFile,
-                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:118: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getShell().getDisplay().syncExec(new Runnable() {
-		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:120: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    CompareUI.openCompareEditorOnPage(fInput, getPart().getSite().getPage());
-			                                                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:120: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    CompareUI.openCompareEditorOnPage(fInput, getPart().getSite().getPage());
-			                                                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:120: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    CompareUI.openCompareEditorOnPage(fInput, getPart().getSite().getPage());
-			                                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:173: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    		getShell().getDisplay().syncExec(new Runnable() {
-    		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:198: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:201: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							innerRunnable.run(new NullProgressMonitor());
-							                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:212: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:212: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					new UpdateOperation(getPart(), resources[i], SVNRevision.HEAD).run(monitor);
-					                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:103: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("SyncAction.markMerged"), e.getMessage()); //$NON-NLS-1$
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:103: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("SyncAction.markMerged"), e.getMessage()); //$NON-NLS-1$
-				                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:159: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:162: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							innerRunnable.run(new NullProgressMonitor());
-							                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:173: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:173: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:38: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		dialog.open();
-		           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (dialog.getReturnCode() != Window.OK) return null;
-		                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:58: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		dialog.open();
-		           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeOperation.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getShell().getDisplay().syncExec(new Runnable() {
-		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeOperation.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				ignoreResourcesDialog = new IgnoreResourcesDialog(getShell(), resources);
-				                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeOperation.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				cancel = ignoreResourcesDialog.open() == IgnoreResourcesDialog.CANCEL;
-				                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeOperation.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		new IgnoreOperation(getPart(), resources, ignoreResourcesDialog).run();
-		                                                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeOperation.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		new IgnoreOperation(getPart(), resources, ignoreResourcesDialog).run();
-		                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:60: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				getShell().getDisplay().syncExec(new Runnable() {
-				        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:65: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                              view.showHistoryFor(remoteResource); 
-                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:67: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                              view.showHistoryFor(resource);
-                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:88: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:91: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							innerRunnable.run(new NullProgressMonitor());
-							                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:102: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:102: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				getShell().getDisplay().syncExec(new Runnable() {
-				        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:61: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							    view.showSvnProperties(svnResource);
-							                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:84: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:87: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							innerRunnable.run(new NullProgressMonitor());
-							                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:98: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:98: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:111: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:111: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:111: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:111: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    return getPart().getSite().getPage().showView(viewId);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeAction.java:29: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Iterator iter = getStructuredSelection().iterator();
-		                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeOperation.java:99: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		wizard.setWindowTitle(Policy.bind("GenerateSVNDiff.title")); //$NON-NLS-1$
-		                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeOperation.java:103: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		final WizardDialog dialog = new WizardDialogWithPersistedLocation(getShell(), wizard, "GenerateDiffFileWizard"); //$NON-NLS-1$
-		                                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeOperation.java:104: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		dialog.setMinimumPageSize(350, 250);
-		                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeOperation.java:105: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getShell().getDisplay().syncExec(new Runnable() {
-		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeOperation.java:107: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				dialog.open();	
-				           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:110: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					okPressed();
-					         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:113: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					updateEnablements();
-					                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                updateEnablements();
-                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:187: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                updateEnablements();
-                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getShell().getDisplay().syncExec(new Runnable() {
-		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:104: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			return MessageDialog.openQuestion(getShell(), Policy.bind("AddAction.addIgnoredTitle"), Policy.bind("AddAction.addIgnoredQuestion")); //$NON-NLS-1$ //$NON-NLS-2$
-			                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:104: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			return MessageDialog.openQuestion(getShell(), Policy.bind("AddAction.addIgnoredTitle"), Policy.bind("AddAction.addIgnoredQuestion")); //$NON-NLS-1$ //$NON-NLS-2$
-			                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:121: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:124: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							innerRunnable.run(new NullProgressMonitor());
-							                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:135: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:135: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(getShell()).run(true, cancelable,/*cancelable, true, */innerRunnable);	
-				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:61: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			getShell().getDisplay().syncExec(new Runnable() {
-			        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					revertAndUpdate = MessageDialog.openQuestion(getShell(), Policy.bind("SyncAction.override.title"), Policy.bind("SyncAction.override.confirm")); //$NON-NLS-1$ //$NON-NLS-2$
-					                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					revertAndUpdate = MessageDialog.openQuestion(getShell(), Policy.bind("SyncAction.override.title"), Policy.bind("SyncAction.override.confirm")); //$NON-NLS-1$ //$NON-NLS-2$
-					                                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:124: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	           		getShell().getDisplay().syncExec(new Runnable() {
-	           		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:126: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        				CommitToTagsWarningDialog dialog = new CommitToTagsWarningDialog(getShell());
-	        				                                                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:127: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        				commit = dialog.open() == CommitToTagsWarningDialog.OK;
-	        				                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:139: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-         		  commitPage.setComment(getProposedComment(modified));  
-         		                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:141: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                  commitPage.setComment(proposedComment);
-                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:142: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                commitPage.setSyncInfoSet(set);
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:37: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:39: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:55: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+                                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:42: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:44: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:68: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+                                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:49: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:66: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:68: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeAction.java:59: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeAction.java:126: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:65: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+				public void run() {
+				            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:93: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+				public void run() {
+				            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeOperation.java:165: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:119: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:174: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+    			public void run() {
+    			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeOperation.java:199: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:102: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:160: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:40: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:63: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.createChangeSet(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.team.core.diff.IDiff[])).
+	public ActiveChangeSet createChangeSet(ISynchronizePageConfiguration configuration, IDiff[] infos) {
+	                       ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:55: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.editChangeSet(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.team.internal.core.subscribers.ActiveChangeSet)).
+	public void editChangeSet(ISynchronizePageConfiguration configuration, ActiveChangeSet set) {
+	            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:67: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.supportsCheckedInChangeSets()).
+    public boolean supportsCheckedInChangeSets() {
+                   ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:74: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.supportsActiveChangeSets()).
+    public boolean supportsActiveChangeSets() {
+                   ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:81: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.createSyncInfoSetChangeSetCollector(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
+    public SyncInfoSetChangeSetCollector createSyncInfoSetChangeSetCollector(ISynchronizePageConfiguration configuration) {
                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:144: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        	    final SvnWizardDialog dialog = new SvnWizardDialog(getShell(), wizard);	                
-        	                                                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:145: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                wizard.setParentDialog(dialog);
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:88: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.getActionGroup()).
+    public SynchronizePageActionGroup getActionGroup() {
                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:146: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        		getShell().getDisplay().syncExec(new Runnable() {
-        		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:148: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        				commit = (dialog.open() == SvnWizardDialog.OK);
-        				                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:152: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        	        resourcesToCommit = commitPage.getSelectedResources();
-        	                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:153: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        	        keepLocks = commitPage.isKeepLocks();        	    	
-        	                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:155: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        	    commitComment = commitPage.getComment();
-        	                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:225: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				dialog.open();
-				           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:228: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return dialog.getReturnCode();
-		                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:278: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		if (!promptForConflictHandling(getShell(), syncSet)) return;
-		                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:294: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			switch (promptForConflicts(getShell(), set)) {
-			                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:327: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                CommitOperation commit = new CommitOperation(getPart(), resourcesToCommit, resourcesToBeAdded[0], resourcesToBeDeleted[0], resourcesToCommit, commitComment, keepLocks);
-                                                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:328: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                commit.run();
-                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:85: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	    IStructuredSelection selection = getStructuredSelection();
-	                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:134: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        	TreeItem[] items = ((TreeViewer)viewer).getTree().getItems();
-        	                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:136: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        		if (item.getData() instanceof ChangeSetDiffNode) {
-        		                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		getShell().getDisplay().syncExec(new Runnable() {
-		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:66: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				revertPage.setResourceRemoved(SVNProviderPlugin.getPlugin().getPluginPreferences().getBoolean(ISVNCoreConstants.PREF_IGNORE_HIDDEN_CHANGES));
-				                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:68: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				SvnWizardDialog dialog = new SvnWizardDialog(getShell(), wizard);
-				                                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:69: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				revert = (dialog.open() == SvnWizardDialog.OK);
-				                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				if (revert) resourcesToRevert = revertPage.getSelectedResources();
-				                                                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:76: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (revertPage != null && !revertPage.isResourceRemoved()) {
-			                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (revertPage != null && !revertPage.isResourceRemoved() && !includesExternals) {
-			                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:87: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				revertOperation = new RevertOperation(getPart(), selectedResources);
-				                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:91: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				revertOperation = new RevertOperation(getPart(), resourcesToRevert);
-				                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:93: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			revertOperation.run();
-			                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				IStructuredSelection selection = getStructuredSelection();
-				                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:53: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        ISynchronizeModelElement element = (ISynchronizeModelElement)getStructuredSelection().getFirstElement();
-                                                                                           ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:97: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.enableChangeSetsByDefault()).
+    public boolean enableChangeSetsByDefault() {
+                   ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:104: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.getActiveChangeSetManager()).
+    public ActiveChangeSetManager getActiveChangeSetManager() {
+                                  ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:111: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.enableActiveChangeSetsFor(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
+    public boolean enableActiveChangeSetsFor(ISynchronizePageConfiguration configuration) {
+                   ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:118: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.enableCheckedInChangeSetsFor(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
+    public boolean enableCheckedInChangeSetsFor(ISynchronizePageConfiguration configuration) {
+                   ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:37: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:39: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:59: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+                                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:36: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:56: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+                                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeOperation.java:41: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:61: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeOperation.java:89: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:56: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeOperation.java:85: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeAction.java:23: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeAction.java:27: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeOperation.java:106: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:108: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
+            public void propertyChange(PropertyChangeEvent event) {
+                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:60: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeOperation.java:122: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+					public void run() {
+					            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:36: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:84: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.CheckedInChangeSet.getAuthor()).
+	    public String getAuthor() {
+	                  ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:99: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.CheckedInChangeSet.getDate()).
+	    public Date getDate() {
+	                ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:114: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSet.getComment()).
+	    public String getComment() {
+	                  ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:220: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.SyncInfoSetChangeSetCollector.add(org.eclipse.team.core.synchronize.SyncInfo[])).
+	protected void add(final SyncInfo[] infos) {
+	               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:224: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.core.internal.jobs.InternalJob.run(org.eclipse.core.runtime.IProgressMonitor)).
+      protected IStatus run(IProgressMonitor monitor) {
+                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:246: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IWorkspaceRunnable.run(org.eclipse.core.runtime.IProgressMonitor)).
+          public void run(IProgressMonitor monitor) throws CoreException {
+                      ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:292: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSetManager.initializeSets()).
+	protected void initializeSets() {
+	               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:62: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+				public void run() {
+				            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:125: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+	        			public void run() {
+	        			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:147: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+        			public void run() {
+        			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeOperation.java:224: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:51: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:54: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:82: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:40: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+                                        ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeOperation.java:60: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
+			public void run() {
+			            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:32: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
+	protected FastSyncInfoFilter getSyncInfoFilter() {
+	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.core.synchronize.FastSyncInfoFilter.select(org.eclipse.team.core.synchronize.SyncInfo)).
+			public boolean select(SyncInfo info) {
+			               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:52: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
+	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+	                                    ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNPerspective.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		layout.addNewWizardShortcut("org.eclipse.ui.wizards.new.project"); //$NON-NLS-1$
 		                           ^
@@ -6513,5 +5508,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-2095 errors
-60 warnings
+1759 errors
+61 warnings
