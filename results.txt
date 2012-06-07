@@ -16,3 +16,4 @@ takes about 35 seconds.
 +20 minutes (1:20): 3954 marking some @UI Runnables and making an actions subpackage @UIPackage (lots of invalid isEnabled() overrides)
 +5 min (1:25): 3441 by making the .wizards subpackage @UIPackage
 +5 min (1:30): 2555 by making .wizards.dialogs and .dialogs @UIPackage
++5 min (1:35): 2095 by making .conflicts and .wizards.sharing @UIPackage
