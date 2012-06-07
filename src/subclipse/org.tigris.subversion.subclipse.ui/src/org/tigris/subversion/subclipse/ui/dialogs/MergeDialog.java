@@ -51,8 +51,9 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class MergeDialog extends SvnDialog {
+@UIType public class MergeDialog extends SvnDialog {
     
     private static final int REVISION_WIDTH_HINT = 40;
     

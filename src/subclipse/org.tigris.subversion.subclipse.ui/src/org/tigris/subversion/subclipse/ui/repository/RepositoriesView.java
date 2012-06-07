@@ -82,13 +82,14 @@ import org.tigris.subversion.subclipse.ui.wizards.NewLocationWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardNewRepositoryPage;
+import guitypes.checkers.quals.*;
 
 /**
  * RepositoriesView is a view on a set of known SVN repositories
  * which allows navigation of the structure of the repository and
  * the performing of SVN-specific operations on the repository contents.
  */
-public class RepositoriesView extends ViewPart implements ISelectionListener {
+@UIType public class RepositoriesView extends ViewPart implements ISelectionListener {
 	public static final String VIEW_ID = "org.tigris.subversion.subclipse.ui.repository.RepositoriesView"; //$NON-NLS-1$
 	
 	// The root

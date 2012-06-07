@@ -58,7 +58,8 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class MergeFileAssociationPreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
+import guitypes.checkers.quals.*;
+@UIType public class MergeFileAssociationPreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
 	private Table table;
 	private TableViewer viewer;	
 	private Button removeButton;

@@ -42,7 +42,8 @@ import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class ResolveTreeConflictWizardMainPage extends WizardPage {
+import guitypes.checkers.quals.*;
+@UIType public class ResolveTreeConflictWizardMainPage extends WizardPage {
 	private Button mergeFromRepositoryButton;
 	private Button compareButton;
 	
@@ -191,7 +192,7 @@ public class ResolveTreeConflictWizardMainPage extends WizardPage {
 			Button selectMergeTargetButton = new Button(mergeTargetGroup, SWT.PUSH);
 			selectMergeTargetButton.setText(Messages.ResolveTreeConflictWizardMainPage_browse);
 			selectMergeTargetButton.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent evt) {
+				@UIEffect public void widgetSelected(SelectionEvent evt) {
 					String title;
 					if (mergeFromRepositoryButton == null && compareButton != null) title = Messages.ResolveTreeConflictWizardMainPage_selectCompareTarget;
 					else if (compareButton == null && mergeFromRepositoryButton != null) title = Messages.ResolveTreeConflictWizardMainPage_selectMergeTarget;
@@ -314,7 +315,7 @@ public class ResolveTreeConflictWizardMainPage extends WizardPage {
 			Button selectMergeTargetButton = new Button(mergeTargetGroup, SWT.PUSH);
 			selectMergeTargetButton.setText(Messages.ResolveTreeConflictWizardMainPage_browse);
 			selectMergeTargetButton.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent evt) {
+				@UIEffect public void widgetSelected(SelectionEvent evt) {
 					String title;
 					if (mergeFromRepositoryButton == null && compareButton != null) title = Messages.ResolveTreeConflictWizardMainPage_selectCompareTarget;
 					else if (compareButton == null && mergeFromRepositoryButton != null) title = Messages.ResolveTreeConflictWizardMainPage_selectMergeTarget;
@@ -374,7 +375,7 @@ public class ResolveTreeConflictWizardMainPage extends WizardPage {
 				deleteButton1.setSelection(true);
 				if (wizard.isAdded()) markResolvedEnabled = false;
 				SelectionListener choiceListener = new SelectionAdapter() {
-					public void widgetSelected(SelectionEvent evt) {
+					@UIEffect public void widgetSelected(SelectionEvent evt) {
 						if (compareButton.getSelection() || (mergeFromRepositoryButton != null && mergeFromRepositoryButton.getSelection()))
 							setPageComplete((mergeTargetText != null && mergeTargetText.getText().length() > 0) || (mergeTargetCombo != null && mergeTargetCombo.getText().length() > 0));
 						else
@@ -425,7 +426,7 @@ public class ResolveTreeConflictWizardMainPage extends WizardPage {
 					}
 				}
 				SelectionListener choiceListener = new SelectionAdapter() {
-					public void widgetSelected(SelectionEvent evt) {
+					@UIEffect public void widgetSelected(SelectionEvent evt) {
 						if (!compareButton.getSelection() && !mergeFromRepositoryButton.getSelection()) setPageComplete(true);
 						else setPageComplete((mergeTargetText != null && mergeTargetText.getText().length() > 0) || (mergeTargetCombo != null && mergeTargetCombo.getText().length() > 0));
 						if (compareButton.getSelection()) {
@@ -482,7 +483,7 @@ public class ResolveTreeConflictWizardMainPage extends WizardPage {
 				compareLabel.setText(Messages.ResolveTreeConflictWizardMainPage_compareEditorInformation);
 				compareLabel.setVisible(false);
 				compareButton.addSelectionListener(new SelectionAdapter() {
-					public void widgetSelected(SelectionEvent evt) {
+					@UIEffect public void widgetSelected(SelectionEvent evt) {
 						compareLabel.setVisible(compareButton.getSelection());
 						if (option1Button != null) option1Button.setEnabled(!compareButton.getSelection());
 						if (option1Group != null) option1Group.setEnabled(!compareButton.getSelection());
@@ -572,7 +573,7 @@ public class ResolveTreeConflictWizardMainPage extends WizardPage {
 			}
 
 			SelectionListener optionListener = new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent evt) {
+				@UIEffect public void widgetSelected(SelectionEvent evt) {
 					if (option1Button != null && option1Button.getSelection()) {
 						option1Group.setEnabled(true);
 						if (option2Group != null) option2Group.setEnabled(false);

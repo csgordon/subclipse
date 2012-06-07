@@ -43,6 +43,7 @@ import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
+import guitypes.checkers.quals.*;
 /**
  * Dialog for searching the history of a resource in the repository.
  * The dialog is available from the history view. A search with this 
@@ -50,7 +51,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
  * history view. Only history entries matching the dialog's fields 
  * will be displayed in the history view.
  */
-public class HistorySearchDialog extends SvnDialog {
+@UIType public class HistorySearchDialog extends SvnDialog {
 
 	private ISVNRemoteResource remoteResource;
 	

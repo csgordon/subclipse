@@ -51,13 +51,14 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.internal.SWTUtils;
 
+import guitypes.checkers.quals.*;
 /**
  * SVN Preference Page
  * 
  * Allows the configuration of SVN specific options.
  * 
  */
-public class SVNPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
+@UIType public class SVNPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
 
     private Button showCompareRevisionInDialog;
     private Button fetchChangePathOnDemand;

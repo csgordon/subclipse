@@ -162,12 +162,13 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNRevisionRange;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
+import guitypes.checkers.quals.*;
 /**
  * <code>IHistoryPage</code> for generic history view 
  * 
  * @author Eugene Kuleshov (migration from legacy history view)
  */
-public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeListener, KeyListener {
+@UIType public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeListener, KeyListener {
 
   private SashForm svnHistoryPageControl;
   private SashForm innerSashForm;
@@ -314,7 +315,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
     lastEntry = null;
     revisionStart = SVNRevision.HEAD;
     // show a Busy Cursor during refresh
-    BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new Runnable() {
+    BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new @UI Runnable() {
       public void run() {
         if(resource != null) {
           try {
@@ -1493,7 +1494,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
 	return createTagFromRevisionChangedPathAction;
   }  
   
-  class AnnotationAction extends ShowAnnotationAction {
+  @UIType class AnnotationAction extends ShowAnnotationAction {
 	  public IStructuredSelection fSelection;
 	  
 	  public AnnotationAction() {
@@ -1524,7 +1525,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
 	  }			  
   }  
   
-  class HistoryAction extends ShowHistoryAction {
+  @UIType class HistoryAction extends ShowHistoryAction {
 	  public IStructuredSelection fSelection;
 	  
 	  public HistoryAction() {
@@ -1566,7 +1567,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
 	  }			  
   }
   
-  class ExportAction extends ExportRemoteFolderAction {
+  @UIType class ExportAction extends ExportRemoteFolderAction {
 	  public IStructuredSelection fSelection;
 	  
 	  public ExportAction() {
@@ -1598,7 +1599,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
 	  }			  
   }  
   
-  class CompareAction extends ShowDifferencesAsUnifiedDiffAction {
+  @UIType class CompareAction extends ShowDifferencesAsUnifiedDiffAction {
 	  public IStructuredSelection fSelection;
 	  
 	  public CompareAction() {
@@ -2330,7 +2331,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
   }
 
   
-  private final class GetNextAction extends Action implements IPropertyChangeListener {
+  @UIType private final class GetNextAction extends Action implements IPropertyChangeListener {
     GetNextAction() {
       super(Policy.bind("HistoryView.getNext"), SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_GET_NEXT)); //$NON-NLS-1$
       updateFromProperties();
@@ -2371,7 +2372,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
   }
 
   
-  private class FetchLogEntriesJob extends AbstractFetchJob {
+  @UIType private class FetchLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchLogEntriesJob() {
@@ -2454,7 +2455,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
     }
   }
 
-  private class FetchNextLogEntriesJob extends AbstractFetchJob {
+  @UIType private class FetchNextLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchNextLogEntriesJob() {
@@ -2758,7 +2759,7 @@ public class SVNHistoryPage extends HistoryPage implements IResourceStateChangeL
   }
 
 
-  public static class ToggleAffectedPathsOptionAction extends Action {
+  @UIType public static class ToggleAffectedPathsOptionAction extends Action {
     private final SVNHistoryPage page;
     private final String preferenceName;
     private final int value;

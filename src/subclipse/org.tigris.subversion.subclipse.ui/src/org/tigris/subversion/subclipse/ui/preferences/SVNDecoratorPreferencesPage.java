@@ -81,12 +81,13 @@ import org.tigris.subversion.subclipse.ui.decorator.SVNDecoratorConfiguration;
 import org.tigris.subversion.subclipse.ui.decorator.SVNLightweightDecorator;
 import org.tigris.subversion.subclipse.ui.decorator.SVNLightweightDecorator.CachedImageDescriptor;
 import org.tigris.subversion.subclipse.ui.internal.SWTUtils;
+import guitypes.checkers.quals.*;
 
 /**
  * The preference page for decoration
  * 
  */
-public class SVNDecoratorPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
+@UIType public class SVNDecoratorPreferencesPage extends PreferencePage implements IWorkbenchPreferencePage {
 
 	private Button imageShowDirty;
 	private Button imageShowHasRemote;

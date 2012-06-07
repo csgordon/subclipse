@@ -31,8 +31,9 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNLogMessage;
 import org.tigris.subversion.svnclientadapter.ISVNLogMessageCallback;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
+import guitypes.checkers.quals.*;
 
-public class RevisionGraphEditor extends GraphicalEditor {
+@UIType public class RevisionGraphEditor extends GraphicalEditor {
 
 	private OverviewOutlinePage overviewOutlinePage;
 

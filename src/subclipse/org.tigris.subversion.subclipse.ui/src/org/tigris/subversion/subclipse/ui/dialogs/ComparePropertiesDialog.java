@@ -35,7 +35,8 @@ import org.tigris.subversion.subclipse.ui.compare.PropertyCompareRemoteResourceN
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class ComparePropertiesDialog extends SvnDialog {
+import guitypes.checkers.quals.*;
+@UIType public class ComparePropertiesDialog extends SvnDialog {
 	private IPropertyProvider left;
 	private IPropertyProvider right;
 	
