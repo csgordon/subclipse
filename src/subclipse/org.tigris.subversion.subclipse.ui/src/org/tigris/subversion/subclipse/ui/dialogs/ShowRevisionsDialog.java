@@ -59,7 +59,8 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class ShowRevisionsDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class ShowRevisionsDialog extends TrayDialog {
 	private ILogEntry logEntry;
     private IResource resource;
     private ISVNRemoteResource remoteResource;

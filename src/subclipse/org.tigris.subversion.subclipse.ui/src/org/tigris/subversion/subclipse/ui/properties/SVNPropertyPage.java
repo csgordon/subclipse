@@ -43,8 +43,9 @@ import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.SVNConflictVersion;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class SVNPropertyPage extends PropertyPage {
+@UIType public class SVNPropertyPage extends PropertyPage {
 	private Text urlValue;
 	private Text revisionValue;
 	private Text repositoryRootValue;

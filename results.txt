@@ -10,3 +10,4 @@ Initial run: 7931 errors
 Note: Running the checker over the whole source base (every line other than the extra svnkit stuff)
 takes about 35 seconds.
 +5 minutes (0:15): 6460 by more UIType annos, and marking a few anonymous inner class methods @UIEffect
++15 minutes (0:30): 5464 by more of the same

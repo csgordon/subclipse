@@ -33,7 +33,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 
-public class SvnWizardSetPropertyPage extends SvnWizardDialogPage {
+import guitypes.checkers.quals.*;
+@UIType public class SvnWizardSetPropertyPage extends SvnWizardDialogPage {
 	private ISVNProperty property;   // null when we set a new property
 	private ISVNLocalResource svnResource;	
 	private Combo propertyNameText;

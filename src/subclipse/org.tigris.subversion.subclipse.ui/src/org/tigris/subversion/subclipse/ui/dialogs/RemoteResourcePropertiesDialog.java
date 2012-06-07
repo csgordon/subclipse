@@ -49,7 +49,8 @@ import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-public class RemoteResourcePropertiesDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class RemoteResourcePropertiesDialog extends TrayDialog {
 	private ISVNRemoteResource remoteResource;
 	private ISVNInfo svnInfo;
 	private ISVNProperty[] properties;

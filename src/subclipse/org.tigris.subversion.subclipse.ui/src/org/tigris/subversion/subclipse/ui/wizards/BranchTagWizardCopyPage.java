@@ -47,7 +47,8 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class BranchTagWizardCopyPage extends SVNWizardPage {
+import guitypes.checkers.quals.*;
+@UIType public class BranchTagWizardCopyPage extends SVNWizardPage {
 	
 	private static final int REVISION_WIDTH_HINT = 40;	
 	
