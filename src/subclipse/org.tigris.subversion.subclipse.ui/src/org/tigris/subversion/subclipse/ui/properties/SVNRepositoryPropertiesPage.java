@@ -38,11 +38,12 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.decorator.SVNLightweightDecorator;
 import org.tigris.subversion.subclipse.ui.dialogs.ChooseRootUrlDialog;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 /**
  * Property page to modify settings for a given repository
  */
-public class SVNRepositoryPropertiesPage extends PropertyPage {
+@UIType public class SVNRepositoryPropertiesPage extends PropertyPage {
     private ISVNRepositoryLocation location;
     private static final String FAKE_PASSWORD = "*********"; //$NON-NLS-1$
     private Text loginText;

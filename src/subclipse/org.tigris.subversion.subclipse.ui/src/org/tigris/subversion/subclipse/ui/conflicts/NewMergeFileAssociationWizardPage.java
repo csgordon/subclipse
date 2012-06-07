@@ -38,7 +38,8 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class NewMergeFileAssociationWizardPage extends WizardPage {
+import guitypes.checkers.quals.*;
+@UIType public class NewMergeFileAssociationWizardPage extends WizardPage {
 	private MergeFileAssociation[] mergeFileAssociations;
 	protected Text fileTypeText;
     private Text defaultProgramLocationText;

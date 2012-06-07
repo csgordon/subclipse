@@ -55,7 +55,8 @@ import org.tigris.subversion.subclipse.ui.actions.WorkspaceAction;
  * 
  * @author cedric chabanois (cchab at tigris.org)
  */
-public class DiffMergePreferencePage extends PreferencePage implements
+import guitypes.checkers.quals.*;
+@UIType public class DiffMergePreferencePage extends PreferencePage implements
         IWorkbenchPreferencePage {
 
     private Text mergeProgramLocationText;

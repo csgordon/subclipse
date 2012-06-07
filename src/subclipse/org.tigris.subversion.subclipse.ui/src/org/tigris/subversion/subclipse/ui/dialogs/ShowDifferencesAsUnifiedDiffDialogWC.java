@@ -51,8 +51,9 @@ import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class ShowDifferencesAsUnifiedDiffDialogWC extends SvnDialog {
+@UIType public class ShowDifferencesAsUnifiedDiffDialogWC extends SvnDialog {
 	private IResource resource;
 	private IWorkbenchPart targetPart;
 	private Button compareButton;

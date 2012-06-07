@@ -37,7 +37,8 @@ import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class SSHPromptDialog extends TrayDialog {
+import guitypes.checkers.quals.*;
+@UIType public class SSHPromptDialog extends TrayDialog {
     private String realm;
     private String username;
     private String password;

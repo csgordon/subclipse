@@ -37,7 +37,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.dialogs.HistoryDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-public class CheckoutWizardCheckoutAsWithProjectFilePage extends WizardPage {
+import guitypes.checkers.quals.*;
+@UIType public class CheckoutWizardCheckoutAsWithProjectFilePage extends WizardPage {
 	private Label textLabel;
 	private Button wizardButton;
 	private Button projectButton;

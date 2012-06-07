@@ -28,7 +28,8 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.HistoryDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-public class SvnWizardAnnotatePage extends SvnWizardDialogPage {
+import guitypes.checkers.quals.*;
+@UIType public class SvnWizardAnnotatePage extends SvnWizardDialogPage {
 	private ISVNRemoteFile svnResource;
 	
 	private Button includeMergedRevisionsButton;

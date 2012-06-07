@@ -187,7 +187,7 @@ import guitypes.checkers.quals.*;
 		browseButton = new Button(tagGroup, SWT.PUSH);
 		browseButton.setText(Policy.bind("ConfigureTagsDialog.browse")); //$NON-NLS-1$
 		browseButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				ChooseUrlDialog dialog = new ChooseUrlDialog(getShell(), svnResources[0].getResource());
 				dialog.setIncludeBranchesAndTags(false);
 				dialog.setFoldersOnly(true);
@@ -221,7 +221,7 @@ import guitypes.checkers.quals.*;
 		setTagGroupEnablement(false);
 		
 		treeViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-			public void selectionChanged(SelectionChangedEvent event) {
+			@UIEffect public void selectionChanged(SelectionChangedEvent event) {
 				if (tagUpdatePending) {
 					if (MessageDialog.openQuestion(getShell(), Policy.bind("ConfigureTagsDialog.title"), //$NON-NLS-1$
 							Policy.bind("ConfigureTagsDialog.pendingUpdate"))) { //$NON-NLS-1$
@@ -267,7 +267,7 @@ import guitypes.checkers.quals.*;
 		});
 		
 		ModifyListener modifyListener = new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
+			@UIEffect public void modifyText(ModifyEvent e) {
 				applyButton.setEnabled(canUpdate());
 				if (applyButton.isEnabled()) tagUpdatePending = true;
 				else tagUpdatePending = false;

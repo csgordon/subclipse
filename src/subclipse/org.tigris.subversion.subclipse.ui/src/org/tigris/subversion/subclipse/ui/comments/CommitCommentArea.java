@@ -90,11 +90,12 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.DialogArea;
 import org.tigris.subversion.subclipse.ui.settings.CommentProperties;
+import guitypes.checkers.quals.*;
 
 /**
  * This area provides the widgets for providing the SVN commit comment
  */
-public class CommitCommentArea extends DialogArea {
+@UIType public class CommitCommentArea extends DialogArea {
 	private boolean showLabel = true;;
     
     public static final String SPELLING_ERROR = "spelling.error"; //$NON-NLS-1$
@@ -402,7 +403,7 @@ public class CommitCommentArea extends DialogArea {
     }
 
 
-    private static class ComboBox extends Observable implements SelectionListener, FocusListener {
+    @UIType private static class ComboBox extends Observable implements SelectionListener, FocusListener {
         
         private final String fMessage;
         private final String [] fComments;

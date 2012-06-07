@@ -60,7 +60,8 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.ResourceWithStatusUtil;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
 
-public class ResourceSelectionTree extends Composite {
+import guitypes.checkers.quals.*;
+@UIType public class ResourceSelectionTree extends Composite {
 	private Tree tree;
 	private int mode;
 	private IResource[] resources;
