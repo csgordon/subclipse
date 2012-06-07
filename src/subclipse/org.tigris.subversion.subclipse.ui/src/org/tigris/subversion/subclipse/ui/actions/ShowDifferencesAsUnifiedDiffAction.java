@@ -28,7 +28,8 @@ import org.tigris.subversion.subclipse.ui.dialogs.DifferencesDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class ShowDifferencesAsUnifiedDiffAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class ShowDifferencesAsUnifiedDiffAction extends WorkbenchWindowAction {
 	private boolean usePegRevision;
 	private SVNRevision pegRevision1;
 	private SVNRevision pegRevision2;

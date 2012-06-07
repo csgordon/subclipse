@@ -801,13 +801,13 @@ import guitypes.checkers.quals.*;
     }
     
     changePathsViewer.addSelectionChangedListener(new ISelectionChangedListener() {
-      public void selectionChanged(SelectionChangedEvent event) {
+      @UIEffect public void selectionChanged(SelectionChangedEvent event) {
         SVNHistoryPage.this.selection = changePathsViewer.getSelection();
       }
     });
 
     changePathsViewer.getControl().addListener(SWT.DefaultSelection, new Listener() {
-      public void handleEvent(Event e) {
+      @UIEffect public void handleEvent(Event e) {
         getOpenChangedPathAction().run();
       }
     });
@@ -816,7 +816,7 @@ import guitypes.checkers.quals.*;
 	MenuManager menuMgr = new MenuManager();
 	Menu menu = menuMgr.createContextMenu(changePathsViewer.getControl());
 	menuMgr.addMenuListener(new IMenuListener() {
-	  public void menuAboutToShow(IMenuManager menuMgr) {
+	  @UIEffect public void menuAboutToShow(IMenuManager menuMgr) {
 	    fillChangePathsMenu(menuMgr);
 	  }
 	});
@@ -889,7 +889,7 @@ import guitypes.checkers.quals.*;
                 return new Region(linkRange[0], linkRange[1]);
               }
               
-              public void open() {
+              @UIEffect public void open() {
                 try {
                   URL url = new URL(linkUrl);
                   PlatformUI.getWorkbench().getBrowserSupport().createBrowser("Subclipse").openURL(url); //$NON-NLS-1$
@@ -947,7 +947,7 @@ import guitypes.checkers.quals.*;
       MenuManager menuMgr = new MenuManager();
       menuMgr.setRemoveAllWhenShown(true);
       menuMgr.addMenuListener(new IMenuListener() {
-        public void menuAboutToShow(IMenuManager menuMgr) {
+        @UIEffect public void menuAboutToShow(IMenuManager menuMgr) {
           menuMgr.add(copyAction);
           menuMgr.add(selectAllAction);
         }
@@ -1133,7 +1133,7 @@ import guitypes.checkers.quals.*;
        * final SVNRevision.Number revisionId =
        * remoteResource.getLastChangedRevision();
        */
-      getSite().getShell().getDisplay().asyncExec(new Runnable() {
+      getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
         public void run() {
           if(currentLogEntryChangePath != null && changePathsViewer != null
               && !changePathsViewer.getControl().isDisposed()) {
@@ -1202,7 +1202,7 @@ import guitypes.checkers.quals.*;
   private IAction getOpenRemoteFileAction() {
     if(openAction == null) {
       openAction = new Action() {
-        public void run() {
+        @UIEffect public void run() {
           OpenRemoteFileAction delegate = new OpenRemoteFileAction();
           delegate.init(this);
           delegate.selectionChanged(this, tableHistoryViewer.getSelection());
@@ -1235,7 +1235,7 @@ import guitypes.checkers.quals.*;
   private IAction getOpenChangedPathAction() {
     if(openChangedPathAction == null) {
       openChangedPathAction = new Action("Open") { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           if (!isFile()) { 
         	  MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("SVNHistoryPage.7"), Policy.bind("SVNHistoryPage.8")); //$NON-NLS-1$ //$NON-NLS-2$
           	  return;
@@ -1262,7 +1262,7 @@ import guitypes.checkers.quals.*;
   private IAction getShowHistoryAction() {
     if(showHistoryAction == null) {
       showHistoryAction = new Action("Show History", SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_MENU_SHOWHISTORY)) { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           HistoryAction delegate = new HistoryAction();
           delegate.selectionChanged(this, changePathsViewer.getSelection());
           delegate.run(this);
@@ -1706,7 +1706,7 @@ import guitypes.checkers.quals.*;
                         .run(monitor);
                     historyTableProvider.setRemoteResource(remoteFile);
         			historyTableProvider.setProjectProperties(ProjectProperties.getProjectProperties(resource));
-                    Display.getDefault().asyncExec(new Runnable() {
+                    Display.getDefault().asyncExec(new @UI Runnable() {
                       public void run() {
                         tableHistoryViewer.refresh();
                       }
@@ -1730,7 +1730,7 @@ import guitypes.checkers.quals.*;
   private IAction getSwitchAction() {
 	  if (switchAction == null) {
 		  switchAction = new Action() {
-			  public void run() {
+			  @UIEffect public void run() {
 				  if(selection instanceof IStructuredSelection) {
 					  IStructuredSelection ss = (IStructuredSelection) selection;
 					  if(ss.size() == 1) {
@@ -1779,7 +1779,7 @@ import guitypes.checkers.quals.*;
   private IAction getCreateTagFromRevisionAction() {
     if(createTagFromRevisionAction == null) {
       createTagFromRevisionAction = new Action() {
-        public void run() {
+        @UIEffect public void run() {
           ISelection selection = getSelection();
           if( !(selection instanceof IStructuredSelection))
             return;
@@ -1851,7 +1851,7 @@ import guitypes.checkers.quals.*;
     // set Action (context menu)
     if(setCommitPropertiesAction == null) {
       setCommitPropertiesAction = new Action(Policy.bind("HistoryView.setCommitProperties")) { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           try {
             final ISelection selection = getSelection();
             if( !(selection instanceof IStructuredSelection))
@@ -1906,7 +1906,7 @@ import guitypes.checkers.quals.*;
                           if (command.isLogMessageChanged()) logEntry.setComment(commitComment);
                           if (command.isAuthorChanged()) logEntry.setAuthor(author);
                         }
-                        getSite().getShell().getDisplay().asyncExec(new Runnable() {
+                        getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
                           public void run() {
                             tableHistoryViewer.refresh();
                             tableHistoryViewer.setSelection(selection, true);
@@ -1939,7 +1939,7 @@ import guitypes.checkers.quals.*;
   private IAction getShowRevisionPropertiesAction() {
   if(showRevisionPropertiesAction == null) {
     showRevisionPropertiesAction = new Action(Policy.bind("HistoryView.showRevisionProperties")) { //$NON-NLS-1$
-      public void run() {
+      @UIEffect public void run() {
         try {
           final ISelection selection = getSelection();
           if( !(selection instanceof IStructuredSelection))
@@ -1977,7 +1977,7 @@ import guitypes.checkers.quals.*;
   private IAction getShowRevisionsAction() {
 	  if (showRevisionsAction == null) {
 		  showRevisionsAction = new Action(Policy.bind("HistoryView.showMergedRevisions")) { //$NON-NLS-1$
-			  public void run() {
+			  @UIEffect public void run() {
 		          ISelection selection = getSelection();
 		          if( !(selection instanceof IStructuredSelection))
 		            return;
@@ -2048,7 +2048,7 @@ import guitypes.checkers.quals.*;
     revisionRanges = getRevisionRanges();
     if(revertChangesAction == null) {
       revertChangesAction = new Action() {
-        public void run() {
+        @UIEffect public void run() {
           ISelection selection = getSelection();
           if( !(selection instanceof IStructuredSelection))
             return;
@@ -2127,7 +2127,7 @@ import guitypes.checkers.quals.*;
       SVNUIPlugin plugin = SVNUIPlugin.getPlugin();
       refreshAction = new Action(
           Policy.bind("HistoryView.refreshLabel"), plugin.getImageDescriptor(ISVNUIConstants.IMG_REFRESH_ENABLED)) { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           refresh();
         }
       };
@@ -2144,7 +2144,7 @@ import guitypes.checkers.quals.*;
 	      SVNUIPlugin plugin = SVNUIPlugin.getPlugin();
 		  searchAction = new Action(
 				  Policy.bind("HistoryView.search"), plugin.getImageDescriptor(ISVNUIConstants.IMG_FILTER_HISTORY)) { //$NON-NLS-1$
-			  public void run() {
+			  @UIEffect public void run() {
 				  if (historySearchDialog == null) {
 					  historySearchDialog = new HistorySearchDialog(getSite().getShell(), remoteResource);
 				  }
@@ -2167,7 +2167,7 @@ import guitypes.checkers.quals.*;
 	      SVNUIPlugin plugin = SVNUIPlugin.getPlugin();
 		  clearSearchAction = new Action(
 				  Policy.bind("HistoryView.clearSearch"), plugin.getImageDescriptor(ISVNUIConstants.IMG_CLEAR)) { //$NON-NLS-1$
-			  public void run() {
+			  @UIEffect public void run() {
 				  BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new @UI Runnable() {
 					  public void run() {
 						  ViewerFilter[] filters = tableHistoryViewer.getFilters();
@@ -2199,7 +2199,7 @@ import guitypes.checkers.quals.*;
       SVNUIPlugin plugin = SVNUIPlugin.getPlugin();
       getAllAction = new Action(
           Policy.bind("HistoryView.getAll"), plugin.getImageDescriptor(ISVNUIConstants.IMG_GET_ALL)) { //$NON-NLS-1$
-        public void run() {
+        @UIEffect public void run() {
           final ISVNRemoteResource remoteResource = historyTableProvider.getRemoteResource();
           if(fetchAllLogEntriesJob == null) {
             fetchAllLogEntriesJob = new FetchAllLogEntriesJob();
@@ -2236,7 +2236,7 @@ import guitypes.checkers.quals.*;
    */
   private Action getContextMenuAction(String title, final IWorkspaceRunnable action) {
     return new Action(title) {
-      public void run() {
+      @UIEffect public void run() {
         try {
           if(resource == null)
             return;
@@ -2279,7 +2279,7 @@ import guitypes.checkers.quals.*;
 	          final MessageDialog dialog = new MessageDialog(getSite().getShell(), title, null, msg,
 	              MessageDialog.QUESTION, new String[] { IDialogConstants.YES_LABEL, IDialogConstants.CANCEL_LABEL}, 0);
 	          final int[] result = new int[ 1];
-	          getSite().getShell().getDisplay().syncExec(new Runnable() {
+	          getSite().getShell().getDisplay().syncExec(new @UI Runnable() {
 	            public void run() {
 	              result[ 0] = dialog.open();
 	            }
@@ -2428,7 +2428,7 @@ import guitypes.checkers.quals.*;
             getNextAction.setEnabled(false);
           }
           final SVNRevision.Number revisionId = remoteResource.getLastChangedRevision();
-          getSite().getShell().getDisplay().asyncExec(new Runnable() {
+          getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
             public void run() {
               if(entries != null && tableHistoryViewer != null && !tableHistoryViewer.getTable().isDisposed()) {
                 // once we got the entries, we refresh the table
@@ -2499,7 +2499,7 @@ import guitypes.checkers.quals.*;
             entryArray.add(fetchedEntries[ i]);
           entries = new ILogEntry[ entryArray.size()];
           entryArray.toArray(entries);
-          getSite().getShell().getDisplay().asyncExec(new Runnable() {
+          getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
             public void run() {
               if(entries != null && tableHistoryViewer != null && !tableHistoryViewer.getTable().isDisposed()) {
                 // once we got the entries, we refresh the table
@@ -2589,7 +2589,7 @@ import guitypes.checkers.quals.*;
           entries = getLogEntries(monitor, remoteResource, pegRevision, SVNRevision.HEAD, revisionEnd, stopOnCopy, limit,
                   tagManager, includeMergedRevisions);
           final SVNRevision.Number revisionId = remoteResource.getLastChangedRevision();
-          getSite().getShell().getDisplay().asyncExec(new Runnable() {
+          getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
             public void run() {
               if(entries != null && tableHistoryViewer != null && !tableHistoryViewer.getTable().isDisposed()) {
                 // once we got the entries, we refresh the table
@@ -2699,7 +2699,7 @@ import guitypes.checkers.quals.*;
 				  historySearchDialog.getStartRevision(),
 				  historySearchDialog.getEndRevision());
 		  
-		  getSite().getShell().getDisplay().asyncExec(new Runnable() {
+		  getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
 				public void run() {
 				    BusyIndicator.showWhile(tableHistoryViewer.getTable().getDisplay(), new @UI Runnable() {
 				        public void run() {
@@ -2718,7 +2718,7 @@ import guitypes.checkers.quals.*;
 	  }
 	  
 	  private void setEmptyViewerFilter() {
-		  getSite().getShell().getDisplay().asyncExec(new Runnable() {
+		  getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
 				public void run() {
 					tableHistoryViewer.addFilter(new EmptySearchViewerFilter());
 				}
@@ -2726,7 +2726,7 @@ import guitypes.checkers.quals.*;
 	  }
 
 	  private void removeEmptyViewerFilter() {
-		  getSite().getShell().getDisplay().asyncExec(new Runnable() {
+		  getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
 				public void run() {
 					ViewerFilter[] filters = tableHistoryViewer.getFilters();
 					for (int i=0; i<filters.length; i++) {
@@ -2807,7 +2807,7 @@ import guitypes.checkers.quals.*;
 	 * The user has to a manual refresh to get the new log entries. 
 	 */
   private void resourceChanged() {
-      getSite().getShell().getDisplay().asyncExec(new Runnable() {
+      getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
       	public void run() {
       		// Preserve the original starting revision so that when Next is pressed
       		// the correct log entries will be fetched.

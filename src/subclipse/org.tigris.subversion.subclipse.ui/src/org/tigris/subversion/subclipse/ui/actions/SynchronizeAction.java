@@ -26,7 +26,8 @@ import org.tigris.subversion.subclipse.ui.subscriber.SVNSynchronizeParticipant;
  * Action to synchronize the selected resources. This results
  * in a file-system participant being added to the synchronize view.
  */
-public class SynchronizeAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class SynchronizeAction extends WorkbenchWindowAction {
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
