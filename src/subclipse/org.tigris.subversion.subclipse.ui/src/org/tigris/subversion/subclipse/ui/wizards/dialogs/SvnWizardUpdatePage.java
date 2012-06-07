@@ -37,7 +37,8 @@ import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-public class SvnWizardUpdatePage extends SvnWizardDialogPage {
+import guitypes.checkers.quals.*;
+@UIType public class SvnWizardUpdatePage extends SvnWizardDialogPage {
     private static final int REVISION_WIDTH_HINT = 40;
     
     private IResource[] resources;

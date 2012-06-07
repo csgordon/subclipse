@@ -61,8 +61,9 @@ import org.tigris.subversion.subclipse.ui.repository.model.SVNModelElement;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class SvnWizardConfigureTagsPage extends SvnWizardDialogPage {
+@UIType public class SvnWizardConfigureTagsPage extends SvnWizardDialogPage {
 	private ISVNLocalResource[] svnResources;
 	private ISVNClientAdapter svnClient;
 	private Branches branches;

@@ -43,8 +43,9 @@ import org.tigris.subversion.subclipse.ui.actions.CompareRemoteResourcesAction;
 import org.tigris.subversion.subclipse.ui.operations.ShowDifferencesAsUnifiedDiffOperation;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class DifferencesDialog extends SvnDialog {
+@UIType public class DifferencesDialog extends SvnDialog {
 	private ISVNResource[] remoteResources;
 	private SVNRevision[] pegRevisions;
 	private String title;

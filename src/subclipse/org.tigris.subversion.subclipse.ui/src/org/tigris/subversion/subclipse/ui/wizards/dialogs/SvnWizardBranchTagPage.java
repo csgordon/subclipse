@@ -43,8 +43,9 @@ import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class SvnWizardBranchTagPage extends SvnWizardDialogPage {
+@UIType public class SvnWizardBranchTagPage extends SvnWizardDialogPage {
 
     private static final int REVISION_WIDTH_HINT = 40;	
 	

@@ -4,5 +4,9 @@ svn co http://subclipse.tigris.org/svn/subclipse/tags/subclipse/1.8.9/subclipse 
 Thread safety of Eclipse Draw2d and GEF: http://wiki.eclipse.org/GEF_Troubleshooting_Guide#Background_Threads_and_Updates
 
 83481 lines of Java by sloccount (including the double-count of the svnkit stuff)
-Initial run: 7813 errors (before annotating some more packages as UIPackages... need to re-run on
-initial text)
+Initial run: 7931 errors 
+
++10 minutes (0:10): 6978 mostly by annotating the top-level classes in the most 'errorful' files @UIType
+Note: Running the checker over the whole source base (every line other than the extra svnkit stuff)
+takes about 35 seconds.
++5 minutes (0:15): 6460 by more UIType annos, and marking a few anonymous inner class methods @UIEffect

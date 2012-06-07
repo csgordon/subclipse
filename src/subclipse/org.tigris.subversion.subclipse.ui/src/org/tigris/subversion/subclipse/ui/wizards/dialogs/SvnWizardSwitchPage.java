@@ -56,8 +56,8 @@ import org.tigris.subversion.subclipse.ui.util.UrlCombo;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
-
-public class SvnWizardSwitchPage extends SvnWizardDialogPage {
+import guitypes.checkers.quals.*;
+@UIType public class SvnWizardSwitchPage extends SvnWizardDialogPage {
     private static final int REVISION_WIDTH_HINT = 40;
     
     private IResource[] resources;

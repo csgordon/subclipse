@@ -43,8 +43,9 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.operations.ShowDifferencesAsUnifiedDiffOperation;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
-public class ShowDifferencesAsUnifiedDiffDialog extends TrayDialog {
+@UIType public class ShowDifferencesAsUnifiedDiffDialog extends TrayDialog {
 //	private ISVNRemoteResource[] remoteResources;
 	private ISVNResource[] remoteResources;
 	private IWorkbenchPart targetPart;
