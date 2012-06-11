@@ -55,13 +55,14 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.history.SVNHistoryPage;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 /**
  * A view showing the results of the SVN Annotate Command.  A linked
  * combination of a View of annotations, a source editor and the
  * Resource History View
  */
-public class AnnotateView extends ViewPart implements ISelectionChangedListener {
+@UIType public class AnnotateView extends ViewPart implements ISelectionChangedListener {
 
 	ITextEditor editor;
 	IHistoryView historyView;
