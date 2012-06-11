@@ -308,7 +308,7 @@ import guitypes.checkers.quals.*;
 	}
 
 	private void getLogEntries() {
-	   BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+	   BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 	        public void run() {
 	            try {
 		            if (remoteResource == null) {
@@ -349,7 +349,7 @@ import guitypes.checkers.quals.*;
 	}
 	
 	private void getNextLogEntries() {
-		   BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		   BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 		        public void run() {
 		            try {
 			            if (remoteResource == null) {
@@ -397,7 +397,7 @@ import guitypes.checkers.quals.*;
 	}
 	
 	private void getAllLogEntries() {
-		   BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		   BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 		        public void run() {
 		            try {
 			            if (remoteResource == null) {

@@ -278,7 +278,7 @@ import guitypes.checkers.quals.*;
 	
     protected void okPressed() {
     	success = true;
-		BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 			public void run() {
 				ISVNRepositoryLocation repository = null;
 				ISVNClientAdapter svnClient = null;

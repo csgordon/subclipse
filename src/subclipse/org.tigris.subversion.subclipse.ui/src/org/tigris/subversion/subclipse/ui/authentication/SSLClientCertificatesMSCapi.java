@@ -17,7 +17,8 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.util.ListContentProvider;
 
-public class SSLClientCertificatesMSCapi extends ListDialog {
+import guitypes.checkers.quals.*;
+@UIType public class SSLClientCertificatesMSCapi extends ListDialog {
 	protected String alias;
 
 	/**

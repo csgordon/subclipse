@@ -30,11 +30,11 @@ import org.eclipse.ui.IWorkbench;
 import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-
+import guitypes.checkers.quals.*;
 /**
  * A wizard for creating a patch file by running the SVN diff command.
  */
-public class GenerateDiffFileWizard extends Wizard {
+@UIType public class GenerateDiffFileWizard extends Wizard {
 	
 	private PatchFileSelectionPage mainPage;
 	

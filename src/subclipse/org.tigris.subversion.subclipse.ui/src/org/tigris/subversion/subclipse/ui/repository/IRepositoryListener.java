@@ -17,7 +17,8 @@ import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
 /**
  * Listener for repositories. events fired when repository added, removed or changed 
  */
-public interface IRepositoryListener {
+import guitypes.checkers.quals.*;
+@UIType public interface IRepositoryListener {
 	public void repositoryAdded(ISVNRepositoryLocation root);
     public void repositoryModified(ISVNRepositoryLocation root);
 	public void repositoryRemoved(ISVNRepositoryLocation root);

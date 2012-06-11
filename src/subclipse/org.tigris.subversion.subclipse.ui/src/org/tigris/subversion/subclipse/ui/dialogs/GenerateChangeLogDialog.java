@@ -260,7 +260,7 @@ import guitypes.checkers.quals.*;
 	
 	private boolean generateChangeLog(final boolean preview) {
 		exception = null;
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {		
+		BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {		
 			public void run() {
 				try {
 					if (!preview && fileButton.getSelection()) {

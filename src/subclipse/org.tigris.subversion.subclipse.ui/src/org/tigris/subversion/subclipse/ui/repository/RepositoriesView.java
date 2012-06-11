@@ -115,7 +115,7 @@ import guitypes.checkers.quals.*;
     // this listener is used when a repository is added, removed or changed
 	private IRepositoryListener repositoryListener = new IRepositoryListener() {
 		public void repositoryAdded(final ISVNRepositoryLocation root) {
-			getViewer().getControl().getDisplay().syncExec(new Runnable() {
+			getViewer().getControl().getDisplay().syncExec(new @UI Runnable() {
 				public void run() {
 					refreshViewer(null, false);
 					getViewer().setSelection(new StructuredSelection(root));
@@ -145,7 +145,7 @@ import guitypes.checkers.quals.*;
 			final Object finalObject = object;
             final boolean finalRefreshReposFolders = refreshRepositoriesFolders;
 			Display display = getViewer().getControl().getDisplay();
-			display.syncExec(new Runnable() {
+			display.syncExec(new @UI Runnable() {
 				public void run() {
 					RepositoriesView.this.refreshViewer(finalObject, finalRefreshReposFolders);
 				}

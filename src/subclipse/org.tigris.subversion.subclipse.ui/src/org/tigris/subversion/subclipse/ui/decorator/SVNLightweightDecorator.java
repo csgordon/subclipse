@@ -61,7 +61,7 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
- 
+import guitypes.checkers.quals.*; 
 /**
  * The decorator for svn resources 
  */
@@ -165,7 +165,7 @@ public class SVNLightweightDecorator
 		setDateFormat(dateFormatPattern);
 
 		propertyListener = new IPropertyChangeListener() {
-						public void propertyChange(PropertyChangeEvent event) {
+						@UIEffect public void propertyChange(PropertyChangeEvent event) {
 							if (ISVNUIConstants.PREF_CALCULATE_DIRTY.equals(event.getProperty())) {
 								computeDeepDirtyCheck = getBoolean(event);
 							} else if (ISVNUIConstants.PREF_FOLDERTEXT_DECORATION.equals(event.getProperty())) {
@@ -216,7 +216,7 @@ public class SVNLightweightDecorator
 	 * @param colors color ids to cache
 	 */
 	private void ensureFontAndColorsCreated(final String[] fonts, final String[] colors) {
-		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				ITheme theme  = PlatformUI.getWorkbench().getThemeManager().getCurrentTheme();
 				for (int i = 0; i < colors.length; i++) {

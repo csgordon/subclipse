@@ -37,6 +37,7 @@ import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.SVNConflictResult;
+import guitypes.checkers.quals.*;
 
 public class SVNConflictResolver implements ISVNConflictResolver {
 	private IResource resource;
@@ -115,7 +116,7 @@ public class SVNConflictResolver implements ISVNConflictResolver {
 		else if (descrip.getConflictKind() != SVNConflictDescriptor.Kind.property && !descrip.isBinary() && applyToAllTextResolution != null) 
 			conflictResolution = new ConflictResolution(descrip, applyToAllTextResolution.getResolution());
 		if (conflictResolution == null) {
-			Display.getDefault().asyncExec(new Runnable() {
+			Display.getDefault().asyncExec(new @UI Runnable() {
 				public void run() {
 					dialogWizard = new DialogWizard(DialogWizard.CONFLICT_HANDLING);
 					dialogWizard.setConflictDescriptor(descrip);
@@ -157,7 +158,7 @@ public class SVNConflictResolver implements ISVNConflictResolver {
 				final IWorkbenchPage page = part.getSite().getPage();
 				final IEditorInput editorInput = new ExternalFileEditorInput(fileStore);
 				final String editorId= getEditorId(fileStore);
-				Display.getDefault().asyncExec(new Runnable() {
+				Display.getDefault().asyncExec(new @UI Runnable() {
 					public void run() {
 						try {
 							final IEditorPart editorPart = page.openEditor(editorInput, editorId);
@@ -215,7 +216,7 @@ public class SVNConflictResolver implements ISVNConflictResolver {
 						final String theirValue = getPropertyValue(conflictNewFile);
 						final String myValue = getPropertyValue(conflictWorkingFile);
 						dialogWizard = null;
-						Display.getDefault().asyncExec(new Runnable() {
+						Display.getDefault().asyncExec(new @UI Runnable() {
 							public void run() {
 								dialogWizard = new DialogWizard(DialogWizard.PROPERTY_VALUE_SELECTION);
 								dialogWizard.setConflictDescriptor(descrip);
@@ -262,7 +263,7 @@ public class SVNConflictResolver implements ISVNConflictResolver {
 				}
 				File conflictOldFile = new File(descrip.getBasePath());		
 				final BuiltInEditConflictsAction editConflictsAction = new BuiltInEditConflictsAction(conflictNewFile, conflictOldFile, workingTempFile, mergedFile, pathFile.getName(), descrip);
-				Display.getDefault().asyncExec(new Runnable() {
+				Display.getDefault().asyncExec(new @UI Runnable() {
 					public void run() {
 						editConflictsAction.run(null);
 					}		
@@ -293,7 +294,7 @@ public class SVNConflictResolver implements ISVNConflictResolver {
 		} catch (final RuntimeException re) {
 			conflictResolution = new ConflictResolution(descrip, ISVNConflictResolver.Choice.postpone);
 			wait = true;
-			Display.getDefault().asyncExec(new Runnable() {
+			Display.getDefault().asyncExec(new @UI Runnable() {
 				public void run() {
 					MessageDialog.openError(Display.getDefault().getActiveShell(), Messages.SVNConflictResolver_0, Messages.SVNConflictResolver_1 + re.getLocalizedMessage() + Messages.SVNConflictResolver_2);		
 					re.printStackTrace();

@@ -3,7 +3,8 @@ package org.tigris.subversion.subclipse.ui;
 import org.eclipse.swt.widgets.Combo;
 import org.tigris.subversion.subclipse.core.ISVNCoreConstants;
 
-public class DepthComboHelper {
+import guitypes.checkers.quals.*;
+@UIType public class DepthComboHelper {
 	private static String[] comboValues = { 
 		ISVNUIConstants.DEPTH_UNKNOWN,
 		ISVNUIConstants.DEPTH_INFINITY,

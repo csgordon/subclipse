@@ -47,7 +47,8 @@ import org.tigris.subversion.subclipse.ui.dialogs.AddToVersionControlDialog;
  * 
  * It also provides a number of useful methods for assisting in repository operations.
  */
-public class RepositoryManager {
+import guitypes.checkers.quals.*;
+@UIType public class RepositoryManager {
 	
 	
 	List listeners = new ArrayList();
@@ -287,7 +288,7 @@ public class RepositoryManager {
     public String promptForComment(final Shell shell, IResource[] resourcesToCommit) {
         final int[] result = new int[1];
         final ReleaseCommentDialog dialog = new ReleaseCommentDialog(shell, resourcesToCommit); 
-        shell.getDisplay().syncExec(new Runnable() {
+        shell.getDisplay().syncExec(new @UI Runnable() {
             public void run() {
                 result[0] = dialog.open();
                 if (result[0] != Window.OK) return;
@@ -311,7 +312,7 @@ public class RepositoryManager {
 		final IResource[][] result = new IResource[1][0];
 		result[0] = null;
 		final AddToVersionControlDialog dialog = new AddToVersionControlDialog(shell, unadded);
-		shell.getDisplay().syncExec(new Runnable() {
+		shell.getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				int code = dialog.open();
 				if (code == IDialogConstants.YES_ID) {

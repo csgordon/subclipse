@@ -489,7 +489,7 @@ import guitypes.checkers.quals.*;
 	 */
 	public void refresh()  {
 
-		Display.getDefault().syncExec(new Runnable() {
+		Display.getDefault().syncExec(new @UI Runnable() {
 			public void run() {
 				try {
 					updateStatus();
