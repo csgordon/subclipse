@@ -69,10 +69,11 @@ import org.tigris.subversion.subclipse.ui.repository.RepositoryManager;
 import org.tigris.subversion.subclipse.ui.repository.model.SVNAdapterFactory;
 import org.tigris.subversion.subclipse.ui.util.SimpleDialogsHelper;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
+import guitypes.checkers.quals.*;
 /**
  * UI Plugin for Subversion provider-specific workbench functionality.
  */
-public class SVNUIPlugin extends AbstractUIPlugin {
+@UIEffect public class SVNUIPlugin extends AbstractUIPlugin {
 	/**
 	 * The id of the SVN plug-in
 	 */
