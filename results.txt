@@ -28,3 +28,4 @@ types... So we're back to 2469...
 +10 min (2:00): 2312
 +10 min (2:10): 2168
 +15 min (2:25): 798 after fixing a few checker bugs and changing the anonymous inner class method defaults to inheriting the lowest overridden effect
++35 min (3:00): 568
