@@ -28,7 +28,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.tigris.subversion.subclipse.tools.usage.internal.SubclipseToolsUsageActivator;
 import org.tigris.subversion.subclipse.tools.usage.util.BrowserUtil;
 
-public class UsageReportEnablementDialog extends Dialog {
+import guitypes.checkers.quals.*;
+@UIType public class UsageReportEnablementDialog extends Dialog {
 
 	private Button checkBox;
 	private boolean reportEnabled;

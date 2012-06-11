@@ -16,8 +16,8 @@ import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 import org.tigris.subversion.subclipse.ui.repository.RepositoriesView;
-
-public class SVNPerspective implements IPerspectiveFactory {
+import guitypes.checkers.quals.*;
+@UIType public class SVNPerspective implements IPerspectiveFactory {
 
 	/* (Non-javadoc)
 	 * Method declared on IPerpsectiveFactory

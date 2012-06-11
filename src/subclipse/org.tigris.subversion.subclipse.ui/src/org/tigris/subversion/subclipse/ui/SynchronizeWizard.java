@@ -20,7 +20,8 @@ import org.tigris.subversion.subclipse.core.sync.SVNWorkspaceSubscriber;
 import org.tigris.subversion.subclipse.ui.internal.GlobalRefreshResourceSelectionPage;
 import org.tigris.subversion.subclipse.ui.subscriber.SVNSynchronizeParticipant;
 
-public class SynchronizeWizard extends Wizard {
+import guitypes.checkers.quals.*;
+@UIType public class SynchronizeWizard extends Wizard {
 	private GlobalRefreshResourceSelectionPage selectionPage;
 	private IWizard importWizard;
 	

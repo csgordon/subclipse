@@ -71,7 +71,8 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
  * A compare input for comparing local resource with remote ones 
  * Used by CompareWithRevisionAction
  */
-public class SVNCompareRevisionsInput extends CompareEditorInput implements ISaveableWorkbenchPart {
+import guitypes.checkers.quals.*;
+@UIType public class SVNCompareRevisionsInput extends CompareEditorInput implements ISaveableWorkbenchPart {
 	private IFile resource;
 	private ILogEntry[] logEntries;
 	private TableViewer viewer;

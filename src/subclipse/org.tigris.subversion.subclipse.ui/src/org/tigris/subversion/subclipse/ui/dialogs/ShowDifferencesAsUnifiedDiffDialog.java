@@ -318,7 +318,7 @@ import guitypes.checkers.quals.*;
 		if (file.exists()) {
 			if (!MessageDialog.openQuestion(getShell(), Policy.bind("HistoryView.showDifferences"), Policy.bind("HistoryView.overwriteOutfile", file.getName()))) return;
 		}	
-		BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 			public void run() {
 				try {
 					SVNUrl fromUrl = null;

@@ -31,7 +31,8 @@ import org.tigris.subversion.subclipse.tools.usage.reporting.ReportingMessages;
 import org.tigris.subversion.subclipse.tools.usage.util.BrowserUtil;
 import org.tigris.subversion.subclipse.tools.usage.util.StatusUtils;
 
-public class UsageReportPreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
+import guitypes.checkers.quals.*;
+@UIType public class UsageReportPreferencePage extends PreferencePage implements IWorkbenchPreferencePage {
 	private Button allowReportingButton;
 
 	public UsageReportPreferencePage() {

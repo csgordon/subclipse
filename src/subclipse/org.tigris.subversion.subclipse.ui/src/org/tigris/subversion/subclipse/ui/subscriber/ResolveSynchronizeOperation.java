@@ -43,6 +43,7 @@ import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardMarkResolvedP
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
+import guitypes.checkers.quals.*;
 
 public class ResolveSynchronizeOperation extends SVNSynchronizeOperation {
 	boolean propertyConflicts = false;
@@ -89,7 +90,7 @@ public class ResolveSynchronizeOperation extends SVNSynchronizeOperation {
 		if (folderSelected) {
 			selectedResolution = ISVNConflictResolver.Choice.chooseMerged;
 		} else {
-			Display.getDefault().syncExec(new Runnable() {
+			Display.getDefault().syncExec(new @UI Runnable() {
 				public void run() {
 					if (propertyConflicts && !textConflicts) {
 						String message;
@@ -161,7 +162,7 @@ public class ResolveSynchronizeOperation extends SVNSynchronizeOperation {
 		
 		switch (progressKind) {
 			case PROGRESS_BUSYCURSOR :
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+				BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 					public void run() {
 						try {
 							innerRunnable.run(new NullProgressMonitor());

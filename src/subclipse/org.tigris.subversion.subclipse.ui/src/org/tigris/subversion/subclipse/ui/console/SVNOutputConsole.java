@@ -42,7 +42,8 @@ import org.tigris.subversion.svnclientadapter.SVNNodeKind;
  * 
  * @since 3.0 
  */
-public class SVNOutputConsole extends IOConsole implements IConsoleListener, IPropertyChangeListener {
+import guitypes.checkers.quals.*;
+@UIType public class SVNOutputConsole extends IOConsole implements IConsoleListener, IPropertyChangeListener {
 	
 	/** Constant used to define consoles that have the ability to output subversion information */
 	public static final String SVN_CONSOLE_TYPE = "SVN";
@@ -71,7 +72,7 @@ public class SVNOutputConsole extends IOConsole implements IConsoleListener, IPr
      * Used to notify this console of lifecycle methods <code>init()</code>
      * and <code>dispose()</code>.
      */
-    class MyLifecycle implements org.eclipse.ui.console.IConsoleListener {
+    @UIType class MyLifecycle implements org.eclipse.ui.console.IConsoleListener {
         public void consolesAdded(IConsole[] consoles) {
             for (int i = 0; i < consoles.length; i++) {
                 IConsole console = consoles[i];
