@@ -117,7 +117,7 @@ import guitypes.checkers.quals.*;
 		Button bb = new Button(fromGroup, SWT.PUSH);
 		bb.setText(Policy.bind("SwitchDialog.browse")); //$NON-NLS-1$
 		bb.addSelectionListener(new SelectionAdapter() {
-            public void widgetSelected(SelectionEvent e) {
+            @UIEffect public void widgetSelected(SelectionEvent e) {
                 ChooseUrlDialog dialog = new ChooseUrlDialog(getShell(), fromResource.getResource());
                 if ((dialog.open() == ChooseUrlDialog.OK) && (dialog.getUrl() != null)) {
                 	fromUrlText.setText(dialog.getUrl());
@@ -152,7 +152,7 @@ import guitypes.checkers.quals.*;
 		fromLogButton.setText(Policy.bind("ShowDifferencesAsUnifiedDiffDialog.showLog")); //$NON-NLS-1$
 		fromLogButton.setEnabled(false);
 		fromLogButton.addSelectionListener(new SelectionAdapter() {
-            public void widgetSelected(SelectionEvent e) {
+            @UIEffect public void widgetSelected(SelectionEvent e) {
                 showLog(e.getSource());
             }
 		});	
@@ -179,7 +179,7 @@ import guitypes.checkers.quals.*;
 		bb = new Button(toGroup, SWT.PUSH);
 		bb.setText(Policy.bind("SwitchDialog.browse")); //$NON-NLS-1$
 		bb.addSelectionListener(new SelectionAdapter() {
-            public void widgetSelected(SelectionEvent e) {
+            @UIEffect public void widgetSelected(SelectionEvent e) {
             	IResource resouce = null;
             	if (remoteResources.length < 2 || remoteResources[1] == null)
             		resouce = remoteResources[0].getResource();
@@ -218,7 +218,7 @@ import guitypes.checkers.quals.*;
 		toLogButton.setText(Policy.bind("ShowDifferencesAsUnifiedDiffDialog.showToLog")); //$NON-NLS-1$
 		toLogButton.setEnabled(false);
 		toLogButton.addSelectionListener(new SelectionAdapter() {
-            public void widgetSelected(SelectionEvent e) {
+            @UIEffect public void widgetSelected(SelectionEvent e) {
                 showLog(e.getSource());
             }
 		});	
@@ -279,7 +279,7 @@ import guitypes.checkers.quals.*;
 		browseButton = new Button(fileGroup, SWT.PUSH);
 		browseButton.setText(Policy.bind("ShowDifferencesAsUnifiedDiffDialog.browse")); //$NON-NLS-1$
 		browseButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				FileDialog dialog = new FileDialog(getShell(), SWT.SAVE);
 				dialog.setText(Policy.bind("ShowDifferencesAsUnifiedDiffDialog.fileDialogText")); //$NON-NLS-1$
 				dialog.setFileName("revision.diff"); //$NON-NLS-1$
@@ -289,13 +289,13 @@ import guitypes.checkers.quals.*;
 		});		
 
 		ModifyListener modifyListener = new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
+			@UIEffect public void modifyText(ModifyEvent e) {
 				setOkButtonStatus();
 			}			
 		};
 		
 		SelectionListener selectionListener = new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
                 fromRevisionText.setEnabled(!fromHeadButton.getSelection());
                 fromLogButton.setEnabled(!fromHeadButton.getSelection());
                 toRevisionText.setEnabled(!toHeadButton.getSelection());
@@ -313,7 +313,7 @@ import guitypes.checkers.quals.*;
 		};
 		
 		SelectionListener compareTypeListener = new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				if (diffButton.getSelection()) {
 					fileText.setEnabled(true);
 					browseButton.setEnabled(true);
@@ -337,10 +337,10 @@ import guitypes.checkers.quals.*;
 		diffButton.addSelectionListener(compareTypeListener);
 		
 		FocusListener focusListener = new FocusAdapter() {
-			public void focusGained(FocusEvent e) {
+			@UIEffect public void focusGained(FocusEvent e) {
 				((Text)e.getSource()).selectAll();
 			}
-			public void focusLost(FocusEvent e) {
+			@UIEffect public void focusLost(FocusEvent e) {
 				((Text)e.getSource()).setText(((Text)e.getSource()).getText());
 			}					
 		};
@@ -357,7 +357,7 @@ import guitypes.checkers.quals.*;
     protected void createButtonsForButtonBar(Composite parent) {
 		Button toggleFromToButton = createButton(parent, 2, Policy.bind("ShowDifferencesAsUnifiedDiffDialog.swap"), false); //$NON-NLS-1$
 		toggleFromToButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				String fromUrl = fromUrlText.getText().trim();
 				boolean fromHeadRevision = fromHeadButton.getSelection();
 				String fromRevision = fromRevisionText.getText().trim();
@@ -411,7 +411,7 @@ import guitypes.checkers.quals.*;
 		if (file.exists()) {
 			if (!MessageDialog.openQuestion(getShell(), Policy.bind("HistoryView.showDifferences"), Policy.bind("HistoryView.overwriteOutfile", file.getName()))) return;
 		}	
-		BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 			public void run() {
 				try {
 					SVNUrl fromUrl = null;

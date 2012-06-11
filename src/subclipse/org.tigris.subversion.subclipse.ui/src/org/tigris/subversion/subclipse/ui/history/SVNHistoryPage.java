@@ -595,7 +595,7 @@ import guitypes.checkers.quals.*;
     // set the content provider for the table
     this.tableHistoryViewer.setContentProvider(new IStructuredContentProvider() {
 
-      public Object[] getElements(Object inputElement) {
+      @UIEffect public Object[] getElements(Object inputElement) {
         // Short-circuit to optimize
         if(entries != null)
           return entries;
@@ -664,7 +664,7 @@ import guitypes.checkers.quals.*;
 
     // Double click open action
     this.tableHistoryViewer.getTable().addListener(SWT.DefaultSelection, new Listener() {
-      public void handleEvent(Event e) {
+      @UIEffect public void handleEvent(Event e) {
         getOpenRemoteFileAction().run();
       }
     });
@@ -674,7 +674,7 @@ import guitypes.checkers.quals.*;
       MenuManager menuMgr = new MenuManager();
       Menu menu = menuMgr.createContextMenu(tableHistoryViewer.getTable());
       menuMgr.addMenuListener(new IMenuListener() {
-        public void menuAboutToShow(IMenuManager menuMgr) {
+        @UIEffect public void menuAboutToShow(IMenuManager menuMgr) {
           fillTableMenu(menuMgr);
         }
       });
@@ -846,7 +846,7 @@ import guitypes.checkers.quals.*;
     SourceViewer result = new SourceViewer(parent, null, null, true, SWT.H_SCROLL | SWT.V_SCROLL | SWT.MULTI | SWT.READ_ONLY);
     result.getTextWidget().setIndent(2);
     result.configure(new TextSourceViewerConfiguration(EditorsUI.getPreferenceStore()) {
-      public Map getHyperlinkDetectorTargets(ISourceViewer sourceViewer) {
+      @UIEffect public Map getHyperlinkDetectorTargets(ISourceViewer sourceViewer) {
         return Collections.singletonMap("org.eclipse.ui.DefaultTextEditor.Subclipse", //$NON-NLS-1$
             new IAdaptable() {
               public Object getAdapter(Class adapter) {
@@ -864,7 +864,7 @@ import guitypes.checkers.quals.*;
         return SWT.NONE;
       }
       
-      public IHyperlinkDetector[] getHyperlinkDetectors(ISourceViewer sourceViewer) {
+      @UIEffect public IHyperlinkDetector[] getHyperlinkDetectors(ISourceViewer sourceViewer) {
         IHyperlinkDetector[] detectors = super.getHyperlinkDetectors(sourceViewer);
         IHyperlinkDetector[] newDetectors;
         if(detectors==null) {
@@ -1651,7 +1651,7 @@ import guitypes.checkers.quals.*;
   private IAction getGetContentsAction() {
     if(getContentsAction == null) {
       getContentsAction = getContextMenuAction(Policy.bind("HistoryView.getContentsAction"), new IWorkspaceRunnable() { //$NON-NLS-1$
-            public void run(IProgressMonitor monitor) throws CoreException {
+            public void run(IProgressMonitor monitor) throws CoreException { /* Colin Gordon: Checker bug: this IS safe, but gets an invalid override error... */
               ISelection selection = getSelection();
               if( !(selection instanceof IStructuredSelection))
                 return;
@@ -1895,7 +1895,7 @@ import guitypes.checkers.quals.*;
                   .getRepository(), ourSelection.getRevision(), commitComment, author);
 
               PlatformUI.getWorkbench().getProgressService().run(true, true, new IRunnableWithProgress() {
-                public void run(IProgressMonitor monitor) throws InvocationTargetException {
+                @UIEffect public void run(IProgressMonitor monitor) throws InvocationTargetException {
                   try {
                     command.run(monitor);
                   } catch(SVNException e) {
@@ -1927,7 +1927,7 @@ import guitypes.checkers.quals.*;
         }
 
         // we don't allow multiple selection
-        public boolean isEnabled() {
+        @UIEffect public boolean isEnabled() {
           ISelection selection = getSelection();
           return selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1;
         }
@@ -1965,7 +1965,7 @@ import guitypes.checkers.quals.*;
       }
 
       // we don't allow multiple selection
-      public boolean isEnabled() {
+      @UIEffect public boolean isEnabled() {
         ISelection selection = getSelection();
         return selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1;
       }
@@ -2110,7 +2110,7 @@ import guitypes.checkers.quals.*;
 	  if (generateChangeLogAction == null) generateChangeLogAction = new GenerateChangeLogAction(new ISelectionProvider() {
 		public void addSelectionChangedListener(ISelectionChangedListener listener) {
 		}
-		public ISelection getSelection() {
+		@UIEffect public ISelection getSelection() {
 			return SVNHistoryPage.this.getSelection();
 		}
 		public void removeSelectionChangedListener(ISelectionChangedListener listener) {
@@ -2356,13 +2356,13 @@ import guitypes.checkers.quals.*;
       Utils.schedule(fetchNextLogEntriesJob, getSite());
     }
 
-    public void propertyChange(PropertyChangeEvent event) {
+    @SafeEffect public void propertyChange(PropertyChangeEvent event) {
       if(ISVNUIConstants.PREF_LOG_ENTRIES_TO_FETCH.equals(event.getProperty())) {
         updateFromProperties();
       }
     }
 
-    private void updateFromProperties() {
+    @SafeEffect private void updateFromProperties() {
       int entriesToFetch = SVNUIPlugin.getPlugin().getPreferenceStore().getInt(ISVNUIConstants.PREF_LOG_ENTRIES_TO_FETCH);
       setToolTipText(Policy.bind("HistoryView.getNext") + " " + entriesToFetch); //$NON-NLS-1$ //$NON-NLS-2$
       if(entriesToFetch <= 0) {
@@ -2372,7 +2372,7 @@ import guitypes.checkers.quals.*;
   }
 
   
-  @UIType private class FetchLogEntriesJob extends AbstractFetchJob {
+  private class FetchLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchLogEntriesJob() {
@@ -2455,7 +2455,7 @@ import guitypes.checkers.quals.*;
     }
   }
 
-  @UIType private class FetchNextLogEntriesJob extends AbstractFetchJob {
+  private class FetchNextLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchNextLogEntriesJob() {

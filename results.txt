@@ -20,3 +20,10 @@ takes about 35 seconds.
 +5 min (1:40): 1759 by making graph.editors, graph.popup.actions, and ui.subscriber @UIPackage
 +5 min (1:45): 1073, using a script that takes a package name and spits out an appropriate package-info.java with @UIPackage
 +5 min (1:50): 834 by making AnnotateView @UIType and .decorators @UIPackage
+
+Apparently much of this was false progress.  I fixed a bug in the checker: @UIPackage should not
+make anonymous inner classes @UIType, since they're often supposed to be effect-polymorphic closure
+types... So we're back to 2469...
+
++10 min (2:00): 2312
++10 min (2:10): 2168

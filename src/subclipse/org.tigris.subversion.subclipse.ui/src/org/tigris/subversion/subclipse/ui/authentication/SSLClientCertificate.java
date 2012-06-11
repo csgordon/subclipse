@@ -106,7 +106,7 @@ import guitypes.checkers.quals.*;
 		    gd.horizontalSpan = 2;
 		    mscapiButton.setLayoutData(gd);
 	    	SelectionListener mscapiSelectionListener = new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent e) {
+				@UIEffect public void widgetSelected(SelectionEvent e) {
 					if (mscapiButton.getSelection()) {
 						keyFileCombo.setEnabled(false);
 						browseButton.setEnabled(false);
@@ -142,7 +142,7 @@ import guitypes.checkers.quals.*;
 			aliasButton = new Button(ailiasSelectGroup, SWT.PUSH);
 			aliasButton.setText(Policy.bind("SSLClientCertificate.2")); //$NON-NLS-1$
 			SelectionListener msCapiCertificateSelectionListener = new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent e) {
+				@UIEffect public void widgetSelected(SelectionEvent e) {
 					SSLClientCertificatesMSCapi dialog = new SSLClientCertificatesMSCapi(SVNUIPlugin.getStandardDisplay().getActiveShell(), realm);
 			        if (dialog.open() == SSLClientCertificatesMSCapi.OK) {
 			            aliasText.setText(dialog.getAlias());
@@ -205,7 +205,7 @@ import guitypes.checkers.quals.*;
 		browseButton = new Button(keyFileGroup, SWT.PUSH);
 		browseButton.setText(Policy.bind("SSHPromptDialog.browse")); //$NON-NLS-1$
 		browseButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				Properties properties = System.getProperties();
 				String home = (String)properties.get("user.home"); //$NON-NLS-1$
 				FileDialog fileDialog = new FileDialog(getShell(), SWT.OPEN);

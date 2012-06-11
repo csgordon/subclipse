@@ -119,7 +119,7 @@ import guitypes.checkers.quals.*;
 			Button browseButton = new Button(questionGroup, SWT.PUSH);
 			browseButton.setText(Policy.bind("browse")); //$NON-NLS-1$
 			browseButton.addSelectionListener(new SelectionAdapter() {	
-				public void widgetSelected(SelectionEvent e) {
+				@UIEffect public void widgetSelected(SelectionEvent e) {
 					FileDialog fileDialog = new FileDialog(getShell(), SWT.OPEN);
 					fileDialog.setText("Select Client Certificate File");
 					String returnFile = fileDialog.open();

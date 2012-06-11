@@ -147,7 +147,7 @@ import guitypes.checkers.quals.*;
 		browseButton = new Button(keyFileGroup, SWT.PUSH);
 		browseButton.setText(Policy.bind("SSHPromptDialog.browse")); //$NON-NLS-1$
 		browseButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				Properties properties = System.getProperties();
 				String home = (String)properties.get("user.home"); //$NON-NLS-1$
 				FileDialog fileDialog = new FileDialog(getShell(), SWT.OPEN);
@@ -185,7 +185,7 @@ import guitypes.checkers.quals.*;
 		}
 		
 		ModifyListener modifyListener = new ModifyListener() {
-            public void modifyText(ModifyEvent me) {
+            @UIEffect public void modifyText(ModifyEvent me) {
                 okButton.setEnabled(canFinish());
             }		    
 		};
@@ -195,7 +195,7 @@ import guitypes.checkers.quals.*;
 		keyFileCombo.addModifyListener(modifyListener);
 		
 		SelectionListener selectionListener = new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				if (passwordButton.getSelection()) {
 					keyFileCombo.setEnabled(false);
 					browseButton.setEnabled(false);

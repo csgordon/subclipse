@@ -16,6 +16,7 @@ import org.eclipse.swt.widgets.Display;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNPromptUserPassword;
+import guitypes.checkers.quals.*;
 
 public class SVNPromptUserPassword implements ISVNPromptUserPassword {
     private String username;
@@ -44,7 +45,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
     public boolean askYesNo(String realm, String askQuestion, boolean askYesIsDefault) {
 		question = askQuestion;
 		yesIsDefault = askYesIsDefault;
-        SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+        SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        int defaultButton = 0;
 		        if (!yesIsDefault) defaultButton = 1;
@@ -72,7 +73,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
     public int askTrustSSLServer(String trustInfo, boolean trustAllowPermanently) {
         info = trustInfo;
         allowPermanently = trustAllowPermanently;
-		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        TrustSSLServerDialog dialog = new TrustSSLServerDialog(Display.getCurrent().getActiveShell(),
 		                info, allowPermanently);
@@ -99,7 +100,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
         username = promptUsername;
         realm = promptRealm;
         maySave = promptMaySave;
-   		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+   		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        PasswordPromptDialog dialog = new PasswordPromptDialog(SVNUIPlugin.getStandardDisplay().getActiveShell(),
 		                realm, username, maySave);
@@ -119,7 +120,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
         username = promptUsername;
         realm = promptRealm;
         maySave = promptMaySave;
-   		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+   		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        UserPromptDialog dialog = new UserPromptDialog(SVNUIPlugin.getStandardDisplay().getActiveShell(),
 		                realm, username, maySave);
@@ -142,7 +143,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
         question = askQuestion;
         if (question.indexOf("certificate") > 0)
         	maySave = false;
-		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        QuestionDialog dialog = new QuestionDialog(Display.getCurrent().getActiveShell(),
 		                realm, question, showAnswer, maySave);
@@ -174,7 +175,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
         realm = promptRealm;
         maySave = promptMaySave;
         sshPort = promptPort;
-   		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+   		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        SSHPromptDialog dialog = new SSHPromptDialog(SVNUIPlugin.getStandardDisplay().getActiveShell(),
 		                realm, username, sshPort, maySave);
@@ -204,7 +205,7 @@ public class SVNPromptUserPassword implements ISVNPromptUserPassword {
         rtnCode = false;
         realm = promptRealm;
         maySave = promptMaySave;
-   		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+   		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 		        SSLClientCertificate dialog = new SSLClientCertificate(SVNUIPlugin.getStandardDisplay().getActiveShell(),
 		                realm, maySave);

@@ -143,7 +143,7 @@ import guitypes.checkers.quals.*;
         addButton.setLayoutData(gridData);
         
         addButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				addFileType();
 			}      	
         });
@@ -155,7 +155,7 @@ import guitypes.checkers.quals.*;
         removeButton.setLayoutData(gridData); 
         removeButton.setEnabled(false);
         removeButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				removeFileType();
 			}
         });
@@ -228,7 +228,7 @@ import guitypes.checkers.quals.*;
         browseMergeProgramButton.setEnabled(false);
         
         browseMergeProgramButton.addSelectionListener(new SelectionAdapter() {
-            public void widgetSelected(SelectionEvent event) {
+            @UIEffect public void widgetSelected(SelectionEvent event) {
                 FileDialog fileDialog = new FileDialog(getShell(), SWT.OPEN);
                 String res = fileDialog.open();
                 if (res != null) {
@@ -258,7 +258,7 @@ import guitypes.checkers.quals.*;
         
         final Text formatToInsert = customProgramParametersText;
         variablesButton.addListener(SWT.Selection, new Listener() {
-            public void handleEvent(Event event) {
+            @UIEffect public void handleEvent(Event event) {
                 addVariables(formatToInsert, getMergeBindingDescriptions());
             }
         });        
@@ -266,7 +266,7 @@ import guitypes.checkers.quals.*;
         mergeProgramGroup.setEnabled(false);
         
         viewer.getTable().addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				updating = false;
 				removeButton.setEnabled(!viewer.getSelection().isEmpty());
 				mergeProgramGroup.setEnabled(!viewer.getSelection().isEmpty());
@@ -306,7 +306,7 @@ import guitypes.checkers.quals.*;
         });
         
         SelectionListener selectionListener = new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				customProgramLocationCombo.setEnabled(customMergeRadioButton.getSelection());
 				customProgramParametersText.setEnabled(customMergeRadioButton.getSelection());
 				browseMergeProgramButton.setEnabled(customMergeRadioButton.getSelection());
@@ -346,7 +346,7 @@ import guitypes.checkers.quals.*;
         customProgramLocationCombo.addSelectionListener(selectionListener);     
         
         ModifyListener modifyListener = new ModifyListener() {
-			public void modifyText(ModifyEvent e) {			
+			@UIEffect public void modifyText(ModifyEvent e) {			
 				IStructuredSelection selection = (IStructuredSelection)viewer.getSelection();
 				MergeFileAssociation mergeFileAssociation = (MergeFileAssociation)selection.getFirstElement();
 				if (updating && mergeFileAssociation != null) {
@@ -361,10 +361,10 @@ import guitypes.checkers.quals.*;
         customProgramParametersText.addModifyListener(modifyListener);
    
 		FocusListener focusListener = new FocusAdapter() {
-			public void focusGained(FocusEvent e) {
+			@UIEffect public void focusGained(FocusEvent e) {
 				((Text)e.getSource()).selectAll();
 			}
-			public void focusLost(FocusEvent e) {
+			@UIEffect public void focusLost(FocusEvent e) {
 				((Text)e.getSource()).setText(((Text)e.getSource()).getText());
 			}					
 		};
