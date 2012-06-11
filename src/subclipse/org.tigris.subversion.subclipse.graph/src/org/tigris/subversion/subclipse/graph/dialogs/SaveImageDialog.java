@@ -148,7 +148,7 @@ import guitypes.checkers.quals.*;
 	protected void okPressed() {
 		settings.put(LAST_OUTPUT, fileTypeCombo.getSelectionIndex());
 		
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+		BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 			public void run() {
 				GraphicalViewer viewer = editor.getViewer();
 				ScalableRootEditPart rootEditPart = (ScalableRootEditPart)viewer.getEditPartRegistry().get(LayerManager.ID);

@@ -31,8 +31,9 @@ import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
-public class ConsolePreferencesPage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
+@UIType public class ConsolePreferencesPage extends FieldEditorPreferencePage implements IWorkbenchPreferencePage {
 
 	public ConsolePreferencesPage() {
 		super(GRID);

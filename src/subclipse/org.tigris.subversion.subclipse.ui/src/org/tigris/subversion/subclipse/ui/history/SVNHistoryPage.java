@@ -2372,7 +2372,7 @@ import guitypes.checkers.quals.*;
   }
 
   
-  private class FetchLogEntriesJob extends AbstractFetchJob {
+  @SafeType private class FetchLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchLogEntriesJob() {
@@ -2455,7 +2455,7 @@ import guitypes.checkers.quals.*;
     }
   }
 
-  private class FetchNextLogEntriesJob extends AbstractFetchJob {
+  @SafeType private class FetchNextLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchNextLogEntriesJob() {
@@ -2522,7 +2522,7 @@ import guitypes.checkers.quals.*;
     }
   }
   
-  private abstract class AbstractFetchJob extends Job {
+  @SafeType private abstract class AbstractFetchJob extends Job {
 	    public AbstractFetchJob(String name) {
 		super(name);
 	}
@@ -2559,7 +2559,7 @@ import guitypes.checkers.quals.*;
 		}
   }
 
-  private class FetchAllLogEntriesJob extends AbstractFetchJob {
+  @SafeType private class FetchAllLogEntriesJob extends AbstractFetchJob {
     public ISVNRemoteResource remoteResource;
 
     public FetchAllLogEntriesJob() {
@@ -2611,7 +2611,7 @@ import guitypes.checkers.quals.*;
     }
   }
 
-  private class SearchHistoryJob extends Job {
+  @SafeType private class SearchHistoryJob extends Job {
 
 	  public SearchHistoryJob() {
 		  super(""); //$NON-NLS-1$
