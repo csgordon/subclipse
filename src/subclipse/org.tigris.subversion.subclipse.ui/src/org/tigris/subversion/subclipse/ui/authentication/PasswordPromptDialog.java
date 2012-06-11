@@ -91,7 +91,7 @@ import guitypes.checkers.quals.*;
 		}
 		
 		ModifyListener modifyListener = new ModifyListener() {
-            public void modifyText(ModifyEvent me) {
+            @UIEffect public void modifyText(ModifyEvent me) {
                 okButton.setEnabled((userText.getText().trim().length() > 0) ||
                  (passwordText.getText().trim().length() > 0));
             }		    

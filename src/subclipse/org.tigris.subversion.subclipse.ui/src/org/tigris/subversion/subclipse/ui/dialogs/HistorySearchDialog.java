@@ -233,7 +233,7 @@ import guitypes.checkers.quals.*;
 		// Enabling and disabling the widgets when the search all button
 		//  is checked or unchecked
 		searchAllButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				if (searchAllButton.getSelection()) {
 					dateLabel.setEnabled(false);
 					midDataLabel.setEnabled(false);
@@ -266,7 +266,7 @@ import guitypes.checkers.quals.*;
 		});
 		// Open the date selection dialog to select a start date
 		selectStartDateButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				String start = null;
 				if (startDateText.getText().trim().length() == 0) {
 					Calendar calendar = Calendar.getInstance();
@@ -296,7 +296,7 @@ import guitypes.checkers.quals.*;
 		});
 		// Open the date selection dialog to select an end date
 		selectEndDateButton.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				String end = null;
 				if (endDateText.getText().trim().length() == 0) {
 					Date date = Calendar.getInstance().getTime();
@@ -324,7 +324,7 @@ import guitypes.checkers.quals.*;
 		});
 		
 		SelectionListener selectionListener = new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
+			@UIEffect public void widgetSelected(SelectionEvent e) {
 				if (e.getSource() == startLogButton) showLog(startRevisionText);
 				else showLog(endRevisionText);
 			}
@@ -337,10 +337,10 @@ import guitypes.checkers.quals.*;
 		userText.setSelection(0, userText.getText().length());
 		
 		FocusListener focusListener = new FocusAdapter() {
-			public void focusGained(FocusEvent e) {
+			@UIEffect public void focusGained(FocusEvent e) {
 				((Text)e.getSource()).selectAll();
 			}
-			public void focusLost(FocusEvent e) {
+			@UIEffect public void focusLost(FocusEvent e) {
 				((Text)e.getSource()).setText(((Text)e.getSource()).getText());
 			}					
 		};
