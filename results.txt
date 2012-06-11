@@ -18,3 +18,5 @@ takes about 35 seconds.
 +5 min (1:30): 2555 by making .wizards.dialogs and .dialogs @UIPackage
 +5 min (1:35): 2095 by making .conflicts and .wizards.sharing @UIPackage
 +5 min (1:40): 1759 by making graph.editors, graph.popup.actions, and ui.subscriber @UIPackage
++5 min (1:45): 1073, using a script that takes a package name and spits out an appropriate package-info.java with @UIPackage
++5 min (1:50): 834 by making AnnotateView @UIType and .decorators @UIPackage
