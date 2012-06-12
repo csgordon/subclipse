@@ -31,3 +31,4 @@ types... So we're back to 2469...
 +35 min (3:00): 568
 +5 min (3:05): 560
 +10 min (3:15): 483 by scripting to mark all "new Runnable" passed to [a]syncExec as @UI
++10 min (3:25): 426 by scripting to mark the BusyIndicator Runnables @UI, and fixing a couple missing imports.

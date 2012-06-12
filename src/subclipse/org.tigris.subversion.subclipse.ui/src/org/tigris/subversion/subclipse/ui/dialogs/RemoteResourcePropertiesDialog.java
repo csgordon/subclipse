@@ -73,7 +73,7 @@ import guitypes.checkers.quals.*;
 	}
 	
 	protected Control createDialogArea(Composite parent) {
-		BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 			public void run() {
 				ISVNClientAdapter client = null;
 				try {

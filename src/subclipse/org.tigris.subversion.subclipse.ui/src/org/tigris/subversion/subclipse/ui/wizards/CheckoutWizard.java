@@ -161,7 +161,7 @@ import guitypes.checkers.quals.*;
 		if (page == selectionPage) {
 			if (aboutToShow) {
 				if (remoteFolders.length == 1) {
-					BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+					BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 						public void run() {
 							checkForProjectFile();
 							if (hasProjectFile) {

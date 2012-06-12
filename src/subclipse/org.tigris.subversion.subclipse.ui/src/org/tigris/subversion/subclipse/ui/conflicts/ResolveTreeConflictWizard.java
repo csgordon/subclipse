@@ -117,7 +117,7 @@ import guitypes.checkers.quals.*;
 
 				svnClient = svnResource.getRepository().getSVNClient();
 				mergeException = null;
-				BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+				BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 					public void run() {
 						try {
 							mergePath = mergeTarget.getLocation().toFile();
@@ -220,7 +220,7 @@ import guitypes.checkers.quals.*;
 		}
 		if (mainPage.getRevertResource() != null) {				
 			revertException = null;
-			BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+			BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 				public void run() {
 					try {
 						IResource[] revertResources = { mainPage.getRevertResource() };

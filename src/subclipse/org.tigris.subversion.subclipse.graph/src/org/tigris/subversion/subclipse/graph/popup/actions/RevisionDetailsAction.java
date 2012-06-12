@@ -20,6 +20,7 @@ import org.tigris.subversion.subclipse.ui.dialogs.ShowRevisionsDialog;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class RevisionDetailsAction extends Action {
 	private Node node;
@@ -39,7 +40,7 @@ public class RevisionDetailsAction extends Action {
 		remoteResource = null;
 		logEntry = null;
 		includeTags = SVNUIPlugin.getPlugin().getPreferenceStore().getBoolean(ISVNUIConstants.PREF_SHOW_TAGS_IN_REMOTE);
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+		BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 			public void run() {
 				try {
 					RevisionGraphEditorInput input = (RevisionGraphEditorInput)editor.getEditorInput();

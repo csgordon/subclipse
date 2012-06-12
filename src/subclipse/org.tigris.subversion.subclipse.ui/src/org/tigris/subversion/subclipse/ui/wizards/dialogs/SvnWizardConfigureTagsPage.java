@@ -195,7 +195,7 @@ import guitypes.checkers.quals.*;
 				final String url = dialog.getUrl();
 				if (url != null) {
 					nameText.setText(dialog.getName());
-					BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+					BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 						public void run() {
 							try {
 								SVNUrl svnUrl = new SVNUrl(url);

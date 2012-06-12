@@ -1440,7 +1440,7 @@ import guitypes.checkers.quals.*;
 //            final SVNRevision revision = branchTagPage.getRevision();
 //            final boolean makeParents = branchTagPage.isMakeParents();
 //            try {
-//                BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+//                BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 //                    public void run() {
 //                      try {
 //                        ISVNClientAdapter client = SVNProviderPlugin.getPlugin().getSVNClientManager().createSVNClient();

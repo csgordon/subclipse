@@ -386,7 +386,7 @@ import guitypes.checkers.quals.*;
             else fromRevision = SVNRevision.getRevision(fromRevisionText.getText().trim());
             if (toHeadButton.getSelection()) toRevision = SVNRevision.HEAD;
             else toRevision = SVNRevision.getRevision(toRevisionText.getText().trim());                        
-            BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+            BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
                 public void run() {
                     try {
                         svnClient.merge(fromUrl, fromRevision, toUrl, toRevision, file, forceButton.getSelection(), true, true, ignoreAncestryButton.getSelection());
@@ -417,7 +417,7 @@ import guitypes.checkers.quals.*;
             else fromRevision = SVNRevision.getRevision(fromRevisionText.getText().trim());
             if (toHeadButton.getSelection()) toRevision = SVNRevision.HEAD;
             else toRevision = SVNRevision.getRevision(toRevisionText.getText().trim());            
-            BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+            BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
                 public void run() {
                     try {
                         svnClient.diff(fromUrl, fromRevision, toUrl, toRevision, diffFile, true);

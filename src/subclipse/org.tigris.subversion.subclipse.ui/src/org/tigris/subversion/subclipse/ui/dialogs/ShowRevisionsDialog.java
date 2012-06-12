@@ -401,7 +401,7 @@ import guitypes.checkers.quals.*;
 	                    .bind("HistoryView.overwriteOutfile", file.getName())))
 	                  return;
 	              }
-	              BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+	              BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 	                public void run() {
 	                  ISVNClientAdapter client = null;
 	                  try {
