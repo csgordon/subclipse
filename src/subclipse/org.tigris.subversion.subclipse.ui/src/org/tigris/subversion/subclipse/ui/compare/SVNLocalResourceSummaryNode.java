@@ -22,8 +22,9 @@ import org.tigris.subversion.subclipse.core.SVNException;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.SVNDiffSummary;
+import guitypes.checkers.quals.*;
 
-public class SVNLocalResourceSummaryNode extends ResourceNode {
+@SafeType public class SVNLocalResourceSummaryNode extends ResourceNode {
 	private final ISVNLocalResource svnResource;
 	private ArrayList fChildren = null;
 	private SVNDiffSummary[] diffSummary;
@@ -82,7 +83,7 @@ public class SVNLocalResourceSummaryNode extends ResourceNode {
 			}
 		};
 		try {
-			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable);
+			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
 		} catch (InvocationTargetException e) {
 			SVNUIPlugin.openError(SVNUIPlugin.getPlugin().getWorkbench().getActiveWorkbenchWindow().getShell(), Policy.bind("TeamFile.saveChanges", svnResource.getName()), null, e); //$NON-NLS-1$
 		} catch (InterruptedException e) {

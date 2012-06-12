@@ -20,12 +20,12 @@ import org.tigris.subversion.subclipse.core.ISVNLocalFolder;
 import org.tigris.subversion.subclipse.core.ISVNLocalResource;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-
+import guitypes.checkers.quals.*;
 /**
  * Node representing a local SVN file.  We can query the status of the resource to determine if
  * it has changed.  It is also used to write the contents back to the file when setContent is called.
  */
-public class SVNLocalResourceNode extends ResourceNode {
+@SafeType public class SVNLocalResourceNode extends ResourceNode {
 	private final ISVNLocalResource svnResource;
 	private ResourceEditionNode remoteResource = null;
 	private ArrayList fChildren = null;
@@ -80,7 +80,7 @@ public class SVNLocalResourceNode extends ResourceNode {
 			}
 		};
 		try {
-			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable);
+			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? Same as SVNLocalResourceSummaryNode...
 		} catch (InvocationTargetException e) {
 			SVNUIPlugin.openError(SVNUIPlugin.getPlugin().getWorkbench().getActiveWorkbenchWindow().getShell(), Policy.bind("TeamFile.saveChanges", svnResource.getName()), null, e); //$NON-NLS-1$
 		} catch (InterruptedException e) {

@@ -269,7 +269,7 @@ public class SVNLocalCompareInput extends CompareEditorInput implements ISaveabl
 		this.diffFile = diffFile;
 	}
 
-	public boolean canRunAsJob() {
+	public boolean canRunAsJob() { // Colin Gordon: Apparently the TeamOperation type is polymorphic, and this method is a dynamic request for which context to run in
 		return true;
 	}
     

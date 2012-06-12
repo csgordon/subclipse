@@ -73,7 +73,7 @@ import guitypes.checkers.quals.*;
 /**
  * UI Plugin for Subversion provider-specific workbench functionality.
  */
-@UIEffect public class SVNUIPlugin extends AbstractUIPlugin {
+public class SVNUIPlugin extends AbstractUIPlugin {
 	/**
 	 * The id of the SVN plug-in
 	 */
@@ -189,7 +189,7 @@ import guitypes.checkers.quals.*;
 				Display display = Display.getCurrent();
 				if (display == null) {
 					// cannot provide progress (not in UI thread)
-					runnable.run(new NullProgressMonitor());
+					runnable.run(new NullProgressMonitor()); // Colin Gordon: BUG or I misunderstood IRunnableWithProgress effects, or the conditionals around this check the thread dynamically
 					return;
 				}
 				// get the active shell or a suitable top-level shell
@@ -201,7 +201,7 @@ import guitypes.checkers.quals.*;
 			}
 			// pop up progress dialog after a short delay
 			final Exception[] holder = new Exception[1];
-			BusyIndicator.showWhile(parent.getDisplay(), new Runnable() {
+			BusyIndicator.showWhile(parent.getDisplay(), new @UI Runnable() {
 				public void run() {
 					try {
 						runnable.run(new NullProgressMonitor());
@@ -396,7 +396,7 @@ import guitypes.checkers.quals.*;
 
 		// Create a runnable that will display the error status
 		final Shell shell = providedShell;
-		Runnable outerRunnable = new Runnable() {
+		@UI Runnable outerRunnable = new @UI Runnable() {
 			public void run() {
 				Shell displayShell;
 				if (shell == null) {
@@ -425,7 +425,7 @@ import guitypes.checkers.quals.*;
 			}
 			display.syncExec(outerRunnable);
 		} else {
-			outerRunnable.run();
+			outerRunnable.run(); // Colin Gordon: SAFE I think - dynamic check for which thread we're on
 		}
 	}
 	
