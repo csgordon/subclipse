@@ -182,7 +182,7 @@ import guitypes.checkers.quals.*;
 		if (view == null || view.isDisposed() || view.getResource() == null) return false;
 		for (int i = 0; i < resources.length; i++) {
 			if (view.getResource().equals(resources[i]) || resources[i].getFullPath().toString().startsWith(view.getResource().getFullPath().toString())) {
-				Display.getDefault().asyncExec(new Runnable() {
+				Display.getDefault().asyncExec(new @UI Runnable() {
 					public void run() {
 						view.refresh();
 					}					

@@ -16,6 +16,7 @@ import org.tigris.subversion.subclipse.core.resources.ISVNFileModificationValida
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardLockPage;
+import guitypes.checkers.quals.*;
 
 public class SVNFileModificationValidatorPrompt implements ISVNFileModificationValidatorPrompt {
     private String comment;
@@ -31,7 +32,7 @@ public class SVNFileModificationValidatorPrompt implements ISVNFileModificationV
         }
         this.files = lockFiles;
         success = false;
-		SVNUIPlugin.getStandardDisplay().syncExec(new Runnable() {
+		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				SvnWizardLockPage lockPage = new SvnWizardLockPage(files);
 		        SvnWizard wizard = new SvnWizard(lockPage);

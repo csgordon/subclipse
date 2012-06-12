@@ -42,6 +42,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.conflicts.SVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
+import guitypes.checkers.quals.*;
 
 public class UpdateSynchronizeOperation extends SVNSynchronizeOperation {
 	private IResource[] resources;
@@ -61,7 +62,7 @@ public class UpdateSynchronizeOperation extends SVNSynchronizeOperation {
 	public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		if (confirmNeeded) {
 			final SyncInfoSet syncSet = getSyncInfoSet();
-			Display.getDefault().syncExec(new Runnable() {
+			Display.getDefault().syncExec(new @UI Runnable() {
 				public void run() {
 					confirm = MessageDialog.openConfirm(getShell(), Policy.bind("SyncAction.updateAll"), Policy.bind("SyncAction.updateConfirm", Integer.toString(syncSet.getSyncInfos().length))); //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-2$				
 				}			

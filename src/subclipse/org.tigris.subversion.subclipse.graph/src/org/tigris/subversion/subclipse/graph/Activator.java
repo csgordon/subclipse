@@ -10,6 +10,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
+import guitypes.checkers.quals.*;
 
 /**
  * The activator class controls the plug-in life cycle
@@ -90,7 +91,7 @@ public class Activator extends AbstractUIPlugin {
 	public static void showErrorDialog(final String title, final Exception exception, boolean uiThread) {
 		if (uiThread) showErrorDialog(title, exception);
 		else {
-			Display.getDefault().syncExec(new Runnable(){
+			Display.getDefault().syncExec(new @UI Runnable(){
 				public void run() {
 					showErrorDialog(title, exception);
 				}			

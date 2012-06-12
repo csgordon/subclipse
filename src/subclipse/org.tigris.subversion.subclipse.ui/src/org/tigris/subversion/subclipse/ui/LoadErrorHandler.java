@@ -4,6 +4,7 @@ import org.eclipse.swt.widgets.Display;
 import org.tigris.subversion.clientadapter.ILoadErrorHandler;
 import org.tigris.subversion.clientadapter.ISVNClientWrapper;
 import org.tigris.subversion.subclipse.ui.dialogs.LoadErrorDialog;
+import guitypes.checkers.quals.*;
 
 public class LoadErrorHandler implements ILoadErrorHandler {
 	private static boolean loadErrorHandled = false;
@@ -16,7 +17,7 @@ public class LoadErrorHandler implements ILoadErrorHandler {
 		final String loadErrors = clientWrapper.getLoadErrors();
 		loadErrorHandled = true;
 		if (!SVNUIPlugin.TEST_MODE) {
-			Display.getDefault().syncExec(new Runnable() {
+			Display.getDefault().syncExec(new @UI Runnable() {
 				public void run() {
 					LoadErrorDialog dialog = new LoadErrorDialog(Display.getDefault().getActiveShell(), loadErrors);
 					dialog.open();

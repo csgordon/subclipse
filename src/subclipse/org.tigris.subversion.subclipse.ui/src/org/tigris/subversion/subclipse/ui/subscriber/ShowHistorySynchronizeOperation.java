@@ -30,6 +30,7 @@ import org.tigris.subversion.subclipse.core.ISVNRemoteResource;
 import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 
 public class ShowHistorySynchronizeOperation extends SVNSynchronizeOperation {
@@ -57,7 +58,7 @@ public class ShowHistorySynchronizeOperation extends SVNSynchronizeOperation {
     protected void run(SVNTeamProvider provider, SyncInfoSet set, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		run(new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) {
-				getShell().getDisplay().syncExec(new Runnable() {
+				getShell().getDisplay().syncExec(new @UI Runnable() {
 					public void run() {
 						IHistoryView view = (IHistoryView)showView(ISVNUIConstants.HISTORY_VIEW_ID);
 						if (view != null) {

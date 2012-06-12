@@ -27,6 +27,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.wizards.WizardDialogWithPersistedLocation;
 import org.tigris.subversion.subclipse.ui.wizards.generatediff.GenerateDiffFileWizard;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
+import guitypes.checkers.quals.*;
 
 public class GenerateDiffFileSynchronizeOperation extends SVNSynchronizeOperation {
 
@@ -102,7 +103,7 @@ public class GenerateDiffFileSynchronizeOperation extends SVNSynchronizeOperatio
 //		dialog.setMinimumPageSize(350, 250);
 		final WizardDialog dialog = new WizardDialogWithPersistedLocation(getShell(), wizard, "GenerateDiffFileWizard"); //$NON-NLS-1$
 		dialog.setMinimumPageSize(350, 250);
-		getShell().getDisplay().syncExec(new Runnable() {
+		getShell().getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				dialog.open();	
 			}

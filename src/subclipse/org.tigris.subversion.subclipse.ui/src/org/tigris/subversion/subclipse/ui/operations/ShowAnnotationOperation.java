@@ -68,6 +68,7 @@ import org.tigris.subversion.svnclientadapter.ISVNAnnotations;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNLogMessage;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 /**
  * @author Brock Janiczak
@@ -133,7 +134,7 @@ public class ShowAnnotationOperation extends SVNOperation {
  //   		final RevisionInformation information= createRevisionInformation(annotateBlocks, Policy.subMonitorFor(monitor, 20));
     		
             // We aren't running from a UI thread
-    		getShell().getDisplay().asyncExec(new Runnable() {
+    		getShell().getDisplay().asyncExec(new @UI Runnable() {
     			public void run() {
 
 //  				is there an open editor for the given input? If yes, use live annotate

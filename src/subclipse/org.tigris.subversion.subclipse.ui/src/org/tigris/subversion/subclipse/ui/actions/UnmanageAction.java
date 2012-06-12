@@ -44,6 +44,7 @@ import org.tigris.subversion.subclipse.core.internal.InfiniteSubProgressMonitor;
 import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
+import guitypes.checkers.quals.*;
 
 /**
  * Unmanage action removes the svn feature from a project and optionally
@@ -191,7 +192,7 @@ public class UnmanageAction extends WorkspaceAction {
 		final int[] result = new int[] { MessageDialog.OK };
 		IProject[] projects = getSelectedProjects();
 		final DeleteProjectDialog dialog = new DeleteProjectDialog(shell, projects);
-		shell.getDisplay().syncExec(new Runnable() {
+		shell.getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				result[0] = dialog.open();
 			}

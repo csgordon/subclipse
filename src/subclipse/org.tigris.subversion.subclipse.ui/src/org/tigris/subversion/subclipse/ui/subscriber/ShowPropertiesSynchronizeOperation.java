@@ -32,6 +32,7 @@ import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.svnproperties.SvnPropertiesView;
+import guitypes.checkers.quals.*;
 
 public class ShowPropertiesSynchronizeOperation extends SVNSynchronizeOperation {
 	
@@ -52,7 +53,7 @@ public class ShowPropertiesSynchronizeOperation extends SVNSynchronizeOperation 
 	protected void run(SVNTeamProvider provider, SyncInfoSet set, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		run(new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) {
-				getShell().getDisplay().syncExec(new Runnable() {
+				getShell().getDisplay().syncExec(new @UI Runnable() {
 					public void run() {
 						try {
 							SvnPropertiesView view = (SvnPropertiesView)showView(SvnPropertiesView.VIEW_ID);

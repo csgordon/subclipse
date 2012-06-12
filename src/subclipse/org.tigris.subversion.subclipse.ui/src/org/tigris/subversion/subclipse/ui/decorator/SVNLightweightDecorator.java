@@ -686,7 +686,7 @@ public class SVNLightweightDecorator
 	 * @param events  the events to post
 	 */
 	private void postLabelEvent(final LabelProviderChangedEvent event) {
-		Display.getDefault().asyncExec(new Runnable() {
+		Display.getDefault().asyncExec(new @UI Runnable() {
 			public void run() {
 				fireLabelProviderChanged(event);
 			}

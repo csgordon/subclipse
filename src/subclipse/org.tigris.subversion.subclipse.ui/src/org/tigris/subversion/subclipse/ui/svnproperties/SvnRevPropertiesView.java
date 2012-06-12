@@ -54,6 +54,7 @@ import org.tigris.subversion.subclipse.ui.settings.UnversionedCustomProperty;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
+import guitypes.checkers.quals.*;
 
 
 
@@ -387,7 +388,7 @@ public void setFocus() {
  */
 public void refresh()  {
 
-    Display.getDefault().syncExec(new Runnable() {
+    Display.getDefault().syncExec(new @UI Runnable() {
         public void run() {
             try {
                 ISVNProperty[] props = getSvnRevProperties();

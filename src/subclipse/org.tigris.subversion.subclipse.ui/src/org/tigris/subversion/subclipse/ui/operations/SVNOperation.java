@@ -35,6 +35,7 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
+import guitypes.checkers.quals.*;
 
 /**
  * This class is the abstract superclass for SVN operations. It provides
@@ -298,7 +299,7 @@ public abstract class SVNOperation extends TeamOperation {
 	}
 	
 	public void showCancelledMessage() {
-		Display.getDefault().asyncExec(new Runnable() {
+		Display.getDefault().asyncExec(new @UI Runnable() {
 			public void run() {
 				MessageDialog.openInformation(getShell(), getJobName(), Policy.bind("SVNOperation.operationCancelled")); //$NON-NLS-1$
 			}			

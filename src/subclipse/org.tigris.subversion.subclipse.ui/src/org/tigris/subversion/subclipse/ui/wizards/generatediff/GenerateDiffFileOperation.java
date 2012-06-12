@@ -49,6 +49,7 @@ import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
+import guitypes.checkers.quals.*;
 
 /**
  * An operation to run the SVN diff operation on a set of resources. The result
@@ -128,7 +129,7 @@ public class GenerateDiffFileOperation implements IRunnableWithProgress {
              newFiles = new ArrayList();
 			 if(unaddedResources.length > 0)
 			 {
-//					Display.getDefault().syncExec(new Runnable() {
+//					Display.getDefault().syncExec(new @UI Runnable() {
 //						 public void run() {
 //							 DiffNewFilesDialog dialog = new DiffNewFilesDialog(shell,unaddedResources);
 //							 	boolean revert = (dialog.open() == RevertDialog.OK);
@@ -213,7 +214,7 @@ public class GenerateDiffFileOperation implements IRunnableWithProgress {
 				if(baos.size() == 0) {
 					emptyDiff = true;
 				} else {
-					Display.getDefault().syncExec(new Runnable() {
+					Display.getDefault().syncExec(new @UI Runnable() {
 						 public void run() {
 							TextTransfer plainTextTransfer = TextTransfer.getInstance();
 							Clipboard clipboard= new Clipboard(shell.getDisplay());		
@@ -233,7 +234,7 @@ public class GenerateDiffFileOperation implements IRunnableWithProgress {
 
 			// check for empty diff and report
 			if (emptyDiff) {
-				Display.getDefault().syncExec(new Runnable() {
+				Display.getDefault().syncExec(new @UI Runnable() {
 					 public void run() {
 							MessageDialog.openInformation(
 									shell,

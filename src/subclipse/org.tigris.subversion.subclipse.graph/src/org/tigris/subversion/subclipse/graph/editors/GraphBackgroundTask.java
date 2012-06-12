@@ -22,6 +22,7 @@ import org.tigris.subversion.subclipse.ui.operations.SVNOperation;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 public class GraphBackgroundTask extends SVNOperation {
 	
@@ -160,7 +161,7 @@ public class GraphBackgroundTask extends SVNOperation {
 			if (editor != null) {
 				if (error == true || monitor.isCanceled()) {
 					if (refreshRevision == null && refreshRevisions == null) {
-						Display.getDefault().syncExec(new Runnable() {
+						Display.getDefault().syncExec(new @UI Runnable() {
 							public void run() {
 								IWorkbenchWindow window = editor.getEditorSite().getWorkbenchWindow();
 								IWorkbenchPage page = window.getActivePage();	
@@ -219,7 +220,7 @@ public class GraphBackgroundTask extends SVNOperation {
 		graph.setSelectedRevision(revision);
 		monitor.setTaskName("Drawing graph");
 		
-		Display.getDefault().syncExec(new Runnable() {
+		Display.getDefault().syncExec(new @UI Runnable() {
 			public void run() {
 				viewer.setContents(graph);
 			}

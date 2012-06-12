@@ -24,6 +24,7 @@ import org.tigris.subversion.subclipse.ui.internal.Utils;
 import org.tigris.subversion.subclipse.ui.operations.ShowDifferencesAsUnifiedDiffOperationWC;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class SVNLocalBranchTagCompareInput extends CompareEditorInput implements ISaveableWorkbenchPart {
 	private ISVNLocalResource[] resources;
@@ -81,7 +82,7 @@ public class SVNLocalBranchTagCompareInput extends CompareEditorInput implements
 				file.deleteOnExit();
 				final ShowDifferencesAsUnifiedDiffOperationWC operation = new ShowDifferencesAsUnifiedDiffOperationWC(targetPart, localResourceNodes[i].getLocalResource().getFile(), remoteResourceNodes[i].getRemoteResource().getUrl(), remoteRevision, file);
 				operation.setGraphicalCompare(true);
-				Display.getDefault().syncExec(new Runnable() {
+				Display.getDefault().syncExec(new @UI Runnable() {
 					public void run() {
 						try {
 							operation.run();

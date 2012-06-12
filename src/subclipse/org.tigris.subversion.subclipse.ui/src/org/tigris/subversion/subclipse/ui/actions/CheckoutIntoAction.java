@@ -34,6 +34,7 @@ import org.tigris.subversion.subclipse.ui.WorkspacePathValidator;
 import org.tigris.subversion.subclipse.ui.operations.CheckoutAsProjectOperation;
 import org.tigris.subversion.subclipse.ui.util.PromptingDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 
 
@@ -100,7 +101,7 @@ public class CheckoutIntoAction extends CheckoutAsProjectAction {
 					for (int i = 0; i < folders.length; i++) {
 					    proceed = true;
 					    if (folders[i].getRepository().getRepositoryRoot().toString().equals(folders[i].getUrl().toString())) {
-						    shell.getDisplay().syncExec(new Runnable() {
+						    shell.getDisplay().syncExec(new @UI Runnable() {
 	                            public void run() {
 	        					     proceed = MessageDialog.openQuestion(shell, Policy.bind("CheckoutAsProjectAction.title"), Policy.bind("AddToWorkspaceAction.checkingOutRoot")); //$NON-NLS-1$
 	                            }
