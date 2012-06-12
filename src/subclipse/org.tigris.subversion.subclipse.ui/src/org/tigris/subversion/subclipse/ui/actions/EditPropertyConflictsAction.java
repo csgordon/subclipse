@@ -30,7 +30,7 @@ import guitypes.checkers.quals.*;
 	
     protected void execute(final IAction action) throws InvocationTargetException, InterruptedException {
     	error = null;
-    	BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+    	BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 			public void run() {
 		    	IResource resource = getSelectedResources()[0];
 		        svnResource = SVNWorkspaceRoot.getSVNResourceFor(resource);

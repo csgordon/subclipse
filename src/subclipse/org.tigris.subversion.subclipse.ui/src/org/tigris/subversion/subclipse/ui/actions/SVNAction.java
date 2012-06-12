@@ -37,7 +37,7 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.util.IPromptCondition;
-
+import guitypes.checkers.quals.*;
 /**
  * SVNAction is the common superclass for all SVN actions. It provides
  * facilities for enablement handling, standard error handling, selection
@@ -234,7 +234,7 @@ abstract public class SVNAction extends ReplaceableIconAction {
 		
 		switch (progressKind) {
 			case PROGRESS_BUSYCURSOR :
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+				BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 					public void run() {
 						try {
 							innerRunnable.run(new NullProgressMonitor());

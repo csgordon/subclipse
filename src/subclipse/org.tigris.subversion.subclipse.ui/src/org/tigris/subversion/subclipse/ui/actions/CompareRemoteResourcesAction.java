@@ -28,7 +28,7 @@ import org.tigris.subversion.subclipse.ui.compare.ResourceEditionNode;
 import org.tigris.subversion.subclipse.ui.compare.SVNCompareEditorInput;
 import org.tigris.subversion.subclipse.ui.compare.SVNFolderCompareEditorInput;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
-
+import guitypes.checkers.quals.*;
 /**
  * This action is used for comparing two arbitrary remote resources. This is
  * enabled in the repository explorer.
@@ -70,7 +70,7 @@ public class CompareRemoteResourcesAction extends SVNAction {
 				  getTargetPage());
 			}
 
-			private void compareFolders(ISVNRemoteFolder folder1,
+			@UIEffect private void compareFolders(ISVNRemoteFolder folder1,
 					ISVNRemoteFolder folder2) {
 				SVNRevision pegRevision1 = null;
 				SVNRevision pegRevision2 = null;

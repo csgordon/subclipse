@@ -78,7 +78,7 @@ public class Utils {
 	 * 16509). @param t
 	 */
 	public static void handle(final Throwable exception) {
-		Utils.getStandardDisplay().asyncExec(new Runnable() {
+		Utils.getStandardDisplay().asyncExec(new @UI Runnable() {
 			public void run() {
 				IStatus error = null;
 				Throwable t = exception;
