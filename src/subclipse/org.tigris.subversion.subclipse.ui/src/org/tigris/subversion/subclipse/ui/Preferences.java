@@ -21,6 +21,7 @@ import org.eclipse.swt.widgets.Display;
 import org.tigris.subversion.subclipse.core.SVNClientManager;
 import org.tigris.subversion.subclipse.core.SVNProviderPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.UnsupportedPasswordStoresDialog;
+import guitypes.checkers.quals.*;
 
 /**
  * Initializes preferences and updates markers when preferences are changed
@@ -58,7 +59,7 @@ private IPreferenceStore store;
     private void setSvnClientConfigDir(String configDir) {
     	if (SVNUIPlugin.getPlugin().passwordStoresConfiguredOnLinux()) {   
     		if (!SVNUIPlugin.TEST_MODE) {
-	    		Display.getDefault().syncExec(new Runnable() {
+	    		Display.getDefault().syncExec(new @UI Runnable() {
 					public void run() {
 				   		UnsupportedPasswordStoresDialog dialog = new UnsupportedPasswordStoresDialog(Display.getDefault().getActiveShell());
 			    		if (dialog.open() == UnsupportedPasswordStoresDialog.OK) {

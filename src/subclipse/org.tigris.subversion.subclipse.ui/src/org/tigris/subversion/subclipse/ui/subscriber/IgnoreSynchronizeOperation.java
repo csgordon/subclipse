@@ -22,6 +22,7 @@ import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.ui.dialogs.IgnoreResourcesDialog;
 import org.tigris.subversion.subclipse.ui.operations.IgnoreOperation;
 
+import guitypes.checkers.quals.*;
 public class IgnoreSynchronizeOperation extends SVNSynchronizeOperation {
 	private IResource[] resources;
 	private IgnoreResourcesDialog ignoreResourcesDialog;
@@ -37,7 +38,7 @@ public class IgnoreSynchronizeOperation extends SVNSynchronizeOperation {
 	}
 
 	protected void run(SVNTeamProvider provider, SyncInfoSet set, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
-		getShell().getDisplay().syncExec(new Runnable() {
+		getShell().getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				ignoreResourcesDialog = new IgnoreResourcesDialog(getShell(), resources);
 				cancel = ignoreResourcesDialog.open() == IgnoreResourcesDialog.CANCEL;

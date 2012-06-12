@@ -23,6 +23,7 @@ import org.tigris.subversion.subclipse.tools.usage.googleanalytics.IGoogleAnalyt
 import org.tigris.subversion.subclipse.tools.usage.internal.SubclipseToolsUsageActivator;
 import org.tigris.subversion.subclipse.tools.usage.preferences.IUsageReportPreferenceConstants;
 import org.tigris.subversion.subclipse.tools.usage.preferences.UsageReportPreferencesUtils;
+import guitypes.checkers.quals.*;
 
 public abstract class AbstractEclipseEnvironment extends AbstractGoogleAnalyticsParameters implements
 		IEclipseEnvironment {
@@ -55,7 +56,7 @@ public abstract class AbstractEclipseEnvironment extends AbstractGoogleAnalytics
 
 	protected void initScreenSettings() {
 		final Display display = getDisplay();
-		display.syncExec(new Runnable() {
+		display.syncExec(new @UI Runnable() {
 
 			public void run() {
 				screenColorDepth = display.getDepth() + SCREENCOLORDEPTH_POSTFIX;

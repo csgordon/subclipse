@@ -396,7 +396,7 @@ abstract public class SVNAction extends ReplaceableIconAction {
 		final int option = SVNUIPlugin.getPlugin().getPreferenceStore().getInt(ISVNUIConstants.PREF_SAVE_DIRTY_EDITORS);
 		final boolean[] okToContinue = new boolean[] {true};
 		if (option != ISVNUIConstants.OPTION_NEVER) {		
-			Display.getDefault().syncExec(new Runnable() {
+			Display.getDefault().syncExec(new @UI Runnable() {
 				public void run() {
 					boolean confirm = option == ISVNUIConstants.OPTION_PROMPT;
 					okToContinue[0] = PlatformUI.getWorkbench().saveAllEditors(confirm);

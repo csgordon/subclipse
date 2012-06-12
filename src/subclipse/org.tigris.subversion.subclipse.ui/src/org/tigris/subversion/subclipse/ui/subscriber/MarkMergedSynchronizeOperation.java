@@ -37,6 +37,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.operations.UpdateOperation;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 public class MarkMergedSynchronizeOperation extends SVNSynchronizeOperation {
     
@@ -98,7 +99,7 @@ public class MarkMergedSynchronizeOperation extends SVNSynchronizeOperation {
 	}
 
 	private void showErrorMessage(final Exception e) {
-    	Display.getDefault().syncExec(new Runnable() {
+    	Display.getDefault().syncExec(new @UI Runnable() {
 			public void run() {
 				MessageDialog.openError(Display.getDefault().getActiveShell(), Policy.bind("SyncAction.markMerged"), e.getMessage()); //$NON-NLS-1$
 			}   		

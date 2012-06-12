@@ -53,6 +53,7 @@ import org.tigris.subversion.subclipse.ui.WorkspacePathValidator;
 import org.tigris.subversion.subclipse.ui.actions.SynchronizeAction;
 import org.tigris.subversion.subclipse.ui.subscriber.SVNSynchronizeParticipant;
 import org.tigris.subversion.subclipse.ui.wizards.ConfigurationWizardMainPage;
+import guitypes.checkers.quals.*;
 
 /**
  * This wizard helps the user to import a new project in their workspace
@@ -241,7 +242,7 @@ public class SharingWizard extends Wizard implements IConfigurationWizard {
 								} catch (final TeamException e) {
 									// Exception validating. We can continue if the user wishes.
 									final boolean[] keep = new boolean[] { false };
-									getShell().getDisplay().syncExec(new Runnable() {
+									getShell().getDisplay().syncExec(new @UI Runnable() {
 										public void run() {
 											keep[0] = MessageDialog.openQuestion(getContainer().getShell(),
 												Policy.bind("SharingWizard.validationFailedTitle"), //$NON-NLS-1$
@@ -288,7 +289,7 @@ public class SharingWizard extends Wizard implements IConfigurationWizard {
 //									projectExists[0] = true;
 //									final boolean[] sync = new boolean[] {true};
 									if (autoconnectPage == null) {
-										getShell().getDisplay().syncExec(new Runnable() {
+										getShell().getDisplay().syncExec(new @UI Runnable() {
 											public void run() {
 //											    sync[0] = false;
 											    if (!MessageDialog.openQuestion(getShell(), Policy.bind("SharingWizard.couldNotImport"), Policy.bind("SharingWizard.couldNotImportLong"))) {  //$NON-NLS-1$ //$NON-NLS-2$
@@ -451,7 +452,7 @@ public class SharingWizard extends Wizard implements IConfigurationWizard {
 		}
 		
 		// Otherwise, get the location from the create location page
-		getShell().getDisplay().syncExec(new Runnable() {
+		getShell().getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				createLocationPage.finish(new NullProgressMonitor());
 			}

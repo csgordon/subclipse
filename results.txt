@@ -30,3 +30,4 @@ types... So we're back to 2469...
 +15 min (2:25): 798 after fixing a few checker bugs and changing the anonymous inner class method defaults to inheriting the lowest overridden effect
 +35 min (3:00): 568
 +5 min (3:05): 560
++10 min (3:15): 483 by scripting to mark all "new Runnable" passed to [a]syncExec as @UI

@@ -34,6 +34,7 @@ import org.tigris.subversion.subclipse.core.util.Assert;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.conflicts.SVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 public class OverrideAndUpdateSynchronizeOperation extends SVNSynchronizeOperation {
 	private IResource[] modifiedResources;
@@ -58,7 +59,7 @@ public class OverrideAndUpdateSynchronizeOperation extends SVNSynchronizeOperati
 	protected void run(SVNTeamProvider provider, SyncInfoSet set, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		if (!revertAndUpdate) return;
 		if (!prompted) {
-			getShell().getDisplay().syncExec(new Runnable() {
+			getShell().getDisplay().syncExec(new @UI Runnable() {
 				public void run() {
 					revertAndUpdate = MessageDialog.openQuestion(getShell(), Policy.bind("SyncAction.override.title"), Policy.bind("SyncAction.override.confirm")); //$NON-NLS-1$ //$NON-NLS-2$
 				}

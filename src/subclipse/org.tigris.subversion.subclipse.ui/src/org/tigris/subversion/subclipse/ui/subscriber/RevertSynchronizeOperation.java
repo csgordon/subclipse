@@ -31,6 +31,7 @@ import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardRevertPage;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
+import guitypes.checkers.quals.*;
 
 public class RevertSynchronizeOperation extends SVNSynchronizeOperation {
 	private String url;
@@ -56,7 +57,7 @@ public class RevertSynchronizeOperation extends SVNSynchronizeOperation {
 	protected void run(SVNTeamProvider provider, SyncInfoSet set, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		if (prompted) return;
 		prompted = true;
-		getShell().getDisplay().syncExec(new Runnable() {
+		getShell().getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				if (resources == null || resources.length == 0) {
 					revert = false;

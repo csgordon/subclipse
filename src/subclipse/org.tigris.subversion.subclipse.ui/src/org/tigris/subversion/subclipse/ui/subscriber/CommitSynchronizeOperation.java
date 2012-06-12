@@ -49,6 +49,7 @@ import org.tigris.subversion.subclipse.ui.settings.ProjectProperties;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardCommitPage;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
+import guitypes.checkers.quals.*;
 
 /**
  * Sync view operation for putting file system resources
@@ -121,7 +122,7 @@ public class CommitSynchronizeOperation extends SVNSynchronizeOperation {
 	    	    boolean commitToTagsPathWithoutWarning = preferenceStore.getBoolean(ISVNUIConstants.PREF_COMMIT_TO_TAGS_PATH_WITHOUT_WARNING);	        	
 	    	    if (!commitToTagsPathWithoutWarning && onTagPath(modified)) {
 	    	    	commit = true;
-	           		getShell().getDisplay().syncExec(new Runnable() {
+	           		getShell().getDisplay().syncExec(new @UI Runnable() {
 	        			public void run() {
 	        				CommitToTagsWarningDialog dialog = new CommitToTagsWarningDialog(getShell());
 	        				commit = dialog.open() == CommitToTagsWarningDialog.OK;
@@ -143,7 +144,7 @@ public class CommitSynchronizeOperation extends SVNSynchronizeOperation {
          	    SvnWizard wizard = new SvnWizard(commitPage);
         	    final SvnWizardDialog dialog = new SvnWizardDialog(getShell(), wizard);	                
                 wizard.setParentDialog(dialog);
-        		getShell().getDisplay().syncExec(new Runnable() {
+        		getShell().getDisplay().syncExec(new @UI Runnable() {
         			public void run() {
         				commit = (dialog.open() == SvnWizardDialog.OK);
         			}
@@ -220,7 +221,7 @@ public class CommitSynchronizeOperation extends SVNSynchronizeOperation {
 		String title = Policy.bind("SyncAction.commit.conflict.title"); //$NON-NLS-1$
 		String question = Policy.bind("SyncAction.commit.conflict.question"); //$NON-NLS-1$
 		final MessageDialog dialog = new MessageDialog(shell, title, null, question, MessageDialog.QUESTION, buttons, 0);
-		shell.getDisplay().syncExec(new Runnable() {
+		shell.getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				dialog.open();
 			}

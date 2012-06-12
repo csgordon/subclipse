@@ -117,7 +117,7 @@ import guitypes.checkers.quals.*;
 		initLimitOutput();
 		
 		//	Ensure that initialization occurs in the ui thread
-		SVNUIPlugin.getStandardDisplay().asyncExec(new Runnable() {
+		SVNUIPlugin.getStandardDisplay().asyncExec(new @UI Runnable() {
 			public void run() {
 				JFaceResources.getFontRegistry().addListener(SVNOutputConsole.this);
 				initializeStreams();

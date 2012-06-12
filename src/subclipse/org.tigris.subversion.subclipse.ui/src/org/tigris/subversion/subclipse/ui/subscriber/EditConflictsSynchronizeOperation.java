@@ -41,6 +41,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.conflicts.ConflictsCompareInput;
 import org.tigris.subversion.svnclientadapter.utils.Command;
+import guitypes.checkers.quals.*;
 
 public class EditConflictsSynchronizeOperation extends SVNSynchronizeOperation {
 
@@ -115,7 +116,7 @@ public class EditConflictsSynchronizeOperation extends SVNSynchronizeOperation {
         final ConflictsCompareInput fInput = new ConflictsCompareInput(cc);
         fInput.setResources(conflictOldFile, conflictWorkingFile,
                 conflictNewFile, (IFile) resource);
-		getShell().getDisplay().syncExec(new Runnable() {
+		getShell().getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 			    CompareUI.openCompareEditorOnPage(fInput, getPart().getSite().getPage());
 			}
@@ -170,7 +171,7 @@ public class EditConflictsSynchronizeOperation extends SVNSynchronizeOperation {
             
             command.setParameters(parameters);
             
-    		getShell().getDisplay().syncExec(new Runnable() {
+    		getShell().getDisplay().syncExec(new @UI Runnable() {
     			public void run() {
     	            try {
                         command.exec();

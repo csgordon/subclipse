@@ -28,6 +28,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.actions.SVNAction;
 import org.tigris.subversion.subclipse.ui.util.DetailsDialogWithProjects;
+import guitypes.checkers.quals.*;
 
 
 /**
@@ -96,7 +97,7 @@ public class RemoveRootAction extends SelectionListenerAction {
 				// This will notify the RepositoryManager of the removal
 				if (!shared.isEmpty()) {
 					final String location = roots[i].getLocation();
-					shell.getDisplay().syncExec(new Runnable() {
+					shell.getDisplay().syncExec(new @UI Runnable() {
 						public void run() {
 							DetailsDialogWithProjects dialog = new DetailsDialogWithProjects(
 								shell, 

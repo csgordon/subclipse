@@ -38,6 +38,7 @@ import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 public class AddSynchronizeOperation extends SVNSynchronizeOperation {
 	private IResource[] resources;
@@ -56,7 +57,7 @@ public class AddSynchronizeOperation extends SVNSynchronizeOperation {
 
 	protected void run(SVNTeamProvider provider, SyncInfoSet set, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		resources = set.getResources();
-		getShell().getDisplay().syncExec(new Runnable() {
+		getShell().getDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				addIgnoredResources = promptForAddOfIgnored(resources);
 			}

@@ -18,6 +18,7 @@ import org.eclipse.ui.IStartup;
 import org.tigris.subversion.subclipse.tools.usage.internal.SubclipseToolsUsageActivator;
 import org.tigris.subversion.subclipse.tools.usage.util.LoggingUtils;
 import org.tigris.subversion.subclipse.tools.usage.util.StatusUtils;
+import guitypes.checkers.quals.*;
 
 public class UsageReportDispatcher implements IStartup {
 	public static final boolean TEST_MODE;
@@ -37,7 +38,7 @@ public class UsageReportDispatcher implements IStartup {
 			return;
 		}
 		
-		Display.getDefault().asyncExec(new Runnable() {
+		Display.getDefault().asyncExec(new @UI Runnable() {
 
 			public void run() {
 				try {

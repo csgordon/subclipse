@@ -34,6 +34,7 @@ import org.tigris.subversion.subclipse.ui.operations.CheckoutAsProjectOperation;
 import org.tigris.subversion.subclipse.ui.util.IPromptCondition;
 import org.tigris.subversion.subclipse.ui.util.PromptingDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 /**
  * Add some remote resources to the workspace. Current implementation:
@@ -97,7 +98,7 @@ public class CheckoutAsProjectAction extends WorkspaceAction {
 					for (int i = 0; i < folders.length; i++) {
 					    proceed = true;
 					    if (folders[i].getRepository().getRepositoryRoot().toString().equals(folders[i].getUrl().toString())) {
-						    shell.getDisplay().syncExec(new Runnable() {
+						    shell.getDisplay().syncExec(new @UI Runnable() {
 	                            public void run() {
 	        					     proceed = MessageDialog.openQuestion(shell, Policy.bind("CheckoutAsProjectAction.title"), Policy.bind("AddToWorkspaceAction.checkingOutRoot")); //$NON-NLS-1$
 	                            }
