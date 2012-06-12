@@ -34,6 +34,7 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
+import guitypes.checkers.quals.*;
 
 public class CopyAction extends WorkbenchWindowAction {
 
@@ -57,7 +58,7 @@ public class CopyAction extends WorkbenchWindowAction {
 		}
 		final IProject targetProject = selectedProject;
 		final File destPath = target;
-		BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+		BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 			public void run() {
 				ISVNClientAdapter client = null;
 				ISVNRepositoryLocation repository = null;
