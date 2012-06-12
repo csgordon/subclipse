@@ -196,7 +196,7 @@ public class EditConflictsSynchronizeOperation extends SVNSynchronizeOperation {
 		
 		switch (progressKind) {
 			case PROGRESS_BUSYCURSOR :
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+				BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 					public void run() {
 						try {
 							innerRunnable.run(new NullProgressMonitor());

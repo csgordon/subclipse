@@ -17,6 +17,7 @@ import org.tigris.subversion.subclipse.ui.compare.PropertyCompareLocalResourceNo
 import org.tigris.subversion.subclipse.ui.compare.PropertyCompareRemoteResourceNode;
 import org.tigris.subversion.subclipse.ui.dialogs.ComparePropertiesDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 public class CompareSvnPropertiesAction extends WorkbenchWindowAction {
 	private IPropertyProvider right;
@@ -34,7 +35,7 @@ public class CompareSvnPropertiesAction extends WorkbenchWindowAction {
 			}
 			else {
 				final ISVNLocalResource svnResource = SVNWorkspaceRoot.getSVNResourceFor(resources[0]);
-				BusyIndicator.showWhile(Display.getDefault(), new Runnable() {			
+				BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {			
 					public void run() {
 						try {
 							right = new PropertyCompareRemoteResourceNode(svnResource.getRemoteResource(SVNRevision.HEAD), SVNRevision.HEAD, true, null);

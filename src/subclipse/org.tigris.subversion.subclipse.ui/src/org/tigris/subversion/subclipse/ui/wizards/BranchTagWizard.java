@@ -20,6 +20,7 @@ import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class BranchTagWizard extends Wizard implements IClosableWizard {
     private IResource[] resources;
@@ -88,7 +89,7 @@ public class BranchTagWizard extends Wizard implements IClosableWizard {
             return false;
         }
         if (!multipleSelections()) {
-        	BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+        	BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 				public void run() {
 					ISVNInfo svnInfo = null;
 					SVNUrl[] sourceUrls = getUrls();

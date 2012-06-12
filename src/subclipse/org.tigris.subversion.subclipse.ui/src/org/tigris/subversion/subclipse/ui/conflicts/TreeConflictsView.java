@@ -195,7 +195,7 @@ import guitypes.checkers.quals.*;
 	
 	public void refresh() {
 		if (disposed || resource == null) return;
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+		BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 			public void run() {
 				folderList = new ArrayList();				
 				treeConflicts = new ArrayList();

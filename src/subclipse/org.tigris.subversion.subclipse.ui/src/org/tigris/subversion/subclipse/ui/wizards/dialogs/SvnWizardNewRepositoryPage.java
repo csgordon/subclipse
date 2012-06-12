@@ -22,6 +22,7 @@ import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
 import org.tigris.subversion.subclipse.core.SVNProviderPlugin;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
+import guitypes.checkers.quals.*;
 
 public class SvnWizardNewRepositoryPage extends SvnWizardDialogPage {
 	private Text folderText;
@@ -101,7 +102,7 @@ public class SvnWizardNewRepositoryPage extends SvnWizardDialogPage {
 
 	public boolean performFinish() {
 		success = true;
-		BusyIndicator.showWhile(Display.getDefault(), new Runnable() {
+		BusyIndicator.showWhile(Display.getDefault(), new @UI Runnable() {
 			public void run() {
 				ISVNClientAdapter svnClient = null;
 				try {

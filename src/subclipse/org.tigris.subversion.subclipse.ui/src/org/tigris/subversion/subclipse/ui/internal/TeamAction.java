@@ -53,6 +53,7 @@ import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.actions.ActionDelegate;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 /**
  * The abstract superclass of all Team actions. This class contains some convenience
@@ -214,7 +215,7 @@ public abstract class TeamAction extends ActionDelegate implements IObjectAction
 		final Exception[] exceptions = new Exception[] {null};
 		switch (progressKind) {
 			case PROGRESS_BUSYCURSOR :
-				BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+				BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 					public void run() {
 						try {
 							runnable.run(new NullProgressMonitor());

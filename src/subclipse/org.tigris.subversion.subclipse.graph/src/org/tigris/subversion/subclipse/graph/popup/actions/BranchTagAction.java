@@ -19,6 +19,7 @@ import org.tigris.subversion.subclipse.ui.wizards.ClosableWizardDialog;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class BranchTagAction extends Action {
 	private RevisionGraphEditor editor;
@@ -54,7 +55,7 @@ public class BranchTagAction extends Action {
             final Alias newAlias = wizard.getNewAlias();
             final boolean switchAfter = wizard.isSwitchAfterBranchTag();
             try {
-                BusyIndicator.showWhile(Display.getCurrent(), new Runnable() {
+                BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
                     public void run() {
                       ISVNClientAdapter client = null;
                       try {
