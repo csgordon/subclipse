@@ -38,10 +38,11 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.compare.internal.Utilities;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
+import guitypes.checkers.quals.*;
 
 public class BuiltInConflictsCompareInput extends CompareEditorInput {
 	
-    public static class MyDiffNode extends DiffNode {
+    @SafeType public static class MyDiffNode extends DiffNode {
         public MyDiffNode(IDiffContainer parent, int kind, ITypedElement ancestor, ITypedElement left, ITypedElement right) {
             super(parent, kind, ancestor, left, right);
         }
@@ -83,7 +84,7 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
         initializeCompareConfiguration();		
 	}
 	
-    private String getType() {
+    @SafeEffect private String getType() {
     	FileNode node = new FileNode(fMineFile);
         String s = node.getType();
         if (s != null)
@@ -107,7 +108,7 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
         cc.setAncestorLabel(ancestorLabel);
     }    	
 
-    protected Object prepareInput(IProgressMonitor pm) throws InvocationTargetException, InterruptedException {
+    @SafeEffect protected Object prepareInput(IProgressMonitor pm) throws InvocationTargetException, InterruptedException {
 		try {
 		    pm
 		            .beginTask(
@@ -191,7 +192,7 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
 		}
 	}
 
-	private String getCharSet() {
+	@SafeEffect private String getCharSet() {
 		String charSet = null;
 		String destFilePath = fDestinationFile.getAbsolutePath();
 		String workspacePath;
@@ -212,7 +213,7 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
 		return charSet;
 	}    
     
-    public void saveChanges(IProgressMonitor pm) throws CoreException {
+    @SafeEffect public void saveChanges(IProgressMonitor pm) throws CoreException {
         try {
             isSaving = true;
             super.saveChanges(pm);
@@ -224,7 +225,7 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
         }
     }
 
-    public boolean isSaveNeeded() {
+    @SafeEffect public boolean isSaveNeeded() {
         if (neverSaved) {
             return true;
         } else {

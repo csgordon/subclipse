@@ -78,7 +78,7 @@ public class Utils {
 	 * This method is only for use by the Target Management feature (see bug
 	 * 16509). @param t
 	 */
-	public static void handle(final Throwable exception) {
+	@SafeEffect public static void handle(final Throwable exception) {
 		Utils.getStandardDisplay().asyncExec(new @UI Runnable() {
 			public void run() {
 				IStatus error = null;
@@ -113,7 +113,7 @@ public class Utils {
 	 * the thread calling this method has an associated display. If so, this
 	 * display is returned. Otherwise the method returns the default display.
 	 */
-	public static Display getStandardDisplay() {
+	@SafeEffect public static Display getStandardDisplay() {
 		Display display= Display.getCurrent();
 		if (display == null) {
 			display= Display.getDefault();

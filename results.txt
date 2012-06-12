@@ -32,3 +32,7 @@ types... So we're back to 2469...
 +5 min (3:05): 560
 +10 min (3:15): 483 by scripting to mark all "new Runnable" passed to [a]syncExec as @UI
 +10 min (3:25): 426 by scripting to mark the BusyIndicator Runnables @UI, and fixing a couple missing imports.
+
+Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently by IShellProvider, says in its docs that it's not intended to be called from outside the UI thread, because the resulting display may be wrong.  This is dozens of errors removed in SVNHistoryPage, but with questionable semantics.
+
++45 min (4:10): 424 after undoing a few wrong annos and going back up to 500, followed by fine-grained annotation

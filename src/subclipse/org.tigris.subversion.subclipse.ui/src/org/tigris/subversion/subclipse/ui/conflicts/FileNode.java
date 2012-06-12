@@ -24,8 +24,9 @@ import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.swt.graphics.Image;
+import guitypes.checkers.quals.*;
 
-public class FileNode extends BufferedContent implements ITypedElement, IEditableContent, IEncodedStreamContentAccessor {
+@SafeType public class FileNode extends BufferedContent implements ITypedElement, IEditableContent, IEncodedStreamContentAccessor {
 	private File file;
 	private String charSet;
 

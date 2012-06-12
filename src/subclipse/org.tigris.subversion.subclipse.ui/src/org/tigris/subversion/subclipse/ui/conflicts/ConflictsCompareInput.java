@@ -32,6 +32,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.compare.internal.BufferedResourceNode;
 import org.tigris.subversion.subclipse.ui.compare.internal.Utilities;
+import guitypes.checkers.quals.*;
 
 /**
  * CompareEditorInput to resolve conflicts.
@@ -52,7 +53,7 @@ public class ConflictsCompareInput extends CompareEditorInput {
      * We want to invoke this when we do a save so that the synchronization
      * markers get updated. 
      */
-    public static class MyDiffNode extends DiffNode {
+    @SafeType public static class MyDiffNode extends DiffNode {
         public MyDiffNode(IDiffContainer parent, int kind, ITypedElement ancestor, ITypedElement left, ITypedElement right) {
             super(parent, kind, ancestor, left, right);
         }
@@ -104,7 +105,7 @@ public class ConflictsCompareInput extends CompareEditorInput {
         initializeCompareConfiguration();
     }
 
-    private String getType() {
+    @SafeEffect private String getType() {
         String s = fDestinationResource.getFileExtension();
         if (s != null)
             return s;
@@ -133,7 +134,7 @@ public class ConflictsCompareInput extends CompareEditorInput {
      * 
      * @see org.eclipse.compare.CompareEditorInput#prepareInput(org.eclipse.core.runtime.IProgressMonitor)
      */
-    protected Object prepareInput(IProgressMonitor pm)
+    @SafeEffect protected Object prepareInput(IProgressMonitor pm)
             throws InvocationTargetException, InterruptedException {
         try {
             pm
@@ -261,7 +262,7 @@ public class ConflictsCompareInput extends CompareEditorInput {
      * 
      * @see org.eclipse.compare.CompareEditorInput#saveChanges(org.eclipse.core.runtime.IProgressMonitor)
      */
-    public void saveChanges(IProgressMonitor pm) throws CoreException {
+    @SafeEffect public void saveChanges(IProgressMonitor pm) throws CoreException {
         try {
             isSaving = true;
             super.saveChanges(pm);
@@ -273,7 +274,7 @@ public class ConflictsCompareInput extends CompareEditorInput {
         }
     }
 
-    public boolean isSaveNeeded() {
+    @SafeEffect public boolean isSaveNeeded() {
         if (neverSaved) {
             return true;
         } else {

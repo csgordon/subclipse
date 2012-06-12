@@ -38,14 +38,15 @@ import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
 import org.tigris.subversion.svnclientadapter.SVNDiffSummary.SVNDiffKind;
+import guitypes.checkers.quals.*;
 
-public class SVNLocalCompareSummaryInput extends SVNAbstractCompareEditorInput implements ISaveableWorkbenchPart {	
+@SafeType public class SVNLocalCompareSummaryInput extends SVNAbstractCompareEditorInput implements ISaveableWorkbenchPart {	
 	private ISVNLocalResource[] resources;
 	private final SVNRevision remoteRevision;
 	private ISVNRemoteFolder[] remoteFolders;
 	private boolean readOnly;
 	
-	public SVNLocalCompareSummaryInput(ISVNLocalResource[] resources, SVNRevision remoteRevision) throws SVNException {
+	@UIEffect public SVNLocalCompareSummaryInput(ISVNLocalResource[] resources, SVNRevision remoteRevision) throws SVNException {
 		super(new CompareConfiguration());
 		this.resources = resources;
 		this.remoteRevision = remoteRevision;
@@ -247,7 +248,7 @@ public class SVNLocalCompareSummaryInput extends SVNAbstractCompareEditorInput i
 	/* (non-Javadoc)
 	 * @see org.eclipse.ui.IWorkbenchPart#createPartControl(org.eclipse.swt.widgets.Composite)
 	 */
-	public void createPartControl(Composite parent) {
+	@UIEffect public void createPartControl(Composite parent) {
 		createContents(parent);
 	}
 	
