@@ -15,11 +15,12 @@ import java.net.URL;
 import java.util.Hashtable;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import guitypes.checkers.quals.*;
 
 /**
  * The image descrptors for the plugin
  */
-public class ImageDescriptors {
+@UIType public class ImageDescriptors {
     private Hashtable imageDescriptors = new Hashtable(20);
     
     /**

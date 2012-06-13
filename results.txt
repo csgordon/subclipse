@@ -36,3 +36,5 @@ types... So we're back to 2469...
 Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently by IShellProvider, says in its docs that it's not intended to be called from outside the UI thread, because the resulting display may be wrong.  This is dozens of errors removed in SVNHistoryPage, but with questionable semantics.
 
 +45 min (4:10): 424 after undoing a few wrong annos and going back up to 500, followed by fine-grained annotation
++60 min (5:10): 354 fine-grained annotation
++20 min (5:30): 319

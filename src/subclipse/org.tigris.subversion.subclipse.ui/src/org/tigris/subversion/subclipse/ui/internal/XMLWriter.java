@@ -14,11 +14,12 @@ package org.tigris.subversion.subclipse.ui.internal;
 
 import java.io.*;
 import java.util.*;
+import guitypes.checkers.quals.*;
 
 /**
  * A simple XML writer.
  */
-public class XMLWriter extends PrintWriter {
+@SafeType public class XMLWriter extends PrintWriter {
 	protected int tab;
 
 	/* constants */

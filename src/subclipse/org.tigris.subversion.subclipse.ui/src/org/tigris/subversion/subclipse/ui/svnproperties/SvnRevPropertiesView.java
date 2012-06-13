@@ -74,7 +74,7 @@ public class SvnRevPropertiesView extends ViewPart {
   private PropertyConflict[] conflicts;  
 
 
-  class ResourceStateChangeListener implements IResourceStateChangeListener {
+  @SafeType class ResourceStateChangeListener implements IResourceStateChangeListener {
     /**
      * the svn status of some resources changed. Refresh if we are concerned
      */

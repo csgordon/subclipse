@@ -32,8 +32,10 @@ import org.eclipse.ui.console.IPatternMatchListenerDelegate;
 import org.eclipse.ui.console.PatternMatchEvent;
 import org.eclipse.ui.console.TextConsole;
 import org.eclipse.ui.part.FileEditorInput;
+import guitypes.checkers.quals.*;
 
-public class PathMatcher implements IPatternMatchListenerDelegate {
+
+@UIType public class PathMatcher implements IPatternMatchListenerDelegate {
 
 	private static Pattern[] PATTERNS = new Pattern[] {
 		Pattern.compile(".*\\s+[SAUCDGMRE]\\s+([^\r\n]+)"),

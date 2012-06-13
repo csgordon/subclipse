@@ -16,7 +16,8 @@ import org.tigris.subversion.subclipse.ui.actions.WorkbenchWindowAction;
 import org.tigris.subversion.subclipse.ui.settings.ProjectProperties;
 import org.tigris.subversion.subclipse.ui.util.LinkList;
 
-public class OpenBugUrlAction extends WorkbenchWindowAction {
+import guitypes.checkers.quals.*;
+@UIType public class OpenBugUrlAction extends WorkbenchWindowAction {
 
 	public OpenBugUrlAction() {
 	}

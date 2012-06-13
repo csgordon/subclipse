@@ -44,10 +44,11 @@ import org.eclipse.swt.widgets.Widget;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchPartSite;
 
+import guitypes.checkers.quals.*;
 /**
  * Convenience and utility methods.
  */
-public class Utilities {
+@UIType public class Utilities {
 	
 	public static IWorkbenchPartSite findSite(Control c) {
 		while (c != null && !c.isDisposed()) {

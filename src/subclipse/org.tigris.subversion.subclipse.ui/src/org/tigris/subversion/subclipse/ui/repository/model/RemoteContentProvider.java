@@ -24,6 +24,7 @@ import org.tigris.subversion.subclipse.core.history.AliasManager;
 import org.tigris.subversion.subclipse.core.history.Branches;
 import org.tigris.subversion.subclipse.core.history.Tags;
 import org.tigris.subversion.subclipse.core.resources.RemoteFolder;
+import guitypes.checkers.quals.*;
 
 /**
  * Extension to the generic workbench content provider mechanism
@@ -31,7 +32,7 @@ import org.tigris.subversion.subclipse.core.resources.RemoteFolder;
  * children for an element aren't fetched until the user clicks
  * on the tree expansion box.
  */
-public class RemoteContentProvider extends WorkbenchContentProvider {
+@UIType public class RemoteContentProvider extends WorkbenchContentProvider {
 	private Branches branches;
 	private Tags tags;
 	private boolean includeBranchesAndTags = true;

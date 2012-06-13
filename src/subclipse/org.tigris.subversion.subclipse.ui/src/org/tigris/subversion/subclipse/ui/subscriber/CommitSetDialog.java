@@ -103,7 +103,7 @@ import guitypes.checkers.quals.*;
 		}
 		
 		commitCommentArea.createArea(composite);
-		commitCommentArea.addPropertyChangeListener(new IPropertyChangeListener() {
+		commitCommentArea.addPropertyChangeListener(new @UI IPropertyChangeListener() {
 
             public void propertyChange(PropertyChangeEvent event) {
 				if (event.getProperty() == CommitCommentArea.OK_REQUESTED) {

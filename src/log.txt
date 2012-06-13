@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120612.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -150,9 +148,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNPristineCopyQuickDiffProvider.java:373: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			IEditorInput input= editor.getEditorInput();
 			                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/internal/ScopableSubscriberParticipant.java:42: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SubscriberParticipant.setSubscriber(org.eclipse.team.core.subscribers.Subscriber)).
-	protected void setSubscriber(Subscriber subscriber) {
-	               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNMarkerListener.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         	treeConflictsViewRefreshed = TreeConflictsView.refresh(changedResources);
         	                                                      ^
@@ -189,36 +184,15 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RemoveRootAction.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				Object next = SVNAction.getAdapter(elements.next(), ISVNRepositoryLocation.class);
 				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:34: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class RemoteContentProvider extends WorkbenchContentProvider {
-       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.inputChanged(viewer, oldInput, newInput);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (manager.isDeferredAdapter(element))
-			                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:75: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				return manager.mayHaveChildren(element);
-				                              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:78: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return super.hasChildren(element);
-		                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:88: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Object[] children = manager.getChildren(parentElement);
-			                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:105: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return super.getChildren(parentElement);
-		                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteContentProvider.java:137: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			manager.cancel(location);
-			              ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/SVNModelElement.java:64: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				getRunnableContext().run(isInterruptable() /*fork*/, isInterruptable() /*cancelable*/, runnable);
 				                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteFileElement.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		return PlatformUI.getWorkbench().getEditorRegistry().getImageDescriptor(((ISVNRemoteFile)object).getName());
 		                                                                       ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/SVNSyncAdapterFactory.java:12: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			return modelElement.getResource();
+			                               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteFolderElement.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		return PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_FOLDER);
 		                                                                     ^
@@ -261,15 +235,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:173: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				rootModified(root);
 				            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/authentication/KeyFilesManager.java:92: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                     writer.startTag(ELEMENT_KEYFILE_HISTORY, null, false);
-                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/authentication/KeyFilesManager.java:94: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                         writer.printSimpleTag(ELEMENT_KEYFILE, previousKeyFiles[i]);
-                                              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/authentication/KeyFilesManager.java:95: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                     writer.endTag(ELEMENT_KEYFILE_HISTORY);
-                                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:147: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			Display display = getViewer().getControl().getDisplay();
 			                                        ^
@@ -336,6 +301,12 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:722: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				if (mergeProviders[i].getName().equals(mergeProvider)) {
 				                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:751: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+            imageDescriptors.initializeImages(baseURL,
+                                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:754: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+        return imageDescriptors.getImageDescriptor(id);
+                                                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:810: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		String[] childrenNames = MergeFileAssociation.getParentPreferences().childrenNames();
 		                                                                  ^
@@ -420,12 +391,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:863: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		reg.put(ISVNUIConstants.IMG_PROPERTY_CONFLICTED, getImageDescriptor(ISVNUIConstants.IMG_PROPERTY_CONFLICTED));
 		       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/ImageDescriptors.java:34: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        ImageDescriptor desc = ImageDescriptor.createFromURL(url);
-                                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/ImageDescriptors.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        ImageDescriptor desc = ImageDescriptor.createFromURL(url);
-                                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/ShowOutOfDateFoldersAction.java:19: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.action.Action.setChecked(boolean)).
 	public void setChecked(boolean checked) {
 	            ^
@@ -447,27 +412,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/MergeFileAssociation.java:66: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.hashCode()).
 	public int hashCode() {
 	           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:146: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizePageActionGroup.initialize(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
-		public void initialize(ISynchronizePageConfiguration configuration) {
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:150: warning: This method overrides a method with @UI effect (org.tigris.subversion.subclipse.ui.subscriber.UpdateSynchronizeAction.getSyncInfoFilter()) and another method with an @AlwaysSafe effect (org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).  This is discouraged.
-				protected FastSyncInfoFilter getSyncInfoFilter() {
-				                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:291: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizePageActionGroup.fillActionBars(org.eclipse.ui.IActionBars)).
-		public void fillActionBars(IActionBars actionBars) {
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:291: warning: This method overrides a method with @UI effect (org.eclipse.ui.actions.ActionGroup.fillActionBars(org.eclipse.ui.IActionBars)) and another method with an @AlwaysSafe effect (org.eclipse.team.ui.synchronize.SynchronizePageActionGroup.fillActionBars(org.eclipse.ui.IActionBars)).  This is discouraged.
-		public void fillActionBars(IActionBars actionBars) {
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:322: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SubscriberParticipant.init(java.lang.String,org.eclipse.ui.IMemento)).
-	public void init(String secondaryId, IMemento memento) throws PartInitException {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:335: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SubscriberParticipant.initializeConfiguration(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
-	protected void initializeConfiguration(ISynchronizePageConfiguration configuration) {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:358: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.AbstractSynchronizeParticipant.isViewerContributionsSupported()).
-	protected boolean isViewerContributionsSupported() {
-	                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNSynchronizeParticipant.java:362: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IChangeSetProvider.getChangeSetCapability()).
 	public ChangeSetCapability getChangeSetCapability() {
 	                           ^
@@ -517,22 +461,16 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/TextViewerAction.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			operationTarget.doOperation(operationCode);
 			                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			int offset = event.getOffset();
-			                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			int length = event.getLength();
-			                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:151: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:153: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				descriptor = registry.getDefaultEditor(path.lastSegment(), contentDescription != null ? contentDescription.getContentType(): null);
 				                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:156: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				descriptor = registry.findEditor(IEditorRegistry.SYSTEM_EXTERNAL_EDITOR_ID);
 				                                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:164: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:166: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				page.openEditor(input, descriptor.getId());
 				               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:164: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:166: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				page.openEditor(input, descriptor.getId());
 				                                       ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNConsolePageParticipant.java:31: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
@@ -568,63 +506,42 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/preferences/SVNDecoratorPreferencesPage.java:824: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
 		public void propertyChange(PropertyChangeEvent event) {
 		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	public OverlayIcon(Image base, ImageDescriptor[] overlays, int[] locations, Point size) {
-	                                                                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:60: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return base.equals(other.base) && Arrays.equals(overlays, other.overlays);
-		                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:64: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		int code = base.hashCode();
-		                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		drawImage(base.getImageData(), 0, 0);
-		         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		drawImage(base.getImageData(), 0, 0);
-		                           ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.equals(java.lang.Object)).
+	public boolean equals(Object o) {
+	               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIcon.java:64: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.hashCode()).
+	public int hashCode() {
+	           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIconCache.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			image = icon.createImage();
 			                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIconCache.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			image.dispose();
 			             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/CommentCommitWizardPage.java:62: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    					IClosableWizard wizard = (IClosableWizard)getWizard();
-    					                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/CommentCommitWizardPage.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    					wizard.finishAndClose();
-    					                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommitCommentArea.java:256: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe Observer.update(java.util.Observable,java.lang.Object)).
         public void update(Observable o, Object arg) {
                     ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/dialogs/DialogArea.java:63: error: incompatible types.
+		if (!listeners.contains(listener))
+		                        ^
+  found   : @UI IPropertyChangeListener
+  required: @AlwaysSafe Object
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/dialogs/DialogArea.java:64: error: incompatible types.
+			listeners.add(listener);
+			              ^
+  found   : @UI IPropertyChangeListener
+  required: ? extends @AlwaysSafe Object
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/dialogs/DialogArea.java:72: error: incompatible types.
+		listeners.remove(listener);
+		                 ^
+  found   : @UI IPropertyChangeListener
+  required: @AlwaysSafe Object
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/BranchTagWizardRepositoryPage.java:332: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IAdaptable.getAdapter(java.lang.Class)).
 		public Object getAdapter(Class adapter) {
 		              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/ResourceSelectionTree.java:769: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IThreeWayDiff.getDirection()).
-		public int getDirection() {
-		           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/ResourceSelectionTree.java:773: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IThreeWayDiff.getLocalChange()).
-		public ITwoWayDiff getLocalChange() {
-		                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/ResourceSelectionTree.java:778: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IThreeWayDiff.getRemoteChange()).
-		public ITwoWayDiff getRemoteChange() {
-		                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/ResourceSelectionTree.java:818: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe Comparator<? extends @AlwaysSafe Object>.compare(T,T)).
-		public int compare(Object obj0, Object obj1) {
-		           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/SVNConflictResolver.java:72: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISVNConflictResolver.resolve(org.tigris.subversion.svnclientadapter.SVNConflictDescriptor)).
 	public SVNConflictResult resolve(SVNConflictDescriptor descrip) throws SVNClientException {
 	                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardBranchTagPage.java:262: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
-				                                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardBranchTagPage.java:263: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					IClosableWizard wizard = (IClosableWizard)getWizard();
-					                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardBranchTagPage.java:264: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					wizard.finishAndClose();
-					                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/settings/ProjectProperties.java:195: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         int[][] urlRanges = urlLinks.getLinkRanges();
                                                   ^
@@ -634,24 +551,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardCompareMultipleResourcesWithBranchTagPage.java:364: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IAdaptable.getAdapter(java.lang.Class)).
 		public Object getAdapter(Class adapter) {
 		              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardLockPage.java:61: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
-				                                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardLockPage.java:62: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					IClosableWizard wizard = (IClosableWizard)getWizard();
-					                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardLockPage.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					wizard.finishAndClose();
-					                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardCommitPage.java:206: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
-    				                                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardCommitPage.java:207: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    					IClosableWizard wizard = (IClosableWizard)getWizard();
-    					                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardCommitPage.java:208: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-    					wizard.finishAndClose();
-    					                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareInput.java:143: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.prepareInput(org.eclipse.core.runtime.IProgressMonitor)).
 	protected Object prepareInput(IProgressMonitor monitor){
 	                 ^
@@ -664,15 +563,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/dialogs/SvnWizardSwitchPage.java:540: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IAdaptable.getAdapter(java.lang.Class)).
 		public Object getAdapter(Class adapter) {
 		              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/BranchTagWizardCommentPage.java:80: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
-				                                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/BranchTagWizardCommentPage.java:81: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					IClosableWizard wizard = (IClosableWizard)getWizard();
-					                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/wizards/BranchTagWizardCommentPage.java:82: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					wizard.finishAndClose();
-					                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareInput.java:24: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.prepareInput(org.eclipse.core.runtime.IProgressMonitor)).
 	protected Object prepareInput(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 	                 ^
@@ -846,36 +736,24 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 			                                 ^
   found   : ? extends @AlwaysSafe Object
   required: @AlwaysSafe String
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:201: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:202: warning: non-varargs call of varargs method with inexact argument type for last parameter;
 				return MessageFormat.format(bundle.getString(key), new String[] { arg });
 				                                                   ^
   cast to Object for a varargs call
   cast to Object[] for a non-varargs call and to suppress this warning
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:219: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:220: warning: non-varargs call of varargs method with inexact argument type for last parameter;
 			return MessageFormat.format(CompareUI.getResourceBundle().getString(key), new String[] { arg });
 			                                                                          ^
   cast to Object for a varargs call
   cast to Object[] for a non-varargs call and to suppress this warning
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:227: warning: non-varargs call of varargs method with inexact argument type for last parameter;
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:228: warning: non-varargs call of varargs method with inexact argument type for last parameter;
 			return MessageFormat.format(CompareUI.getResourceBundle().getString(key), new String[] { arg0, arg1 });
 			                                                                          ^
   cast to Object for a varargs call
   cast to Object[] for a non-varargs call and to suppress this warning
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:54: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Object data= c.getData();
-			                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:56: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				return ((IWorkbenchPart)data).getSite();
-				                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			c= c.getParent();
-			              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		Control[] children= composite.getChildren();
-		                                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:65: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			children[i].setEnabled(enable);
-			                      ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/BufferedResourceNode.java:120: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+				byte[] bytes= Utilities.readBytes(is);
+				                                 ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalBaseCompareInput.java:98: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.prepareInput(org.eclipse.core.runtime.IProgressMonitor)).
 	protected Object prepareInput(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 	                 ^
@@ -888,60 +766,21 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceNode.java:83: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? Same as SVNLocalResourceSummaryNode...
 			                                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceNode.java:97: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	            	if (!getLocalResource().isDirty() && getLocalResource().getResource().getProjectRelativePath().toString().equals(remoteResource.getRemoteResource().getProjectRelativePath()) &&
-	            	                                                                                                                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceNode.java:98: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	            			getLocalResource().getStatus().getLastChangedRevision().equals(remoteResource.getRemoteResource().getLastChangedRevision())) {
-	            			                                                                                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:98: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.equals(java.lang.Object)).
-	public boolean equals(Object other) {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:110: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStructureComparator.getChildren()).
-	public Object[] getChildren() {
-	                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:177: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStreamContentAccessor.getContents()).
-	public InputStream getContents() throws CoreException {
-	                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:208: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getImage()).
-	public Image getImage() {
-	             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:216: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getName()).
-	public String getName() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:224: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getType()).
-	public String getType() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:238: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.hashCode()).
-	public int hashCode() {
-	           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/ResourceEditionNode.java:242: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IEncodedStreamContentAccessor.getCharset()).
-	public String getCharset() throws CoreException {
-	              ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceSummaryNode.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
 			                                                                    ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceSummaryNode.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
 			                                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/MultipleSelectionNode.java:15: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStructureComparator.getChildren()).
-	public Object[] getChildren() {
-	                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/MultipleSelectionNode.java:19: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getImage()).
-	public Image getImage() {
-	             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/MultipleSelectionNode.java:23: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getName()).
-	public String getName() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/MultipleSelectionNode.java:27: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getType()).
-	public String getType() {
-	              ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SummaryDifferencer.java:14: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.structuremergeviewer.Differencer.contentsEqual(java.lang.Object,java.lang.Object)).
 	protected boolean contentsEqual(Object input1, Object input2) {
 	                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SummaryDifferencer.java:18: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.structuremergeviewer.Differencer.updateProgress(org.eclipse.core.runtime.IProgressMonitor,java.lang.Object)).
     protected void updateProgress(IProgressMonitor progressMonitor, Object node) {
                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareSummaryInput.java:123: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+						String localCharset = Utilities.getCharset(resource.getIResource());
+						                                          ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNAbstractCompareEditorInput.java:21: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.createContents(org.eclipse.swt.widgets.Composite)).
 	public Control createContents(Composite parent) {
 	               ^
@@ -954,27 +793,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNFolderCompareEditorInput.java:224: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.canRunAsJob()).
 	public boolean canRunAsJob() {
 	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:22: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStreamContentAccessor.getContents()).
-	public InputStream getContents() throws CoreException {
-	                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:26: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getName()).
-	public String getName() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:30: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getImage()).
-	public Image getImage() {
-	             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getType()).
-	public String getType() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStructureComparator.getChildren()).
-	public Object[] getChildren() {
-	                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:43: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.equals(java.lang.Object)).
-	public boolean equals(Object obj) {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:51: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.hashCode()).
-	public int hashCode() {
-	           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalBranchTagCompareInput.java:75: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.prepareInput(org.eclipse.core.runtime.IProgressMonitor)).
 	protected Object prepareInput(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 	                 ^
@@ -1008,6 +826,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:127: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.ResourceNode.replace(org.eclipse.compare.ITypedElement,org.eclipse.compare.ITypedElement)).
 		public ITypedElement replace(ITypedElement child, ITypedElement other) {
 		                     ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:147: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.compare.ResourceEditionNode.getName()).
+		public String getName() {
+		              ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:171: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.structuremergeviewer.DiffNode.getName()).
 		public String getName() {
 		              ^
@@ -1029,54 +850,15 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:502: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.canRunAsJob()).
 	public boolean canRunAsJob() {
 	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStreamContentAccessor.getContents()).
-	public InputStream getContents() throws CoreException {
-	                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:62: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getName()).
-	public String getName() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:66: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getImage()).
-	public Image getImage() {
-	             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:70: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ITypedElement.getType()).
-	public String getType() {
-	              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:74: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStructureComparator.getChildren()).
-	public Object[] getChildren() {
-	                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:104: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.equals(java.lang.Object)).
-	public boolean equals(Object other) {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyCompareRemoteResourceNode.java:115: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.hashCode()).
-	public int hashCode() {
-	           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/UIBaseResourceStorageFactory.java:26: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IBaseResourceStorageFactory.createResourceStorage(org.tigris.subversion.subclipse.core.resources.BaseResource)).
 	public BaseResourceStorage createResourceStorage(BaseResource baseResource) {
 	                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:31: error: An method override may only be @UI if it overrides an @UI method (overriding org.xml.sax.helpers.DefaultHandler.characters(char[],int,int)).
-	public void characters(char[] chars, int startIndex, int length) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:39: error: An method override may only be @UI if it overrides an @UI method (overriding org.xml.sax.helpers.DefaultHandler.startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes)).
-	public void startElement(
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:59: error: An method override may only be @UI if it overrides an @UI method (overriding org.xml.sax.helpers.DefaultHandler.endElement(java.lang.String,java.lang.String,java.lang.String)).
-	public void endElement(String namespaceURI, String localName, String qName) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:69: error: incompatible component type of Vector.copyInto argument.
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:70: error: incompatible component type of Vector.copyInto argument.
 			comments.copyInto(CommentsManager.previousComments);
 			                                 ^
   found   : ? extends @AlwaysSafe Object
   required: @AlwaysSafe String
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentTemplatesContentHandler.java:29: error: An method override may only be @UI if it overrides an @UI method (overriding org.xml.sax.helpers.DefaultHandler.characters(char[],int,int)).
-	public void characters(char[] chars, int startIndex, int length) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentTemplatesContentHandler.java:37: error: An method override may only be @UI if it overrides an @UI method (overriding org.xml.sax.helpers.DefaultHandler.startElement(java.lang.String,java.lang.String,java.lang.String,org.xml.sax.Attributes)).
-	public void startElement(
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentTemplatesContentHandler.java:57: error: An method override may only be @UI if it overrides an @UI method (overriding org.xml.sax.helpers.DefaultHandler.endElement(java.lang.String,java.lang.String,java.lang.String)).
-	public void endElement(String namespaceURI, String localName, String qName) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentTemplatesContentHandler.java:66: error: incompatible component type of Vector.copyInto argument.
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentTemplatesContentHandler.java:67: error: incompatible component type of Vector.copyInto argument.
 			comments.copyInto(CommentsManager.commentTemplates);
 			                                 ^
   found   : ? extends @AlwaysSafe Object
@@ -1090,42 +872,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNDecoratorConfiguration.java:54: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.toString()).
 		public String toString() {
 		              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:21: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	public OpenBugUrlAction() {
-	                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:35: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					String[] urls = linkList.getUrls();
-					                                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					handle(e, null, null);
-					      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				PlatformUI.getWorkbench().getBrowserSupport().createBrowser("bugurlbrowser" + (i++)).openURL(new URL((String) it.next()));
-				                                                                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				PlatformUI.getWorkbench().getBrowserSupport().createBrowser("bugurlbrowser" + (i++)).openURL(new URL((String) it.next()));
-				                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:51: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				handle(e, null, null);
-				      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/OpenBugUrlAction.java:74: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				return linkList.getUrls().length != 0;
-				                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/AdaptableList.java:71: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IAdaptable.getAdapter(java.lang.Class)).
-public Object getAdapter(Class adapter) {
-              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/AdaptableList.java:103: error: An method override may only be @UI if it overrides an @UI method (overriding java.lang.Object.toString()).
-public String toString() {
-              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/SimpleDialogsHelper.java:35: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISimpleDialogsHelper.promptYesNo(java.lang.String,java.lang.String,boolean)).
-	public boolean promptYesNo(String title, String question, boolean yesIsDefault) {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/SimpleDialogsHelper.java:48: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe ISimpleDialogsHelper.promptYesCancel(java.lang.String,java.lang.String,boolean)).
-	public boolean promptYesCancel(String title, String question, boolean yesIsDefault) {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/SimpleDialogsHelper.java:98: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe Runnable).
-		public void run() {
-		            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/util/PromptingDialog.java:91: error: Calling a method with UIEffect effect from a context limited to PolyUIEffect effects.
 					dialog.open();
 					           ^
@@ -1141,81 +887,39 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/CommitAction.java:428: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 							if ((aResource.getType() == IResource.FOLDER) && isSymLink(aResource)) // don't traverse into symlink folders
 							                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:81: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])).
-    public void resourceSyncInfoChanged(IResource[] changedResources) {
-                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:89: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceModified(org.eclipse.core.resources.IResource[])).
-    public void resourceModified(IResource[] changedResources) {}
-                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:91: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectConfigured(org.eclipse.core.resources.IProject)).
-    public void projectConfigured(IProject project) {}
-                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:93: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectDeconfigured(org.eclipse.core.resources.IProject)).
-    public void projectDeconfigured(IProject project) {}
-                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:95: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.initialize()).
-    public void initialize() {}
-                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:103: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])).
-		public void resourceSyncInfoChanged(IResource[] changedResources) {
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:111: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceModified(org.eclipse.core.resources.IResource[])).
-		public void resourceModified(IResource[] changedResources) {}
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:113: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectConfigured(org.eclipse.core.resources.IProject)).
-		public void projectConfigured(IProject project) {}
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:115: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectDeconfigured(org.eclipse.core.resources.IProject)).
-		public void projectDeconfigured(IProject project) {}
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:117: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.initialize()).
-		public void initialize() {}
-		            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:84: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                refresh();
+                       ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:106: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+					refresh();
+					       ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNConflictsFilter.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 public class SVNConflictsFilter extends ViewerFilter {
        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:37: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:55: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:42: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+		        IResource resource = element.getResource();
+		                                                ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:68: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:49: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:66: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    IResource resource = element.getResource();
+			                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:71: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeAction.java:59: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSynchronizeAction.java:126: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:75: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    	IResource resource = element.getResource();
+			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:63: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:48: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    	IResource resource = element.getResource();
+			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.createChangeSet(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.team.core.diff.IDiff[])).
 	public ActiveChangeSet createChangeSet(ISynchronizePageConfiguration configuration, IDiff[] infos) {
 	                       ^
@@ -1246,45 +950,24 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:118: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.enableCheckedInChangeSetsFor(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
     public boolean enableCheckedInChangeSetsFor(ISynchronizePageConfiguration configuration) {
                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:37: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:59: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:36: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    	IResource resource = element.getResource();
+			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:56: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeAction.java:23: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/GenerateDiffFileSynchronizeAction.java:27: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:110: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					okPressed();
-					         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/CommitSetDialog.java:113: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-					updateEnablements();
-					                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    IResource resource = element.getResource();
+			                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    	IResource resource = element.getResource();
+			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:84: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.CheckedInChangeSet.getAuthor()).
 	    public String getAuthor() {
 	                  ^
@@ -1300,33 +983,30 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:292: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSetManager.initializeSets()).
 	protected void initializeSets() {
 	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:51: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:82: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    	IResource resource = element.getResource();
+			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			    IStructuredSelection selection = getStructuredSelection();
 			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:58: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-    protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:32: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSyncInfoFilter()).
-	protected FastSyncInfoFilter getSyncInfoFilter() {
-	                             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			        if (element.getResource() instanceof IFile) {
+			                               ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+		                .getSVNResourceFor(element.getResource());	
+		                                                      ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				IStructuredSelection selection = getStructuredSelection();
 				                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:52: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.ui.synchronize.SynchronizeModelAction.getSubscriberOperation(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.compare.structuremergeviewer.IDiffElement[])).
-	protected SynchronizeModelOperation getSubscriberOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
-	                                    ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+			    IResource resource = element.getResource();
+			                                            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+		                    Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
+		                                       ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:236: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.createContents(org.eclipse.swt.widgets.Composite)).
 	public Control createContents(Composite parent) {
 	               ^
@@ -1348,6 +1028,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/DiffMergePreferencePage.java:450: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.preference.PreferencePage.doGetPreferenceStore()).
     protected IPreferenceStore doGetPreferenceStore() {
                                ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:142: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+                            Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
+                                               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ExternalFileStorage.java:31: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IStorage.getContents()).
 	public InputStream getContents() throws CoreException {
 	                   ^
@@ -1370,5 +1053,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-424 errors
-16 warnings
+319 errors
+14 warnings

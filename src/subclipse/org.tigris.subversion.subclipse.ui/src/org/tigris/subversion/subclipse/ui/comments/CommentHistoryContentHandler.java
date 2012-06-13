@@ -14,11 +14,12 @@ import java.util.Vector;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
+import guitypes.checkers.quals.*;
 
 /**
  * Class used to read comment history using SAX 
  */
-class CommentHistoryContentHandler extends DefaultHandler {
+@SafeType class CommentHistoryContentHandler extends DefaultHandler {
 
 	private StringBuffer buffer;
 	private Vector comments;

@@ -17,10 +17,11 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Point;
 
+import guitypes.checkers.quals.*;
 /**
  * An OverlayIcon consists of a main icon and several adornments.
  */
-public abstract class OverlayIcon extends CompositeImageDescriptor {
+@UIType public abstract class OverlayIcon extends CompositeImageDescriptor {
 	// the base image
 	private Image base;
 	// the overlay images

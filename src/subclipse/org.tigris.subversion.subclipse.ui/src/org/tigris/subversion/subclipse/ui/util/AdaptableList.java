@@ -16,6 +16,7 @@ import java.util.List;
 
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.ui.model.IWorkbenchAdapter;
+import guitypes.checkers.quals.*;
 
 /**
  * A list of adaptable objects.  This is a generic list that can
@@ -23,7 +24,7 @@ import org.eclipse.ui.model.IWorkbenchAdapter;
  * Also implements the IWorkbenchAdapter interface for simple display
  * and navigation.
  */
-public class AdaptableList extends WorkbenchAdapter implements IAdaptable {
+@SafeType public class AdaptableList extends WorkbenchAdapter implements IAdaptable {
 	protected List children = null;
 /**
  * Creates a new adaptable list.

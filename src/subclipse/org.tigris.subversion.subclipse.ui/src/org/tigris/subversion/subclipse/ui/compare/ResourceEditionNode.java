@@ -36,6 +36,7 @@ import org.tigris.subversion.subclipse.core.resources.RemoteFolder;
 import org.tigris.subversion.subclipse.core.util.Util;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 /**
  * A class for comparing ISVNRemoteResource objects
  * 
@@ -48,7 +49,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
  * </p>
  *  
  */
-public class ResourceEditionNode
+@SafeType public class ResourceEditionNode
 		implements
 			IStructureComparator,
 			ITypedElement,

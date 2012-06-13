@@ -14,11 +14,12 @@ import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.model.IWorkbenchAdapter;
 
+import guitypes.checkers.quals.*;
 /**
  * A default implementation of the IWorkbenchAdapter interface.
  * Provides basic implementations of the interface methods.
  */
-public abstract class WorkbenchAdapter implements IWorkbenchAdapter {
+@SafeType public abstract class WorkbenchAdapter implements IWorkbenchAdapter {
 	protected static final Object[] NO_CHILDREN = new Object[0];
 /**
  * @see IWorkbenchAdapter#getChildren
@@ -31,7 +32,7 @@ public Object[] getChildren(Object o) {
  * object that responds to the IWorkbenchAdapter adapter interface.
  * Returns a toString() of the object if it is not adaptable
  */
-public static String getElementLabel(IAdaptable a) {
+@UIEffect public static String getElementLabel(IAdaptable a) {
 	if (a == null) {
 		return "";//$NON-NLS-1$
 	}
