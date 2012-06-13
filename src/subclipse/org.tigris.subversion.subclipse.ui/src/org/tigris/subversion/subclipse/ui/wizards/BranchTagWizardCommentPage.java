@@ -21,6 +21,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.comments.CommitCommentArea;
 import org.tigris.subversion.subclipse.ui.settings.CommentProperties;
 import org.tigris.subversion.subclipse.ui.settings.ProjectProperties;
+import guitypes.checkers.quals.*;
 
 public class BranchTagWizardCommentPage extends SVNWizardPage {
 	protected CommitCommentArea commitCommentArea;
@@ -75,7 +76,7 @@ public class BranchTagWizardCommentPage extends SVNWizardPage {
 		}
 		
 		commitCommentArea.createArea(outerContainer);
-		commitCommentArea.addPropertyChangeListener(new IPropertyChangeListener() {
+		commitCommentArea.addPropertyChangeListener(new @UI IPropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent event) {
 				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
 					IClosableWizard wizard = (IClosableWizard)getWizard();

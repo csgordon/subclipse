@@ -14,9 +14,10 @@ package org.tigris.subversion.subclipse.ui.comments;
 import java.util.Vector;
 
 import org.xml.sax.Attributes;
+import guitypes.checkers.quals.*;
 import org.xml.sax.helpers.DefaultHandler;
 
-class CommentTemplatesContentHandler extends DefaultHandler {
+@SafeType class CommentTemplatesContentHandler extends DefaultHandler {
 
 	private StringBuffer buffer;
 	private Vector comments;

@@ -12,7 +12,8 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 
-public class PropertyComparePropertyNode implements IStructureComparator, ITypedElement, IStreamContentAccessor {
+import guitypes.checkers.quals.*;
+@SafeType public class PropertyComparePropertyNode implements IStructureComparator, ITypedElement, IStreamContentAccessor {
 	private ISVNProperty property;
 	
 	public PropertyComparePropertyNode(ISVNProperty property) {

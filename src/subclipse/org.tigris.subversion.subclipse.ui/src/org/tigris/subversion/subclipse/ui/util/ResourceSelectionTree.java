@@ -759,7 +759,7 @@ import guitypes.checkers.quals.*;
 		
 	}
 	
-	private class ResourceSelectionDiff implements IThreeWayDiff {
+	@SafeType private class ResourceSelectionDiff implements IThreeWayDiff {
 		private IResource resource;
 		
 		public ResourceSelectionDiff(IResource resource) {
@@ -814,7 +814,7 @@ import guitypes.checkers.quals.*;
 		
 	}
 	
-	private class ResourceComparator implements Comparator {
+	@SafeType private class ResourceComparator implements Comparator {
 		public int compare(Object obj0, Object obj1) {
 			IResource resource0 = (IResource)obj0;
 			IResource resource1 = (IResource)obj1;

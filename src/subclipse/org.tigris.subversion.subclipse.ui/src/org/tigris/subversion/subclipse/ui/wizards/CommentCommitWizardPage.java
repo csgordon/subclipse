@@ -21,6 +21,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.PlatformUI;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.comments.CommitCommentArea;
+import guitypes.checkers.quals.*;
 
 public class CommentCommitWizardPage extends SVNWizardPage {
 
@@ -56,7 +57,7 @@ public class CommentCommitWizardPage extends SVNWizardPage {
 		commitCommentArea.createArea(top);
         IWizard wizard = getWizard();
         if (wizard instanceof IClosableWizard) {
-    		commitCommentArea.addPropertyChangeListener(new IPropertyChangeListener() {
+    		commitCommentArea.addPropertyChangeListener(new @UI IPropertyChangeListener() {
     			public void propertyChange(PropertyChangeEvent event) {
     				if (event.getProperty() == CommitCommentArea.OK_REQUESTED) {
     					IClosableWizard wizard = (IClosableWizard)getWizard();

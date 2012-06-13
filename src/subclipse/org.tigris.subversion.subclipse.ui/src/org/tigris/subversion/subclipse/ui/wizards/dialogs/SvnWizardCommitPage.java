@@ -201,7 +201,7 @@ import guitypes.checkers.quals.*;
 			}
 
 			commitCommentArea.createArea(cTop);
-			commitCommentArea.addPropertyChangeListener(new IPropertyChangeListener() {
+			commitCommentArea.addPropertyChangeListener(new @UI IPropertyChangeListener() {
 				public void propertyChange(PropertyChangeEvent event) {
     				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
     					IClosableWizard wizard = (IClosableWizard)getWizard();

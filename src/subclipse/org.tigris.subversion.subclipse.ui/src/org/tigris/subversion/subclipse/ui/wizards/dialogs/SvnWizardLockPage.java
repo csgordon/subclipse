@@ -24,6 +24,7 @@ import org.tigris.subversion.subclipse.ui.comments.CommitCommentArea;
 import org.tigris.subversion.subclipse.ui.settings.CommentProperties;
 import org.tigris.subversion.subclipse.ui.util.ResourceSelectionTree;
 import org.tigris.subversion.subclipse.ui.wizards.IClosableWizard;
+import guitypes.checkers.quals.*;
 
 public class SvnWizardLockPage extends SvnWizardDialogPage {
     private CommitCommentArea commitCommentArea;
@@ -56,7 +57,7 @@ public class SvnWizardLockPage extends SvnWizardDialogPage {
 		    };
 		    commitCommentArea.setModifyListener(modifyListener);
 		}   
-		commitCommentArea.addPropertyChangeListener(new IPropertyChangeListener() {
+		commitCommentArea.addPropertyChangeListener(new @UI IPropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent event) {
 				if (event.getProperty() == CommitCommentArea.OK_REQUESTED && canFinish()) {
 					IClosableWizard wizard = (IClosableWizard)getWizard();

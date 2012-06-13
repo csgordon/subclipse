@@ -17,6 +17,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.tigris.subversion.subclipse.core.util.ISimpleDialogsHelper;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.eclipse.swt.graphics.Image;
+import guitypes.checkers.quals.*;
 
 /**
  *	
@@ -30,7 +31,7 @@ import org.eclipse.swt.graphics.Image;
  * @see org.tigris.subversion.subclipse.core.SVNProviderPlugin#getSimpleDialogsHelper()
  */
 
-public class SimpleDialogsHelper implements ISimpleDialogsHelper {
+@SafeType public class SimpleDialogsHelper implements ISimpleDialogsHelper {
 
 	public boolean promptYesNo(String title, String question, boolean yesIsDefault) {
 		MessageDialogRunnable mdr = new MessageDialogRunnable(
@@ -66,7 +67,7 @@ public class SimpleDialogsHelper implements ISimpleDialogsHelper {
 	 *
 	 */
 	
-	private static class MessageDialogRunnable implements Runnable {
+	@UI private static class MessageDialogRunnable implements @UI Runnable {
 		final Shell shell;
 		final String title, message;
 		final Image image;
@@ -85,7 +86,7 @@ public class SimpleDialogsHelper implements ISimpleDialogsHelper {
 		 * @param defaultButton
 		 */
 
-		MessageDialogRunnable(Shell shell, String title, Image image, String message, int imageType, String buttonLabels[], int defaultButton){
+		@SafeEffect MessageDialogRunnable(Shell shell, String title, Image image, String message, int imageType, String buttonLabels[], int defaultButton){
 			this.shell = shell;
 			this.title = title;
 			this.image = image;
@@ -102,7 +103,7 @@ public class SimpleDialogsHelper implements ISimpleDialogsHelper {
 					buttonLabels, defaultButton).open();
 		}
 		
-		public int getResult(){
+		@SafeEffect public int getResult(){
 			return result;
 		}
 	}

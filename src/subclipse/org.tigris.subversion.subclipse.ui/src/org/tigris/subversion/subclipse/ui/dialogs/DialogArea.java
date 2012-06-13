@@ -31,6 +31,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 
+import guitypes.checkers.quals.*;
 /**
  * This class provides facilities to allow common widget groupings to be shared
  * by mulitple dialogs or wizards.
@@ -58,7 +59,7 @@ public abstract class DialogArea {
 	 * 
 	 * @param listener
 	 */
-	public void addPropertyChangeListener(IPropertyChangeListener listener) {
+	public void addPropertyChangeListener(@UI IPropertyChangeListener listener) {
 		if (!listeners.contains(listener))
 			listeners.add(listener);
 	}
@@ -67,14 +68,14 @@ public abstract class DialogArea {
 	 * 
 	 * @param listener
 	 */
-	public void removePropertyChangeListener(IPropertyChangeListener listener) {
+	public void removePropertyChangeListener(@UI IPropertyChangeListener listener) {
 		listeners.remove(listener);
 	}
 
 	protected void firePropertyChangeChange(String property, Object oldValue, Object newValue) {
 		PropertyChangeEvent event = new PropertyChangeEvent(this, property, oldValue, newValue);
 		for (Iterator iter = listeners.iterator(); iter.hasNext();) {
-			IPropertyChangeListener listener = (IPropertyChangeListener) iter.next();
+			@UI IPropertyChangeListener listener = (@UI IPropertyChangeListener) iter.next();
 			listener.propertyChange(event);
 		}
 	}
