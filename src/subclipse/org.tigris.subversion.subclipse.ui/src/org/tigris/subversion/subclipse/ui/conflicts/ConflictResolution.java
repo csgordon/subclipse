@@ -2,8 +2,9 @@ package org.tigris.subversion.subclipse.ui.conflicts;
 
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
+import guitypes.checkers.quals.*;
 
-public class ConflictResolution {
+@SafeType public class ConflictResolution {
 	private SVNConflictDescriptor conflictDescriptor;
 	private int resolution;
 	private String mergedPath;

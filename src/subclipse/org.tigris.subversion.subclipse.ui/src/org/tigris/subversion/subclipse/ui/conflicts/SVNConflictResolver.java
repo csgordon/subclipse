@@ -39,7 +39,7 @@ import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.SVNConflictResult;
 import guitypes.checkers.quals.*;
 
-public class SVNConflictResolver implements ISVNConflictResolver {
+@SafeType public class SVNConflictResolver implements ISVNConflictResolver {
 	private IResource resource;
 	private int textHandling = ISVNConflictResolver.Choice.postpone;
 	private int binaryHandling = ISVNConflictResolver.Choice.postpone;
@@ -355,7 +355,7 @@ public class SVNConflictResolver implements ISVNConflictResolver {
 		}
 	}	
 	
-	private void finishEditing(SVNConflictDescriptor descrip) {
+	@UIEffect private void finishEditing(SVNConflictDescriptor descrip) {
 		DialogWizard dialogWizard = new DialogWizard(DialogWizard.FINISHED_EDITING);
 		dialogWizard.setConflictDescriptor(descrip);
 		ConflictWizardDialog dialog = new ConflictWizardDialog(Display.getDefault().getActiveShell(), dialogWizard);

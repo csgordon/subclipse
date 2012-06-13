@@ -21,15 +21,16 @@ import org.eclipse.team.core.TeamException;
 import org.eclipse.ui.model.IWorkbenchAdapter;
 import org.eclipse.ui.progress.IDeferredWorkbenchAdapter;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 /**
  * Base class for model elements
  */
-public abstract class SVNModelElement implements IWorkbenchAdapter, IAdaptable {
+@UIType public abstract class SVNModelElement implements IWorkbenchAdapter, IAdaptable {
 
 	private IRunnableContext runnableContext;
 
-	public Object getAdapter(Class adapter) {
+	@SafeEffect public Object getAdapter(Class adapter) {
 		if (adapter == IWorkbenchAdapter.class)
 			return this;
 		if ((adapter == IDeferredWorkbenchAdapter.class) && this instanceof IDeferredWorkbenchAdapter)

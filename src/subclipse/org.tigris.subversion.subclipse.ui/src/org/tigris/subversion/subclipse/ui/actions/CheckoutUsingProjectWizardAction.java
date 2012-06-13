@@ -38,6 +38,7 @@ import org.tigris.subversion.subclipse.ui.operations.CheckoutAsProjectOperation;
 import org.tigris.subversion.subclipse.ui.util.IPromptCondition;
 import org.tigris.subversion.subclipse.ui.util.PromptingDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 /**
  * Add a remote resource to the workspace. Current implementation:
@@ -202,7 +203,7 @@ public class CheckoutUsingProjectWizardAction extends SVNAction {
     /**
      * Listener used to get the project  by NewProjectAction
      */
-	class NewProjectListener implements IResourceChangeListener {
+	@SafeType class NewProjectListener implements IResourceChangeListener {
 		private IProject newProject = null;
 		/**
 		 * @see IResourceChangeListener#resourceChanged(IResourceChangeEvent)

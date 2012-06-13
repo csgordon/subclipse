@@ -26,8 +26,9 @@ import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
 import org.tigris.subversion.subclipse.core.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.operations.FetchMembersOperation;
+import guitypes.checkers.quals.*;
 
-public class RemoteFolderElement extends SVNModelElement implements IDeferredWorkbenchAdapter {
+@UIType public class RemoteFolderElement extends SVNModelElement implements IDeferredWorkbenchAdapter {
 
 	/**
 	 * Overridden to append the version name to remote folders which

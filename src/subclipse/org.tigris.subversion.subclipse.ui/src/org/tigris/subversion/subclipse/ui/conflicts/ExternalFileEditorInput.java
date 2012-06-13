@@ -22,6 +22,7 @@ import org.eclipse.ui.IPersistableElement;
 import org.eclipse.ui.IStorageEditorInput;
 import org.eclipse.ui.editors.text.ILocationProvider;
 import org.eclipse.ui.model.IWorkbenchAdapter;
+import guitypes.checkers.quals.*;
 
 public class ExternalFileEditorInput implements IPathEditorInput, IStorageEditorInput, ILocationProvider  {
 	
@@ -89,13 +90,13 @@ public class ExternalFileEditorInput implements IPathEditorInput, IStorageEditor
 		return null;
 	}
 
-    public IPath getPath() {
+    @SafeEffect public IPath getPath() {
     	if (fPath == null)
     		fPath= new Path(fFileStore.toURI().getPath());
     	return fPath;
     }
 
-	public boolean equals(Object o) {
+	@SafeEffect public boolean equals(Object o) {
 		if (o == this)
 			return true;
 
@@ -112,7 +113,7 @@ public class ExternalFileEditorInput implements IPathEditorInput, IStorageEditor
 		return false;
 	}
 
-	public int hashCode() {
+	@SafeEffect public int hashCode() {
 		return fFileStore.hashCode();
 	}
 
