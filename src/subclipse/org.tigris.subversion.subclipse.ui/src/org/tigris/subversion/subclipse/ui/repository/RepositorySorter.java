@@ -14,8 +14,9 @@ import org.eclipse.jface.viewers.ViewerSorter;
 import org.tigris.subversion.subclipse.core.ISVNRemoteFile;
 import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
 import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
+import guitypes.checkers.quals.*;
 
-public class RepositorySorter extends ViewerSorter {
+@UIType public class RepositorySorter extends ViewerSorter {
 
 	private static final int REPO_ROOT_CATEGORY = 1;
 	private static final int REMOTE_FOLDER_CATEGORY = 2;

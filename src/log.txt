@@ -166,9 +166,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteFileElement.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		return PlatformUI.getWorkbench().getEditorRegistry().getImageDescriptor(((ISVNRemoteFile)object).getName());
 		                                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/SVNSyncAdapterFactory.java:12: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			return modelElement.getResource();
-			                               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/RemoteFolderElement.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		return PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJ_FOLDER);
 		                                                                     ^
@@ -187,9 +184,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/model/SVNRepositoryRootElement.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			operation.run(Policy.subMonitorFor(monitor, 100));
 			             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositorySorter.java:18: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class RepositorySorter extends ViewerSorter {
-       ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:155: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				rootAdded(root);
 				         ^
@@ -839,30 +833,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNConflictsFilter.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 public class SVNConflictsFilter extends ViewerFilter {
        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowHistorySynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		        IResource resource = element.getResource();
-		                                                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/IgnoreSynchronizeAction.java:49: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IResource resource = element.getResource();
-			                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:71: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeAction.java:75: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    	IResource resource = element.getResource();
-			    	                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeAction.java:48: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    	IResource resource = element.getResource();
-			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:34: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.createChangeSet(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration,org.eclipse.team.core.diff.IDiff[])).
 	public ActiveChangeSet createChangeSet(ISynchronizePageConfiguration configuration, IDiff[] infos) {
 	                       ^
@@ -893,24 +863,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCapability.java:118: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.ui.synchronize.ChangeSetCapability.enableCheckedInChangeSetsFor(org.eclipse.team.ui.synchronize.ISynchronizePageConfiguration)).
     public boolean enableCheckedInChangeSetsFor(ISynchronizePageConfiguration configuration) {
                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeAction.java:46: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    	IResource resource = element.getResource();
-			    	                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/EditConflictsSynchronizeAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IResource resource = element.getResource();
-			                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:39: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/AddSynchronizeAction.java:43: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    	IResource resource = element.getResource();
-			    	                                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:84: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.CheckedInChangeSet.getAuthor()).
 	    public String getAuthor() {
 	                  ^
@@ -926,27 +878,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:292: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSetManager.initializeSets()).
 	protected void initializeSets() {
 	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:57: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/RevertSynchronizeAction.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    	IResource resource = element.getResource();
-			    	                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:41: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IStructuredSelection selection = getStructuredSelection();
-			                                                           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:45: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			        if (element.getResource() instanceof IFile) {
-			                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ResolveSynchronizeAction.java:47: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		                .getSVNResourceFor(element.getResource());	
-		                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:37: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				IStructuredSelection selection = getStructuredSelection();
-				                                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/ShowPropertiesSynchronizeAction.java:40: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			    IResource resource = element.getResource();
-			                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		                    Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
 		                                       ^
@@ -996,5 +927,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-300 errors
+277 errors
 14 warnings
