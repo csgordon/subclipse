@@ -39,3 +39,4 @@ Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently
 +60 min (5:10): 354 fine-grained annotation
 +20 min (5:30): 319
 +60 min (6:30): 300 after tons of finnagling with SVNHistoryPage, then switching to knocking off the 1-error files
++15 min (6:45): 277 fine-grained annotation
