@@ -1125,7 +1125,7 @@ import guitypes.checkers.quals.*;
     textViewer.getTextWidget().setWordWrap(wrapCommentsText);
   }
 
-  void setCurrentLogEntryChangePath(final LogEntryChangePath[] currentLogEntryChangePath) {
+  @SafeEffect void setCurrentLogEntryChangePath(final LogEntryChangePath[] currentLogEntryChangePath) {
     this.currentLogEntryChangePath = currentLogEntryChangePath;
     if( !shutdown) {
       // Getting the changePaths
@@ -1688,7 +1688,7 @@ import guitypes.checkers.quals.*;
   }
 
   // update to the selected revision (context menu)
-  private IAction getUpdateToRevisionAction() {
+  @SafeEffect private IAction getUpdateToRevisionAction() {
     if(updateToRevisionAction == null) {
       updateToRevisionAction = getContextMenuAction(
           Policy.bind("HistoryView.getRevisionAction"), new IWorkspaceRunnable() { //$NON-NLS-1$
@@ -1895,7 +1895,7 @@ import guitypes.checkers.quals.*;
                   .getRepository(), ourSelection.getRevision(), commitComment, author);
 
               PlatformUI.getWorkbench().getProgressService().run(true, true, new IRunnableWithProgress() {
-                @UIEffect public void run(IProgressMonitor monitor) throws InvocationTargetException {
+                public void run(IProgressMonitor monitor) throws InvocationTargetException {
                   try {
                     command.run(monitor);
                   } catch(SVNException e) {
@@ -2268,7 +2268,7 @@ import guitypes.checkers.quals.*;
    * Ask the user to confirm the overwrite of the file if the file has been
    * modified since last commit
    */
-  private boolean confirmOverwrite() {
+  @SafeEffect private boolean confirmOverwrite() {
 	    IFile file = (IFile) resource;
 	    if(file != null && file.exists()) {
 	      ISVNLocalFile svnFile = SVNWorkspaceRoot.getSVNFileFor(file);
@@ -2296,7 +2296,7 @@ import guitypes.checkers.quals.*;
 	    return true;
 	  }
 
-  private ISelection getSelection() {
+  @SafeEffect private ISelection getSelection() { // Colin Gordon: Not sure if I'm allowing a data race here
     return selection;
   }
 
@@ -2806,7 +2806,7 @@ import guitypes.checkers.quals.*;
 	 * without refetching the log entries to preserve bandwidth.
 	 * The user has to a manual refresh to get the new log entries. 
 	 */
-  private void resourceChanged() {
+  @SafeEffect private void resourceChanged() {
       getSite().getShell().getDisplay().asyncExec(new @UI Runnable() {
       	public void run() {
       		// Preserve the original starting revision so that when Next is pressed
