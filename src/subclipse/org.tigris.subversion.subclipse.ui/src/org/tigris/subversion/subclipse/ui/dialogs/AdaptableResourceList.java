@@ -14,6 +14,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.model.IWorkbenchAdapter;
+import guitypes.checkers.quals.*;
 
 /**
  * This class acts as a resource list that can be used in table widgets.
@@ -29,7 +30,7 @@ public class AdaptableResourceList implements IAdaptable, IWorkbenchAdapter {
 	/**
 	 * @see org.eclipse.core.runtime.IAdaptable#getAdapter(Class)
 	 */
-	public Object getAdapter(Class adapter) {
+	@SafeEffect public Object getAdapter(Class adapter) {
 		if (adapter == IWorkbenchAdapter.class) return this;
 		return null;
 	}

@@ -20,6 +20,7 @@ import org.eclipse.ui.model.IWorkbenchAdapter;
 import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
 import org.tigris.subversion.subclipse.core.repo.RepositoryComparator;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 /**
  * AllRootsElement is the model element for the repositories view.
@@ -28,7 +29,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
  * Because we extend IAdaptable, we don't need to register this adapter
  * as we need for RemoteFileElement, RemoteFolderElement ...
  */
-public class AllRootsElement extends SVNModelElement  implements IAdaptable  {
+@UIType public class AllRootsElement extends SVNModelElement  implements IAdaptable  {
 	public ImageDescriptor getImageDescriptor(Object object) {
 		return null;
 	}
@@ -41,7 +42,7 @@ public class AllRootsElement extends SVNModelElement  implements IAdaptable  {
 	public String getLabel(Object o) {
 		return null;
 	}
-	public Object getAdapter(Class adapter) {
+	@SafeEffect public Object getAdapter(Class adapter) {
 		if (adapter == IWorkbenchAdapter.class) return this;
 		return null;
 	}

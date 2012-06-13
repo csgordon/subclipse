@@ -29,6 +29,7 @@ import org.tigris.subversion.subclipse.ui.actions.WorkspaceAction;
 import org.tigris.subversion.subclipse.ui.conflicts.MergeFileAssociation;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.utils.Command;
+import guitypes.checkers.quals.*;
 
 public class BuiltInEditConflictsAction extends WorkspaceAction {
 	private File conflictNewFile;
@@ -164,7 +165,7 @@ public class BuiltInEditConflictsAction extends WorkspaceAction {
 		return ISVNUIConstants.IMG_MENU_EDITCONFLICT;
 	}
 
-	public BuiltInConflictsCompareInput getBuiltInConflictsCompareInput() {
+	@SafeEffect public BuiltInConflictsCompareInput getBuiltInConflictsCompareInput() {
 		return builtInConflictsCompareInput;
 	}
   

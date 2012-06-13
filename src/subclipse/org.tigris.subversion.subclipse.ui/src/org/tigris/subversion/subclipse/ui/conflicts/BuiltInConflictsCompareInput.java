@@ -262,7 +262,7 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
 		finished = true;	
 	}
 	
-	public boolean isFinished() {
+	@SafeEffect public boolean isFinished() {
 		return finished;
 	}
 
@@ -270,11 +270,11 @@ public class BuiltInConflictsCompareInput extends CompareEditorInput {
 		this.finished = finished;
 	}
 
-	public boolean isResolved() {
+	@SafeEffect public boolean isResolved() {
 		return resolved;
 	}
 
-	public int getResolution() {
+	@SafeEffect public int getResolution() {
 		return resolution;
 	}	
 

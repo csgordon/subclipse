@@ -55,6 +55,7 @@ import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardCommitPage;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.svnclientadapter.ISVNStatus;
 import org.tigris.subversion.svnclientadapter.utils.SVNStatusUtils;
+import guitypes.checkers.quals.*;
 
 /**
  * Action for checking in files to a subversion provider
@@ -445,7 +446,7 @@ public class CommitAction extends WorkbenchWindowAction {
 		return (IResource[]) unadded.toArray(new IResource[unadded.size()]);
 	}
 	
-	protected boolean isSymLink(IResource resource) {
+	@SafeEffect protected boolean isSymLink(IResource resource) {
 		File file = resource.getLocation().toFile();
 	    try {
 	    	if (!file.exists())

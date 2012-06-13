@@ -210,7 +210,7 @@ import guitypes.checkers.quals.*;
 	}
 		
 	
-	protected boolean isSymLink(IResource resource) {
+	@SafeEffect protected boolean isSymLink(IResource resource) {
 		File file = resource.getLocation().toFile();
 	    try {
 	    	if (!file.exists())

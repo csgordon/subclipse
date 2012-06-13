@@ -23,12 +23,13 @@ import org.tigris.subversion.subclipse.core.Policy;
 import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.operations.FetchMembersOperation;
+import guitypes.checkers.quals.*;
 
 /**
  * RemoteRootElement is the model element for a repository that
  * appears in the repositories view
  */
-public class SVNRepositoryRootElement extends SVNModelElement implements IDeferredWorkbenchAdapter {
+@UIType public class SVNRepositoryRootElement extends SVNModelElement implements IDeferredWorkbenchAdapter {
 	public ImageDescriptor getImageDescriptor(Object object) {
 		if (object instanceof ISVNRepositoryLocation /*|| object instanceof RepositoryRoot*/) {
 			return SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_REPOSITORY);

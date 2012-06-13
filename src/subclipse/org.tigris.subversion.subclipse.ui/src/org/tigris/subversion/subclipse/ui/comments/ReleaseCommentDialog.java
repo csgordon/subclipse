@@ -23,6 +23,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.PlatformUI;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
+import guitypes.checkers.quals.*;
 
 /**
  * Prompts the user for a multi-line comment for releasing to SVN.
@@ -55,7 +56,7 @@ public class ReleaseCommentDialog extends Dialog {
 		composite.setLayoutData(new GridData(GridData.FILL_BOTH));
 		
 		commitCommentArea.createArea(composite);
-		commitCommentArea.addPropertyChangeListener(new IPropertyChangeListener() {
+		commitCommentArea.addPropertyChangeListener(new @UI IPropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent event) {
 				if (event.getProperty() == CommitCommentArea.OK_REQUESTED)
 					okPressed();

@@ -128,7 +128,7 @@ import guitypes.checkers.quals.*;
 		return (IFile[]) tmp.toArray(new IFile[tmp.size()]);
 	}
 
-	public static byte[] readBytes(InputStream in) {
+	@SafeEffect public static byte[] readBytes(InputStream in) {
 		ByteArrayOutputStream bos= new ByteArrayOutputStream();
 		try {		
 			while (true) {
@@ -363,7 +363,7 @@ import guitypes.checkers.quals.*;
 		return Utilities.readString(is, encoding);
 	}
 
-	public static void close(InputStream is) {
+	@SafeEffect public static void close(InputStream is) {
 		if (is != null) {
 			try {
 				is.close();

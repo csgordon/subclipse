@@ -5,6 +5,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.tigris.subversion.subclipse.ui.Messages;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
+import guitypes.checkers.quals.*;
 
 public class DialogWizard extends Wizard {
 	private SVNConflictDescriptor conflictDescriptor;
@@ -81,35 +82,35 @@ public class DialogWizard extends Wizard {
 		return super.performCancel();
 	}
 
-	public boolean isConflictResolved() {
+	@SafeEffect public boolean isConflictResolved() {
 		return conflictResolved;
 	}
 
-	public ConflictResolution getConflictResolution() {
+	@SafeEffect public ConflictResolution getConflictResolution() {
 		return conflictResolution;
 	}
 
-	public void setConflictDescriptor(SVNConflictDescriptor conflictDescriptor) {
+	@SafeEffect public void setConflictDescriptor(SVNConflictDescriptor conflictDescriptor) {
 		this.conflictDescriptor = conflictDescriptor;
 	}
 
-	public void setResources(IResource[] resources) {
+	@SafeEffect public void setResources(IResource[] resources) {
 		this.resources = resources;
 	}
 
-	public int getResolution() {
+	@SafeEffect public int getResolution() {
 		return resolution;
 	}
 
-	public void setMyValue(String myValue) {
+	@SafeEffect public void setMyValue(String myValue) {
 		this.myValue = myValue;
 	}
 
-	public void setIncomingValue(String incomingValue) {
+	@SafeEffect public void setIncomingValue(String incomingValue) {
 		this.incomingValue = incomingValue;
 	}
 
-	public String getValueToUse() {
+	@SafeEffect public String getValueToUse() {
 		return valueToUse;
 	}
 
