@@ -42,6 +42,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.ChooseUrlDialog;
 import org.tigris.subversion.subclipse.ui.util.UrlCombo;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class BranchTagWizardRepositoryPage extends SVNWizardPage {
     private UrlCombo toUrlCombo;
@@ -302,7 +303,7 @@ public class BranchTagWizardRepositoryPage extends SVNWizardPage {
 		return svnResources[0];
 	}
 	
-    private class BranchResource implements IAdaptable {
+    @SafeType private class BranchResource implements IAdaptable {
     	private IResource resource;
     	private ISVNRemoteResource remoteResource;
     	private String partialPath;

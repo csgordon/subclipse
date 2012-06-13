@@ -342,7 +342,7 @@ import guitypes.checkers.quals.*;
     	return commonRoot;
     }
     
-    private class CompareResource implements IAdaptable {
+    @SafeType private class CompareResource implements IAdaptable {
     	private IResource resource;
     	private String partialPath;
     	public CompareResource(IResource resource, String partialPath) {

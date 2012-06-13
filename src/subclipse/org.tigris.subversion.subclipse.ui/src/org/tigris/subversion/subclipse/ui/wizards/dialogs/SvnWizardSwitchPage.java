@@ -523,7 +523,7 @@ import guitypes.checkers.quals.*;
     	return commonRoot;
     }
     
-    private class SwitchResource implements IAdaptable {
+    @SafeType private class SwitchResource implements IAdaptable {
     	private IResource resource;
     	private String partialPath;
     	public SwitchResource(IResource resource, String partialPath) {

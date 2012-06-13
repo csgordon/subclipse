@@ -17,6 +17,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Shell;
+import guitypes.checkers.quals.*;
 
 /**
  * A confirmation dialog helper that will either show a 'yes/no/yes to all/cancel'
@@ -86,7 +87,7 @@ public class PromptingDialog {
 		// run in syncExec because callback is from an operation,
 		// which is probably not running in the UI thread.
 		shell.getDisplay().syncExec(
-			new Runnable() {
+			new @UI Runnable() {
 				public void run() {
 					dialog.open();
 				}
