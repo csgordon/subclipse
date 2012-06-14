@@ -85,7 +85,7 @@ import guitypes.checkers.quals.*;
     /**
      * the ITypedElement for the left element (ie the file) 
      */
-	class TypedBufferedContent extends ResourceNode {
+	@SafeType class TypedBufferedContent extends ResourceNode {
 		public TypedBufferedContent(IFile resource) {
 			super(resource);
 		}
@@ -132,7 +132,7 @@ import guitypes.checkers.quals.*;
 	/**
 	 * This class is an edition node which knows the log entry it came from.
 	 */
-	class ResourceRevisionNode extends ResourceEditionNode {	
+	@SafeType class ResourceRevisionNode extends ResourceEditionNode {	
 		ILogEntry entry;
 		public ResourceRevisionNode(ILogEntry entry) {
 			super(entry.getRemoteResource());
@@ -164,7 +164,7 @@ import guitypes.checkers.quals.*;
 	/**
 	 * A compare node that gets its label from the right element
 	 */
-	class VersionCompareDiffNode extends DiffNode implements IAdaptable {
+	@SafeType class VersionCompareDiffNode extends DiffNode implements IAdaptable {
 		public VersionCompareDiffNode(ITypedElement left, ITypedElement right) {
 			super(left, right);
 		}
@@ -182,7 +182,7 @@ import guitypes.checkers.quals.*;
 	/**
 	 * A content provider which knows how to get the children of the diff container
 	 */
-	class VersionCompareContentProvider implements IStructuredContentProvider {
+	@SafeType class VersionCompareContentProvider implements IStructuredContentProvider {
 		public void dispose() {
 		}
 		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {

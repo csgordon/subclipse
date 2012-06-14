@@ -5,7 +5,8 @@ import org.osgi.service.prefs.Preferences;
 import org.tigris.subversion.subclipse.core.util.StringMatcher;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-public class MergeFileAssociation implements Comparable {
+import guitypes.checkers.quals.*;
+@SafeType public class MergeFileAssociation implements Comparable {
 	private String fileType;
 	private int type;
 	private String mergeProgram;

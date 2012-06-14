@@ -34,6 +34,7 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class CommitOperation extends SVNOperation {
     private IResource[] resourcesToAdd;
@@ -252,7 +253,7 @@ public class CommitOperation extends SVNOperation {
 	    }
 	}
 	
-	protected class ProjectAndRepository {
+	@SafeType protected class ProjectAndRepository {
 		
 		private SVNTeamProvider provider;
 		private String rootURL;

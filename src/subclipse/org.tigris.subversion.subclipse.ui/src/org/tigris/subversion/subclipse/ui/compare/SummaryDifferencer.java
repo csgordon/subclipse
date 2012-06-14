@@ -4,8 +4,9 @@ import org.eclipse.compare.ITypedElement;
 import org.eclipse.compare.structuremergeviewer.Differencer;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.tigris.subversion.subclipse.ui.Policy;
+import guitypes.checkers.quals.*;
 
-public class SummaryDifferencer extends Differencer {
+@SafeType public class SummaryDifferencer extends Differencer {
 
 	public SummaryDifferencer() {
 		super();

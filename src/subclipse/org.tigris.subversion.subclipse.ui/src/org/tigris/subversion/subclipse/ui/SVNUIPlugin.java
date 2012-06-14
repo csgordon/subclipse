@@ -371,7 +371,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
 	 * provided shell can be used without sync-execing, etc.
 	 */
 	public interface IOpenableInShell {
-		public void open(Shell shell);
+		@UIEffect public void open(Shell shell);
 	}
 	
 	/**
@@ -844,7 +844,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
 		return getPlugin().getImageRegistry().get(key);
 	}	
 	
-	protected void initializeImageRegistry(ImageRegistry reg) {
+	@UIEffect protected void initializeImageRegistry(ImageRegistry reg) {
 		super.initializeImageRegistry(reg);
 		reg.put(ISVNUIConstants.IMG_PROPERTIES, getImageDescriptor(ISVNUIConstants.IMG_PROPERTIES));
 		reg.put(ISVNUIConstants.IMG_FILEADD_PENDING, getImageDescriptor(ISVNUIConstants.IMG_FILEADD_PENDING));

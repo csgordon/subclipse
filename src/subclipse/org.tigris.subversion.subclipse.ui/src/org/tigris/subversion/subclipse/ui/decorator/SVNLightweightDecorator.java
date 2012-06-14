@@ -164,8 +164,8 @@ public class SVNLightweightDecorator
 		String dateFormatPattern = store.getString(ISVNUIConstants.PREF_DATEFORMAT_DECORATION);
 		setDateFormat(dateFormatPattern);
 
-		propertyListener = new IPropertyChangeListener() {
-						@UIEffect public void propertyChange(PropertyChangeEvent event) {
+		propertyListener = new @UI IPropertyChangeListener() {
+						public void propertyChange(PropertyChangeEvent event) {
 							if (ISVNUIConstants.PREF_CALCULATE_DIRTY.equals(event.getProperty())) {
 								computeDeepDirtyCheck = getBoolean(event);
 							} else if (ISVNUIConstants.PREF_FOLDERTEXT_DECORATION.equals(event.getProperty())) {

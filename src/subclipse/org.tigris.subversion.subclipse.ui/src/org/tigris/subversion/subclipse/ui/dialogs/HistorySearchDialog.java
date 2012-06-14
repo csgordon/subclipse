@@ -366,39 +366,39 @@ import guitypes.checkers.quals.*;
 		this.remoteResource = remoteResource;
 	}
 	
-	public String getUser() {
+	@SafeEffect public String getUser() {
 		return user;
 	}
 	
-	public String getComment() {
+	@SafeEffect public String getComment() {
 		return comment;
 	}
 	
-	public Date getStartDate() {
+	@SafeEffect public Date getStartDate() {
 		return startDate;
 	}
 	
-	public Date getEndDate() {
+	@SafeEffect public Date getEndDate() {
 		return endDate;
 	}
 	
-	public SVNRevision.Number getStartRevision() {
+	@SafeEffect public SVNRevision.Number getStartRevision() {
 		return startRevision;
 	}
 	
-	public SVNRevision.Number getEndRevision() {
+	@SafeEffect public SVNRevision.Number getEndRevision() {
 		return endRevision;
 	}
 	
-	public boolean getRegExp() {
+	@SafeEffect public boolean getRegExp() {
 		return regExp;
 	}
 	
-	public boolean getAutoFetchLogs() {
+	@SafeEffect public boolean getAutoFetchLogs() {
 		return autoFetchLogs;
 	}
 	
-	public boolean getSearchAllLogs() {
+	@SafeEffect public boolean getSearchAllLogs() {
 		return searchAll;
 	}
 	
