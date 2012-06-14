@@ -43,3 +43,6 @@ Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently
 +60 min (7:45): 244
 +45 min (8:30): 177
 +45 min (9:15): 152
++5 min (9:20): 141 (CompareEditorInput is mostly a UIType heirarchy, though it implements
+                    canRunAsJob(), so a subclass can make itself safe and run on a different thread
+                    (or make itself unsafe and run on a different thread)
