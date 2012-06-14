@@ -42,3 +42,4 @@ Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently
 +15 min (6:45): 277 fine-grained annotation
 +60 min (7:45): 244
 +45 min (8:30): 177
++45 min (9:15): 152

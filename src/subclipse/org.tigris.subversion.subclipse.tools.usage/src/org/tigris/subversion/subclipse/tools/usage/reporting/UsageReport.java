@@ -38,6 +38,7 @@ import org.tigris.subversion.subclipse.tools.usage.tracker.internal.PluginLogger
 import org.tigris.subversion.subclipse.tools.usage.tracker.internal.SuffixFocusPoint;
 import org.tigris.subversion.subclipse.tools.usage.tracker.internal.Tracker;
 import org.tigris.subversion.subclipse.tools.usage.util.StatusUtils;
+import guitypes.checkers.quals.*;
 
 public class UsageReport {
 
@@ -62,7 +63,7 @@ public class UsageReport {
 		new ReportingJob().schedule();
 	}
 
-	private void askUser() {
+	@UIEffect private void askUser() {
 		UsageReportEnablementDialog dialog = new UsageReportEnablementDialog(
 				true,
 				PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell());
@@ -165,7 +166,7 @@ public class UsageReport {
 		}
 	}
 
-	private class AskUserJob extends UIJob {
+	@UIType private class AskUserJob extends UIJob {
 		private AskUserJob() {
 			super(ReportingMessages.UsageReport_Asking_User);
 		}

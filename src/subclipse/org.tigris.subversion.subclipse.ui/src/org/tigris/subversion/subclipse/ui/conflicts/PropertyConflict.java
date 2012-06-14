@@ -12,8 +12,8 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.Path;
 import org.tigris.subversion.subclipse.core.ISVNLocalResource;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
-
-public class PropertyConflict {
+import guitypes.checkers.quals.*;
+@SafeType public class PropertyConflict {
 	private String propertyName;
 	private String oldLocalValue;
 	private String newLocalValue;

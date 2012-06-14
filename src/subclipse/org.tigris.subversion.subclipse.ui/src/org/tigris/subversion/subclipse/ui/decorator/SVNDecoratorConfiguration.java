@@ -15,13 +15,14 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import org.eclipse.jface.viewers.IDecoration;
+import guitypes.checkers.quals.*;
 
 public class SVNDecoratorConfiguration {
 
 	/**
 	 * Decorator component that represents static text in the format string
 	 */
-	private static class ConstantValueDecoratorComponent implements IDecoratorComponent {
+	@SafeType private static class ConstantValueDecoratorComponent implements IDecoratorComponent {
 		private final String value;
 
 		public ConstantValueDecoratorComponent(String value) {
@@ -39,7 +40,7 @@ public class SVNDecoratorConfiguration {
 	/**
 	 * Decorator component that represents a placeholder for a value
 	 */
-	private static class MappedValueDecoratorComponent implements IDecoratorComponent {
+	@SafeType private static class MappedValueDecoratorComponent implements IDecoratorComponent {
 
 		private final String key;
 		public MappedValueDecoratorComponent(String key) {
@@ -120,7 +121,7 @@ public class SVNDecoratorConfiguration {
      * @param bindings Bindings to link components to
      * @return Decorator components for prefix and suffix
      */
-    public static IDecoratorComponent[][] compileFormatString(String format) {
+    @SafeEffect public static IDecoratorComponent[][] compileFormatString(String format) {
 		int length = format.length();
 		int start = -1;
 		int end = length;

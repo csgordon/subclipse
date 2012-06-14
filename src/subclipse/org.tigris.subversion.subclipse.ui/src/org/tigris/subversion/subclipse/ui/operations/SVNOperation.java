@@ -209,7 +209,7 @@ public abstract class SVNOperation extends TeamOperation {
 		// which is probably not running in the UI thread.
 		final int[] code = new int[] {0};
 		displayShell.getDisplay().syncExec(
-			new Runnable() {
+			new @UI Runnable() {
 				public void run() {
 					MessageDialog dialog = 
 						new MessageDialog(displayShell, title, null, msg, MessageDialog.QUESTION, buttons, 0);
