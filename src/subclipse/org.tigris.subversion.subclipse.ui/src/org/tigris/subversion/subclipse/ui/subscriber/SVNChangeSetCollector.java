@@ -40,13 +40,14 @@ import org.tigris.subversion.svnclientadapter.ISVNLogMessage;
 import org.tigris.subversion.svnclientadapter.SVNClientException;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
+import guitypes.checkers.quals.*;
 
 public class SVNChangeSetCollector extends SyncInfoSetChangeSetCollector {
 
 	/**
 	 * Change set used to store incoming changes in
 	 */
-	public class SVNCheckedInChangeSet extends CheckedInChangeSet {
+	@SafeType public class SVNCheckedInChangeSet extends CheckedInChangeSet {
 		
 		private long revision;
 		private String author;
@@ -268,7 +269,7 @@ public class SVNChangeSetCollector extends SyncInfoSetChangeSetCollector {
 	 * @param string String to strip linebreaks from
 	 * @return the string without any line breaks in it
 	 */
-	private String flattenComment(String string) {
+	@SafeEffect private String flattenComment(String string) {
 		StringBuffer buffer = new StringBuffer(string.length() + 20);
 		boolean skipAdjacentLineSeparator = true;
 		for (int i = 0; i < string.length(); i++) {

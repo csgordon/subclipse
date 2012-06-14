@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120614.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -123,9 +121,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:147: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			Display display = getViewer().getControl().getDisplay();
 			                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:147: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Display display = getViewer().getControl().getDisplay();
-			                           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:178: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
           if (selection!=null && RemoteResourceTransfer.getInstance().isSupportedType(event.dataType)) {
                                                                                      ^
@@ -454,22 +449,7 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:106: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 					refresh();
 					       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNConflictsFilter.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-public class SVNConflictsFilter extends ViewerFilter {
-       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:84: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.CheckedInChangeSet.getAuthor()).
-	    public String getAuthor() {
-	                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:99: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.CheckedInChangeSet.getDate()).
-	    public Date getDate() {
-	                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:114: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSet.getComment()).
-	    public String getComment() {
-	                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:245: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        performUpdate(new IWorkspaceRunnable() {
-                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:292: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSetManager.initializeSets()).
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/SVNChangeSetCollector.java:293: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.team.internal.core.subscribers.ChangeSetManager.initializeSets()).
 	protected void initializeSets() {
 	               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
@@ -499,9 +479,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ResolveTreeConflictWizard.java:202: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 						compareList.add(mainPage.getCompareResource2());
 						                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/DiffMergePreferencePage.java:450: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.preference.PreferencePage.doGetPreferenceStore()).
-    protected IPreferenceStore doGetPreferenceStore() {
-                               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:142: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                             Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
                                                ^
@@ -521,5 +498,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-141 errors
+134 errors
 14 warnings

@@ -447,7 +447,7 @@ import guitypes.checkers.quals.*;
      * 
      * @see org.eclipse.jface.preference.PreferencePage#doGetPreferenceStore()
      */
-    protected IPreferenceStore doGetPreferenceStore() {
+    @SafeEffect protected IPreferenceStore doGetPreferenceStore() {
         return SVNUIPlugin.getPlugin().getPreferenceStore();
     }
 
