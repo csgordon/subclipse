@@ -6,8 +6,10 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
+      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120614.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -118,27 +120,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:173: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				rootModified(root);
 				            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:147: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			Display display = getViewer().getControl().getDisplay();
-			                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:178: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-          if (selection!=null && RemoteResourceTransfer.getInstance().isSupportedType(event.dataType)) {
-                                                                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:178: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-          if (selection!=null && RemoteResourceTransfer.getInstance().isSupportedType(event.dataType)) {
-                                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:186: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-          } else if (PluginTransfer.getInstance().isSupportedType(event.dataType)) {
-                                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:186: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-          } else if (PluginTransfer.getInstance().isSupportedType(event.dataType)) {
-                                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:190: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    event.data = new PluginTransferData("org.tigris.subversion.subclipse.ui.svnRemoteDrop", RemoteResourceTransfer.getInstance().toByteArray((ISVNRemoteResource) array[i])); //$NON-NLS-1$
-                                                                                                                                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoriesView.java:190: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    event.data = new PluginTransferData("org.tigris.subversion.subclipse.ui.svnRemoteDrop", RemoteResourceTransfer.getInstance().toByteArray((ISVNRemoteResource) array[i])); //$NON-NLS-1$
-                                                                                                                                              ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:192: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 					runnable.run(new NullProgressMonitor()); // Colin Gordon: BUG or I misunderstood IRunnableWithProgress effects, or the conditionals around this check the thread dynamically
 					            ^
@@ -443,6 +424,12 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 			                                 ^
   found   : ? extends @AlwaysSafe Object
   required: @AlwaysSafe String
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/RemoteResourceTransfer.java:45: warning: This method overrides a method with @UI effect (org.eclipse.swt.dnd.Transfer.javaToNative(java.lang.Object,org.eclipse.swt.dnd.TransferData)) and another method with an @AlwaysSafe effect (org.eclipse.swt.dnd.ByteArrayTransfer.javaToNative(java.lang.Object,org.eclipse.swt.dnd.TransferData)).  This is discouraged.
+    public void javaToNative (Object object, TransferData transferData) {
+                ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/actions/RemoteResourceTransfer.java:55: warning: This method overrides a method with @UI effect (org.eclipse.swt.dnd.Transfer.nativeToJava(org.eclipse.swt.dnd.TransferData)) and another method with an @AlwaysSafe effect (org.eclipse.swt.dnd.ByteArrayTransfer.nativeToJava(org.eclipse.swt.dnd.TransferData)).  This is discouraged.
+    public Object nativeToJava(TransferData transferData){	
+                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnRevPropertiesView.java:81: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])).
     @UIEffect public void resourceSyncInfoChanged(IResource[] changedResources) {
                           ^
@@ -498,5 +485,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-134 errors
-14 warnings
+127 errors
+16 warnings
