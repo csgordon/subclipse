@@ -164,7 +164,7 @@ public class SVNLightweightDecorator
 		String dateFormatPattern = store.getString(ISVNUIConstants.PREF_DATEFORMAT_DECORATION);
 		setDateFormat(dateFormatPattern);
 
-		propertyListener = new @UI IPropertyChangeListener() {
+		propertyListener = new IPropertyChangeListener() {
 						public void propertyChange(PropertyChangeEvent event) {
 							if (ISVNUIConstants.PREF_CALCULATE_DIRTY.equals(event.getProperty())) {
 								computeDeepDirtyCheck = getBoolean(event);
@@ -229,7 +229,7 @@ public class SVNLightweightDecorator
 		});
 	}
 	
-	private boolean getBoolean(PropertyChangeEvent event) {
+	@SafeEffect private boolean getBoolean(PropertyChangeEvent event) {
 		if (event.getNewValue() instanceof String) return ((String)event.getNewValue()).equalsIgnoreCase("true"); //$NON-NLS-1$
 		if (event.getNewValue() instanceof Boolean) return ((Boolean)event.getNewValue()).booleanValue();
 		return false;
@@ -728,7 +728,7 @@ public class SVNLightweightDecorator
 //		SVNProviderPlugin.broadcastDecoratorEnablementChanged(false /* disabled */);
 	}
 
-	private void setDateFormat(String dateFormatPattern) {
+	@SafeEffect private void setDateFormat(String dateFormatPattern) {
 		if (dateFormatPattern == null || dateFormatPattern.length() == 0) {
 			dateFormat = DateFormat.getInstance();			
 		}

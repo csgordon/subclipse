@@ -181,7 +181,7 @@ import guitypes.checkers.quals.*;
 	
 	
 
-} class WorkMonitorListener implements WorkListener {
+} @SafeType class WorkMonitorListener implements WorkListener {
 	
 	private IProgressMonitor monitor;
 	private int unitWork;
@@ -195,7 +195,7 @@ import guitypes.checkers.quals.*;
 		monitor.worked(unitWork);
 	}
 
-} class CallbackUpdater implements ISVNLogMessageCallback {
+} @SafeType class CallbackUpdater implements ISVNLogMessageCallback {
 
 	private Cache cache;
 	private IProgressMonitor monitor;

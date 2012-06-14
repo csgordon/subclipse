@@ -89,7 +89,7 @@ public class Activator extends AbstractUIPlugin {
 	}
 	
 	public static void showErrorDialog(final String title, final Exception exception, boolean uiThread) {
-		if (uiThread) showErrorDialog(title, exception);
+		if (uiThread) showErrorDialog(title, exception); // Colin Gordon: Another instance of dynamic selection of thread context
 		else {
 			Display.getDefault().syncExec(new @UI Runnable(){
 				public void run() {
@@ -99,7 +99,7 @@ public class Activator extends AbstractUIPlugin {
 		}
 	}
 	
-	public static void showErrorDialog(String title, Exception exception) {
+	@UIEffect public static void showErrorDialog(String title, Exception exception) {
 		String message;
 		if (exception.getMessage() == null) message = "" + exception;
 		else message = exception.getMessage();
@@ -110,7 +110,7 @@ public class Activator extends AbstractUIPlugin {
      * Returns the image descriptor for the given image ID.
      * Returns null if there is no such image.
      */
-    public ImageDescriptor getImageDescriptor(String id) {
+    @UIEffect public ImageDescriptor getImageDescriptor(String id) {
         if (imageDescriptors == null) {
             imageDescriptors = new ImageDescriptors();
             imageDescriptors.initializeImages(baseURL);

@@ -7,8 +7,9 @@ import org.eclipse.ui.IPersistableElement;
 import org.eclipse.ui.PlatformUI;
 import org.tigris.subversion.subclipse.core.ISVNRemoteResource;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
+import guitypes.checkers.quals.*;
 
-public class RevisionGraphEditorInput implements IEditorInput {
+@SafeType public class RevisionGraphEditorInput implements IEditorInput {
 	
 	private IResource resource;
 	private ISVNRemoteResource remoteResource;

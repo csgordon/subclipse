@@ -20,8 +20,9 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.browser.IWebBrowser;
+import guitypes.checkers.quals.*;
 
-public class BrowserUtil {
+@UIType public class BrowserUtil {
 
 	/**
 	 * Opens a browser for the given url with the given id. If an error occurs
