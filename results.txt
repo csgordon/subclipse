@@ -49,3 +49,4 @@ Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently
 +15 min (9:35): 134
 +10 min (9:45): 127
 +15 min (10:00): 119 may have found a bug in CommitCommentArea.
++40 min (10:40): 100

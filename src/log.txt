@@ -194,18 +194,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:166: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				page.openEditor(input, descriptor.getId());
 				               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNConsolePageParticipant.java:31: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		IActionBars bars = page.getSite().getActionBars();
-		                                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNConsolePageParticipant.java:31: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		IActionBars bars = page.getSite().getActionBars();
-		                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNConsolePageParticipant.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		bars.getToolBarManager().appendToGroup(IConsoleConstants.LAUNCH_GROUP, consoleRemoveAction);
-		                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNConsolePageParticipant.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		bars.getToolBarManager().appendToGroup(IConsoleConstants.LAUNCH_GROUP, consoleRemoveAction);
-		                      ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/preferences/SVNMenuIconsPreferencesPage.java:166: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.preference.PreferencePage.doGetPreferenceStore()).
 	protected IPreferenceStore doGetPreferenceStore() {
 	                           ^
@@ -234,7 +222,7 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 			image = icon.createImage();
 			                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommitCommentArea.java:256: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe Observer.update(java.util.Observable,java.lang.Object)).
-        public void update(Observable o, Object arg) {
+        public void update(Observable o, Object arg) { // Colin Gordon: BUG? or polymorphic iface: IObservable is totally general, but this clearly calls into a chain that hits an SWT widget.  I don't understand the code structure well enough yet to rule out a polymorphic iface, though.
                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/dialogs/DialogArea.java:63: error: incompatible types.
 		if (!listeners.contains(listener))
@@ -355,24 +343,15 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceSummaryNode.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
 			                                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareSummaryInput.java:63: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		CompareConfiguration cc = getCompareConfiguration();
-		                                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareSummaryInput.java:78: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setTitle(title);		
-		        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareSummaryInput.java:123: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						String localCharset = Utilities.getCharset(resource.getIResource());
-						                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareSummaryInput.java:206: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			saveChanges(monitor);
-			           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalCompareSummaryInput.java:223: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return isSaveNeeded();
-		                   ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNFolderCompareEditorInput.java:128: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.isSaveNeeded()).
+	public boolean isSaveNeeded() {
+	               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/StatusAwareDifferencer.java:11: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.structuremergeviewer.Differencer.contentsEqual(java.lang.Object,java.lang.Object)).
     protected boolean contentsEqual(Object left, Object right) {
                       ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareEditorInput.java:184: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.isSaveNeeded()).
+	public boolean isSaveNeeded() {
+	               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/RevisionAwareDifferencer.java:78: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.structuremergeviewer.Differencer.contentsEqual(java.lang.Object,java.lang.Object)).
     protected boolean contentsEqual(Object input1, Object input2) {
                       ^
@@ -382,9 +361,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:119: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				new ProgressMonitorDialog(shell).run(false, false, runnable);
 				                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				handle(e);
-				      ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/UIBaseResourceStorageFactory.java:26: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IBaseResourceStorageFactory.createResourceStorage(org.tigris.subversion.subclipse.core.resources.BaseResource)).
 	public BaseResourceStorage createResourceStorage(BaseResource baseResource) {
 	                           ^
@@ -416,42 +392,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		                    Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
 		                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:175: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		    setTitle(title);
-		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:219: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            super.saveChanges(pm);
-                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:232: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            return super.isSaveNeeded();
-                                     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ResolveTreeConflictWizard.java:183: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						return mainPage.getCompareResource1();
-						                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ResolveTreeConflictWizard.java:195: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						IResource[] compareResources = { mainPage.getCompareResource1(), mainPage.getCompareResource2() };
-						                                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ResolveTreeConflictWizard.java:195: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						IResource[] compareResources = { mainPage.getCompareResource1(), mainPage.getCompareResource2() };
-						                                                                                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ResolveTreeConflictWizard.java:201: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						compareList.add(mainPage.getCompareResource1());
-						                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ResolveTreeConflictWizard.java:202: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-						compareList.add(mainPage.getCompareResource2());
-						                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:142: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
                             Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
                                                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:238: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            setTitle(title);
-                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:268: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            super.saveChanges(pm);
-                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:281: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            return super.isSaveNeeded();
-                                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ExternalFileEditorInput.java:110: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
             return getPath().equals(input.getPath());
                                                  ^
@@ -459,5 +402,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-119 errors
+100 errors
 16 warnings
