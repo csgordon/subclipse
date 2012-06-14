@@ -512,7 +512,7 @@ import guitypes.checkers.quals.*;
      * Returns the viewer.
      * @return TreeViewer
      */
-    protected TreeViewer getViewer() {
+    @SafeEffect protected TreeViewer getViewer() {
         return treeViewer;
     }
 
