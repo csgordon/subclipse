@@ -47,3 +47,4 @@ Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently
                     canRunAsJob(), so a subclass can make itself safe and run on a different thread
                     (or make itself unsafe and run on a different thread)
 +15 min (9:35): 134
++10 min (9:45): 127
