@@ -253,14 +253,14 @@ import guitypes.checkers.quals.*;
             fTextField.setEnabled(enabled);
         }
         
-        public void update(Observable o, Object arg) {
+        public void update(Observable o, Object arg) { // Colin Gordon: BUG? or polymorphic iface: IObservable is totally general, but this clearly calls into a chain that hits an SWT widget.  I don't understand the code structure well enough yet to rule out a polymorphic iface, though.
             if (arg instanceof String) {
                 setText((String)arg); // triggers a modify event
                 if (modifyListener != null) modifyListener.modifyText(null);
             }
         }
         
-        public String getText() {
+        @SafeEffect public String getText() {
             return fText;
         }
         
@@ -580,11 +580,11 @@ import guitypes.checkers.quals.*;
 				SVNUIPlugin.getPlugin().getRepositoryManager().getCommentsManager().getCommentTemplates());
 	}
 
-    public String getComment() {
+    @SafeEffect public String getComment() {
     	return getComment(false);
     }
     
-	public String getComment(boolean save) {
+	@SafeEffect public String getComment(boolean save) {
         final String comment= fTextBox.getText();
         if (comment == null)
             return ""; //$NON-NLS-1$
@@ -592,7 +592,7 @@ import guitypes.checkers.quals.*;
         return comment;
     }
 	
-	public void addComment(String comment) {
+	@SafeEffect public void addComment(String comment) {
 		if (comment != null && comment.trim().length() > 0) SVNUIPlugin.getPlugin().getRepositoryManager().getCommentsManager().addComment(comment);
 	}
     
