@@ -15,14 +15,14 @@ import org.eclipse.ui.console.*;
 import org.eclipse.ui.console.IConsole;
 import org.eclipse.ui.console.IConsolePageParticipant;
 import org.eclipse.ui.part.IPageBookViewPage;
-
+import guitypes.checkers.quals.*;
 /**
  * Console helper that allows contributing actions to the console view when
  * the SVN console is visible. Added to the console via an extension point
  * from org.eclipse.ui.console.
  * 
  */
-public class SVNConsolePageParticipant implements IConsolePageParticipant {
+@UIType public class SVNConsolePageParticipant implements IConsolePageParticipant {
 
 	private ConsoleRemoveAction consoleRemoveAction;
 	

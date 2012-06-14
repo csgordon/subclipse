@@ -330,7 +330,7 @@ import guitypes.checkers.quals.*;
 		return null;
 	}
 	
-	public static String getCharset(IResource resource) {
+	@SafeEffect public static String getCharset(IResource resource) {
 		if (resource instanceof IEncodedStorage) {
 			try {
 				return ((IEncodedStorage)resource).getCharset();

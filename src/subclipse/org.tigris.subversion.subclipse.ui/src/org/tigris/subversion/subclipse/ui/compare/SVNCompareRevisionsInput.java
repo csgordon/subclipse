@@ -379,7 +379,7 @@ import guitypes.checkers.quals.*;
 		}
 	}
     
-	private void handle(Exception e) {
+	@SafeEffect private void handle(Exception e) {
 		setMessage(SVNUIPlugin.openError(shell, null, null, e, SVNUIPlugin.LOG_NONTEAM_EXCEPTIONS).getMessage());
 	}
 	/**

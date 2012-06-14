@@ -841,11 +841,11 @@ import guitypes.checkers.quals.*;
 		return null;
 	}
 	
-	public IResource getCompareResource1() {
+	@SafeEffect public IResource getCompareResource1() {
 		return compareResource1;
 	}
 
-	public IResource getCompareResource2() {
+	@SafeEffect public IResource getCompareResource2() {
 		return compareResource2;
 	}
 	
