@@ -814,7 +814,7 @@ import guitypes.checkers.quals.*;
 		}
 	}
 	
-	private static class ThemeListener implements IPropertyChangeListener {
+	@UI private static class ThemeListener implements @UI IPropertyChangeListener {
 
 		private final Preview preview;
 		

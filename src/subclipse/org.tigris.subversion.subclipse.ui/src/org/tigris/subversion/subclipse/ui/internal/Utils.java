@@ -34,7 +34,7 @@ import guitypes.checkers.quals.*;
 
 public class Utils {
 	
-	public static void schedule(Job job, IWorkbenchSite site) {
+	@SafeEffect public static void schedule(Job job, IWorkbenchSite site) {
 		if (site != null) {
 			IWorkbenchSiteProgressService siteProgress = (IWorkbenchSiteProgressService) site.getAdapter(IWorkbenchSiteProgressService.class);
 			if (siteProgress != null) {
@@ -45,7 +45,7 @@ public class Utils {
 		job.schedule();
 	}
 	
-	public static byte[] readBytes(InputStream in) {
+	@SafeEffect public static byte[] readBytes(InputStream in) {
 		ByteArrayOutputStream bos= new ByteArrayOutputStream();
 		try {		
 			while (true) {

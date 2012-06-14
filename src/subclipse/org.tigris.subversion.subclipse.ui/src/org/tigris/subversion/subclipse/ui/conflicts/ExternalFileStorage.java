@@ -18,8 +18,9 @@ import org.eclipse.core.resources.IStorage;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
+import guitypes.checkers.quals.*;
 
-public class ExternalFileStorage implements IStorage {
+@SafeType public class ExternalFileStorage implements IStorage {
 
 	private IFileStore fFileStore;
 	private IPath fFullPath;
