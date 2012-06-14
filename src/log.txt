@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120614.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -99,27 +97,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RemoveRootAction.java:55: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				Object next = SVNAction.getAdapter(elements.next(), ISVNRepositoryLocation.class);
 				                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:155: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				rootAdded(root);
-				         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:158: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				rootRemoved(root);
-				           ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:161: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                resourceDeleted(resource);
-                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:164: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                resourceCreated(parent, resourceName);
-                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:167: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                resourceCopied(source, destination);
-                              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:170: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                resourceMoved(resource, destinationFolder, destinationResourceName);
-                             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:173: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				rootModified(root);
-				            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:376: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+		runnable.run(monitor);
+		            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:192: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 					runnable.run(new NullProgressMonitor()); // Colin Gordon: BUG or I misunderstood IRunnableWithProgress effects, or the conditionals around this check the thread dynamically
 					            ^
@@ -132,15 +112,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:224: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			if (createdShell) parent.dispose();
 			                                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:247: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			repositoryManager.startup();
-			                         ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:428: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			outerRunnable.run(); // Colin Gordon: SAFE I think - dynamic check for which thread we're on
 			                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:477: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				repositoryManager.shutdown();
-				                          ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:482: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         console.shutdown();
                         ^
@@ -485,5 +459,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-127 errors
+119 errors
 16 warnings

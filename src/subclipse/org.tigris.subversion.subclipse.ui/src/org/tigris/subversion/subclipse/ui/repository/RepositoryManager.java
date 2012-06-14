@@ -48,7 +48,7 @@ import org.tigris.subversion.subclipse.ui.dialogs.AddToVersionControlDialog;
  * It also provides a number of useful methods for assisting in repository operations.
  */
 import guitypes.checkers.quals.*;
-@UIType public class RepositoryManager {
+public class RepositoryManager {
 	
 	
 	List listeners = new ArrayList();

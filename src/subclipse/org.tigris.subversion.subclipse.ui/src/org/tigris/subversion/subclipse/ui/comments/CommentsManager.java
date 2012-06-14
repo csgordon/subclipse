@@ -33,11 +33,11 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.internal.XMLWriter;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-
+import guitypes.checkers.quals.*;
 /**
  * the comments manager : holds previous comments 
  */
-public class CommentsManager {
+@SafeType public class CommentsManager {
     // The previously remembered comment
     static String[] previousComments = new String[0];
     static String[] commentTemplates = new String[0];
