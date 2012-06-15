@@ -254,12 +254,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		super(configuration, elements);
 		     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		                    Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
-		                                       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ConflictsCompareInput.java:142: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                            Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
-                                               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ExternalFileEditorInput.java:110: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
             return getPath().equals(input.getPath());
                                                  ^
@@ -267,5 +261,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-55 errors
+53 errors
 16 warnings
