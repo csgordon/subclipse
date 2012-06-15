@@ -49,6 +49,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.settings.ProjectProperties;
 import org.tigris.subversion.subclipse.ui.util.LinkList;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 /**
  * This class provides the table and it's required components for a file's revision
@@ -476,12 +477,12 @@ public class HistoryTableProvider {
 	}
 	
 
-	private SVNRevision.Number getRevision(ISVNRemoteResource currentEdition) {
+	@SafeEffect private SVNRevision.Number getRevision(ISVNRemoteResource currentEdition) {
 		if (currentEdition == null) return SVNRevision.INVALID_REVISION;
 		return currentEdition.getLastChangedRevision();
 	}
 	
-	public void setRemoteResource(ISVNRemoteResource remoteResource) {
+	@SafeEffect public void setRemoteResource(ISVNRemoteResource remoteResource) {
 		this.currentRemoteResource = remoteResource;
 		this.currentRevision = getRevision(remoteResource);
 	}
@@ -521,7 +522,7 @@ public class HistoryTableProvider {
 		return this.projectProperties != null;
 	}
 
-	public void setProjectProperties(ProjectProperties projectProperties) {
+	@SafeEffect public void setProjectProperties(ProjectProperties projectProperties) {
 		this.projectProperties = projectProperties;
 	}
 

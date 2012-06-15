@@ -20,7 +20,7 @@ import guitypes.checkers.quals.*;
 /**
  * The image descrptors for the plugin
  */
-@UIType public class ImageDescriptors {
+public class ImageDescriptors {
     private Hashtable imageDescriptors = new Hashtable(20);
     
     /**

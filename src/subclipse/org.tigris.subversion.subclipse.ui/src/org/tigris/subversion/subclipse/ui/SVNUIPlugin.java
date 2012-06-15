@@ -745,7 +745,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
      * Returns the image descriptor for the given image ID.
      * Returns null if there is no such image.
      */
-    @UIEffect public ImageDescriptor getImageDescriptor(String id) {
+    public ImageDescriptor getImageDescriptor(String id) {
         if (imageDescriptors == null) {
             imageDescriptors = new ImageDescriptors();
             imageDescriptors.initializeImages(baseURL,
