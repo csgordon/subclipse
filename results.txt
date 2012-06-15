@@ -111,3 +111,4 @@ Note: Eclipse has lots of things that look up an Object by Foo.class and require
 to Foo, which is a source of much imprecision (see getImageDescriptor and the like).
 
 +30 (14:50): 55
++5 (14:55): 53

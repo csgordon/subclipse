@@ -183,7 +183,7 @@ import guitypes.checkers.quals.*;
 			
 	}
 
-	public static String getString(ResourceBundle bundle, String key, String dfltValue) {
+	@SafeEffect public static String getString(ResourceBundle bundle, String key, String dfltValue) {
 		
 		if (bundle != null) {
 			try {
@@ -207,7 +207,7 @@ import guitypes.checkers.quals.*;
 		return "!" + key + "!";//$NON-NLS-2$ //$NON-NLS-1$
 	}
 	
-	public static String getString(String key) {
+	@SafeEffect public static String getString(String key) {
 		try {
 			return CompareUI.getResourceBundle().getString(key);
 		} catch (MissingResourceException e) {
