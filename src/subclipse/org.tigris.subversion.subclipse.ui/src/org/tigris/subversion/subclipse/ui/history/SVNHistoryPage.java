@@ -1059,7 +1059,7 @@ import guitypes.checkers.quals.*;
     actionBars.updateActionBars();  
   }
 
-  ILogEntry getLogEntry(IStructuredSelection ss) {
+  @SafeEffect ILogEntry getLogEntry(IStructuredSelection ss) {
     if(ss.getFirstElement() instanceof LogEntryChangePath) {
       return ((LogEntryChangePath) ss.getFirstElement()).getLogEntry();
     }
@@ -1514,7 +1514,7 @@ import guitypes.checkers.quals.*;
 		  return (ISVNRemoteFile)remoteResource; 
 	  }
 	  
-	  protected boolean isEnabled() {
+	  @SafeEffect protected boolean isEnabled() {
 		  return true;
 	  }
 	  
@@ -1556,7 +1556,7 @@ import guitypes.checkers.quals.*;
 		  return new ISVNRemoteResource[0];
 	  }
 	  
-	  protected boolean isEnabled() {
+	  @SafeEffect protected boolean isEnabled() {
 		  return true;
 	  }
 	  
@@ -1588,7 +1588,7 @@ import guitypes.checkers.quals.*;
 		  return new ISVNRemoteResource[0];
 	  }
 	  
-	  protected boolean isEnabled() {
+	  @SafeEffect protected boolean isEnabled() {
 		  return true;
 	  }
 	  
@@ -1636,7 +1636,7 @@ import guitypes.checkers.quals.*;
 		  return new ISVNRemoteResource[0];
 	  }
 	  
-	  protected boolean isEnabled() {
+	  @SafeEffect protected boolean isEnabled() {
 		  return true;
 	  }
 	  
@@ -1927,7 +1927,7 @@ import guitypes.checkers.quals.*;
         }
 
         // we don't allow multiple selection
-        @UIEffect public boolean isEnabled() {
+        public boolean isEnabled() {
           ISelection selection = getSelection();
           return selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1;
         }
@@ -1965,7 +1965,7 @@ import guitypes.checkers.quals.*;
       }
 
       // we don't allow multiple selection
-      @UIEffect public boolean isEnabled() {
+      public boolean isEnabled() {
         ISelection selection = getSelection();
         return selection instanceof IStructuredSelection && ((IStructuredSelection) selection).size() == 1;
       }
@@ -2139,7 +2139,7 @@ import guitypes.checkers.quals.*;
   }
 
   // Search action (toolbar)
-  private IAction getSearchAction() {
+  @SafeEffect private IAction getSearchAction() {
 	  if (searchAction == null) {
 	      SVNUIPlugin plugin = SVNUIPlugin.getPlugin();
 		  searchAction = new Action(
@@ -2162,7 +2162,7 @@ import guitypes.checkers.quals.*;
   }
   
   // Clear search action (toolbar)
-  private IAction getClearSearchAction() {
+  @SafeEffect private IAction getClearSearchAction() {
 	  if (clearSearchAction == null) {
 	      SVNUIPlugin plugin = SVNUIPlugin.getPlugin();
 		  clearSearchAction = new Action(
@@ -2223,7 +2223,7 @@ import guitypes.checkers.quals.*;
   }
   
   // Get Get Next action (toolbar)
-  public IAction getGetNextAction() {
+  @SafeEffect public IAction getGetNextAction() {
     if(getNextAction == null) {
       getNextAction = new GetNextAction();
     }
@@ -2234,7 +2234,7 @@ import guitypes.checkers.quals.*;
    * All context menu actions use this class This action : - updates
    * currentSelection - action.run
    */
-  private Action getContextMenuAction(String title, final IWorkspaceRunnable action) {
+  @SafeEffect private Action getContextMenuAction(String title, final IWorkspaceRunnable action) {
     return new Action(title) {
       @UIEffect public void run() {
         try {
@@ -2739,7 +2739,7 @@ import guitypes.checkers.quals.*;
 	  }
 }
 
-  class FetchChangePathJob extends Job {
+  @SafeType class FetchChangePathJob extends Job {
     public ILogEntry logEntry;
 
     public FetchChangePathJob() {
@@ -2792,7 +2792,7 @@ import guitypes.checkers.quals.*;
   /* (non-Javadoc)
    * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])
    */
-  public void resourceSyncInfoChanged(IResource[] changedResources) {
+  @SafeEffect public void resourceSyncInfoChanged(IResource[] changedResources) {
       for (int i = 0; i < changedResources.length; i++) {
           IResource changedResource = changedResources[i];
           if( changedResource.equals( resource ) ) {
@@ -2851,22 +2851,22 @@ import guitypes.checkers.quals.*;
   /* (non-Javadoc)
    * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#resourceModified(org.eclipse.core.resources.IResource[])
    */
-  public void resourceModified(IResource[] changedResources) {
+  @SafeEffect public void resourceModified(IResource[] changedResources) {
   }
 
   /* (non-Javadoc)
    * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#projectConfigured(org.eclipse.core.resources.IProject)
    */
-  public void projectConfigured(IProject project) {
+  @SafeEffect public void projectConfigured(IProject project) {
   }
 
   /* (non-Javadoc)
    * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#projectDeconfigured(org.eclipse.core.resources.IProject)
    */
-  public void projectDeconfigured(IProject project) {
+  @SafeEffect public void projectDeconfigured(IProject project) {
   }
 
-  public void initialize() {	  
+  @SafeEffect public void initialize() {	  
   }
   
 public static void setHistorySearchViewerFilter(

@@ -215,69 +215,18 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/settings/ProjectProperties.java:196: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         String[] urlUrls = urlLinks.getUrls();
                                            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1659: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              ISVNRemoteFile remoteFile = (ISVNRemoteFile) getLogEntry(ss).getRemoteResource();
-                                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1693: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-      updateToRevisionAction = getContextMenuAction(
-                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1700: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-              ISVNRemoteFile remoteFile = (ISVNRemoteFile) getLogEntry(ss).getRemoteResource();
-                                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1705: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    new ReplaceOperation(getSite().getPage().getActivePart(), file, remoteFile.getLastChangedRevision())
-                                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1707: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-                    historyTableProvider.setRemoteResource(remoteFile);
-                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1708: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        			historyTableProvider.setProjectProperties(ProjectProperties.getProjectProperties(resource));
-        			                                         ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1723: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
       PlatformUI.getWorkbench().getHelpSystem().setHelp(updateToRevisionAction,
                                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1930: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.action.Action.isEnabled()).
-        @UIEffect public boolean isEnabled() {
-                                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1968: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.action.Action.isEnabled()).
-      @UIEffect public boolean isEnabled() {
-                               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2540: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        		if (getClearSearchAction().isEnabled()) {
-	        		                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2544: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-	        			getGetNextAction().setEnabled(false);
-	        			                ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2622: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 	          final ISVNRemoteResource remoteResource = historyTableProvider.getRemoteResource();
 	                                                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2650: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-							  getSearchAction().setEnabled(true);
-							                 ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2655: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 						  final ISVNRemoteResource remoteResource = historyTableProvider.getRemoteResource();
 						                                                                                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2680: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			          final ISVNRemoteResource remoteResource = historyTableProvider.getRemoteResource();
 			                                                                                          ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2753: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.core.internal.jobs.InternalJob.run(org.eclipse.core.runtime.IProgressMonitor)).
-    public IStatus run(IProgressMonitor monitor) {
-                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2795: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])).
-  public void resourceSyncInfoChanged(IResource[] changedResources) {
-              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2854: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceModified(org.eclipse.core.resources.IResource[])).
-  public void resourceModified(IResource[] changedResources) {
-              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2860: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectConfigured(org.eclipse.core.resources.IProject)).
-  public void projectConfigured(IProject project) {
-              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2866: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectDeconfigured(org.eclipse.core.resources.IProject)).
-  public void projectDeconfigured(IProject project) {
-              ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:2869: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.initialize()).
-  public void initialize() {	  
-              ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/authentication/KeyFileHistoryContentHandler.java:57: error: incompatible component type of Vector.copyInto argument.
 			keyFiles.copyInto(KeyFilesManager.previousKeyFiles);
 			                                 ^
@@ -399,5 +348,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-99 errors
+82 errors
 16 warnings
