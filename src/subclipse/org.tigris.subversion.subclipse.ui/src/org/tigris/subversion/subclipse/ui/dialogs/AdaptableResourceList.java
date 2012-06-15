@@ -44,7 +44,7 @@ public class AdaptableResourceList implements IAdaptable, IWorkbenchAdapter {
 	/**
 	 * @see org.eclipse.ui.model.IWorkbenchAdapter#getImageDescriptor(java.lang.Object)
 	 */
-	public ImageDescriptor getImageDescriptor(Object object) {
+	@SafeEffect public ImageDescriptor getImageDescriptor(Object object) {
 		return null;
 	}
 	/**

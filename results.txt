@@ -102,3 +102,12 @@ into a new thread.  I have not yet marked it as such but will need to.
 +30 (13:35): 76
 +30 (14:05): 66
 +15 (14:20): 60
+
+Note: AbstractUIPlugin.getImageRegistry() is only safe after the workbench is running, because it
+may call createImageRegistry, which should usually be okay for plugins.
+Note: FontRegistry.get() is safe, but the code makes it clear the devs only do so for backwards
+compatibility.
+Note: Eclipse has lots of things that look up an Object by Foo.class and require the client to cast
+to Foo, which is a source of much imprecision (see getImageDescriptor and the like).
+
++30 (14:50): 55

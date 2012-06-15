@@ -126,7 +126,7 @@ import guitypes.checkers.quals.*;
 		});
 	}
 	
-	private void initLimitOutput() {
+	@SafeEffect private void initLimitOutput() {
 		IPreferenceStore store = SVNUIPlugin.getPlugin().getPreferenceStore();
 		if(store.getBoolean(ISVNUIConstants.PREF_CONSOLE_LIMIT_OUTPUT)) {
 			setWaterMarks(1000, store.getInt(ISVNUIConstants.PREF_CONSOLE_HIGH_WATER_MARK));
@@ -216,7 +216,7 @@ import guitypes.checkers.quals.*;
 	/* (non-Javadoc)
 	 * @see org.eclipse.ui.console.MessageConsole#dispose()
 	 */
-	protected void dispose() {
+	@SafeEffect protected void dispose() {
 		// Here we can't call super.dispose() because we actually want the partitioner to remain
 		// connected, but we won't show lines until the console is added to the console manager
 		// again.
@@ -248,7 +248,7 @@ import guitypes.checkers.quals.*;
 	/* (non-Javadoc)
 	 * @see org.eclipse.jface.util.IPropertyChangeListener#propertyChange(org.eclipse.jface.util.PropertyChangeEvent)
 	 */
-	public void propertyChange(PropertyChangeEvent event) {
+	@SafeEffect public void propertyChange(PropertyChangeEvent event) {
 		String property = event.getProperty();		
 		// colors
 		if (visible) {
@@ -298,7 +298,7 @@ import guitypes.checkers.quals.*;
 	/**
 	 * Returns a color instance based on data from a preference field.
 	 */
-	private Color createColor(Display display, String preference) {
+	@SafeEffect private Color createColor(Display display, String preference) {
 		RGB rgb = PreferenceConverter.getColor(SVNUIPlugin.getPlugin().getPreferenceStore(), preference);
 		return new Color(display, rgb);
 	}

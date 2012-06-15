@@ -32,7 +32,7 @@ public class ExternalFileEditorInput implements IPathEditorInput, IStorageEditor
 			return null;
 		}
 
-		public ImageDescriptor getImageDescriptor(Object object) {
+		@SafeEffect public ImageDescriptor getImageDescriptor(Object object) {
 			return null;
 		}
 

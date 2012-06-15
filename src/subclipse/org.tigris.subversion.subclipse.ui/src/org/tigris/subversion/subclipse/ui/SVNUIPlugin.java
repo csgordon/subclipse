@@ -840,7 +840,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
         return mergeFileAssociation;
 	}
 	
-	@UIEffect public static Image getImage(String key) {
+	public static Image getImage(String key) {
 		return getPlugin().getImageRegistry().get(key);
 	}	
 	
