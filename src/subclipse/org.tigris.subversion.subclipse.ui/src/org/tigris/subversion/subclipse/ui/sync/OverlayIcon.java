@@ -55,13 +55,13 @@ import guitypes.checkers.quals.*;
 	 */
 	protected abstract void drawOverlays(ImageDescriptor[] overlays, int[] locations);
 
-	public boolean equals(Object o) {
+	@SafeEffect public boolean equals(Object o) {
 		if (! (o instanceof OverlayIcon)) return false;
 		OverlayIcon other = (OverlayIcon) o;
 		return base.equals(other.base) && Arrays.equals(overlays, other.overlays);
 	}
 
-	public int hashCode() {
+	@SafeEffect public int hashCode() {
 		int code = base.hashCode();
 		for (int i = 0; i < overlays.length; i++) {
 			code ^= overlays[i].hashCode();

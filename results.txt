@@ -101,3 +101,4 @@ into a new thread.  I have not yet marked it as such but will need to.
 +30 (13:05): 82!
 +30 (13:35): 76
 +30 (14:05): 66
++15 (14:20): 60

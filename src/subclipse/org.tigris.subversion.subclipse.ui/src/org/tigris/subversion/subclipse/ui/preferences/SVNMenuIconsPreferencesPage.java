@@ -25,6 +25,7 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 /**
  * SVN Preference Page
@@ -163,7 +164,7 @@ public class SVNMenuIconsPreferencesPage extends PreferencePage implements IWork
 	 *  (non-Javadoc)
 	 * @see org.eclipse.jface.preference.PreferencePage#doGetPreferenceStore()
 	 */ 
-	protected IPreferenceStore doGetPreferenceStore() {
+	@SafeEffect protected IPreferenceStore doGetPreferenceStore() {
 		return SVNUIPlugin.getPlugin().getPreferenceStore();
 	}
 
