@@ -39,12 +39,12 @@ import org.tigris.subversion.subclipse.ui.operations.UpdateOperation;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import guitypes.checkers.quals.*;
 
-public class MarkMergedSynchronizeOperation extends SVNSynchronizeOperation {
+@SafeType public class MarkMergedSynchronizeOperation extends SVNSynchronizeOperation { // must be safe b/c canRunAsJob returns true
     
 	public final static int PROGRESS_DIALOG = 1;
 	public final static int PROGRESS_BUSYCURSOR = 2;
 
-    public MarkMergedSynchronizeOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
+    @UIEffect public MarkMergedSynchronizeOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements) {
         super(configuration, elements);
     }
 

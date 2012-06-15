@@ -92,7 +92,7 @@ import guitypes.checkers.quals.*;
 	 * @param resource the resource
 	 * @return the ignore pattern for the specified resource
 	 */
-	public String getIgnorePatternFor(IResource resource) {
+	@SafeEffect public String getIgnorePatternFor(IResource resource) {
 		switch (selectedAction) {
 			case ADD_NAME_ENTRY:
 				return resource.getName();

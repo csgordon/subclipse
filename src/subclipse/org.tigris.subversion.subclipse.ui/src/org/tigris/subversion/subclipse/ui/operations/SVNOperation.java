@@ -295,7 +295,7 @@ public abstract class SVNOperation extends TeamOperation {
 	 */
 	protected boolean canRunAsJob() {
 		// Put SVN jobs in the background by default.
-		return true;
+		return true; // Colin Gordon: Because of this default, I'm making the heirarchy safe, and will have to live with the errors from the couple classes that override this.
 	}
 	
 	public void showCancelledMessage() {

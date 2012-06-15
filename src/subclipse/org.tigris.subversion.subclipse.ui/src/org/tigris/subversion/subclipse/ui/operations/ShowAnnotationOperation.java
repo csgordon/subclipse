@@ -181,7 +181,7 @@ public class ShowAnnotationOperation extends SVNOperation {
         return super.getGotoAction();
     }
     
-	private ITextEditorExtension4 getEditor() {
+	@UIEffect private ITextEditorExtension4 getEditor() {
         final IWorkbench workbench= PlatformUI.getWorkbench();
         final IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
         IEditorReference[] references= window.getActivePage().getEditorReferences();
@@ -233,7 +233,7 @@ public class ShowAnnotationOperation extends SVNOperation {
         return null;
 	}
     
-    private RevisionInformation createRevisionInformation(final AnnotateBlocks annotateBlocks, IProgressMonitor monitor) {
+    @UIEffect private RevisionInformation createRevisionInformation(final AnnotateBlocks annotateBlocks, IProgressMonitor monitor) {
     	Map logEntriesByRevision= new HashMap();
     GetLogsCommand logCommand = new GetLogsCommand(this.remoteFile, SVNRevision.HEAD, this.fromRevision, this.toRevision, false, 0, null, false);
 		try {
@@ -340,7 +340,7 @@ public class ShowAnnotationOperation extends SVNOperation {
 	 * Returns true if the user wishes to always use the live annotate view, false otherwise.
 	 * @return
 	 */
-	private boolean promptForQuickDiffAnnotate(){
+	@UIEffect private boolean promptForQuickDiffAnnotate(){
 		//check whether we should ask the user.
 		final IPreferenceStore store = SVNUIPlugin.getPlugin().getPreferenceStore();
 		final String option = store.getString(ISVNUIConstants.PREF_USE_QUICKDIFFANNOTATE);

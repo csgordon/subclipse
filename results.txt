@@ -50,3 +50,45 @@ Interesting to note that IWorkbenchSite.getShell(), specified as safe apparently
 +10 min (9:45): 127
 +15 min (10:00): 119 may have found a bug in CommitCommentArea.
 +40 min (10:40): 100
+
+Digging into the SVNOperation heirarchy a bit more, since the graph package's Activator defines a
+showErrorDialog that takes a boolean for whether it's being called in the UI thread.  It's only
+called from GraphBackgroundTask, which is a safe (canRunAsJob() == true) with the UI thread flag set
+to false (correctly).  So I've made SVNOperation safe, and will (for now) live with the error
+warnings about invalid overrides for those classes that override canRunAsJob to return true (a
+couple also return a member variable....).  Apparently TeamOperation also inherits from
+IRunnableWithProgress - perhaps that interface is polymorphic after all, and the progress monitor
+methods are safe.
+
+http://www.vogella.com/articles/EclipseJobs/article.html#eclipsejobs_iprogressmonitor seems to
+indicate that IProgressMonitor should be safe... but looking at the implementation of
+ProgressMonitorPart, that one's not.  Perhaps it's polymorphic... I'm making it polymorphic.
+
+Commit Operation overrides canRunAsJob() to return a field canRunAsJob, and there's an accompanying
+setCanRunAsJob(boolean).  RevertOperation, UpdateOperation, SwitchOperation do the same.
+ShowDifferencesAsUnifiedDiffOperationWC does the same thing more or less, though using a flag for
+whether or not it's a graphical operation.
+
+RevertOperation, UpdateOperation, and SwitchOperation extend RepositoryProviderOperation (which
+extends SVNOperation).
+
+None of the setCanRunAsJob() calls ever pass something other than 'true' as far as I can tell (the
+calls to the operation method are only from the corresponding actions, which have their own
+canRunAsJob flag, which also defaults to true and the action setter is never called).
+
+UpdateSynchronizeOperation and MarkMergedSynchronizeOperation, and
+OverrideAndUpdateSynchronizeOperation, override canRunAsJob from
+SVNSynchronizeOperation (which extends org.eclipse.team.ui.SynchronizeModelOperation), and all
+return true.
+
+So almost all of these classes should be marked SAFE as used, though there is code there that could push
+them onto the UI thread with UI operations.  The only exception is
+ShowDifferencesAsUnifiedDiffOperationWC, which does have nontrivial calls to setGraphicalCompare().
+Need to investigate further.
+
+Note that SynchronizeModelOperation inherits directly from TeamOperation, which defaults to the UI
+thread, so it can be @UIType.  SVNSynchronizeOperation then inherits from that.  So that heirarchy
+can default to UI, except for those that override canRunAsJob to return true.
+
++1:40 (12:20): 108.  Error count went up, but I fixed a lot of improper annotations, and may have
+found a bug in MarkMergedSynchronizeOperation.
