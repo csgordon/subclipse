@@ -50,7 +50,7 @@ import guitypes.checkers.quals.*;
 	private boolean confirmNeeded;
 	private List<IStatus> errors;
 	
-	public UpdateSynchronizeOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements, IResource[] resources) {
+	@UIEffect public UpdateSynchronizeOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements, IResource[] resources) {
 		super(configuration, elements);
 		this.resources = resources;
 	}

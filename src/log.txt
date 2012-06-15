@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120615.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -66,24 +64,9 @@ subclipse/org.tigris.subversion.subclipse.tools.usage/src/org/tigris/subversion/
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNMarkerListener.java:59: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
         	treeConflictsViewRefreshed = TreeConflictsView.refresh(changedResources);
         	                                                      ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:612: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])).
-	public void resourceSyncInfoChanged(IResource[] changedResources) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:619: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.resourceModified(org.eclipse.core.resources.IResource[])).
-	public void resourceModified(IResource[] changedResources) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:670: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectConfigured(org.eclipse.core.resources.IProject)).
-	public void projectConfigured(IProject project) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:677: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.projectDeconfigured(org.eclipse.core.resources.IProject)).
-	public void projectDeconfigured(IProject project) {
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:681: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe IResourceStateChangeListener.initialize()).
-	public void initialize() {};
-	            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:699: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
-	public void propertyChange(PropertyChangeEvent event) {
-	            ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:588: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
+		SVNUIPlugin.getPlugin().getWorkbench().getDecoratorManager().update(SVNUIPlugin.DECORATOR_ID); // Colin Gordon: BUG? At a glance .update() is not safe (though it depends on the ILabelProviderListeners), but this is called from projectConfigured(), which must be safe by inheritance
+		                                                                   ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RemoveRootAction.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		super(Policy.bind("RemoteRootAction.label")); //$NON-NLS-1$
 		     ^
@@ -289,18 +272,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/svnproperties/SvnPropertiesView.java:106: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 					refresh();
 					       ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:54: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super(configuration, elements);
-		     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:64: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			final SyncInfoSet syncSet = getSyncInfoSet();
-			                                          ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		super.run(monitor);
 		         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:77: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		IResource[] resourceArray = extractResources(resources, set);
-		                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:160: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 				                       ^
@@ -313,12 +287,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		super(configuration, elements);
 		     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:70: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		IResource[] modifiedResourceArray = extractResources(modifiedResources, set);
-		                                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:71: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		IResource[] resourceArray = extractResources(resources, set);
-		                                            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/BuiltInConflictsCompareInput.java:115: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		                    Utilities.getString("ResourceCompare.taskName"), IProgressMonitor.UNKNOWN); //$NON-NLS-1$
 		                                       ^
@@ -332,5 +300,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-76 errors
+66 errors
 16 warnings
