@@ -15,6 +15,7 @@ import java.util.Arrays;
 import org.eclipse.jface.resource.CompositeImageDescriptor;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.*;
+import guitypes.checkers.quals.*;
 
 /**
  * An OverlayIcon consists of a main icon and several adornments.
@@ -77,13 +78,13 @@ public class OverlayIcon extends CompositeImageDescriptor {
 			}
 		}
 
-	public boolean equals(Object o) {
+	@SafeEffect public boolean equals(Object o) {
 		if (! (o instanceof OverlayIcon)) return false;
 		OverlayIcon other = (OverlayIcon) o;
 		return base.equals(other.base) && Arrays.equals(overlays, other.overlays);
 	}
 
-	public int hashCode() {
+	@SafeEffect public int hashCode() {
 		int code = base.hashCode();
 		for (int i = 0; i < overlays.length; i++) {
 			code ^= overlays[i].hashCode();
