@@ -28,6 +28,7 @@ import org.eclipse.ui.ISelectionListener;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
+import guitypes.checkers.quals.*;
 
 
 /**
@@ -110,7 +111,7 @@ public class SVNPluginAction extends Action implements IPluginContribution,
 		return AS_PUSH_BUTTON;
 	}
 
-    public IActionDelegate getDelegate() {
+    @SafeEffect public IActionDelegate getDelegate() {
     	return delegate;
     }
 

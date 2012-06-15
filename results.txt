@@ -92,3 +92,9 @@ can default to UI, except for those that override canRunAsJob to return true.
 
 +1:40 (12:20): 108.  Error count went up, but I fixed a lot of improper annotations, and may have
 found a bug in MarkMergedSynchronizeOperation.
+
+According to the docs for IProgressService, IRunnableWithProgress appears to be polymorphic, since
+IProgressService is a UI-only class that provides a method that may fork the IRunnableWithProgress
+into a new thread.  I have not yet marked it as such but will need to.
+
++15 (12:35): 99!

@@ -745,7 +745,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
      * Returns the image descriptor for the given image ID.
      * Returns null if there is no such image.
      */
-    public ImageDescriptor getImageDescriptor(String id) {
+    @UIEffect public ImageDescriptor getImageDescriptor(String id) {
         if (imageDescriptors == null) {
             imageDescriptors = new ImageDescriptors();
             imageDescriptors.initializeImages(baseURL,
@@ -840,7 +840,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
         return mergeFileAssociation;
 	}
 	
-	public static Image getImage(String key) {
+	@UIEffect public static Image getImage(String key) {
 		return getPlugin().getImageRegistry().get(key);
 	}	
 	
