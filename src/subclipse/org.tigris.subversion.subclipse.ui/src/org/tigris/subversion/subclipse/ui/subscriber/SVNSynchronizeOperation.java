@@ -29,7 +29,7 @@ import org.eclipse.team.ui.synchronize.SynchronizeModelOperation;
 import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-
+import guitypes.checkers.quals.*;
 /**
  * Override SynchronizeModelOperation in order to delegate the operation to each file system 
  * provider instance (i.e. each project). Also, prompt to prune conflicts from the set of
@@ -77,7 +77,7 @@ public abstract class SVNSynchronizeOperation extends SynchronizeModelOperation 
 	/*
 	 * Divide the sync info for the operation by project
 	 */
-	protected Map getProjectSyncInfoSetMap(SyncInfoSet syncSet) {
+	@SafeEffect protected Map getProjectSyncInfoSetMap(SyncInfoSet syncSet) {
 		Map map = new HashMap();
 		SyncInfo[] infos = syncSet.getSyncInfos();
 		for (int i = 0; i < infos.length; i++) {
@@ -107,7 +107,7 @@ public abstract class SVNSynchronizeOperation extends SynchronizeModelOperation 
      * to the same IProject.
      * 
      */	
-	protected IResource[] extractResources(IResource[] selectedResources, SyncInfoSet set) {
+	@SafeEffect protected IResource[] extractResources(IResource[] selectedResources, SyncInfoSet set) {
         IResource[] setResources = set.getResources();
 		IProject project = setResources[0].getProject();
 		ArrayList projectResources = new ArrayList();

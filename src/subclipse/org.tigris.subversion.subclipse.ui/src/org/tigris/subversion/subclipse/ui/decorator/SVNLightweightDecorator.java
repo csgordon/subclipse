@@ -215,7 +215,7 @@ public class SVNLightweightDecorator
 	 * @param fonts fonts ids to cache
 	 * @param colors color ids to cache
 	 */
-	private void ensureFontAndColorsCreated(final String[] fonts, final String[] colors) {
+	@SafeEffect private void ensureFontAndColorsCreated(final String[] fonts, final String[] colors) {
 		SVNUIPlugin.getStandardDisplay().syncExec(new @UI Runnable() {
 			public void run() {
 				ITheme theme  = PlatformUI.getWorkbench().getThemeManager().getCurrentTheme();
@@ -584,14 +584,14 @@ public class SVNLightweightDecorator
 	/*
 	* Perform a blanket refresh of all SVN decorations
 	*/
-	public static void refresh() {
-		SVNUIPlugin.getPlugin().getWorkbench().getDecoratorManager().update(SVNUIPlugin.DECORATOR_ID);
+	@SafeEffect public static void refresh() {
+		SVNUIPlugin.getPlugin().getWorkbench().getDecoratorManager().update(SVNUIPlugin.DECORATOR_ID); // Colin Gordon: BUG? At a glance .update() is not safe (though it depends on the ILabelProviderListeners), but this is called from projectConfigured(), which must be safe by inheritance
 	}
 
 	/*
 	 * Update the decorators for every resource in project
 	 */
-	public void refresh(IProject project) {
+	@SafeEffect public void refresh(IProject project) {
 		final List resources = new ArrayList();
 		try {
 			project.accept(new IResourceVisitor() {
@@ -609,21 +609,21 @@ public class SVNLightweightDecorator
 	/**
 	 * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#resourceSyncInfoChanged(org.eclipse.core.resources.IResource[])
 	 */
-	public void resourceSyncInfoChanged(IResource[] changedResources) {
+	@SafeEffect public void resourceSyncInfoChanged(IResource[] changedResources) {
 		resourceStateChanged(changedResources);
 	}
 	
 	/**
 	 * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#resourceModificationStateChanged(org.eclipse.core.resources.IResource[])
 	 */
-	public void resourceModified(IResource[] changedResources) {
+	@SafeEffect public void resourceModified(IResource[] changedResources) {
 		resourceStateChanged(changedResources);
 	}
 
 	/**
 	 * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#resourceStateChanged(org.eclipse.core.resources.IResource[])
 	 */
-	public void resourceStateChanged(IResource[] changedResources) {
+	@SafeEffect public void resourceStateChanged(IResource[] changedResources) {
 		// add depth first so that update thread processes parents first.
 		//System.out.println(">> State Change Event");
 		Set resourcesToUpdate = new HashSet();
@@ -667,25 +667,25 @@ public class SVNLightweightDecorator
 	/**
 	 * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#projectConfigured(org.eclipse.core.resources.IProject)
 	 */
-	public void projectConfigured(IProject project) {
+	@SafeEffect public void projectConfigured(IProject project) {
 		refresh(project);
 	}
 
 	/**
 	 * @see org.tigris.subversion.subclipse.core.IResourceStateChangeListener#projectDeconfigured(org.eclipse.core.resources.IProject)
 	 */
-	public void projectDeconfigured(IProject project) {
+	@SafeEffect public void projectDeconfigured(IProject project) {
 		refresh(project);
 	}
 	
-	public void initialize() {};
+	@SafeEffect public void initialize() {};
 	
 	/**
 	 * Post the label event to the UI thread
 	 *
 	 * @param events  the events to post
 	 */
-	private void postLabelEvent(final LabelProviderChangedEvent event) {
+	@SafeEffect private void postLabelEvent(final LabelProviderChangedEvent event) {
 		Display.getDefault().asyncExec(new @UI Runnable() {
 			public void run() {
 				fireLabelProviderChanged(event);
@@ -696,14 +696,14 @@ public class SVNLightweightDecorator
 	/* (non-Javadoc)
 	 * @see org.eclipse.jface.util.IPropertyChangeListener#propertyChange(org.eclipse.jface.util.PropertyChangeEvent)
 	 */
-	public void propertyChange(PropertyChangeEvent event) {
+	@SafeEffect public void propertyChange(PropertyChangeEvent event) {
 		if (isEventOfInterest(event)) {
 			ensureFontAndColorsCreated(fonts, colors);
 		    refresh();
 		}	
 	}
 
-    private boolean isEventOfInterest(PropertyChangeEvent event) {
+    @SafeEffect private boolean isEventOfInterest(PropertyChangeEvent event) {
         String prop = event.getProperty();
         return prop.equals(TeamUI.GLOBAL_IGNORES_CHANGED) 
         	|| prop.equals(TeamUI.GLOBAL_FILE_TYPES_CHANGED) 
