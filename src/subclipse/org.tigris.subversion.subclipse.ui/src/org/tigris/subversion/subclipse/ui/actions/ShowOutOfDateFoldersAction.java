@@ -6,6 +6,7 @@ import org.tigris.subversion.subclipse.core.SVNProviderPlugin;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.subscriber.SVNSynchronizeParticipant;
+import guitypes.checkers.quals.*;
 
 public class ShowOutOfDateFoldersAction extends Action {
 	private SVNSynchronizeParticipant svnSynchronizeParticipant;
@@ -16,7 +17,7 @@ public class ShowOutOfDateFoldersAction extends Action {
 		setChecked(SVNProviderPlugin.getPlugin().getPluginPreferences().getBoolean(ISVNCoreConstants.PREF_SHOW_OUT_OF_DATE_FOLDERS));
 	}
 	
-	public void setChecked(boolean checked) {
+	@SafeEffect public void setChecked(boolean checked) {
 		super.setChecked(checked);
 		SVNProviderPlugin.getPlugin().getPluginPreferences().setValue(ISVNCoreConstants.PREF_SHOW_OUT_OF_DATE_FOLDERS, isChecked());
 		if (svnSynchronizeParticipant != null) svnSynchronizeParticipant.refresh(svnSynchronizeParticipant.getResources(), Policy.bind("ShowOutOfDateFoldersAction.refreshTaskName"), Policy.bind("ShowOutOfDateFoldersAction.refreshTaskName"), SVNUIPlugin.getActivePage().getActivePart().getSite()); //$NON-NLS-1$, //$NON-NLS-1$		

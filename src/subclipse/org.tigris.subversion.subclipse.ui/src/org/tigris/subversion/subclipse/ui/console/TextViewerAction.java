@@ -15,11 +15,11 @@ import org.eclipse.jface.action.Action;
 import org.eclipse.jface.text.ITextOperationTarget;
 import org.eclipse.jface.text.ITextViewer;
 import org.eclipse.ui.texteditor.IUpdate;
-
+import guitypes.checkers.quals.*;
 /**
  * Used by ConsoleView 
  */
-public class TextViewerAction extends Action implements IUpdate {
+@UIType public class TextViewerAction extends Action implements IUpdate {
 	private int operationCode = -1;
 	private ITextOperationTarget operationTarget;
 

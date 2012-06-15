@@ -52,6 +52,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.actions.ShowOutOfDateFoldersAction;
 import org.tigris.subversion.subclipse.ui.internal.ScopableSubscriberParticipant;
 import org.tigris.subversion.subclipse.ui.util.ResourceSelectionTreeDecorator;
+import guitypes.checkers.quals.*;
 
 
 /**
@@ -366,12 +367,12 @@ public class SVNSynchronizeParticipant extends ScopableSubscriberParticipant imp
         return capability;
 	}
 	
-	public IStatus refresh(IResource[] resources, IProgressMonitor monitor) {
+	@SafeEffect public IStatus refresh(IResource[] resources, IProgressMonitor monitor) {
 		this.resources = resources;
 		return refreshNow(resources, getLongTaskName(resources), monitor);
 	}
 
-	public void propertyChange(org.eclipse.core.runtime.Preferences.PropertyChangeEvent event) {
+	@SafeEffect public void propertyChange(org.eclipse.core.runtime.Preferences.PropertyChangeEvent event) {
 		if (event.getProperty().equals(ISVNCoreConstants.PREF_IGNORE_HIDDEN_CHANGES)) {
 			if (getResources() != null) {
 				refresh(getResources(), new NullProgressMonitor());		

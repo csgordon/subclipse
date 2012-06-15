@@ -193,7 +193,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
 					return;
 				}
 				// get the active shell or a suitable top-level shell
-				parent = display.getActiveShell();
+				parent = display.getActiveShell(); // Colin Gordon: subject to dynamic thread check
 				if (parent == null) {
 					parent = new Shell(display);
 					createdShell = true;
