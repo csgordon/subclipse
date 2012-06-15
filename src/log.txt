@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120615.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -96,15 +94,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:428: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			outerRunnable.run(); // Colin Gordon: SAFE I think - dynamic check for which thread we're on
 			                 ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNOutputConsole.java:219: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.ui.console.IOConsole.dispose()).
-	protected void dispose() {
-	               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNOutputConsole.java:219: warning: This method overrides a method with @UI effect (org.eclipse.ui.console.AbstractConsole.dispose()) and another method with an @AlwaysSafe effect (org.eclipse.ui.console.IOConsole.dispose()).  This is discouraged.
-	protected void dispose() {
-	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/SVNOutputConsole.java:251: error: An method override may only be @UI if it overrides an @UI method (overriding non-UI instantiation of @AlwaysSafe IPropertyChangeListener).
-	public void propertyChange(PropertyChangeEvent event) {
-	            ^
+	@SafeEffect protected void dispose() {
+	                           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/ShowAnnotationOperation.java:261: warning: non-varargs call of varargs method with inexact argument type for last parameter;
 				tooltipAffordance = (String) EditorsUI.class.getMethod("getTooltipAffordanceString", null).invoke(null, null);
 				                                                                                     ^
@@ -118,12 +110,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/FetchMembersOperation.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			collector.add(children, Policy.subMonitorFor(monitor, 5));
 			             ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/editor/RemoteFileEditorInput.java:135: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return fileAdapter == null ? null : fileAdapter.getImageDescriptor(file);
-		                                                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/editor/RemoteFileEditorInput.java:142: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return fileAdapter == null ? null : fileAdapter.getImageDescriptor(file);
-		                                                                  ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/ConsoleRemoveAction.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		setImageDescriptor(TeamImages.getImageDescriptor("elcl16/participant_rem.gif")); //$NON-NLS-1$
 		                                                ^
@@ -213,9 +199,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNFolderCompareEditorInput.java:128: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.CompareEditorInput.isSaveNeeded()).
 	public boolean isSaveNeeded() {
 	               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/PropertyComparePropertyNode.java:32: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		return SVNUIPlugin.getImage(ISVNUIConstants.IMG_PROPERTIES);
-		                           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/StatusAwareDifferencer.java:11: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.compare.structuremergeviewer.Differencer.contentsEqual(java.lang.Object,java.lang.Object)).
     protected boolean contentsEqual(Object left, Object right) {
                       ^
@@ -284,5 +267,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-60 errors
+55 errors
 16 warnings
