@@ -88,7 +88,7 @@ public class Activator extends AbstractUIPlugin {
 		else getDefault().getLog().log(new Status(IStatus.ERROR, PLUGIN_ID, IStatus.ERROR, message, exception));
 	}
 	
-	public static void showErrorDialog(final String title, final Exception exception, boolean uiThread) {
+	@UIEffect public static void showErrorDialog(final String title, final Exception exception, boolean uiThread) {
 		if (uiThread) showErrorDialog(title, exception); // Colin Gordon: Another instance of dynamic selection of thread context
 		else {
 			Display.getDefault().syncExec(new @UI Runnable(){

@@ -44,7 +44,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
 import guitypes.checkers.quals.*;
 
-public class UpdateSynchronizeOperation extends SVNSynchronizeOperation {
+@SafeType public class UpdateSynchronizeOperation extends SVNSynchronizeOperation { // must be safe b/c canRunAsJob returns true
 	private IResource[] resources;
 	private boolean confirm;
 	private boolean confirmNeeded;

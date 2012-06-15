@@ -36,7 +36,7 @@ import org.tigris.subversion.subclipse.ui.conflicts.SVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import guitypes.checkers.quals.*;
 
-public class OverrideAndUpdateSynchronizeOperation extends SVNSynchronizeOperation {
+@SafeType public class OverrideAndUpdateSynchronizeOperation extends SVNSynchronizeOperation { // must be safe b/c canRunAsJob returns true
 	private IResource[] modifiedResources;
 	private IResource[] resources;
 	private boolean revertAndUpdate = true;
