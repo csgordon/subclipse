@@ -41,6 +41,7 @@ import org.tigris.subversion.subclipse.ui.util.PromptingDialog;
 import org.tigris.subversion.subclipse.ui.util.IPromptCondition;
 import org.tigris.subversion.svnclientadapter.ISVNStatus;
 import org.tigris.subversion.svnclientadapter.utils.SVNStatusUtils;
+import guitypes.checkers.quals.*;
 
 /**
  * This class represents an action performed on a local SVN workspace
@@ -375,11 +376,11 @@ public abstract class WorkspaceAction extends SVNAction {
 		return getOverwriteLocalChangesPrompt(resources);
 	}
 
-	public String getName() {
+	@SafeEffect public String getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	@SafeEffect public void setName(String name) {
 		this.name = name;
 	}
 

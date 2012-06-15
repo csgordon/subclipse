@@ -231,7 +231,7 @@ import guitypes.checkers.quals.*;
 	/**
 	 * Clean-up created fonts.
 	 */
-	public void shutdown() {
+	@SafeEffect public void shutdown() {
 		// Call super dispose because we want the partitioner to be
 		// disconnected.
 		super.dispose();
