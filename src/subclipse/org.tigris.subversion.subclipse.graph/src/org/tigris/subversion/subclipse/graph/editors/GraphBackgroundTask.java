@@ -24,7 +24,7 @@ import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import guitypes.checkers.quals.*;
 
-public class GraphBackgroundTask extends SVNOperation {
+@SafeType public class GraphBackgroundTask extends SVNOperation {
 	
 	private IResource resource;
 	private ISVNRemoteResource remoteResource;
@@ -153,7 +153,7 @@ public class GraphBackgroundTask extends SVNOperation {
 				} catch(Exception e) {
 					Activator.handleError(e);
 					error = true;
-					Activator.showErrorDialog("Calculate Revision Graph Information", e, false);
+					Activator.showErrorDialog("Calculate Revision Graph Information", e, false); // Colin Gordon: safe - the false indicates that showErrorDialog will do a syncExec, though this is not checked
 				}
 			} else {
 				monitor.worked(VERY_LONG_TASK);
@@ -177,7 +177,7 @@ public class GraphBackgroundTask extends SVNOperation {
 			monitor.done();
 		} catch (Exception e) {
 			Activator.handleError(e);
-			Activator.showErrorDialog("Calculate Revision Graph Information", e, false);
+			Activator.showErrorDialog("Calculate Revision Graph Information", e, false); // Colin Gordon: safe - the false indicates that showErrorDialog will do a syncExec, though this is not checked
 			return;
 		} finally {
 			if(cache != null)

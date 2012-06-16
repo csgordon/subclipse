@@ -34,7 +34,7 @@ import guitypes.checkers.quals.*;
 /**
  * RemoveRootAction removes a repository
  */
-public class RemoveRootAction extends SelectionListenerAction {
+@UIType public class RemoveRootAction extends SelectionListenerAction {
 	private IStructuredSelection selection;
 	private Shell shell;
 	

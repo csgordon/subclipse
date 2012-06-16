@@ -30,8 +30,9 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.SVNDiffSummary;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.utils.Depth;
+import guitypes.checkers.quals.*;
 
-public final class RevisionAwareDifferencer extends Differencer {
+@SafeType public final class RevisionAwareDifferencer extends Differencer {
     // comparison constants
     private static final int NODE_EQUAL = 0;
     private static final int NODE_NOT_EQUAL = 1;

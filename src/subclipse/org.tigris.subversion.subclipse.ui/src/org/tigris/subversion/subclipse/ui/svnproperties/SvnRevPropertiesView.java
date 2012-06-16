@@ -78,7 +78,7 @@ public class SvnRevPropertiesView extends ViewPart {
     /**
      * the svn status of some resources changed. Refresh if we are concerned
      */
-    @UIEffect public void resourceSyncInfoChanged(IResource[] changedResources) {
+    public void resourceSyncInfoChanged(IResource[] changedResources) {
         for (int i = 0; i < changedResources.length;i++) {
             if (resource != null && changedResources[i].equals(resource.getIResource())) {
                 refresh();
@@ -386,7 +386,7 @@ public void setFocus() {
 /**
  * refresh the view
  */
-public void refresh()  {
+@SafeEffect public void refresh()  {
 
     Display.getDefault().syncExec(new @UI Runnable() {
         public void run() {

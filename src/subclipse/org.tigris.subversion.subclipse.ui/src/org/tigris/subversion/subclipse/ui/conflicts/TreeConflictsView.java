@@ -170,15 +170,15 @@ import guitypes.checkers.quals.*;
 		super.dispose();
 	}
 	
-	public boolean isDisposed() {
+	@SafeEffect public boolean isDisposed() {
 		return disposed;
 	}
 
-	public IResource getResource() {
+	@SafeEffect public IResource getResource() {
 		return resource;
 	}
 
-	public static boolean refresh(IResource[] resources) {
+	@SafeEffect public static boolean refresh(IResource[] resources) {
 		if (view == null || view.isDisposed() || view.getResource() == null) return false;
 		for (int i = 0; i < resources.length; i++) {
 			if (view.getResource().equals(resources[i]) || resources[i].getFullPath().toString().startsWith(view.getResource().getFullPath().toString())) {
