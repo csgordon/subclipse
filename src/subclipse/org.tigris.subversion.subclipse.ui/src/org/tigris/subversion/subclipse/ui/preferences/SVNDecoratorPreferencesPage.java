@@ -510,7 +510,7 @@ import guitypes.checkers.quals.*;
 	*
 	* @return the preference store for this plugin
 	*/
-	protected IPreferenceStore doGetPreferenceStore() {
+	@SafeEffect protected IPreferenceStore doGetPreferenceStore() {
 		return SVNUIPlugin.getPlugin().getPreferenceStore();
 	}
 	
