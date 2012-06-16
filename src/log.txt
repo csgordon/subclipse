@@ -6,8 +6,10 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
+     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
+      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120616.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -107,9 +109,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:166: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				page.openEditor(input, descriptor.getId());
 				               ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/preferences/SVNDecoratorPreferencesPage.java:513: error: An method override may only be @UI if it overrides an @UI method (overriding org.eclipse.jface.preference.PreferencePage.doGetPreferenceStore()).
-	protected IPreferenceStore doGetPreferenceStore() {
-	                           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/preferences/SVNDecoratorPreferencesPage.java:682: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe Observer.update(java.util.Observable,java.lang.Object)).
 		public void update(Observable o, Object arg) {
 		            ^
@@ -203,12 +202,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/OverrideAndUpdateSynchronizeOperation.java:50: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		super(configuration, elements);
 		     ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/conflicts/ExternalFileEditorInput.java:110: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-            return getPath().equals(input.getPath());
-                                                 ^
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-38 errors
+36 errors
 14 warnings
