@@ -498,7 +498,7 @@ public class HistoryTableProvider {
      * get the remote resource from which we want the history 
      * @return
      */
-	public ISVNRemoteResource getRemoteResource() {
+	@SafeEffect public ISVNRemoteResource getRemoteResource() {
 		return this.currentRemoteResource;
 	}
 

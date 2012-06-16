@@ -487,7 +487,7 @@ import guitypes.checkers.quals.*;
 	/**
 	 * refresh the view
 	 */
-	public void refresh()  {
+	@SafeEffect public void refresh()  {
 
 		Display.getDefault().syncExec(new @UI Runnable() {
 			public void run() {

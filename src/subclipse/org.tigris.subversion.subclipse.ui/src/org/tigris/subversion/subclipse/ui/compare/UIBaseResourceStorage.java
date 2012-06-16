@@ -12,13 +12,14 @@ package org.tigris.subversion.subclipse.ui.compare;
 import org.eclipse.compare.IEncodedStreamContentAccessor;
 import org.tigris.subversion.subclipse.core.resources.BaseResource;
 import org.tigris.subversion.subclipse.core.resources.BaseResourceStorage;
+import guitypes.checkers.quals.*;
 
 /**
  * This class does not add any functionality. It just adds the UI dependent interface
  * <code>IEncodedStreamContentAccessor</code>.
  * @see org.tigris.subversion.subclipse.core.resources.BaseResourceStorageFactory#current()
  */
-public class UIBaseResourceStorage extends BaseResourceStorage implements IEncodedStreamContentAccessor {
+@SafeType public class UIBaseResourceStorage extends BaseResourceStorage implements IEncodedStreamContentAccessor {
 
 	/** Do not use this constructor directly.
 	 * @param baseResource

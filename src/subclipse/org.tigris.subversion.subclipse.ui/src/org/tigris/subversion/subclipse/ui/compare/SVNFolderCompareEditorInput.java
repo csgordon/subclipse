@@ -25,6 +25,7 @@ import org.tigris.subversion.svnclientadapter.SVNNodeKind;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNDiffSummary.SVNDiffKind;
 import org.tigris.subversion.svnclientadapter.utils.Depth;
+import guitypes.checkers.quals.*;
 
 public class SVNFolderCompareEditorInput extends SVNAbstractCompareEditorInput {
 	private SummaryEditionNode left;
@@ -125,7 +126,7 @@ public class SVNFolderCompareEditorInput extends SVNAbstractCompareEditorInput {
 		setTitle(title);
 	}
 
-	public boolean isSaveNeeded() {
+	@SafeEffect public boolean isSaveNeeded() {
 		return false;
 	}
 

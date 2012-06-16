@@ -22,6 +22,7 @@ import org.tigris.subversion.subclipse.core.ISVNRemoteResource;
 import org.tigris.subversion.subclipse.core.resources.RemoteResource;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
+import guitypes.checkers.quals.*;
 
 /**
  * A compare input for comparing remote resources. Use <code>SVNLocalCompareInput</code> 
@@ -181,7 +182,7 @@ public class SVNCompareEditorInput extends SVNAbstractCompareEditorInput {
 	/* (Non-javadoc)
 	 * Method declared on CompareEditorInput
 	 */
-	public boolean isSaveNeeded() {
+	@SafeEffect public boolean isSaveNeeded() {
 		return false;
 	}
 

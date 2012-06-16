@@ -3,8 +3,8 @@ package org.tigris.subversion.subclipse.ui.compare;
 import org.eclipse.compare.structuremergeviewer.Differencer;
 import org.tigris.subversion.subclipse.core.ISVNLocalResource;
 import org.tigris.subversion.subclipse.core.SVNException;
-
-public class StatusAwareDifferencer extends Differencer {
+import guitypes.checkers.quals.*;
+@SafeType public class StatusAwareDifferencer extends Differencer {
     /* (non-Javadoc)
      * @see org.eclipse.compare.structuremergeviewer.Differencer#contentsEqual(java.lang.Object, java.lang.Object)
      */

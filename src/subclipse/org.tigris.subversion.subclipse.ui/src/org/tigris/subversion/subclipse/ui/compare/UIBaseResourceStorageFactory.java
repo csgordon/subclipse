@@ -12,11 +12,12 @@ package org.tigris.subversion.subclipse.ui.compare;
 import org.tigris.subversion.subclipse.core.resources.BaseResource;
 import org.tigris.subversion.subclipse.core.resources.BaseResourceStorage;
 import org.tigris.subversion.subclipse.core.resources.IBaseResourceStorageFactory;
+import guitypes.checkers.quals.*;
 
 /**
  * This factory creates instances that has UI specific dependencies
  */
-public class UIBaseResourceStorageFactory implements IBaseResourceStorageFactory {
+@SafeType public class UIBaseResourceStorageFactory implements IBaseResourceStorageFactory {
 
 	/**
 	 * Creates a {@link org.tigris.subversion.subclipse.core.resources.BaseResourceStorage BaseResourceStorage} implementation
