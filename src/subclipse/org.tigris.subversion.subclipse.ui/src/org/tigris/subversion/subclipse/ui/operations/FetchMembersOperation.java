@@ -18,6 +18,7 @@ import org.tigris.subversion.subclipse.core.ISVNRemoteFolder;
 import org.tigris.subversion.subclipse.core.ISVNRemoteResource;
 import org.tigris.subversion.subclipse.core.Policy;
 import org.tigris.subversion.subclipse.core.SVNException;
+import guitypes.checkers.quals.*;
 
 /**
  * Fetch the members of a remote folder in the background, passing incremental
@@ -34,7 +35,7 @@ public class FetchMembersOperation extends SVNOperation {
 		this.collector = collector;
 	}
 
-	protected void execute(IProgressMonitor monitor) throws SVNException, InterruptedException {
+	@UIEffect protected void execute(IProgressMonitor monitor) throws SVNException, InterruptedException { // Colin Gordon: necessary invalid override: only called exlicitly (via run()) from a UI context, not properly used as an Operation.
 		monitor = Policy.monitorFor(monitor);
 		try {
 			monitor.beginTask(Policy.bind("FetchMembersOperation.message", remoteFolder.getName()), 100);

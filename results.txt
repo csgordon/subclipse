@@ -115,3 +115,8 @@ to Foo, which is a source of much imprecision (see getImageDescriptor and the li
 +1:15 (16:10): 38
 +5 (16:15): 36 (actually 35 after I fixed a stupid typo (@SafeEFfect instead of @SafeEffect) in the stub file)
 +5 (16:20): 34
+
+FetchMembersOperation is really a UI variant of the SVNOperation, but doesn't override canRunAsJob()
+to return false.  But in practice, it's safe because it's always run explicitly from a UI context
+rather than through an IProgressService.
++5 (16:25): 34, but better marked.
