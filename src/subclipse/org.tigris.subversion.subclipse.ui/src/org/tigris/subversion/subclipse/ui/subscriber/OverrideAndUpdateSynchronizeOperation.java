@@ -46,7 +46,7 @@ import guitypes.checkers.quals.*;
 	public final static int PROGRESS_DIALOG = 1;
 	public final static int PROGRESS_BUSYCURSOR = 2;
 
-	public OverrideAndUpdateSynchronizeOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements, IResource[] modifiedResources, IResource[] resources) {
+	@UIEffect public OverrideAndUpdateSynchronizeOperation(ISynchronizePageConfiguration configuration, IDiffElement[] elements, IResource[] modifiedResources, IResource[] resources) {
 		super(configuration, elements);
 		this.modifiedResources = modifiedResources;
 		this.resources = resources;
