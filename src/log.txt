@@ -68,10 +68,10 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 				parent = display.getActiveShell(); // Colin Gordon: subject to dynamic thread check
 				                               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:204: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			BusyIndicator.showWhile(parent.getDisplay(), new @UI Runnable() {
+			BusyIndicator.showWhile(parent.getDisplay(), new @UI Runnable() { // Colin Gordon: subject to dynamic thread check
 			                       ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:224: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			if (createdShell) parent.dispose();
+			if (createdShell) parent.dispose(); // Colin Gordon: subject to dynamic thread check + other control flow for safety
 			                                ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:428: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 			outerRunnable.run(); // Colin Gordon: SAFE I think - dynamic check for which thread we're on
@@ -89,9 +89,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 				                                                                                                        ^
   cast to Object for a varargs call
   cast to Object[] for a non-varargs call and to suppress this warning
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/FetchMembersOperation.java:42: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			collector.add(children, Policy.subMonitorFor(monitor, 5));
-			             ^
+subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/FetchMembersOperation.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.operations.SVNOperation.execute(org.eclipse.core.runtime.IProgressMonitor)).
+	@UIEffect protected void execute(IProgressMonitor monitor) throws SVNException, InterruptedException { // Colin Gordon: necessary invalid override: only called exlicitly (via run()) from a UI context, not properly used as an Operation.
+	                         ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/ConsoleRemoveAction.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		setImageDescriptor(TeamImages.getImageDescriptor("elcl16/participant_rem.gif")); //$NON-NLS-1$
 		                                                ^
