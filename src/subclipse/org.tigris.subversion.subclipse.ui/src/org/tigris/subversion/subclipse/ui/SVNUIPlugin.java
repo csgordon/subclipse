@@ -201,7 +201,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
 			}
 			// pop up progress dialog after a short delay
 			final Exception[] holder = new Exception[1];
-			BusyIndicator.showWhile(parent.getDisplay(), new @UI Runnable() {
+			BusyIndicator.showWhile(parent.getDisplay(), new @UI Runnable() { // Colin Gordon: subject to dynamic thread check
 				public void run() {
 					try {
 						runnable.run(new NullProgressMonitor());
@@ -221,7 +221,7 @@ public class SVNUIPlugin extends AbstractUIPlugin {
 			}
 			//new TimeoutProgressMonitorDialog(parent, TIMEOUT).run(true /*fork*/, cancelable, runnable);
 		} finally {
-			if (createdShell) parent.dispose();
+			if (createdShell) parent.dispose(); // Colin Gordon: subject to dynamic thread check + other control flow for safety
 		}
 	}	
 
