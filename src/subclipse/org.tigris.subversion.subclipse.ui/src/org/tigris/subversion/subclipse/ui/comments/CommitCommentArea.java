@@ -253,7 +253,7 @@ import guitypes.checkers.quals.*;
             fTextField.setEnabled(enabled);
         }
         
-        public void update(Observable o, Object arg) { // Colin Gordon: BUG? or polymorphic iface: IObservable is totally general, but this clearly calls into a chain that hits an SWT widget.  I don't understand the code structure well enough yet to rule out a polymorphic iface, though.
+        public void update(Observable o, Object arg) { // Colin Gordon: Observer & Observable are polymorphic and intertwined, but I can't use them in this instance unless I fix handling of types that implement differently-permissioned interfaces.
             if (arg instanceof String) {
                 setText((String)arg); // triggers a modify event
                 if (modifyListener != null) modifyListener.modifyText(null);

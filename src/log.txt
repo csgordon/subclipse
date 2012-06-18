@@ -92,23 +92,11 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/operations/FetchMembersOperation.java:38: error: An method override may only be @UI if it overrides an @UI method (overriding org.tigris.subversion.subclipse.ui.operations.SVNOperation.execute(org.eclipse.core.runtime.IProgressMonitor)).
 	@UIEffect protected void execute(IProgressMonitor monitor) throws SVNException, InterruptedException { // Colin Gordon: necessary invalid override: only called exlicitly (via run()) from a UI context, not properly used as an Operation.
 	                         ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/ConsoleRemoveAction.java:27: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setImageDescriptor(TeamImages.getImageDescriptor("elcl16/participant_rem.gif")); //$NON-NLS-1$
-		                                                ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/ConsoleRemoveAction.java:28: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		setDisabledImageDescriptor(TeamImages.getImageDescriptor("dlcl16/participant_rem.gif")); //$NON-NLS-1$
-		                                                        ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/console/PathMatcher.java:166: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				page.openEditor(input, descriptor.getId());
-				               ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/preferences/SVNDecoratorPreferencesPage.java:682: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe Observer.update(java.util.Observable,java.lang.Object)).
-		public void update(Observable o, Object arg) {
+		public void update(Observable o, Object arg) { // Colin Gordon: This method will never be called - Preview is never used as an Observer (removing that implements clause fixes this error)
 		            ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/sync/OverlayIconCache.java:33: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			image = icon.createImage();
-			                        ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommitCommentArea.java:256: error: An method override may only be @UI if it overrides an @UI method (overriding @AlwaysSafe Observer.update(java.util.Observable,java.lang.Object)).
-        public void update(Observable o, Object arg) { // Colin Gordon: BUG? or polymorphic iface: IObservable is totally general, but this clearly calls into a chain that hits an SWT widget.  I don't understand the code structure well enough yet to rule out a polymorphic iface, though.
+        public void update(Observable o, Object arg) { // Colin Gordon: Observer & Observable are polymorphic and intertwined, but I can't use them in this instance unless I fix handling of types that implement differently-permissioned interfaces.
                     ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/dialogs/DialogArea.java:63: error: incompatible types.
 		if (!listeners.contains(listener))
@@ -125,12 +113,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 		                 ^
   found   : @UI IPropertyChangeListener
   required: @AlwaysSafe Object
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/settings/ProjectProperties.java:195: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        int[][] urlRanges = urlLinks.getLinkRanges();
-                                                  ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/settings/ProjectProperties.java:196: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-        String[] urlUrls = urlLinks.getUrls();
-                                           ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1723: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
       PlatformUI.getWorkbench().getHelpSystem().setHelp(updateToRevisionAction,
                                                        ^
@@ -198,5 +180,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-34 errors
+28 errors
 14 warnings
