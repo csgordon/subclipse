@@ -372,7 +372,7 @@ public class RepositoryManager {
 	/**
 	 * Run the given runnable
 	 */
-	public void run(IRunnableWithProgress runnable, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+	@UIEffect public void run(IRunnableWithProgress runnable, IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		runnable.run(monitor);
 	}
 	

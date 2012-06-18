@@ -114,3 +114,4 @@ to Foo, which is a source of much imprecision (see getImageDescriptor and the li
 +5 (14:55): 53
 +1:15 (16:10): 38
 +5 (16:15): 36 (actually 35 after I fixed a stupid typo (@SafeEFfect instead of @SafeEffect) in the stub file)
++5 (16:20): 34

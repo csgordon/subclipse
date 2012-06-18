@@ -6,10 +6,8 @@ init:
 
 compile:
 [jsr308.javac] /homes/gws/csgordon/research/guitypes/checker/build.xml:40: warning: 'includeantruntime' was not set, defaulting to build.sysclasspath=last; set to false for repeatable builds
-     [copy] Copying 1 file to /homes/gws/csgordon/research/guitypes/checker/build/guitypes/checkers
 
 dist:
-      [jar] Building jar: /homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-20120618.jar
 
 BUILD SUCCESSFUL
 Total time: 0 seconds
@@ -63,9 +61,6 @@ subclipse/org.tigris.subversion.subclipse.tools.usage/src/org/tigris/subversion/
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/decorator/SVNLightweightDecorator.java:588: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 		SVNUIPlugin.getPlugin().getWorkbench().getDecoratorManager().update(SVNUIPlugin.DECORATOR_ID); // Colin Gordon: BUG? At a glance .update() is not safe (though it depends on the ILabelProviderListeners), but this is called from projectConfigured(), which must be safe by inheritance
 		                                                                   ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/repository/RepositoryManager.java:376: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		runnable.run(monitor);
-		            ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/SVNUIPlugin.java:192: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 					runnable.run(new NullProgressMonitor()); // Colin Gordon: BUG or I misunderstood IRunnableWithProgress effects, or the conditionals around this check the thread dynamically
 					            ^
@@ -203,5 +198,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-35 errors
+34 errors
 14 warnings
