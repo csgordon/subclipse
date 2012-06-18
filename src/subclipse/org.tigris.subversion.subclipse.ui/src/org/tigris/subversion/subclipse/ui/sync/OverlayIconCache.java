@@ -15,11 +15,12 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.swt.graphics.Image;
+import guitypes.checkers.quals.*;
 
 /**
  * Maintains a cache of OverlayIcons.
  */
-public class OverlayIconCache {
+@UIType public class OverlayIconCache {
 	private Map /*from OverlayIcon to Image*/ cache = new HashMap();
 	
 	/**

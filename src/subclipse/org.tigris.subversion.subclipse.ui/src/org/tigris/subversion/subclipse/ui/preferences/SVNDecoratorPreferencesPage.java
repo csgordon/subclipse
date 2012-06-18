@@ -679,7 +679,7 @@ import guitypes.checkers.quals.*;
 			}
 		}
 		
-		public void update(Observable o, Object arg) {
+		public void update(Observable o, Object arg) { // Colin Gordon: This method will never be called - Preview is never used as an Observer (removing that implements clause fixes this error)
 			refresh();
 		}
 		

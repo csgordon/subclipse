@@ -103,7 +103,7 @@ import guitypes.checkers.quals.*;
 		}
 	}
 	
-	private static class FileHyperlink implements IHyperlink {
+	@UIType private static class FileHyperlink implements IHyperlink {
 		
 		private String myPath;
 
