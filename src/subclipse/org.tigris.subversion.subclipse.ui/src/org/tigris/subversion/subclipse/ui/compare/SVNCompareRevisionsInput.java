@@ -116,7 +116,7 @@ import guitypes.checkers.quals.*;
 				}
 			};
 			try {
-				new ProgressMonitorDialog(shell).run(false, false, runnable);
+				new ProgressMonitorDialog(shell).run(false, false, runnable); // Colin Gordon: BUG? Same as SVNLocalResourceSummaryNode...
 			} catch (InvocationTargetException e) {
 				SVNUIPlugin.openError(SVNUIPlugin.getPlugin().getWorkbench().getActiveWorkbenchWindow().getShell(), Policy.bind("TeamFile.saveChanges", resource.getName()), null, e); //$NON-NLS-1$
 			} catch (InterruptedException e) {
