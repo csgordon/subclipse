@@ -96,7 +96,7 @@ public abstract class AbstractEclipseEnvironment extends AbstractGoogleAnalytics
 	}
 
 	protected Display getDisplay() {
-		if (PlatformUI.isWorkbenchRunning()) { // Colin Gordon: This is marked safe in the stub file, but is still getting flagged for some reason
+		if (PlatformUI.isWorkbenchRunning()) {
 			return PlatformUI.getWorkbench().getDisplay();
 		}
 
