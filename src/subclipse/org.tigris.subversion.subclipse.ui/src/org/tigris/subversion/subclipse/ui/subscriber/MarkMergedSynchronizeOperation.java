@@ -52,7 +52,7 @@ import guitypes.checkers.quals.*;
         return true;
     }
 
-    protected void run(SVNTeamProvider provider, SyncInfoSet set, final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+    @UIEffect protected void run(SVNTeamProvider provider, SyncInfoSet set, final IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
         final IResource[] resources = set.getResources();
         run(new WorkspaceModifyOperation() {
             protected void execute(IProgressMonitor mon) throws CoreException, InvocationTargetException, InterruptedException {
@@ -145,7 +145,7 @@ import guitypes.checkers.quals.*;
         }
 	}    
     
-	final protected void run(final IRunnableWithProgress runnable, boolean cancelable, int progressKind) throws InvocationTargetException, InterruptedException {
+	@UIEffect final protected void run(final IRunnableWithProgress runnable, boolean cancelable, int progressKind) throws InvocationTargetException, InterruptedException {
 		final Exception[] exceptions = new Exception[] {null};
 		
 		// Ensure that no repository view refresh happens until after the action

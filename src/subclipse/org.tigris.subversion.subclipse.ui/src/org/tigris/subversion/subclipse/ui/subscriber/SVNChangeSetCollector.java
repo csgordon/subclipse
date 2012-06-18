@@ -290,7 +290,7 @@ public class SVNChangeSetCollector extends SyncInfoSetChangeSetCollector {
 	 * (non-Javadoc)
 	 * @see org.eclipse.team.internal.core.subscribers.ChangeSetManager#initializeSets()
 	 */
-	protected void initializeSets() {
+	@SafeEffect protected void initializeSets() {
 		// Nothing to initialize
 	}
 	
