@@ -83,7 +83,7 @@ import guitypes.checkers.quals.*;
 			}
 		};
 		try {
-			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
+			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance, but getActiveShell() is not safe, and ProgressMonitorDialog.run() eventually calls Label.setText...
 		} catch (InvocationTargetException e) {
 			SVNUIPlugin.openError(SVNUIPlugin.getPlugin().getWorkbench().getActiveWorkbenchWindow().getShell(), Policy.bind("TeamFile.saveChanges", svnResource.getName()), null, e); //$NON-NLS-1$
 		} catch (InterruptedException e) {

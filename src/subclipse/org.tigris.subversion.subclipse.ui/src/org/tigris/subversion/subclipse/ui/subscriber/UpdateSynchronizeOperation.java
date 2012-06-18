@@ -59,10 +59,10 @@ import guitypes.checkers.quals.*;
 		return true;
 	}
 
-	public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
+	@UIEffect public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 		if (confirmNeeded) {
 			final SyncInfoSet syncSet = getSyncInfoSet();
-			Display.getDefault().syncExec(new @UI Runnable() {
+			Display.getDefault().syncExec(new @UI Runnable() { // Colin Gordon: unless this is run directly somewhere, this is unnecessary since this method already runs in the UI thread by inheriting from SNVSynchronizeOperaiton & TeamOperation
 				public void run() {
 					confirm = MessageDialog.openConfirm(getShell(), Policy.bind("SyncAction.updateAll"), Policy.bind("SyncAction.updateConfirm", Integer.toString(syncSet.getSyncInfos().length))); //$NON-NLS-1$ //$NON-NLS-1$ //$NON-NLS-2$				
 				}			

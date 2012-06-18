@@ -121,3 +121,5 @@ to return false.  But in practice, it's safe because it's always run explicitly 
 rather than through an IProgressService.
 +5 (16:25): 34, but better marked.
 +30 (16:55): 28
++5 (17:00): 27
++15 (17:15): 26

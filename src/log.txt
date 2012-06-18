@@ -113,9 +113,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 		                 ^
   found   : @UI IPropertyChangeListener
   required: @AlwaysSafe Object
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/history/SVNHistoryPage.java:1723: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-      PlatformUI.getWorkbench().getHelpSystem().setHelp(updateToRevisionAction,
-                                                       ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/authentication/KeyFileHistoryContentHandler.java:57: error: incompatible component type of Vector.copyInto argument.
 			keyFiles.copyInto(KeyFilesManager.previousKeyFiles);
 			                                 ^
@@ -143,13 +140,13 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? Same as SVNLocalResourceSummaryNode...
 			                                                             ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceSummaryNode.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
+			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance, but getActiveShell() is not safe, and ProgressMonitorDialog.run() eventually calls Label.setText...
 			                                                                    ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNLocalResourceSummaryNode.java:86: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance
+			new ProgressMonitorDialog(Display.getDefault().getActiveShell()).run(false, false, runnable); // Colin Gordon: BUG? context method must be a safe method by inheritance, but getActiveShell() is not safe, and ProgressMonitorDialog.run() eventually calls Label.setText...
 			                                                             ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:119: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-				new ProgressMonitorDialog(shell).run(false, false, runnable);
+				new ProgressMonitorDialog(shell).run(false, false, runnable); // Colin Gordon: BUG? Same as SVNLocalResourceSummaryNode...
 				                                    ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:70: error: incompatible component type of Vector.copyInto argument.
 			comments.copyInto(CommentsManager.previousComments);
@@ -161,9 +158,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 			                                 ^
   found   : ? extends @AlwaysSafe Object
   required: @AlwaysSafe String
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/UpdateSynchronizeOperation.java:73: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
-		super.run(monitor);
-		         ^
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/subscriber/MarkMergedSynchronizeOperation.java:160: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				BusyIndicator.showWhile(Display.getCurrent(), new @UI Runnable() {
 				                       ^
@@ -180,5 +174,5 @@ Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-28 errors
+26 errors
 14 warnings
