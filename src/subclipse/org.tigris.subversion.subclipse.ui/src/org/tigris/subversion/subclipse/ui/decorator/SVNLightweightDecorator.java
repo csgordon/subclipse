@@ -584,7 +584,7 @@ public class SVNLightweightDecorator
 	/*
 	* Perform a blanket refresh of all SVN decorations
 	*/
-	@SafeEffect public static void refresh() {
+	public static void refresh() {
 		SVNUIPlugin.getPlugin().getWorkbench().getDecoratorManager().update(SVNUIPlugin.DECORATOR_ID); // Colin Gordon: BUG? At a glance .update() is not safe (though it depends on the ILabelProviderListeners), but this is called from projectConfigured(), which must be safe by inheritance
 	}
 
@@ -696,14 +696,14 @@ public class SVNLightweightDecorator
 	/* (non-Javadoc)
 	 * @see org.eclipse.jface.util.IPropertyChangeListener#propertyChange(org.eclipse.jface.util.PropertyChangeEvent)
 	 */
-	@SafeEffect public void propertyChange(PropertyChangeEvent event) {
+	public void propertyChange(PropertyChangeEvent event) {
 		if (isEventOfInterest(event)) {
 			ensureFontAndColorsCreated(fonts, colors);
 		    refresh();
 		}	
 	}
 
-    @SafeEffect private boolean isEventOfInterest(PropertyChangeEvent event) {
+    private boolean isEventOfInterest(PropertyChangeEvent event) {
         String prop = event.getProperty();
         return prop.equals(TeamUI.GLOBAL_IGNORES_CHANGED) 
         	|| prop.equals(TeamUI.GLOBAL_FILE_TYPES_CHANGED) 

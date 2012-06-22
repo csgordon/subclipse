@@ -107,7 +107,7 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 			listeners.add(listener);
 			              ^
   found   : @UI IPropertyChangeListener
-  required: ? extends @AlwaysSafe Object
+  required: @AlwaysSafe IPropertyChangeListener
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/dialogs/DialogArea.java:72: error: incompatible types.
 		listeners.remove(listener);
 		                 ^
