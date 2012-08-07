@@ -20,7 +20,7 @@ import org.xml.sax.helpers.DefaultHandler;
 @SafeType class CommentTemplatesContentHandler extends DefaultHandler {
 
 	private StringBuffer buffer;
-	private Vector comments;
+	private Vector<String> comments;
 	public CommentTemplatesContentHandler() {
 	}
 
@@ -47,7 +47,7 @@ import org.xml.sax.helpers.DefaultHandler;
 			return;
 		} 
 		if (elementName.equals(CommentsManager.ELEMENT_COMMENT_TEMPLATES)) {
-			comments = new Vector();
+			comments = new Vector<String>();
 			return;
 		}
 	}

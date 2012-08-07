@@ -113,11 +113,6 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 		                 ^
   found   : @UI IPropertyChangeListener
   required: @AlwaysSafe Object
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/authentication/KeyFileHistoryContentHandler.java:57: error: incompatible component type of Vector.copyInto argument.
-			keyFiles.copyInto(KeyFilesManager.previousKeyFiles);
-			                                 ^
-  found   : ? extends @AlwaysSafe Object
-  required: @AlwaysSafe String
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/internal/Utilities.java:202: warning: non-varargs call of varargs method with inexact argument type for last parameter;
 				return MessageFormat.format(bundle.getString(key), new String[] { arg });
 				                                                   ^
@@ -148,19 +143,9 @@ subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse
 subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/compare/SVNCompareRevisionsInput.java:119: error: Calling a method with UIEffect effect from a context limited to SafeEffect effects.
 				new ProgressMonitorDialog(shell).run(false, false, runnable); // Colin Gordon: BUG? Same as SVNLocalResourceSummaryNode...
 				                                    ^
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentHistoryContentHandler.java:70: error: incompatible component type of Vector.copyInto argument.
-			comments.copyInto(CommentsManager.previousComments);
-			                                 ^
-  found   : ? extends @AlwaysSafe Object
-  required: @AlwaysSafe String
-subclipse/org.tigris.subversion.subclipse.ui/src/org/tigris/subversion/subclipse/ui/comments/CommentTemplatesContentHandler.java:67: error: incompatible component type of Vector.copyInto argument.
-			comments.copyInto(CommentsManager.commentTemplates);
-			                                 ^
-  found   : ? extends @AlwaysSafe Object
-  required: @AlwaysSafe String
 Note: Some input files use or override a deprecated API.
 Note: Recompile with -Xlint:deprecation for details.
 Note: Some input files use unchecked or unsafe operations.
 Note: Recompile with -Xlint:unchecked for details.
-22 errors
+19 errors
 14 warnings
