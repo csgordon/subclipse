@@ -18,7 +18,7 @@ import org.xml.sax.helpers.DefaultHandler;
 class KeyFileHistoryContentHandler extends DefaultHandler {
 
 	private StringBuffer buffer;
-	private Vector keyFiles;
+	private Vector<String> keyFiles;
 	public KeyFileHistoryContentHandler() {
 	}
 
@@ -39,7 +39,7 @@ class KeyFileHistoryContentHandler extends DefaultHandler {
 			return;
 		} 
 		if (elementName.equals(KeyFilesManager.ELEMENT_KEYFILE_HISTORY)) {
-			keyFiles = new Vector(KeyFilesManager.MAX_FILES);
+			keyFiles = new Vector<String>(KeyFilesManager.MAX_FILES);
 			return;
 		}
 	}

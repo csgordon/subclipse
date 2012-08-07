@@ -22,7 +22,7 @@ import guitypes.checkers.quals.*;
 @SafeType class CommentHistoryContentHandler extends DefaultHandler {
 
 	private StringBuffer buffer;
-	private Vector comments;
+	private Vector<String> comments;
 	public CommentHistoryContentHandler() {
 	}
 
@@ -49,7 +49,7 @@ import guitypes.checkers.quals.*;
 			return;
 		} 
 		if (elementName.equals(CommentsManager.ELEMENT_COMMIT_HISTORY)) {
-			comments = new Vector(CommentsManager.MAX_COMMENTS);
+			comments = new Vector<String>(CommentsManager.MAX_COMMENTS);
 			return;
 		}
 	}
