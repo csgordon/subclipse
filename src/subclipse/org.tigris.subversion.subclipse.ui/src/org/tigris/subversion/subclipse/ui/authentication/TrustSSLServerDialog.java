@@ -22,7 +22,7 @@ import org.eclipse.ui.PlatformUI;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class TrustSSLServerDialog extends TrayDialog {
     private String info;
     private boolean allowPermanently;

@@ -20,7 +20,7 @@ import org.eclipse.ui.model.IWorkbenchAdapter;
 import org.tigris.subversion.subclipse.core.ISVNRepositoryLocation;
 import org.tigris.subversion.subclipse.core.repo.RepositoryComparator;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * AllRootsElement is the model element for the repositories view.

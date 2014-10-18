@@ -31,7 +31,7 @@ import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardRevertPage;
 import org.tigris.subversion.svnclientadapter.SVNStatusKind;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class RevertSynchronizeOperation extends SVNSynchronizeOperation {
 	private String url;

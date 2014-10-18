@@ -21,7 +21,7 @@ import org.eclipse.swt.widgets.Display;
 import org.tigris.subversion.subclipse.core.SVNClientManager;
 import org.tigris.subversion.subclipse.core.SVNProviderPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.UnsupportedPasswordStoresDialog;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * Initializes preferences and updates markers when preferences are changed

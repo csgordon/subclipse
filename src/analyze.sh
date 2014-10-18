@@ -1,9 +1,5 @@
 #!/bin/bash
-export PATH=~/research/guitypes/checker/binary:$PATH
-
-CHECKER=/homes/gws/csgordon/research/guitypes/checker/dist/lib/guitypes-`date "+%Y%m%d"`.jar
-
-CFJARS="/homes/gws/csgordon/research/guitypes/checker/binary/jsr308-all.jar"
+export PATH=$CHECKERFRAMEWORK/checker/bin:$PATH
 
 JARS=
 
@@ -15,7 +11,7 @@ ECLIPSEJARS="/usr/share/java/ant.jar:/usr/lib/eclipse/dropins/jdt/plugins/org.ec
 DEBUG= #"-AprintErrorStack -Afilenames -Ashowchecks" #-Alint=debugSpew"
 ERRS=9999
 
-COMMAND="javac -encoding ISO-8859-1 -J-Xbootclasspath/p:$CFJARS -Xmaxerrs $ERRS -cp $CHECKER:$ECLIPSEJARS -processor guitypes.checkers.GUIEffectsChecker $DEBUG"
+COMMAND="javac -encoding ISO-8859-1 -Xmaxerrs $ERRS -cp $ECLIPSEJARS -processor org.checkerframework.checker.guieffect.GuiEffectChecker $DEBUG"
 
 echo $COMMAND
 
@@ -26,12 +22,4 @@ JAVAFILES="subclipse/org.tigris.subversion.clientadapter subclipse/org.tigris.su
 
 #echo $JAVAFILES
 
-#if [ -e $CHECKER ];
-#then
-#    find . -name '*.java' | xargs $COMMAND;
-#else
-    pushd ~/research/guitypes/checker && ant dist && popd && find $JAVAFILES -name '*.java' | xargs $COMMAND;
-#fi
-
-
-#
+pushd ~/research/guitypes/checker && ant dist && popd && find $JAVAFILES -name '*.java' | xargs $COMMAND;

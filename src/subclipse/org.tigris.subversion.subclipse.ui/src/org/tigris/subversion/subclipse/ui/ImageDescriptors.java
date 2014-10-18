@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.Hashtable;
 
 import org.eclipse.jface.resource.ImageDescriptor;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * The image descrptors for the plugin

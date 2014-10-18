@@ -25,7 +25,7 @@ import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardMarkResolvedP
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.ISVNStatus;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class ResolveActionWithChoices extends ResolveAction {
 	private int selectedResolution;

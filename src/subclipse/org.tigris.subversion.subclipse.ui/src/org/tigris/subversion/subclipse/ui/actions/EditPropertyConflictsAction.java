@@ -16,7 +16,7 @@ import org.tigris.subversion.subclipse.ui.wizards.SizePersistedWizardDialog;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class EditPropertyConflictsAction extends WorkbenchWindowAction {
 	private ISVNLocalResource svnResource;
 	private String conflictSummary;

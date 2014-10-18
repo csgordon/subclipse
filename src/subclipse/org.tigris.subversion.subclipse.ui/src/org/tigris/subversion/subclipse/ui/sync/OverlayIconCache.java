@@ -15,7 +15,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.eclipse.swt.graphics.Image;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * Maintains a cache of OverlayIcons.

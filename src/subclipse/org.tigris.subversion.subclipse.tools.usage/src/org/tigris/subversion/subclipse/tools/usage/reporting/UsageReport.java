@@ -38,7 +38,7 @@ import org.tigris.subversion.subclipse.tools.usage.tracker.internal.PluginLogger
 import org.tigris.subversion.subclipse.tools.usage.tracker.internal.SuffixFocusPoint;
 import org.tigris.subversion.subclipse.tools.usage.tracker.internal.Tracker;
 import org.tigris.subversion.subclipse.tools.usage.util.StatusUtils;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class UsageReport {
 

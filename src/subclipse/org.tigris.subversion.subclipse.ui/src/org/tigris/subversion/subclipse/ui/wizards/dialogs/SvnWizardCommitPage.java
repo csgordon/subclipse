@@ -65,7 +65,7 @@ import org.tigris.subversion.subclipse.ui.util.ResourceSelectionTree;
 import org.tigris.subversion.subclipse.ui.wizards.IClosableWizard;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SvnWizardCommitPage extends SvnWizardDialogPage {
 	public static final String COMMIT_WIZARD_DIALOG_SETTINGS = "CommitWizard"; //$NON-NLS-1$
 	

@@ -3,7 +3,7 @@ package org.tigris.subversion.subclipse.ui;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.swt.widgets.Display;
 import org.tigris.subversion.subclipse.core.IMessageHandler;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class MessageHandler implements IMessageHandler {
 	private boolean response;

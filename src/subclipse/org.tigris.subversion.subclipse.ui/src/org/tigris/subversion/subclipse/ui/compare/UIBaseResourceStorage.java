@@ -12,7 +12,7 @@ package org.tigris.subversion.subclipse.ui.compare;
 import org.eclipse.compare.IEncodedStreamContentAccessor;
 import org.tigris.subversion.subclipse.core.resources.BaseResource;
 import org.tigris.subversion.subclipse.core.resources.BaseResourceStorage;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * This class does not add any functionality. It just adds the UI dependent interface

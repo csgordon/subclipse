@@ -5,7 +5,7 @@ import org.eclipse.jface.wizard.Wizard;
 import org.tigris.subversion.subclipse.ui.Messages;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class DialogWizard extends Wizard {
 	private SVNConflictDescriptor conflictDescriptor;

@@ -55,7 +55,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNStatus;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class TreeConflictsView extends ViewPart {
 	public static final String VIEW_ID = "org.tigris.subversion.subclipse.ui.conflicts.TreeConflictsView"; //$NON-NLS-1$
 

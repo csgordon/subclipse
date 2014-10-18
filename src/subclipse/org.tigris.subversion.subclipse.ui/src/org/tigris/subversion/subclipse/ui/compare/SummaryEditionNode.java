@@ -26,7 +26,7 @@ import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 import org.tigris.subversion.svnclientadapter.SVNDiffSummary.SVNDiffKind;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @SafeType public class SummaryEditionNode
 		implements
 			IStructureComparator,

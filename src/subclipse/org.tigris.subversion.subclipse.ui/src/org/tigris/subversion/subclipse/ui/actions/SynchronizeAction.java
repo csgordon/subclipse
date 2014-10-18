@@ -26,7 +26,7 @@ import org.tigris.subversion.subclipse.ui.subscriber.SVNSynchronizeParticipant;
  * Action to synchronize the selected resources. This results
  * in a file-system participant being added to the synchronize view.
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SynchronizeAction extends WorkbenchWindowAction {
 
 	/* (non-Javadoc)

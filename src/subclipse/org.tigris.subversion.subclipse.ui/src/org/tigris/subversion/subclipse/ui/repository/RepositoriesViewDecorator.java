@@ -9,7 +9,7 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.decorator.SVNLightweightDecorator.CachedImageDescriptor;
 import org.tigris.subversion.subclipse.ui.util.DiffImage;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @UIType public class RepositoriesViewDecorator {
 	private static ImageDescriptor locked = new CachedImageDescriptor(SVNUIPlugin.getPlugin().getImageDescriptor(ISVNUIConstants.IMG_LOCKED));

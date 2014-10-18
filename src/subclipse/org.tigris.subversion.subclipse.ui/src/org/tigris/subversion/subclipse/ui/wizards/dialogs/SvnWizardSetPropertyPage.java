@@ -33,7 +33,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SvnWizardSetPropertyPage extends SvnWizardDialogPage {
 	private ISVNProperty property;   // null when we set a new property
 	private ISVNLocalResource svnResource;	

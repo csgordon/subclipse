@@ -21,7 +21,7 @@ import org.eclipse.team.core.TeamException;
 import org.eclipse.ui.model.IWorkbenchAdapter;
 import org.eclipse.ui.progress.IDeferredWorkbenchAdapter;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * Base class for model elements

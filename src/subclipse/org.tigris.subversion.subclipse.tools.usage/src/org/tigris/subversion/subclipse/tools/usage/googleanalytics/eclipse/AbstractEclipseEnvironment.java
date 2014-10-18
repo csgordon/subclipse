@@ -23,7 +23,7 @@ import org.tigris.subversion.subclipse.tools.usage.googleanalytics.IGoogleAnalyt
 import org.tigris.subversion.subclipse.tools.usage.internal.SubclipseToolsUsageActivator;
 import org.tigris.subversion.subclipse.tools.usage.preferences.IUsageReportPreferenceConstants;
 import org.tigris.subversion.subclipse.tools.usage.preferences.UsageReportPreferencesUtils;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public abstract class AbstractEclipseEnvironment extends AbstractGoogleAnalyticsParameters implements
 		IEclipseEnvironment {

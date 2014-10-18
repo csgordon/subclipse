@@ -44,7 +44,7 @@ import org.tigris.subversion.subclipse.core.internal.InfiniteSubProgressMonitor;
 import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
 import org.tigris.subversion.subclipse.ui.IHelpContextIds;
 import org.tigris.subversion.subclipse.ui.Policy;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * Unmanage action removes the svn feature from a project and optionally

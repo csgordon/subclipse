@@ -22,7 +22,7 @@ import org.tigris.subversion.subclipse.core.SVNException;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.SVNDiffSummary;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @SafeType public class SVNLocalResourceSummaryNode extends ResourceNode {
 	private final ISVNLocalResource svnResource;

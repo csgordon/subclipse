@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.Hashtable;
 
 import org.eclipse.jface.resource.ImageDescriptor;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @UIType public class ImageDescriptors {
     private Hashtable imageDescriptors = new Hashtable(20);

@@ -37,7 +37,7 @@ import org.tigris.subversion.subclipse.core.history.LogEntry;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class GenerateChangeLogDialog extends SvnDialog {
 	private List<LogEntry> logEntries;
 	private Button svnLogButton;

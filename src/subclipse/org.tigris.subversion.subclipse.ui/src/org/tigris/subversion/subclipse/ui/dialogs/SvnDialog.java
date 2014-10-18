@@ -10,7 +10,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public abstract class SvnDialog extends TrayDialog {
 	private String id;
 	private IDialogSettings settings = SVNUIPlugin.getPlugin().getDialogSettings();

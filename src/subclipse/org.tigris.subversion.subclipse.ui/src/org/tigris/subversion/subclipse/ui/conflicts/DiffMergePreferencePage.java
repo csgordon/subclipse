@@ -55,7 +55,7 @@ import org.tigris.subversion.subclipse.ui.actions.WorkspaceAction;
  * 
  * @author cedric chabanois (cchab at tigris.org)
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class DiffMergePreferencePage extends PreferencePage implements
         IWorkbenchPreferencePage {
 

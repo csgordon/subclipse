@@ -29,7 +29,7 @@ import org.tigris.subversion.subclipse.ui.actions.WorkspaceAction;
 import org.tigris.subversion.subclipse.ui.conflicts.MergeFileAssociation;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.utils.Command;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class BuiltInEditConflictsAction extends WorkspaceAction {
 	private File conflictNewFile;

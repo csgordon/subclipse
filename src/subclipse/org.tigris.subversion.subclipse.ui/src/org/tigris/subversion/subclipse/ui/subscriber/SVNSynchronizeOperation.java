@@ -29,7 +29,7 @@ import org.eclipse.team.ui.synchronize.SynchronizeModelOperation;
 import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * Override SynchronizeModelOperation in order to delegate the operation to each file system 
  * provider instance (i.e. each project). Also, prompt to prune conflicts from the set of

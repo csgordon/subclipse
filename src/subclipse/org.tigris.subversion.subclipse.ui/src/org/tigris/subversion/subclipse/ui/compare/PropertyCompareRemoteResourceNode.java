@@ -19,7 +19,7 @@ import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @SafeType public class PropertyCompareRemoteResourceNode implements IStructureComparator, ITypedElement, IStreamContentAccessor, IPropertyProvider {
 	private ISVNRemoteResource remoteResource;
 	private SVNRevision pegRevision;

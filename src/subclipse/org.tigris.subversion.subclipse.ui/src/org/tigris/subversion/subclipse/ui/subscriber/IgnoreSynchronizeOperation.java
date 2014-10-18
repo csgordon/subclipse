@@ -22,7 +22,7 @@ import org.tigris.subversion.subclipse.core.SVNTeamProvider;
 import org.tigris.subversion.subclipse.ui.dialogs.IgnoreResourcesDialog;
 import org.tigris.subversion.subclipse.ui.operations.IgnoreOperation;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 public class IgnoreSynchronizeOperation extends SVNSynchronizeOperation {
 	private IResource[] resources;
 	private IgnoreResourcesDialog ignoreResourcesDialog;

@@ -41,7 +41,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.conflicts.ConflictsCompareInput;
 import org.tigris.subversion.svnclientadapter.utils.Command;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class EditConflictsSynchronizeOperation extends SVNSynchronizeOperation {
 

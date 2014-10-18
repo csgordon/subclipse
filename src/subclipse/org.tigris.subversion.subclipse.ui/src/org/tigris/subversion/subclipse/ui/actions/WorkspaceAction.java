@@ -41,7 +41,7 @@ import org.tigris.subversion.subclipse.ui.util.PromptingDialog;
 import org.tigris.subversion.subclipse.ui.util.IPromptCondition;
 import org.tigris.subversion.svnclientadapter.ISVNStatus;
 import org.tigris.subversion.svnclientadapter.utils.SVNStatusUtils;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * This class represents an action performed on a local SVN workspace

@@ -41,7 +41,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 import org.tigris.subversion.subclipse.graph.Activator;
 import org.tigris.subversion.subclipse.graph.editors.RevisionGraphEditor;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SaveImageDialog extends TrayDialog {
 	private RevisionGraphEditor editor;
 	private Combo fileTypeCombo;

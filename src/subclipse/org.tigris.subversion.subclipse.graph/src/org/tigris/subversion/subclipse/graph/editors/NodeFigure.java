@@ -11,7 +11,7 @@ import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Font;
 import org.tigris.subversion.subclipse.graph.Activator;
 import org.tigris.subversion.subclipse.graph.cache.Node;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @UIType public class NodeFigure extends RoundedRectangle {
 

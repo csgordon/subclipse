@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import org.eclipse.jface.viewers.IDecoration;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class SVNDecoratorConfiguration {
 

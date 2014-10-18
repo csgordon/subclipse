@@ -4,7 +4,7 @@ import org.eclipse.swt.widgets.Display;
 import org.tigris.subversion.clientadapter.ILoadErrorHandler;
 import org.tigris.subversion.clientadapter.ISVNClientWrapper;
 import org.tigris.subversion.subclipse.ui.dialogs.LoadErrorDialog;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class LoadErrorHandler implements ILoadErrorHandler {
 	private static boolean loadErrorHandled = false;

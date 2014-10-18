@@ -34,7 +34,7 @@ import org.tigris.subversion.subclipse.ui.conflicts.MergeFileAssociation;
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class ConflictHandlingWizardPage extends WizardPage {
 	private SVNConflictDescriptor conflictDescriptor;
 	private IResource resource;

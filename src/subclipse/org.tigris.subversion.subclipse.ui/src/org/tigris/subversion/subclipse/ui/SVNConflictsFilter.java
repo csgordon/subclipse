@@ -25,7 +25,7 @@ import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.ui.model.IWorkbenchAdapter;
 import org.tigris.subversion.subclipse.core.resources.LocalResourceStatus;
 import org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * Filter which only shows resources that have Subversion conflicts. Works by checking 
  * if the the resource has an associated SVN conflic warning marker tied to it.

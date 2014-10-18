@@ -52,7 +52,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.actions.ShowOutOfDateFoldersAction;
 import org.tigris.subversion.subclipse.ui.internal.ScopableSubscriberParticipant;
 import org.tigris.subversion.subclipse.ui.util.ResourceSelectionTreeDecorator;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 
 /**

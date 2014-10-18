@@ -41,7 +41,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.operations.ExportRemoteFolderOperation;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class ExportRemoteFolderDialog extends SvnDialog {
 	private ISVNRemoteResource remoteResource;
 	private IWorkbenchPart targetPart;

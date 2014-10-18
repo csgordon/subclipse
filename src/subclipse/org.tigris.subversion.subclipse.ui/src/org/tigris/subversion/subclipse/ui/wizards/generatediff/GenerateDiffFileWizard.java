@@ -30,7 +30,7 @@ import org.eclipse.ui.IWorkbench;
 import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * A wizard for creating a patch file by running the SVN diff command.
  */

@@ -46,7 +46,7 @@ import org.tigris.subversion.svnclientadapter.utils.SVNStatusUtils;
 /**
  * Action to restore pristine working copy file 
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class RevertAction extends WorkbenchWindowAction {
     
     private String url;
