@@ -12,7 +12,7 @@ package org.tigris.subversion.subclipse.ui.compare;
 import org.tigris.subversion.subclipse.core.resources.BaseResource;
 import org.tigris.subversion.subclipse.core.resources.BaseResourceStorage;
 import org.tigris.subversion.subclipse.core.resources.IBaseResourceStorageFactory;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * This factory creates instances that has UI specific dependencies

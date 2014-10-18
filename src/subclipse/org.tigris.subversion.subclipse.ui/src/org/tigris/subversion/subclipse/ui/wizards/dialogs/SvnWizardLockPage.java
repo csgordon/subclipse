@@ -24,7 +24,7 @@ import org.tigris.subversion.subclipse.ui.comments.CommitCommentArea;
 import org.tigris.subversion.subclipse.ui.settings.CommentProperties;
 import org.tigris.subversion.subclipse.ui.util.ResourceSelectionTree;
 import org.tigris.subversion.subclipse.ui.wizards.IClosableWizard;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class SvnWizardLockPage extends SvnWizardDialogPage {
     private CommitCommentArea commitCommentArea;

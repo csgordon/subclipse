@@ -20,7 +20,7 @@ import org.tigris.subversion.subclipse.ui.dialogs.ShowRevisionsDialog;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class RevisionDetailsAction extends Action {
 	private Node node;

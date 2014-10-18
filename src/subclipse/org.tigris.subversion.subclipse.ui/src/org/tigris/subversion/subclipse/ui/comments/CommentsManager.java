@@ -33,7 +33,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.internal.XMLWriter;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * the comments manager : holds previous comments 
  */

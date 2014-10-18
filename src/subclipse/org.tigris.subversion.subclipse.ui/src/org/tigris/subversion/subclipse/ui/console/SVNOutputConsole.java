@@ -42,7 +42,7 @@ import org.tigris.subversion.svnclientadapter.SVNNodeKind;
  * 
  * @since 3.0 
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SVNOutputConsole extends IOConsole implements IConsoleListener, IPropertyChangeListener {
 	
 	/** Constant used to define consoles that have the ability to output subversion information */

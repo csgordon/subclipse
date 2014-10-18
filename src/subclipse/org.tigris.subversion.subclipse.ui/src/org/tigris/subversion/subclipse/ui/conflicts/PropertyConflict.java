@@ -12,7 +12,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.Path;
 import org.tigris.subversion.subclipse.core.ISVNLocalResource;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @SafeType public class PropertyConflict {
 	private String propertyName;
 	private String oldLocalValue;

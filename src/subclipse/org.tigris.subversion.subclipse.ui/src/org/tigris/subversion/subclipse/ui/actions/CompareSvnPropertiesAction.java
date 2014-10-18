@@ -17,7 +17,7 @@ import org.tigris.subversion.subclipse.ui.compare.PropertyCompareLocalResourceNo
 import org.tigris.subversion.subclipse.ui.compare.PropertyCompareRemoteResourceNode;
 import org.tigris.subversion.subclipse.ui.dialogs.ComparePropertiesDialog;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class CompareSvnPropertiesAction extends WorkbenchWindowAction {
 	private IPropertyProvider right;

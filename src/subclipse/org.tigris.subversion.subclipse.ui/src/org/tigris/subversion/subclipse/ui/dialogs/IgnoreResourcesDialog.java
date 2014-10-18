@@ -38,7 +38,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 /**
  * the dialog used to add patterns to svn:ignore 
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class IgnoreResourcesDialog extends TrayDialog {
 	// resources that should be ignored
 	private IResource[] resources;

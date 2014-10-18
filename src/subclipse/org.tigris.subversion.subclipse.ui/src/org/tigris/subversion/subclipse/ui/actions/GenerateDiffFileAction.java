@@ -47,7 +47,7 @@ import org.tigris.subversion.svnclientadapter.utils.SVNStatusUtils;
  * Action to generate a patch file using the SVN diff command.
  * 
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class GenerateDiffFileAction extends WorkbenchWindowAction {
 	private IResource[] modifiedResources;
 	private ArrayList unaddedList;

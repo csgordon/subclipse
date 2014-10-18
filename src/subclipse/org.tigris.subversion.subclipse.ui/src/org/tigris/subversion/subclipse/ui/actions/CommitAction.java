@@ -55,7 +55,7 @@ import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardCommitPage;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.svnclientadapter.ISVNStatus;
 import org.tigris.subversion.svnclientadapter.utils.SVNStatusUtils;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * Action for checking in files to a subversion provider

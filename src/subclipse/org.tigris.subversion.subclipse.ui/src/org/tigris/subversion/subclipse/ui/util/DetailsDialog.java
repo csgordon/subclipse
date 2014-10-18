@@ -26,7 +26,7 @@ import org.eclipse.swt.widgets.Shell;
 /**
  * A simple superclass for detail button dialogs.
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType abstract public class DetailsDialog extends TrayDialog {
 	/**
 	 * The Details button.

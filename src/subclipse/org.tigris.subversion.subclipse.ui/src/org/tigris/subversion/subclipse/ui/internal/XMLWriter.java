@@ -14,7 +14,7 @@ package org.tigris.subversion.subclipse.ui.internal;
 
 import java.io.*;
 import java.util.*;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * A simple XML writer.

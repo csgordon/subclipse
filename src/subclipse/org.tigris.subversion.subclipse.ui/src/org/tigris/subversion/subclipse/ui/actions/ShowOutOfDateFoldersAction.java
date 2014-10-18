@@ -6,7 +6,7 @@ import org.tigris.subversion.subclipse.core.SVNProviderPlugin;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.subscriber.SVNSynchronizeParticipant;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class ShowOutOfDateFoldersAction extends Action {
 	private SVNSynchronizeParticipant svnSynchronizeParticipant;

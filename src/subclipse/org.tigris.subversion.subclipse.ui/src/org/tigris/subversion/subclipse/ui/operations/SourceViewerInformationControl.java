@@ -37,7 +37,7 @@ import org.eclipse.ui.editors.text.TextSourceViewerConfiguration;
  * This class is copied from org.eclipse.jface.text.source.projection.SourceViewerInformationControl
  * Several changes are made in order to handle hover for CVS annotations
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType class SourceViewerInformationControl implements IInformationControl, IInformationControlExtension, DisposeListener {
 
 	/** Border thickness in pixels. */

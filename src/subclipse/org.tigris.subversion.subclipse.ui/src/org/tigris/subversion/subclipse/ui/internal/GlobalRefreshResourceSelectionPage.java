@@ -54,7 +54,7 @@ import org.eclipse.ui.views.navigator.ResourceSorter;
 import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * Page that allows the user to select a set of resources that are managed by a subscriber 
  * participant. Callers can provide a scope hint to determine the initial selection for the

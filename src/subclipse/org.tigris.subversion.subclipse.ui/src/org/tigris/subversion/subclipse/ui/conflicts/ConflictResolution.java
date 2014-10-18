@@ -2,7 +2,7 @@ package org.tigris.subversion.subclipse.ui.conflicts;
 
 import org.tigris.subversion.svnclientadapter.ISVNConflictResolver;
 import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @SafeType public class ConflictResolution {
 	private SVNConflictDescriptor conflictDescriptor;

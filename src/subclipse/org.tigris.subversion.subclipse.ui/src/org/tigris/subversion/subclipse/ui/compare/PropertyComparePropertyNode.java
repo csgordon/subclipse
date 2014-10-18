@@ -12,7 +12,7 @@ import org.tigris.subversion.subclipse.ui.ISVNUIConstants;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @SafeType public class PropertyComparePropertyNode implements IStructureComparator, ITypedElement, IStreamContentAccessor {
 	private ISVNProperty property;
 	

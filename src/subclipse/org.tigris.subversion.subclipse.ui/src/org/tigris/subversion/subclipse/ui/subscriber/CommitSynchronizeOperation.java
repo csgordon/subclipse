@@ -49,7 +49,7 @@ import org.tigris.subversion.subclipse.ui.settings.ProjectProperties;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardCommitPage;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * Sync view operation for putting file system resources

@@ -3,7 +3,7 @@ package org.tigris.subversion.subclipse.ui.compare;
 import org.eclipse.compare.ITypedElement;
 import org.eclipse.compare.structuremergeviewer.IStructureComparator;
 import org.eclipse.swt.graphics.Image;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @SafeType public class MultipleSelectionNode implements IStructureComparator, ITypedElement {
 	private Object[] children;

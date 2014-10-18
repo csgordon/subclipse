@@ -69,7 +69,7 @@ import org.tigris.subversion.subclipse.ui.repository.RepositoryManager;
 import org.tigris.subversion.subclipse.ui.repository.model.SVNAdapterFactory;
 import org.tigris.subversion.subclipse.ui.util.SimpleDialogsHelper;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * UI Plugin for Subversion provider-specific workbench functionality.
  */

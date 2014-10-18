@@ -30,7 +30,7 @@ import org.tigris.subversion.svnclientadapter.SVNUrl;
 /**
  * Action to switch to branch/tag 
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SwitchAction extends WorkbenchWindowAction {
 	private IResource[] selectedResources;
 	private boolean canRunAsJob = true;

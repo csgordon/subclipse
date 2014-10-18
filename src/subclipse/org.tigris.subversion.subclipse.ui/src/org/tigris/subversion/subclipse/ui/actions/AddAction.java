@@ -33,7 +33,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
  * AddAction performs a 'svn add' command on the selected resources. If a
  * container is selected, its children are recursively added.
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class AddAction extends WorkbenchWindowAction {
 
 	/*

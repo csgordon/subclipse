@@ -82,7 +82,7 @@ import org.tigris.subversion.subclipse.ui.wizards.NewLocationWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardNewRepositoryPage;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * RepositoriesView is a view on a set of known SVN repositories

@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.tigris.subversion.subclipse.core.util.ISimpleDialogsHelper;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.eclipse.swt.graphics.Image;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  *	

@@ -7,7 +7,7 @@ import org.eclipse.compare.CompareEditorInput;
 import org.eclipse.compare.structuremergeviewer.Differencer;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.tigris.subversion.subclipse.ui.Policy;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class PropertyCompareInput extends CompareEditorInput {
 	private IPropertyProvider left;
 	private IPropertyProvider right;

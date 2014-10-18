@@ -24,7 +24,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.dialogs.IgnoreResourcesDialog;
 import org.tigris.subversion.subclipse.ui.operations.IgnoreOperation;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class IgnoreAction extends WorkbenchWindowAction {
 
 	protected void execute(final IAction action) throws InvocationTargetException, InterruptedException {

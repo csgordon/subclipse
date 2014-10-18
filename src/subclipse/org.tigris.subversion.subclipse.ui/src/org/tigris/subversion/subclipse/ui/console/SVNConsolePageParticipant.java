@@ -15,7 +15,7 @@ import org.eclipse.ui.console.*;
 import org.eclipse.ui.console.IConsole;
 import org.eclipse.ui.console.IConsolePageParticipant;
 import org.eclipse.ui.part.IPageBookViewPage;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 /**
  * Console helper that allows contributing actions to the console view when
  * the SVN console is visible. Added to the console via an extension point

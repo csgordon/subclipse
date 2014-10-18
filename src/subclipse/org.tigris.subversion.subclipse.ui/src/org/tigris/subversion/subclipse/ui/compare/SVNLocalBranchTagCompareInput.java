@@ -24,7 +24,7 @@ import org.tigris.subversion.subclipse.ui.internal.Utils;
 import org.tigris.subversion.subclipse.ui.operations.ShowDifferencesAsUnifiedDiffOperationWC;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class SVNLocalBranchTagCompareInput extends CompareEditorInput implements ISaveableWorkbenchPart {
 	private ISVNLocalResource[] resources;

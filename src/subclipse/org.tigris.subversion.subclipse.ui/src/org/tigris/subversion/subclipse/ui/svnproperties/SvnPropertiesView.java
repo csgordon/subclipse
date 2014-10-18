@@ -78,7 +78,7 @@ import org.tigris.subversion.svnclientadapter.SVNStatusKind;
  * The <code>SvnPropertiesView</code> shows the svn properties for a svn local resource 
  * 
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class SvnPropertiesView extends ViewPart {
 
 	public static final String VIEW_ID = "org.tigris.subversion.subclipse.ui.svnproperties.SvnPropertiesView"; //$NON-NLS-1$

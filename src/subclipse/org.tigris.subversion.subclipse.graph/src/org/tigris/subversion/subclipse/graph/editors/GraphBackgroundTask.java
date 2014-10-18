@@ -22,7 +22,7 @@ import org.tigris.subversion.subclipse.ui.operations.SVNOperation;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNInfo;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @SafeType public class GraphBackgroundTask extends SVNOperation {
 	

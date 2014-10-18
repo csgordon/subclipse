@@ -6,7 +6,7 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.action.IAction;
 import org.tigris.subversion.subclipse.ui.conflicts.TreeConflictsView;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class ShowTreeConflictsAction extends WorkbenchWindowAction {
 	
 	protected void execute(IAction action) throws InvocationTargetException, InterruptedException {

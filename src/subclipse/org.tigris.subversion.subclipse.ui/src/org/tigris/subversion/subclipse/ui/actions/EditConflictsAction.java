@@ -38,7 +38,7 @@ import org.tigris.subversion.svnclientadapter.utils.Command;
 /**
  * Action to edit conflicts
  */
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class EditConflictsAction extends WorkbenchWindowAction {
     private IFile selectedResource;
     

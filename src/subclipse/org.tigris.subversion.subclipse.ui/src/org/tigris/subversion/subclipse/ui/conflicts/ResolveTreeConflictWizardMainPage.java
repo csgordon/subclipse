@@ -42,7 +42,7 @@ import org.tigris.subversion.svnclientadapter.SVNConflictDescriptor;
 import org.tigris.subversion.svnclientadapter.SVNRevision;
 import org.tigris.subversion.svnclientadapter.SVNUrl;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class ResolveTreeConflictWizardMainPage extends WizardPage {
 	private Button mergeFromRepositoryButton;
 	private Button compareButton;

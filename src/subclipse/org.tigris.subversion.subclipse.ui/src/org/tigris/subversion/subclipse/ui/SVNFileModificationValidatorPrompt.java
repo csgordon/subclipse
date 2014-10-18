@@ -16,7 +16,7 @@ import org.tigris.subversion.subclipse.core.resources.ISVNFileModificationValida
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizard;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardDialog;
 import org.tigris.subversion.subclipse.ui.wizards.dialogs.SvnWizardLockPage;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 public class SVNFileModificationValidatorPrompt implements ISVNFileModificationValidatorPrompt {
     private String comment;

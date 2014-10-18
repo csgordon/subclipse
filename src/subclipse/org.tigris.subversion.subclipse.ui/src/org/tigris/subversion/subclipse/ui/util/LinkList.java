@@ -9,7 +9,7 @@
  *     Subclipse project committers - initial API and implementation
  ******************************************************************************/
 package org.tigris.subversion.subclipse.ui.util;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 @SafeType public class LinkList {
     private int[][] linkRanges;

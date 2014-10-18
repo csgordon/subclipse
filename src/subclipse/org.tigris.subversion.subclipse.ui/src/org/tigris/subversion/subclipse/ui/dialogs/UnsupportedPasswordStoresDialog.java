@@ -19,7 +19,7 @@ import org.eclipse.ui.forms.widgets.Hyperlink;
 import org.tigris.subversion.subclipse.ui.Messages;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 @UIType public class UnsupportedPasswordStoresDialog extends SvnDialog {
 
 	public UnsupportedPasswordStoresDialog(Shell shell) {

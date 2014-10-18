@@ -20,7 +20,7 @@ import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.svnclientadapter.ISVNClientAdapter;
 import org.tigris.subversion.svnclientadapter.ISVNProperty;
 
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 // Colin Gordon: CHECKER bug: This type gets invalid method override errors despite being @SafeType...
 @SafeType public class PropertyCompareLocalResourceNode implements IStructureComparator, ITypedElement, IStreamContentAccessor, IPropertyProvider {
 	private IResource resource;

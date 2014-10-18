@@ -90,7 +90,7 @@ import org.tigris.subversion.subclipse.ui.Policy;
 import org.tigris.subversion.subclipse.ui.SVNUIPlugin;
 import org.tigris.subversion.subclipse.ui.dialogs.DialogArea;
 import org.tigris.subversion.subclipse.ui.settings.CommentProperties;
-import guitypes.checkers.quals.*;
+import org.checkerframework.checker.guieffect.qual.*;
 
 /**
  * This area provides the widgets for providing the SVN commit comment
